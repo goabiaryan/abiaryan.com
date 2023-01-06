@@ -1,0 +1,224 @@
+site_name: My Docs
+
+# Project information
+site_name: Abi Aryan
+site_url: https://abiaryan.com
+site_author: Abi Aryan
+site_description: >-
+  Personal Blog
+copyright: Copyright &copy; 2022 Abi Aryan
+
+#configuration
+theme:
+  name: material
+
+  # Static files
+  static_templates:
+    - 404.html
+
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    # - navigation.instant
+    - navigation.sections
+    - navigation.tabs
+  palette:
+    - scheme: default
+      primary: white
+      accent: teal
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - scheme: slate
+      primary: red
+      accent: red
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+  font:
+    text: Roboto
+    code: Roboto Mono
+  favicon: logo
+  icon:
+    logo: logo
+
+# Plugins
+plugins:
+  - search
+  - glightbox
+  - external-markdown
+  - tags:
+      tags_file: tags.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+
+  # - redirects:
+  #     redirect_maps:
+  #       changelog/insiders.md: insiders/changelog.md
+  #       extensions/admonition.md: reference/admonitions.md
+  #       extensions/codehilite.md: reference/code-blocks.md
+  #       extensions/footnotes.md: reference/footnotes.md
+  #       extensions/metadata.md: reference/meta-tags.md
+  #       extensions/permalinks.md: setup/setting-up-navigation.md #permalink
+  #       extensions/pymdown.md: reference/admonitions.md
+  #       plugins/revision-date.md: setup/adding-a-git-repository.md #revision-date
+  #       plugins/search.md: setup/setting-up-site-search.md
+  #       releases/4.md: upgrading.md #upgrading-from-4x-to-5x
+  #       releases/5.md: upgrading.md #upgrading-from-3x-to-4x
+  #       releases/changelog.md: changelog.md
+  #       setup/adding-social-links.md: setup/setting-up-the-footer.md
+  #       sponsorship.md: insiders/index.md
+  # - minify:
+  #     minify_html: true
+
+# Customization
+extra:
+  generator: false
+  social:
+    # - icon: docs/fun-zone/assets/Mastodon_Icon.png
+    #   link: https://mstdn.social/@goabiaryan
+    # - icon: fontawesome/brands/gitter
+    #   link: https://gitter.im/squidfunk/mkdocs-material
+    # - icon: fontawesome/brands/docker
+    #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/twitter
+      link: https://mstdn.social/@goabiaryan
+    # - icon: fontawesome/brands/linkedin
+    #   link: https://linkedin.com/in/squidfunk/
+    # - icon: fontawesome/brands/instagram
+    #   link: https://instagram.com/squidfunk
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:<abi@abiaryan.com>
+  disqus: abi-aryan
+
+# Extensions
+markdown_extensions:
+  - mdx_truly_sane_lists
+  - admonition
+  - abbr
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - def_list
+  - footnotes
+  - meta
+  - tables
+  - md_in_html
+  - pymdownx.betterem
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shorthand: true
+      user: squidfunk
+      repo: mkdocs-material
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
+  - javascripts/tablesort.js
+
+# Page tree
+# nav:
+#   - Home: index.md
+#   - Getting started:
+#     - Installation: getting-started.md
+#     - Creating your site: creating-your-site.md
+#     - Publishing your site: publishing-your-site.md
+#     - Customization: customization.md
+#     - Troubleshooting: troubleshooting.md
+#     - Data privacy: data-privacy.md
+#     - License: license.md
+#     - Releases:
+#       - Changelog: changelog.md
+#       - Upgrade guide: upgrading.md
+#       - Deprecations: deprecations.md
+#   - Setup:
+#     - Changing the colors: setup/changing-the-colors.md
+#     - Changing the fonts: setup/changing-the-fonts.md
+#     - Changing the language: setup/changing-the-language.md
+#     - Changing the logo and icons: setup/changing-the-logo-and-icons.md
+#     - Setting up navigation: setup/setting-up-navigation.md
+#     - Setting up site search: setup/setting-up-site-search.md
+#     - Setting up site analytics: setup/setting-up-site-analytics.md
+#     - Setting up tags: setup/setting-up-tags.md
+#     - Setting up versioning: setup/setting-up-versioning.md
+#     - Setting up the header: setup/setting-up-the-header.md
+#     - Setting up the footer: setup/setting-up-the-footer.md
+#     - Adding a git repository: setup/adding-a-git-repository.md
+#     - Adding a comment system: setup/adding-a-comment-system.md
+#   - Reference:
+#     - Abbreviations: reference/abbreviations.md
+#     - Admonitions: reference/admonitions.md
+#     - Buttons: reference/buttons.md
+#     - Code blocks: reference/code-blocks.md
+#     - Content tabs: reference/content-tabs.md
+#     - Data tables: reference/data-tables.md
+#     - Diagrams: reference/diagrams.md
+#     - Footnotes: reference/footnotes.md
+#     - Formatting: reference/formatting.md
+#     - Icons + Emojis: reference/icons-emojis.md
+#     - Images: reference/images.md
+#     - Lists: reference/lists.md
+#     - MathJax: reference/mathjax.md
+#     - Meta tags: reference/meta-tags.md
+#     - Variables: reference/variables.md
+#   - Insiders:
+#     - Sponsorship: insiders/index.md
+#     - Getting started:
+#       - Installation: insiders/getting-started.md
+#       - Changelog: insiders/changelog.md
+nav:
+  - About: index.md
+  - Podcast: podcast\posts\legal-tech.md
+  - MLOps:
+      - Open Problems in MLOps: ml-engineering\posts\mlops-open-problems.md
+      - Why TensorLayer?: ml-engineering/posts/2019-05-10-why-tensorlayer.md
+  - Theoretical ML:
+      - Developing A.I. using Games: machine-learning/posts/2019-09-09-game-ai.md
+      - Dense Associative Memory for Pattern Recognition: machine-learning/posts/2017-09-10-associative-memory.md   
+      - AutoML - An Overview: machine-learning\posts\automl-problems-2018.md    
+  - Fun Zone:
+      - News: fun-zone/posts/news.md
+      - Why Re-Learn Your Core Skills?: fun-zone/posts/re-learn.md
+      - Books I am Reading: fun-zone/posts/reading.md
+  - Archive:
+      - Sections: tags.md
+# Google Analytics
+# google_analytics:
+#   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
+#   - auto
