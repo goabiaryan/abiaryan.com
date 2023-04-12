@@ -6,7 +6,7 @@ site_url: https://abiaryan.com
 site_author: Abi Aryan
 site_description: >-
   Personal Blog
-copyright: Copyright &copy; 2022 Abi Aryan
+copyright: Copyright &copy; 2023 Abi Aryan
 
 #configuration
 theme:
@@ -79,21 +79,23 @@ plugins:
 extra:
   generator: false
   social:
-    # - icon: docs/fun-zone/assets/Mastodon_Icon.png
-    #   link: https://mstdn.social/@goabiaryan
+    - icon: fontawesome/brands/medium
+      link: https://datadrivenbabe.substack.com/
     # - icon: fontawesome/brands/gitter
     #   link: https://gitter.im/squidfunk/mkdocs-material
-    # - icon: fontawesome/brands/docker
-    #   link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+    - icon: fontawesome/brands/mastodon
+      link: https://masto.ai/@abi
     - icon: fontawesome/brands/twitter
-      link: https://mstdn.social/@goabiaryan
-    # - icon: fontawesome/brands/linkedin
-    #   link: https://linkedin.com/in/squidfunk/
+      link: https://twitter.com/goabiaryan
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/goabiaryan/
     # - icon: fontawesome/brands/instagram
     #   link: https://instagram.com/squidfunk
     - icon: fontawesome/solid/paper-plane
       link: mailto:<abi@abiaryan.com>
-  disqus: abi-aryan
+  analytics:
+    provider: google
+    property: G-NC4SF5LGSH
 
 # Extensions
 markdown_extensions:
@@ -151,6 +153,7 @@ extra_javascript:
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
   - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
   - javascripts/tablesort.js
+  - js/image-carousel.js
 
 # Page tree
 # nav:
@@ -218,7 +221,4 @@ nav:
       - Books I am Reading: fun-zone/posts/reading.md
   - Archive:
       - Sections: tags.md
-# Google Analytics
-# google_analytics:
-#   - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-#   - auto
+
