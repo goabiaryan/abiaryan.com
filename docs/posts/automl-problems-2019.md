@@ -9,7 +9,7 @@ tags:
 **March 16, 2019**
 
 <sup> 
-Article based on the research paper Problems & Challenges in AutoML, 2019. I would like to thank my co-author [Shubhi Sareen](https://twitter.com/shubhi_sareen) for being an excellent research collaborator through this research.
+Article based on the research paper Problems & Challenges in AutoML, 2019. I would like to thank my co-author [Shubhi Sareen](https://in.linkedin.com/in/shubhi-sareen) for being an excellent research collaborator through this research.
 </sup>
 
 The constantly growing amount and complexity of data involved in brain studies makes manual parameterization of data processing and modelling algorithms a tedious and time-consuming task. One of the key focuses for the machine learning community has been to develop autonomous agents, by automating the entire production pipeline for selecting and training the learning algorithms, so as to take humans out of the loop. This automation has several benefits including reducing human effort and the associated time cost involved, improving the performance of these algorithms by tailoring them to the problem at hand, reducing human induced bias as well as improving the improving the reproducibility and fairness of the scientific studie s. In this paper, we will be discussing some of the key problems and challenges in AutoML. Our survey will cover central algorithms in AutoML including NAS, etc. In parallel, we also highlight the unique advantages of deep neural network, focusing on developing algorithms that can generalize of different tasks via AutoML. To conclude, we describe several current areas of research within the field.

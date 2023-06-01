@@ -49,7 +49,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
     #### 2023
     - **May 4** - Speaker at [LLMs Demsytified](https://www.linkedin.com/events/llmsdemsytifiedwithchris-abi7057602763823730688/comments/) Webinar with Chris Brousseau, Data Scientist at MasterCard
-    - **April 26** - Speaker at [Large Language Models in Production](https://twitter.com/i/spaces/1BRKjZelnOpKw?s=20) Twitter Spaces with  [Christine Yuen, Co-Founder and Head of Engineering at Shakudo.io](https://ca.linkedin.com/in/christinestyuen), hosted by Sabrina Aquino
+    - **April 26** - Speaker at [Large Language Models in Production](https://twitter.com/i/spaces/1BRKjZelnOpKw?s=20) Twitter Spaces with Christine Yuen, Co-Founder and Head of Engineering at Shakudo.io, hosted by Sabrina Aquino
     - Co-Host MLOps Community Podcast talking about 
         - Why is MLOps Hard in an Enterprise with [Maria Vechtomova & Basak Eskili, Machine Learning Engineers at Ahold Delhaize](https://open.spotify.com/episode/26w3yWLTPiIT3Qja7knavy?si=f28d3be1809d40cb)
         - Large Language Model at Scale with [Nils Reimers, Director of Machine Learning at Cohere](https://open.spotify.com/episode/7khUZhFHo6I33eusrtWlaS?si=a6149e87b90a417d)
