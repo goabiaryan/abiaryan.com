@@ -4,7 +4,6 @@ categories:
   - 2017
 tags:
   - Machine Learning
-comments: true
 ---
 **September 10, 2017** 
 

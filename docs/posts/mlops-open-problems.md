@@ -4,13 +4,8 @@ categories:
   - 2022
 tags:
   - MLSys
-draft: true
-date: 2022-10-23
 ---
 **December 12, 2022** 
-
-??? Note
-    Inspired by Advent of Code, [Advent of Data 2022](https://www.adventofdata.com/) is 24 data science, data engineering, machine learning articles by 24 authors until Christmas. This write-up is a re-post from the first post for Advent of Data: [MLOps isn’t DevOps for ML](https://www.adventofdata.com/mlops-isnt-devops-for-ml/) for  by me.
 
 MLOps requires a lot of moving variables across the business, data, code as well as model engineering at each phase of the machine learning lifecycle introducing questions that are unique to ML.
 

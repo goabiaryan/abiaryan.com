@@ -4,9 +4,8 @@ categories:
   - 2023
 tags:
   - LLMOps
-draft: true
-date: 2023-05-15
 ---
+# Introduction to Large Language Models
 **May 15, 2023** 
 
 <sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricwWeegie) for being an excellent collaborator on this article.</sup>

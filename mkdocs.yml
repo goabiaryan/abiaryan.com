@@ -209,7 +209,7 @@ extra_javascript:
 nav:
   - Home: index.md
   # - About: bio\posts\about.md
-  - Posts: 
+  - Posts:
       - Introduction to Large Language Models: posts\intro-llms.md
       - Problems & Challenges in MLOps: posts\mlops-open-problems.md
       - Problems & Challenges in AutoML: posts\automl-problems-2019.md
