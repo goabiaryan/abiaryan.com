@@ -9,6 +9,8 @@ date: 2023-05-15
 ---
 **May 15, 2023** 
 
+<sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricwWeegie) for being an excellent collabotor on this article.</sup>
+
 *This article will explore the concept of LLMs, their architecture, how they work, and their applications. Additionally, the article will also discuss the challenges in building LLMs, including the computational requirements and the ethical implications of using these models.*
 
 ![LLM Evolution](\assets\intro-llms\main.png)
@@ -17,7 +19,7 @@ Large Language Models (LLMs) are machine learning models trained on a massive am
 
 LLMs can be trained using various techniques, such as recurrent neural networks (RNNs), transformer-based models like GPT-4, or other deep learning architectures. The models typically work by being trained in a couple of phases, the first of which involves ‘masking’ different words within sentences so that the model has to learn which words should be correctly imputed or in providing words or sentences and asking the model to correctly predict the next elements of those sequences. Now, the latest LLMs may also incorporate other neural networks as part of the wider system, still often referred to as part of the LLM, which are ‘Reward Models’ (RMs) **[1]** that act to select an outputted response from the core model that aligns best with human feedback. These Reward Models are trained using reinforcement learning with human feedback (RLHF), a process which can require thousands of hours of subject matter experts providing feedback to potential LLM outputs.
 
-# Understanding Large Language Models
+## Understanding Large Language Models
 
 Many traditional language models are statistical models used in NLP that can assign probabilities to items in a sequence of words or tokens in a target language. Consider if we had a language model trained on English, it could then be used to predict the next word in a sentence given the previous words. For example, if we input "I am going to the" into the language model, it may predict the next word as "store" with a high probability. These models can be trained using various techniques, including RNNs, LSTMs, transformers, and others.
 
@@ -29,7 +31,7 @@ These models can generate text that is contextually relevant, coherent, and indi
 
 ![Transformer Models](\assets\intro-llms\LLM_parameters.png)
 
-# Architecture of Large Language Model
+## Architecture of Large Language Model
 
 The architecture of an LLM varies depending on the specific implementation. However, most LLMs use a transformer-based architecture, which is a deep learning architecture that was first introduced in the Attention is All You Need paper in 2017. Transformers have become the dominant architecture for large-scale language models because of their ability to handle long-range dependencies and capture contextual information more effectively. They are also inherently scalable as the processing of different tokens can be achieved in parallel, which has been a key enabler for organisations building these models that are willing to invest in larger compute.
 
@@ -37,7 +39,7 @@ Transformers work by processing a sequence of input tokens (words, characters, e
 
 In addition to self-attention, transformers also use feedforward neural networks to process the representations of each token and generate the final output
 
-# How many parameters does the large language model need to have?
+## How many parameters does the large language model need to have?
 
 The “number of parameters” is usually used as a key comparator between different large language models, but what does this actually mean?  These are essentially the variables that the model uses to learn and make predictions, more specifically the ‘weights’ and ‘biases’ of the trained neural network. These parameters are represented as floating-point numbers stored in matrices, and they capture the knowledge and patterns that the model has learned from the training data.
 
@@ -47,9 +49,9 @@ As mentioned, the term "large language model" has no formal definition, but it g
 
 In summary, the number of parameters in a large language model can vary widely depending on the specific architecture and implementation, but it generally reflects the model's complexity and the amount of data it has been trained on. Models with billions of parameters can achieve impressive performance on a range of language tasks, but training and using them requires significant computational resources.
 
-# Do you really need a large language model?
+## Do you really need a large language model?
 
-The question of whether a large language model (LLM) is necessary provides several points to consider. One point is that LLMs are undertrained, and more data and longer training can improve performance on various tasks. In addition, transformer inference costs are roughly linear with the number of parameters, so smaller models are cheaper to do inference with than larger ones. Scaling to multiple GPUs adds complexity, overhead, and cost, making smaller models more preferable. **To give a concrete example, the training and inferencing with OpenAI’s models required the creation of a 1024 GPU cluster and the development of optimized ML pipelines utilizing parallel computing frameworks like Alpa and Ray[10]**. The development and optimization of compute clusters at this scale is far beyond the reach of most organisations.
+The question of whether a large language model (LLM) is necessary provides several points to consider. One point is that LLMs are undertrained, and more data and longer training can improve performance on various tasks. In addition, transformer inference costs are roughly linear with the number of parameters, so smaller models are cheaper to do inference with than larger ones. Scaling to multiple GPUs adds complexity, overhead, and cost, making smaller models more preferable. To give a concrete example, the training and inferencing with OpenAI’s models required the creation of a 1024 GPU cluster and the development of optimized ML pipelines utilizing parallel computing frameworks like Alpa and Ray**[10]**. The development and optimization of compute clusters at this scale is far beyond the reach of most organisations.
 
 Another bottleneck of LLMs is the data. One approach to generating additional data is using Chain of Thought reasoning, as described in the Huang et al. paper. However, it is important to note that high-quality data really matters, and experiments consistently show that deduplicating data increases performance substantially.
 
@@ -63,7 +65,7 @@ It is worth noting that a model trained on very few tokens might be "compute opt
 
 It is important to consider the trade-offs involved in selecting a large language model, including cost, performance, data quality, and optimal compute.
 
-# How to compress the Large Language Models to get equivalent performance within constrained environments aka smaller devices with less memory and compute limitations?
+## How to compress the Large Language Models to get equivalent performance within constrained environments aka smaller devices with less memory and compute limitations?
 
 As discussed, LLMs require large amounts of computational resources not just for training but also for inferencing.This has led to a challenge of deploying these models on smaller devices such as mobile phones or embedded systems with limited resources.
 
@@ -75,7 +77,7 @@ Another technique is **pruning or sparsity**, which involves removing unnecessar
 
 Overall, model compression techniques are critical for deploying LLMs in constrained environments such as smaller devices with less memory and compute limitations **[8]**. Researchers are continuously exploring new techniques to reduce the size of LLMs while maintaining their performance.
 
-# Applications of Large Language Models
+## Applications of Large Language Models
 
 Although the use of LLMs in production is a relatively new concept, it is becoming clear that LLMs have a wide range of potential applications in NLP and related fields. Some of the most common applications include:
 
@@ -109,4 +111,14 @@ As this post has described, the development of large language models has been an
 9. Transformers are poor generalization models [Mind the Gap: Assessing Temporal Generalization in Neural Language Models (neurips.cc)](https://proceedings.neurips.cc/paper/2021/hash/f5bf0ba0a17ef18f9607774722f5698c-Abstract.html)
 10. GPU Scaling with Alpa And Ray https://opendatascience.com/training-175b-parameter-language-models-at-1000-gpu-scale-with-alpa-and-ray/
 
-<sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricwWeegie) for being an excellent collabotor on this blogpost.</sup>
+## Citation
+```
+  @article{abi2023,
+  title = "Introduction to Large Language Models",
+  author= "Aryan, Abi; McMahon, Andy",
+  journal = "abiaryan.com"
+  year = "2023"
+  month = "May"
+  url = "https://abiaryan.com/posts/intro-llms/"
+  }
+```

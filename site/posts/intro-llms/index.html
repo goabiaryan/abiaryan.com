@@ -344,12 +344,101 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction to Large Language Models
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         Introduction to Large Language Models
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-large-language-models" class="md-nav__link">
+    Understanding Large Language Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-large-language-model" class="md-nav__link">
+    Architecture of Large Language Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-many-parameters-does-the-large-language-model-need-to-have" class="md-nav__link">
+    How many parameters does the large language model need to have?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-you-really-need-a-large-language-model" class="md-nav__link">
+    Do you really need a large language model?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-compress-the-large-language-models-to-get-equivalent-performance-within-constrained-environments-aka-smaller-devices-with-less-memory-and-compute-limitations" class="md-nav__link">
+    How to compress the Large Language Models to get equivalent performance within constrained environments aka smaller devices with less memory and compute limitations?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications-of-large-language-models" class="md-nav__link">
+    Applications of Large Language Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    Citation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -376,7 +465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../automl-problems-2018/" class="md-nav__link">
+      <a href="../automl-problems-2019/" class="md-nav__link">
         Problems & Challenges in AutoML
       </a>
     </li>
@@ -449,8 +538,83 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#understanding-large-language-models" class="md-nav__link">
+    Understanding Large Language Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-of-large-language-model" class="md-nav__link">
+    Architecture of Large Language Model
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-many-parameters-does-the-large-language-model-need-to-have" class="md-nav__link">
+    How many parameters does the large language model need to have?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#do-you-really-need-a-large-language-model" class="md-nav__link">
+    Do you really need a large language model?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-compress-the-large-language-models-to-get-equivalent-performance-within-constrained-environments-aka-smaller-devices-with-less-memory-and-compute-limitations" class="md-nav__link">
+    How to compress the Large Language Models to get equivalent performance within constrained environments aka smaller devices with less memory and compute limitations?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applications-of-large-language-models" class="md-nav__link">
+    Applications of Large Language Models
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    Conclusion
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
+  
+    <nav class="md-nav" aria-label="References">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    Citation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -478,40 +642,41 @@
 
 
 <p><strong>May 15, 2023</strong> </p>
+<p><sup> * Acknowledgements: I would like to thank my co-author <a href="https://twitter.com/ElectricwWeegie">Andy McMahon</a> for being an excellent collabotor on this article.</sup></p>
 <p><em>This article will explore the concept of LLMs, their architecture, how they work, and their applications. Additionally, the article will also discuss the challenges in building LLMs, including the computational requirements and the ethical implications of using these models.</em></p>
 <p><a class="glightbox" href="\assets\intro-llms\main.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="LLM Evolution" src="\assets\intro-llms\main.png" /></a></p>
 <p>Large Language Models (LLMs) are machine learning models trained on a massive amount of text data to generate human-like text or perform language-related tasks. These models are designed to understand and generate text in a way that mimics human language patterns and structures and can be thought of as the next generation after more traditional natural language processing (NLP) capabilities.</p>
 <p>LLMs can be trained using various techniques, such as recurrent neural networks (RNNs), transformer-based models like GPT-4, or other deep learning architectures. The models typically work by being trained in a couple of phases, the first of which involves ‘masking’ different words within sentences so that the model has to learn which words should be correctly imputed or in providing words or sentences and asking the model to correctly predict the next elements of those sequences. Now, the latest LLMs may also incorporate other neural networks as part of the wider system, still often referred to as part of the LLM, which are ‘Reward Models’ (RMs) <strong>[1]</strong> that act to select an outputted response from the core model that aligns best with human feedback. These Reward Models are trained using reinforcement learning with human feedback (RLHF), a process which can require thousands of hours of subject matter experts providing feedback to potential LLM outputs.</p>
-<h1 id="understanding-large-language-models">Understanding Large Language Models<a class="headerlink" href="#understanding-large-language-models" title="Permanent link">&para;</a></h1>
+<h2 id="understanding-large-language-models">Understanding Large Language Models<a class="headerlink" href="#understanding-large-language-models" title="Permanent link">&para;</a></h2>
 <p>Many traditional language models are statistical models used in NLP that can assign probabilities to items in a sequence of words or tokens in a target language. Consider if we had a language model trained on English, it could then be used to predict the next word in a sentence given the previous words. For example, if we input "I am going to the" into the language model, it may predict the next word as "store" with a high probability. These models can be trained using various techniques, including RNNs, LSTMs, transformers, and others.</p>
 <p>LLMs are a subset of language models that are designed to generate large amounts of human-like text using few-shot learning**[2]**.</p>
 <p><a class="glightbox" href="\assets\intro-llms\LLMs_graph_1.jpeg" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="LLM Training" src="\assets\intro-llms\LLMs_graph_1.jpeg" /></a></p>
 <p>These models can generate text that is contextually relevant, coherent, and indistinguishable from human-generated text. The dramatic increase of performance and the emergence of new capabilities in LLMs as they have been trained on huge amounts of data has led to the term ‘scale is all you need’ becoming a colloquial rule of thumb in some parts of the machine learning community. This is a tongue in cheek reference to the classic ‘Attention is all you need’ paper from Google, but it captures an important phenomenon that has been observed. This idea essentially captures that as we continue to scale to more and more data and larger and larger networks [3], we will continue to see the same sort of performance improvements we have until now. Whether or not these scaling behaviours will plateau is an open research question.</p>
 <p><a class="glightbox" href="\assets\intro-llms\LLM_parameters.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Transformer Models" src="\assets\intro-llms\LLM_parameters.png" /></a></p>
-<h1 id="architecture-of-large-language-model">Architecture of Large Language Model<a class="headerlink" href="#architecture-of-large-language-model" title="Permanent link">&para;</a></h1>
+<h2 id="architecture-of-large-language-model">Architecture of Large Language Model<a class="headerlink" href="#architecture-of-large-language-model" title="Permanent link">&para;</a></h2>
 <p>The architecture of an LLM varies depending on the specific implementation. However, most LLMs use a transformer-based architecture, which is a deep learning architecture that was first introduced in the Attention is All You Need paper in 2017. Transformers have become the dominant architecture for large-scale language models because of their ability to handle long-range dependencies and capture contextual information more effectively. They are also inherently scalable as the processing of different tokens can be achieved in parallel, which has been a key enabler for organisations building these models that are willing to invest in larger compute.</p>
 <p>Transformers work by processing a sequence of input tokens (words, characters, etc.) and computing a representation for each token that captures its meaning in the context of the entire sequence. This is achieved through a mechanism called self-attention, which allows the model to weigh the importance of each token in the sequence when computing its representation. The self-attention mechanism allows the transformer to capture long-range dependencies and to learn context-aware representations of each token.</p>
 <p>In addition to self-attention, transformers also use feedforward neural networks to process the representations of each token and generate the final output</p>
-<h1 id="how-many-parameters-does-the-large-language-model-need-to-have">How many parameters does the large language model need to have?<a class="headerlink" href="#how-many-parameters-does-the-large-language-model-need-to-have" title="Permanent link">&para;</a></h1>
+<h2 id="how-many-parameters-does-the-large-language-model-need-to-have">How many parameters does the large language model need to have?<a class="headerlink" href="#how-many-parameters-does-the-large-language-model-need-to-have" title="Permanent link">&para;</a></h2>
 <p>The “number of parameters” is usually used as a key comparator between different large language models, but what does this actually mean?  These are essentially the variables that the model uses to learn and make predictions, more specifically the ‘weights’ and ‘biases’ of the trained neural network. These parameters are represented as floating-point numbers stored in matrices, and they capture the knowledge and patterns that the model has learned from the training data.</p>
 <p>The number of parameters in a language model is directly related to its complexity and the amount of data it has been trained on. In general, a larger number of parameters allows for more complex patterns to be learned, which can result in better performance on a range of language tasks. However, training larger models also requires more data and computing resources, which can make it challenging to scale up to very large models.</p>
 <p>As mentioned, the term "large language model" has no formal definition, but it generally refers to models with billions of parameters. For example, OpenAI's GPT-3 has 175 billion parameters, which is one of the largest publicly available language models to date. The LLaMA language model family, on the other hand, offers a range of sizes, from 7 billion parameters to 65 billion parameters.Its smaller models claim to match the performance of GPT-3 in terms of output quality and speed, while being able to run on a single high-end consumer GPU.</p>
 <p>In summary, the number of parameters in a large language model can vary widely depending on the specific architecture and implementation, but it generally reflects the model's complexity and the amount of data it has been trained on. Models with billions of parameters can achieve impressive performance on a range of language tasks, but training and using them requires significant computational resources.</p>
-<h1 id="do-you-really-need-a-large-language-model">Do you really need a large language model?<a class="headerlink" href="#do-you-really-need-a-large-language-model" title="Permanent link">&para;</a></h1>
-<p>The question of whether a large language model (LLM) is necessary provides several points to consider. One point is that LLMs are undertrained, and more data and longer training can improve performance on various tasks. In addition, transformer inference costs are roughly linear with the number of parameters, so smaller models are cheaper to do inference with than larger ones. Scaling to multiple GPUs adds complexity, overhead, and cost, making smaller models more preferable. <strong>To give a concrete example, the training and inferencing with OpenAI’s models required the creation of a 1024 GPU cluster and the development of optimized ML pipelines utilizing parallel computing frameworks like Alpa and Ray[10]</strong>. The development and optimization of compute clusters at this scale is far beyond the reach of most organisations.</p>
+<h2 id="do-you-really-need-a-large-language-model">Do you really need a large language model?<a class="headerlink" href="#do-you-really-need-a-large-language-model" title="Permanent link">&para;</a></h2>
+<p>The question of whether a large language model (LLM) is necessary provides several points to consider. One point is that LLMs are undertrained, and more data and longer training can improve performance on various tasks. In addition, transformer inference costs are roughly linear with the number of parameters, so smaller models are cheaper to do inference with than larger ones. Scaling to multiple GPUs adds complexity, overhead, and cost, making smaller models more preferable. To give a concrete example, the training and inferencing with OpenAI’s models required the creation of a 1024 GPU cluster and the development of optimized ML pipelines utilizing parallel computing frameworks like Alpa and Ray**[10]**. The development and optimization of compute clusters at this scale is far beyond the reach of most organisations.</p>
 <p>Another bottleneck of LLMs is the data. One approach to generating additional data is using Chain of Thought reasoning, as described in the Huang et al. paper. However, it is important to note that high-quality data really matters, and experiments consistently show that deduplicating data increases performance substantially.</p>
 <p>The access to high quality data has been called out as a potential factor that will lead to a plateau in the progress of LLMs and that may break the ‘scale is all you need’ paradigm. The challenge is that after you have already trained on the majority of available corpora, not enough new high quality data is being generated to feed into newer, larger models. In fact, <a href="https://arxiv.org/abs/2211.04325">Villalobos et al</a> suggest we will run out of high quality language data, defined to include books, scientific articles, Wikipedia and some other filtered web content, as soon as 2026. There have also been discussions around the potential pollution of the available data pool with LLM generated content, so that a feedback cycle ensues where LLM outputs are fed in as inputs. This could lead to an increase in negative effects like hallucinations.</p>
 <p>Additionally, it is hard to reverse engineer the compute optimal without over-training the model. The Chinchilla paper <strong>[4]</strong> attempts to identify the optimal model size and number of tokens to train a LLM given a particular compute budget.</p>
 <p>It is worth noting that a model trained on very few tokens might be "compute optimal," but it is not ideal for applications. Overall, <strong>speculative sampling</strong> may be a promising research direction for optimizing compute in large language model decoding. The key idea behind speculative sampling is to introduce randomness during the generation process to explore alternative possibilities and improve the diversity and quality of the generated samples. In traditional sampling methods, such as greedy sampling, the model generates samples by choosing the most likely output at each step.Speculative sampling aims to overcome this limitation by introducing controlled randomness during the sampling process. Instead of selecting the most likely output at each step, the model considers multiple possibilities and samples from a probability distribution. This distribution is typically derived from the output probabilities predicted by the model. By incorporating randomness, speculative sampling <strong>[5]</strong> encourages the model to explore alternative paths and produce more diverse samples. It allows the model to consider lower-probability outputs that might still be interesting or valuable. This helps to capture a wider range of possibilities and generate outputs that go beyond the typical, more probable samples.</p>
 <p><strong>One common approach to speculative sampling is known as temperature scaling.</strong> The temperature parameter controls the level of randomness in the sampling process. Higher temperatures increase randomness, allowing the model to consider a broader range of possibilities. Lower temperatures make the sampling process more focused and deterministic, favoring the most probable outputs.</p>
 <p>It is important to consider the trade-offs involved in selecting a large language model, including cost, performance, data quality, and optimal compute.</p>
-<h1 id="how-to-compress-the-large-language-models-to-get-equivalent-performance-within-constrained-environments-aka-smaller-devices-with-less-memory-and-compute-limitations">How to compress the Large Language Models to get equivalent performance within constrained environments aka smaller devices with less memory and compute limitations?<a class="headerlink" href="#how-to-compress-the-large-language-models-to-get-equivalent-performance-within-constrained-environments-aka-smaller-devices-with-less-memory-and-compute-limitations" title="Permanent link">&para;</a></h1>
+<h2 id="how-to-compress-the-large-language-models-to-get-equivalent-performance-within-constrained-environments-aka-smaller-devices-with-less-memory-and-compute-limitations">How to compress the Large Language Models to get equivalent performance within constrained environments aka smaller devices with less memory and compute limitations?<a class="headerlink" href="#how-to-compress-the-large-language-models-to-get-equivalent-performance-within-constrained-environments-aka-smaller-devices-with-less-memory-and-compute-limitations" title="Permanent link">&para;</a></h2>
 <p>As discussed, LLMs require large amounts of computational resources not just for training but also for inferencing.This has led to a challenge of deploying these models on smaller devices such as mobile phones or embedded systems with limited resources.</p>
 <p>To overcome this challenge, researchers have developed various model compression techniques to reduce the size of LLMs while maintaining their performance. One such technique is <strong>quantization [7]</strong>, which reduces the number of bits used to represent weights and activations in the model. For example, instead of using 32 bits to represent a weight value, quantization can reduce it to 8 bits, resulting in a smaller model size. Post-training quantization (PTQ) is one of the most popular techniques used to compress LLMs. It involves training the model with high precision and then quantizing the weights and activations to lower precision during the inference phase. This allows for a smaller model size while maintaining high performance. As quantization represents model parameters with lower-bit integer (e.g., int8), the model size and runtime latency would both benefit from such int representation. One significant example would be LLaMA.cpp that can run the inference of a LLaMa model with 4-bit quantization. This means that it can run Meta’s new GPT-3-class AI large language model on your laptop, phone, and Raspberry Pi.</p>
 <p>Another technique is <strong>pruning or sparsity</strong>, which involves removing unnecessary connections or weights from the model. This reduces the number of parameters in the model and makes it more compact. Distillation is another technique where a smaller model is trained to mimic the behavior of a larger model. This allows for the smaller model to perform well while requiring less memory and compute resources.</p>
 <p><strong>Neural architecture search (NAS)</strong> is another technique that involves searching for the optimal architecture for a given task. This allows for the creation of a smaller and more efficient model that performs well on the specific task.</p>
 <p>Overall, model compression techniques are critical for deploying LLMs in constrained environments such as smaller devices with less memory and compute limitations <strong>[8]</strong>. Researchers are continuously exploring new techniques to reduce the size of LLMs while maintaining their performance.</p>
-<h1 id="applications-of-large-language-models">Applications of Large Language Models<a class="headerlink" href="#applications-of-large-language-models" title="Permanent link">&para;</a></h1>
+<h2 id="applications-of-large-language-models">Applications of Large Language Models<a class="headerlink" href="#applications-of-large-language-models" title="Permanent link">&para;</a></h2>
 <p>Although the use of LLMs in production is a relatively new concept, it is becoming clear that LLMs have a wide range of potential applications in NLP and related fields. Some of the most common applications include:</p>
 <ol>
 <li>Language Generation: LLMs can generate contextually relevant and coherent text in response to a prompt or a question. This has led to the development of language generation applications, such as chatbots and virtual assistants, that can interact with users in natural language.</li>
@@ -542,7 +707,16 @@
 <li>Transformers are poor generalization models <a href="https://proceedings.neurips.cc/paper/2021/hash/f5bf0ba0a17ef18f9607774722f5698c-Abstract.html">Mind the Gap: Assessing Temporal Generalization in Neural Language Models (neurips.cc)</a></li>
 <li>GPU Scaling with Alpa And Ray <a href="https://opendatascience.com/training-175b-parameter-language-models-at-1000-gpu-scale-with-alpa-and-ray/">https://opendatascience.com/training-175b-parameter-language-models-at-1000-gpu-scale-with-alpa-and-ray/</a></li>
 </ol>
-<p><sup> * Acknowledgements: I would like to thank my co-author <a href="https://twitter.com/ElectricwWeegie">Andy McMahon</a> for being an excellent collabotor on this blogpost.</sup></p>
+<h2 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  @article{abi2023,
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  title = &quot;Introduction to Large Language Models&quot;,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  author= &quot;Aryan, Abi; McMahon, Andy&quot;,
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  journal = &quot;abiaryan.com&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  year = &quot;2023&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  month = &quot;May&quot;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  url = &quot;https://abiaryan.com/posts/intro-llms/&quot;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  }
+</code></pre></div>
 
 
   

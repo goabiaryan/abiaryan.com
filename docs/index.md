@@ -45,8 +45,9 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ## Social Calendar
 ??? Past
-    ##  Past
-    ### 2023
+    ###  Past
+
+    #### 2023
     - **May 4** - Speaker at [LLMs Demsytified](https://www.linkedin.com/events/llmsdemsytifiedwithchris-abi7057602763823730688/comments/) Webinar with Chris Brousseau, Data Scientist at MasterCard
     - **April 26** - Speaker at [Large Language Models in Production](https://twitter.com/i/spaces/1BRKjZelnOpKw?s=20) Twitter Spaces with  [Christine Yuen, Co-Founder and Head of Engineering at Shakudo.io](https://ca.linkedin.com/in/christinestyuen), hosted by Sabrina Aquino
     - Co-Host MLOps Community Podcast talking about 
@@ -58,26 +59,30 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
         - PeopleOps in MLOps with [Shalabh Chaudri, Head of Customer Success, Union AI](https://open.spotify.com/episode/6K7hmNdHvzEx77PYpq1t19?si=e6594f736f784256)
         - ML in Production with [ Jean-Michel Daignan, Data Scientist at Ubisoft](https://open.spotify.com/episode/085vGI7g6SBqgu82WVNuqw?si=4390561d7db24446)
         - Multilingual Programming with [Rodolfo Núñez, Senior Machine Learning Engineer at Entel](https://open.spotify.com/episode/1iLJOngdnmOw6V5khEl22W?si=8f3127dbcbad40b0)
-    ### 2022
+
+    #### 2022
     - Co-Host MLOps Community Podcast talking about 
         - Foundational models with [Alex Ratner, Founder and CEO of Snorkel](https://open.spotify.com/episode/1KfAvI1Je3ZCNstpSDSH5u?si=f4aeca7c7a4845f8)
         - Managing Machine Learning Projects with [Simon Thompson, Head of Data Science, GFT Technologies](https://open.spotify.com/episode/1M6DdaoQ61CQrx52bTisGv?si=9c2d8bd478524cd6)
         - HCI for MLOps Infra Companies with [Murtuza Shergadwala, Senior Data Scientist, Fidder.ai](https://open.spotify.com/episode/1fpQFtk8NVgRJPhJVX8jhu?si=0ce2a2dffbd04136)
         - What is MLOps with [Niklas Kühl, Managing Consultant for Data Science at IBM](https://open.spotify.com/episode/75GBfKNBPrYKwL4zEon1sI?si=a02874b9b38c4da6)
-    ### 2021
+
+    #### 2021
     - March: Delivered a workshop on Full Stack Deep Learning at Women Who Code Los Angeles
     - *Hundred other Women Who Code London, LA, SF, NYC events through 2016 - 2021 that I don't remember at the moment, ha!*
-    ### 2020
+
+    #### 2020
     - August: Presented a technical workshop on Natural Language Processing (NLP) Hands On! at MLNerdie Los Angeles
-    ### 2018
+
+    #### 2018
     - Delivered a workshop on [A Hands-On Application of Causal Methods in Python](https://pydata.org/la2018/schedule/presentation/10/) at PyData Los Angeles
     - Presented a talk on [Big Problems at the Heart of Machine Learning](https://pydata.org/la2018/schedule/presentation/38/) at PyData Los Angeles
 
-## Upcoming 
+### Upcoming 
 
-### June 2023
+#### June 2023
 - June 15 - Moderating the panel on **LLM Evaluations** at LLMs in Production Conference II by MLOps.Community
-### July 2023
+#### July 2023
 - July 6 - Talking about **Fune-Tuning for LLMs** at What's  the BUZZ? with Andreas Welsch
 - July 7 - Talking about **Data and MLOps** at Women in Data Podcast
 - July 7 - Presenting our research paper on **Cost Modelling for LLMs** at LLM Projects Workshop

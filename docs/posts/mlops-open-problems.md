@@ -54,7 +54,19 @@ It truly needs an army, some in-house (DE/MLE) and some outsourced to the A.I. t
 
 I am working on a longer blog-post of the same for MLOps.Community - to recieve it when it goes out first subscribe to my [Substack](https://datadrivenbabe.substack.com/). It's free. I send out one letter a month exclusively on MLOps.
 
-### Some Papers in MLOps (as of Dec 2022)
+### Citation
+```
+  @article{abi2022,
+  title = "Problems & Challenges in MLOps",
+  author= "Aryan, Abi",
+  journal = "abiaryan.com"
+  year = "2022"
+  month = "Dec"
+  url = "https://abiaryan.com/posts/mlops-open-problems/"
+  }
+```
+
+#### Key Papers in MLOps (as of Dec 2022)
 
 Some more MLOps papers 📜 you may find interesting to read a little further into the best practices and challenges with machine learning models deployed in production.
 
@@ -76,7 +88,7 @@ Some more MLOps papers 📜 you may find interesting to read a little further in
 8. Last but not the least, is [Towards Accountability for Machine Learning Datasets: Practices from Software Engineering and Infrastructure](https://dl.acm.org/doi/abs/10.1145/3442188.3445918). It proposes a rigorous framework for dataset development transparency that supports decision-making and accountability.
 
 
-### Some Papers in MLOps (as of Oct 2022)
+#### Key Papers in MLOps (as of Oct 2022)
 
 1. The top one would be [Machine Learning: The High-Interest Credit Card of Technical Debt by D. Sculley et al](https://research.google/pubs/pub43146/). We invited him as a guest on our MLOps Community podcast (Spotify/iTunes) Episode #32 - def worth listening to! 
 

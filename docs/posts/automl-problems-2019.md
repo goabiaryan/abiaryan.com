@@ -10,6 +10,10 @@ date: 2019-03-16
 ---
 **March 16, 2019**
 
+<sup> 
+Article based on the research paper Problems & Challenges in AutoML, 2019. I would like to thank my co-author [Shubhi Sareen](https://twitter.com/shubhi_sareen) for being an excellent research collabotor through this research.
+</sup>
+
 The constantly growing amount and complexity of data involved in brain studies makes manual parameterization of data processing and modelling algorithms a tedious and time-consuming task. One of the key focuses for the machine learning community has been to develop autonomous agents, by automating the entire production pipeline for selecting and training the learning algorithms, so as to take humans out of the loop. This automation has several benefits including reducing human effort and the associated time cost involved, improving the performance of these algorithms by tailoring them to the problem at hand, reducing human induced bias as well as improving the improving the reproducibility and fairness of the scientific studie s. In this paper, we will be discussing some of the key problems and challenges in AutoML. Our survey will cover central algorithms in AutoML including NAS, etc. In parallel, we also highlight the unique advantages of deep neural network, focusing on developing algorithms that can generalize of different tasks via AutoML. To conclude, we describe several current areas of research within the field.
 
 While neural networks were not the first choice for designing machine intelligence, it was in 2012 that neural networks began outperforming competing techniques for tasks that required complex feature engineering [Hinton, Sutskever 2012]. This advent of deep learning has had a significant impact on many areas in machine learning, dramatically improving the state-of-the-art in tasks such as object detection, speech recognition, and language translation.
@@ -65,7 +69,7 @@ While one possible direction post this could be extending the framework to suppo
 
 Introduced in 2015, Auto-sklearn approached the problem by taking into account past performance on similar datasets, or constructing ensembles from the models evaluated during the optimization. While budget and computational power being the obvious constraints for such methods, one not-so-obvious limitation is that testing hundreds of hyperparameter optimization configuration increases the risk of overfitting to the validation set. 
 
-![Bayesian Machine Learning](\machine-learning\assets\automl\bayesian.png)
+![Bayesian Machine Learning](\assets\automl\bayesian.png)
 
 Aside from this, several incremental developments have been made in the field of architecture selection, hyperparameter optimization and meta-learning using both gradient based as well as gradient-free methods. 
 
@@ -76,7 +80,7 @@ The most intuitive gradient-free technique is random search i.e. randomly search
 ##### Gradient Based Techniques
 In the past few years, deep learning methods have shown immense potential in the area of AutoML. One such key project is Auto-Net which uses Bayesian Optimization method SMAC and the deep learning library Lasagne, later followed by Auto-Net 2.0 that uses a combination of Bayesian Optimization and HyperBand, called BHOB, and uses PyTorch as the key deep learning library. Auto-Net provides automatically-tuned feed-forward neural networks without any human intervention. BHOB uses repeated runs of successive halving to invest most runtime in promising neural networks and stops training neural networks with poor performance early and using kernel density estimator to describe regions of high performance in the space of neural network. One of its key advantages is that this method is highly parallelizable achieving almost linear speedups with an increasing number of workers. Auto-Net performance on three different datasets -
 
-![AutoNet](\machine-learning\assets\automl\autonet.png)
+![AutoNet](\assets\automl\autonet.png)
 
 As observed, AutoNet performs best twice and comparatively well for yolanda as well. As the No Free Lunch theorem goes, any one algorithm that searches for an optimal cost or fitness solution is not universally superior to any other algorithm given that we are optimizing for fit on a limited class of problems thus it may or may not generalize in an infinite possibilities dataset. Thus gradient based neural networks started to focus on building a model from existing class of models instead of random search on a particular number of configurations.  In 2016, the focus shifted from searching within specified parameters to instead the use of modular approach to find the best model and combination of hyperparameters.
 
@@ -103,7 +107,7 @@ One of the key advantages of Bayesian Optimization framework is that it can be a
 
 If f is cheap to evaluate we could sample at many points e.g. via grid search, random search or numeric gradient estimation. However, if function evaluation is expensive e.g. tuning hyperparameters of a deep neural network, probe drilling for oil at given geographic coordinates or evaluating the effectiveness of a drug candidate taken from a chemical search space then it is important to minimize the number of samples drawn from the black box function f. This is the domain where Bayesian optimization techniques are most useful. They attempt to find the global optimum in a minimum number of steps. A popular surrogate model for Bayesian optimization are Gaussian processes (GPs). The success of these methods has led to the discovery and development of several acquisition functions including Thompson Sampling, Probability of Improvement, Expected Improvement, Upper Confidence Bounds, Entropy Search etc. These acquisition functions trade off exploration and exploitation such that their optima is located where the uncertainty in the surrogate model is large (exploration) and/or the prediction is high (exploitation). 
 
-![Bayesian Method](\machine-learning\assets\automl\bayesian_algo.png)
+![Bayesian Method](\assets\automl\bayesian_algo.png)
 
 In terms of AutoML, it has been proved through various experiments that often the careful choice of statistical model is often far more important than the choice of acquisition functions. While Bayesian Optimization is already one of the preferred methods for combinatorial search spaces and policy search for both parametric as well as non-parametric models, one of the major applications in AutoML has been the exploration of Bayesian Optimization for Automating Hyperparameter Tuning. In architectural search spaces, Bayesian Optimization methods have received great attention in tuning deep belief networks, Markov Chain Monte Carlo Methods (MCMC), Convolutional Neural Networks and its application in one of the most primitive neural architecture search methods such as SMAC, Auto-SkLearn, AutoWeka, BHOB, REMBO etc.
 
@@ -139,11 +143,11 @@ The key idea here is to use a neural network to learn the gradient descent updat
 
 A reinforcement learning problem is typically formally represented as an Markov decision process(MDP). We consider a finite-horizon MDP with continuous state and action spaces defined by the tuple (S,A,p0,p,c,$\gamma$), where S is the set of states, A is the set of actions, $p0:S \rightarrow R+$ is the probability density over initial states, $p:S \times A \times S \rightarrow R+$ is the transition probability density, that is, the conditional probability density over successor states given the current state and action, $c:S \rightarrow R$ is a function that maps state to cost and $\gamma \in (0,1]$ is the discount factor.The objective is to learn a stochastic policy $\Pi^*$: $S \times A \rightarrow R+ $, which is a conditional probability density over actions given the current state, such that the expected cumulative cost is minimized. That is,
 
-![Reinforcement Learning](\machine-learning\assets\automl\rl_cum.png)
+![Reinforcement Learning](\assets\automl\rl_cum.png)
 
 where the expectation is taken with respect to the joint distribution over the sequence of states and actions, often referred to as a trajectory, which has the density 
 
-![Density](\machine-learning\assets\automl\rl_density.png)
+![Density](\assets\automl\rl_density.png)
 
 This problem of finding the cost-minimizing policy is known as the policy search problem. To enable generalization to unseen states, the policy is typically parameterized and minimization is performed over representable policies. Solving this problem exactly is intractable in all but selected special cases. Therefore, policy search methods generally tackle this problem by solving it approximately.In many practical settings,p, which characterizes the dynamics, is unknown and must therefore be estimated. Additionally, because it is often equally important to minimize cost at earlier and later time steps, we will henceforth focus on the undiscounted setting, i.e. the setting where $\gamma$= 1.
 
@@ -236,7 +240,7 @@ Deep neural networks tend to perform better than the shallow networks, but is it
     
 In other words, the NFLT states that no black box strategy is superior to another one. Another point to consider is the tradeoff between generality and specificity of an approach.
 
-![NLFT](\machine-learning\assets\automl\nlft.png)
+![NLFT](\assets\automl\nlft.png)
 
 The need for defining interpretability arises from the gap between objectives in a supervised learning environment and the actual deployment costs. The training procedure only requires the predicted and actual labels for optimization. The problem arises when the real world problem cannot be translated into a mathematical function or because of the difference between the deployment and training settings. Interpretations thus cater to the important but difficult to formalize objectives. The objectives of interpretability are:
 
@@ -325,4 +329,14 @@ Linear models like Linear Regression and Logistic Regression are inherently inte
 
 Model agnostic methods focus on developing stand-alone techniques to interpret the results of a machine learning model. The model is treated as a black box, whose parameters, weights or even architecture is unknown. Certain types of agnostic methods try to model the relationship between the features and the output of the ML model. These methods are easily understandable and intuitive to human beings. However, these methods rely on the assumption of independence among the input features, which is not true for many real world scenarios. Another class of methods focuses on the input features. These methods include the study the meaningful but computationally expensive interaction among the features or studying how the model error changes with permutation in the input feature values. The latter method provides a global overview of the model, but is prone to outliers. The third class of model agnostic methods comprise of surrogate models. The global surrogate method uses the predictions of a black box model for the input data to train an inherently interpretable model, which is then used to carry out the interpretability study. The Local Surrogate Method (LIME) generates permuted data samples for the sample of interest, along with the black-box model’s outcomes for these new data points. It then trains an interpretable model over this newly generate dataset where each input sample’s weight is based upon its distance from the original sample. These methods are flexible and can be used over any type of dataset. However the performance of these methods depend upon the choice and performance of the surrogate interpretable models.    
 
-<sup> * Acknowledgements: I would like to thank my co-author [Shubhi Sareen](https://twitter.com/shubhi_sareen) for being an excellent research collabotor through this research.</sup>
+### Citation
+```
+  @article{abi2019,
+  title = "Problems & Challenges in AutoML",
+  author= "Aryan, Abi; Sareen, Shubhi",
+  journal = "abiaryan.com"
+  year = "2019"
+  month = "Mar"
+  url = "https://abiaryan.com/posts/automl-problems-2019/"
+  }
+```

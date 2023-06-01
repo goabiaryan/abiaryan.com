@@ -212,7 +212,7 @@ nav:
   - Posts: 
       - Introduction to Large Language Models: posts\intro-llms.md
       - Problems & Challenges in MLOps: posts\mlops-open-problems.md
-      - Problems & Challenges in AutoML: posts\automl-problems-2018.md
+      - Problems & Challenges in AutoML: posts\automl-problems-2019.md
       - Developing A.I. using Games: posts\game-ai.md
       - Why TensorLayer?: posts\why-tensorlayer.md
       - Dense Associative Memory for Pattern Recognition: posts\associative-memory.md   

@@ -96,3 +96,5 @@ Citations:
 2. [TensorLayer Documentation](https://tensorlayer.readthedocs.io/en/latest/index.html)
 3. [What Is TensorLayer And How Is It Different From TensorFlow’s Other Machine Learning Libraries?](https://analyticsindiamag.com/what-is-tensorlayer-and-how-is-it-different-from-tensorflows-other-machine-learning-libraries/)
 4. [Presenting TensorLayer for Researchers and Engineers: A transparent Deep Learning and Reinforcement Learning Library](https://www.techleer.com/articles/503-presenting-tensorlayer-for-researchers-and-engineers-a-transparent-deep-learning-and-reinforcement-learning-library/)
+
+<sup> I would like to thank TFLayer creators Hao Dong, Luo Mai,Johanthan Dekhtiar, and LG for the review.</sup>
