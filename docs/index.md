@@ -38,7 +38,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 - **Mar 2016 -Aug 2021** Director, Women Who Code Los Angeles
 
 ## Upcoming Projects
-- 👩‍💻 **Building Autonomous Goal-Based Agents for Multi-modal Data** - BolkayAI
+- 👩‍💻 **Building Autonomous Goal-Based Agents for Multi-Modal Data** - BolkayAI
 - 📜 Research Paper, **Cost Modelling for LLMs in enterprise** (EMNLP 2023 Submission)
 - 📝 Article, **LLM Evaluation: A Moving Target** (currently in review)
 - 📝 Article, **To Prompt or Not** (currently in review)
