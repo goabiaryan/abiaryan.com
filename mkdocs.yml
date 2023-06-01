@@ -51,10 +51,11 @@ plugins:
   - search
   - glightbox
   - external-markdown
+  # - mkdocs-blogging-plugin
   - tags:
       tags_file: tags.md
-  - git-revision-date-localized:
-      enable_creation_date: true
+  # - git-revision-date-localized:
+  #     enable_creation_date: true
 
   # - redirects:
   #     redirect_maps:
@@ -83,8 +84,8 @@ extra:
       link: https://datadrivenbabe.substack.com/
     # - icon: fontawesome/brands/gitter
     #   link: https://gitter.im/squidfunk/mkdocs-material
-    - icon: fontawesome/brands/mastodon
-      link: https://masto.ai/@abi
+    # - icon: fontawesome/brands/mastodon
+    #   link: https://masto.ai/@abi
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/goabiaryan
     - icon: fontawesome/brands/linkedin
@@ -99,7 +100,7 @@ extra:
 
 # Extensions
 markdown_extensions:
-  - mdx_truly_sane_lists
+  # - mdx_truly_sane_lists
   - admonition
   - abbr
   - attr_list
@@ -206,18 +207,18 @@ extra_javascript:
 #       - Installation: insiders/getting-started.md
 #       - Changelog: insiders/changelog.md
 nav:
-  - About: index.md
-  - Podcast: podcast\posts\legal-tech.md
-  - MLOps:
-      - Open Problems in MLOps: ml-engineering\posts\mlops-open-problems.md
-      - Why TensorLayer?: ml-engineering/posts/2019-05-10-why-tensorlayer.md
-  - Theoretical ML:
-      - Developing A.I. using Games: machine-learning/posts/2019-09-09-game-ai.md
-      - Dense Associative Memory for Pattern Recognition: machine-learning/posts/2017-09-10-associative-memory.md   
-      - AutoML - An Overview: machine-learning\posts\automl-problems-2018.md    
-  - Fun Zone:
-      - News: fun-zone/posts/news.md
-      - Books I am Reading: fun-zone/posts/reading.md
-  - Archive:
-      - Sections: tags.md
+  - Home: index.md
+  # - About: bio\posts\about.md
+  - Posts: 
+      - Introduction to Large Language Models: posts\intro-llms.md
+      - Problems & Challenges in MLOps: posts\mlops-open-problems.md
+      - Problems & Challenges in AutoML: posts\automl-problems-2018.md
+      - Developing A.I. using Games: posts\game-ai.md
+      - Why TensorLayer?: posts\why-tensorlayer.md
+      - Dense Associative Memory for Pattern Recognition: posts\associative-memory.md   
+
+  # - Speaking: 
+    # podcast\posts\legal-tech.md
+      # - News: fun-zone/posts/news.md
+      # - Books I am Reading: fun-zone/posts/reading.md
 

@@ -1,61 +1,62 @@
 ![abi](\full-abi.png){: .center}
 
-My name is Abi. I am a Computer Scientist working extensively in machine learning to make the software systems smarter. Over the past six years, my focus has been building machine learning models for various applications including recommendation systems, voice-tech, geopositional apps etc. 
+Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. Over the past seven years, my focus has been building machine learning models for various applications including recommendation systems, voice-tech, geo-positional apps etc. 
 
-Prior to that, I also attended [Insight](https://insightfellows.com/data-science) in Toronto as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition. At school, I majored in mathematics with minors in statistics and computer science with some finance and mangement courses loosely sprinkled in.
+In the past, I also attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
 
-I am deeply fascinated by deep tech and its applications in various industries. To that end, I have been lucky enough to be a VC Fellow with [Laconia Capital.](https://www.laconiacapitalgroup.com/) deepening my expertise in private-equity, fund-raising and due-diligence for AI/ML startups. I am also passionate about communities and helping self-taught engineers get into technical careers. In my free time, you would find me working behind the scenes obsessing over content strategy and analytics at the [MLOps Community](https://mlops.community/). I do also occassionally appear as a co-host on some of the podcast episodes - talking about Foundational models with [Alex Ratner, Founder and CEO of Snorkel](https://www.youtube.com/watch?v=QGl8A7vgq7A), Managing Machine Learning Projects with [Simon Thompson, Head of Data Science, GFT Technologies](https://www.youtube.com/watch?v=FlFqElO6LWk), HCI for MLOps Infra Companies with [Murtuza Shergadwala, Senior Data Scientist, Fidder.ai](https://www.youtube.com/watch?v=MF98m1uFRqA&t=0s), What is MLOps with [Niklas Kühl, Managing Consultant for Data Science at IBM](https://www.youtube.com/watch?v=FgaKl5XsuMc) and many more. 
+✍️ I am also currently authoring **LLMOps:Managing Large Language Models in Production** book for O'Reilley Publications and an **MLOps: Deploying ML models in production** course with Educative for data scientists to learn fundamentals of data engineering and how to deploy machine learning models in production.
 
-*On another note*, I am also working on some self-study courses that I wish were there when I was starting out. As someone who has taught python and machine learning at over 40 events for Women Who Code, WiMLDS and PyData conferences, I have often felt that software engineers tend to make simple things un-necessarily hard with unintuitive terminologies. As a self-taught programmer, it took me years to figure the best frameworks to learn anything quickly and build a unique learning style that spoke to my dopamine-hungry brain. Tying technical concepts with fun story-telling and intuitive analogies, I am now slowly trying to package my hard-learnt lessons and learnings into courses that would allow more people to have the power to make cool things to solve real-world problems by breaking down initimidating concepts into simple, easy-to-follow and obvious explanations.
+## Publications
+[Arena: A General Evaluation Platform and Building Toolkit for Multi-Agent Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/6216), *Accepted for poster presentation at AAAI 2020*
 
-<!-- I am currently working on an **MLOps Course: Deploying ML Models in Production** with an edu-tech platform. 
+[Problems & Challenges in AutoML](posts/automl-problems-2018/), 2019
 
-??? Note
-    What is MLOps? I've asked this question to over 100 DS, DE, and MLEs out there. 
-    
-    😌 Conclusion:
-    
-    🖊️MLOps is a best-practices engineering framework that combines #ML, #DevOps, and #DataEngineering, to deploy and maintain ML systems in production reliably and efficiently. 
-    
-    😕 And why should you care? 
-    
-    You shouldn't 😤
+## Top Tweets
+- [My Review of FrugalGPT Paper](https://twitter.com/GoAbiAryan/status/1657033209329209348?s=20)
 
-    ⁉️ unless... 🤔
+- [My Review from Palm 2 paper](https://twitter.com/GoAbiAryan/status/1656650856140537858?s=20)
 
-    ❗️ you believe machine learning is going to revolutionize your industry and you want to be at the helm of that development.
+- [My Top 10 MLOps Papers](https://twitter.com/GoAbiAryan/status/1580852750526468097?s=20)
 
-    Plz explain 🧠
-    
-    1. Adopting MLOps practices gives you faster time-to-market for ML projects deployed at scale.
-    2. To ensure that ML models are consistent and all business requirements are met at scale; a logical, easy-to-follow policy for data and model management is essential ∴ MLOps🤷
+- [My Top 10 Data Engineering Papers](https://twitter.com/GoAbiAryan/status/1629151405125812225?s=20)
 
-    What do you need to know to get started? 🏎️
+## Volunteering
+- **October 2023** Invited Reviewer for NeurIPS Workshop: I (Still) Can't Believe It's Not Better
 
-    1. Machine Learning
-    2. Fundamentals of Software Engineering
-    3. DevOps
-    4. Data Engineering
-    5. System Design
+- **March 2023** Invited Reviewer | Fifth Symposium on Advances in Approximate Bayesian Inference (AABI 2023)
 
-    .. you don't need to know all of it to get started ⏳ BUT you need a combination of at least three of the five to be successful 🍻
+- **September 2022** Proposal Reviewer, PyData NYC
 
-Here are some snippets from the Table of Contents:
+- **September 2021** Invited Reviewer for NeurIPS Workshop: I (Still) Can't Believe It's Not Better
 
-![MLOps Course](/canvas.png){: .center}
+- **August 2021** Research Mentor | Association for Computational Linguistics
 
-*While a registration link isn't available until the full course material is ready for publishing*, but if you are already on my substack, you'll be the first to know when it releases:) -->
+- **November 2018** Area Chair - AutoML | NeurIPS 2018
 
-**I am best reached via [email](mailto: abi@abiaryan.com). I’m always open to interesting conversations and collaboration.**
+- **May 2018 - Sep 2018** Organising Committee Co-Chair, Pydata Los Angeles
 
-I am, foremost, driven by the goal to create personalized humane-agents that can influence and alter human decision making, but subsconsciously, also the nagging desire to leave the world a slightly better place than I found it. A tad bit geeky and a gadget lover at heart, I am equally fascinated by large-scale engineering application design as well as low level computer hardware engineering including microprocessors, crafting compilers, integrated chip design etc.
+- **Mar 2016 -Aug 2021** Director, Women Who Code Los Angeles
 
-##### Interested in hearing about Data Infrastructure, ML Systems, and new startups/research papers/tools in the MLOps space?
+## Upcoming Projects
+- 👩‍💻 **Building Autonomous Goal-Based Agents for Multi-modal Data** - BolkayAI
+- 📜 Research Paper, **Cost Modelling for LLMs in enterprise** (EMNLP 2023 Submission)
+- 📝 Article, **LLM Evaluation: A Moving Target** (currently in review)
+- 📝 Article, **To Prompt or Not** (currently in review)
 
-I send out Data Driven Babe. Feel free to sub. No spamming. Just one letter a month.
+## Social Calendar
+![May-June 2023](\assets\Social Calendar.png)
+
+<!-- and an independent consultant with over 7 years of experience in the industry where I've worked  in machine learning infrastructure design and model development, integration and deployment at scale for recommender systems, computer vision, natural language processing as well as audio-speech synthesis. You can book my services [here](https://topmate.io/goabiaryan) -->
+
+
+
+
+<!-- ##### Interested in hearing about Data Infrastructure, ML Systems, and new startups/research papers/tools in the MLOps space? -->
+
+<!-- I send out Data Driven Babe. Feel free to sub. No spamming. Just one letter a month. -->
 
 <!-- [Subscribe to my newsletter](datadrivenbabe.substack.com){ .md-button .md-button--primary } -->
 
-<iframe src="https://datadrivenbabe.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:black;" frameborder="10" scrolling="no"></iframe>
+<!-- <iframe src="https://datadrivenbabe.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:black;" frameborder="10" scrolling="no"></iframe> -->
 
-This month's newsletter will be about Building Reliable Data Pipelines. 
+<!-- This month's newsletter will be about Building Reliable Data Pipelines.  -->
