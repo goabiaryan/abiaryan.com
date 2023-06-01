@@ -29,7 +29,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 - **September 2021** Invited Reviewer for NeurIPS Workshop: I (Still) Can't Believe It's Not Better
 
-- **August 2021** Research Mentor | Association for Computational Linguistics
+- **August 2021** Research Mentorship | Association for Computational Linguistics
 
 - **November 2018** Area Chair - AutoML | NeurIPS 2018
 
