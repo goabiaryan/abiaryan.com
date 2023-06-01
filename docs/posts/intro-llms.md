@@ -9,7 +9,7 @@ date: 2023-05-15
 ---
 **May 15, 2023** 
 
-<sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricwWeegie) for being an excellent collabotor on this article.</sup>
+<sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricwWeegie) for being an excellent collaborator on this article.</sup>
 
 *This article will explore the concept of LLMs, their architecture, how they work, and their applications. Additionally, the article will also discuss the challenges in building LLMs, including the computational requirements and the ethical implications of using these models.*
 

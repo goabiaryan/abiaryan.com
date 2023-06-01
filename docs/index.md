@@ -9,7 +9,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 ## Publications
 [Arena: A General Evaluation Platform and Building Toolkit for Multi-Agent Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/6216), *Accepted for poster presentation at AAAI 2020*
 
-[Problems & Challenges in AutoML](posts/automl-problems-2018/), 2019
+[Problems & Challenges in AutoML](posts/automl-problems-2019/), 2019
 
 ## Top Tweets
 - [My Review of FrugalGPT Paper](https://twitter.com/GoAbiAryan/status/1657033209329209348?s=20)
