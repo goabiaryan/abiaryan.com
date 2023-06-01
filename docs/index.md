@@ -48,9 +48,6 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 <!-- and an independent consultant with over 7 years of experience in the industry where I've worked  in machine learning infrastructure design and model development, integration and deployment at scale for recommender systems, computer vision, natural language processing as well as audio-speech synthesis. You can book my services [here](https://topmate.io/goabiaryan) -->
 
-
-
-
 <!-- ##### Interested in hearing about Data Infrastructure, ML Systems, and new startups/research papers/tools in the MLOps space? -->
 
 <!-- I send out Data Driven Babe. Feel free to sub. No spamming. Just one letter a month. -->
