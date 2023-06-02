@@ -1,6 +1,6 @@
 ![abi](\full-abi.png){: .center}
 
-Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. Over the past seven years, my focus has been building machine learning models for various applications including recommendation systems, voice-tech, geo-positional apps etc. 
+Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc. 
 
 In the past, I also attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
 
