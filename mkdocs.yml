@@ -210,7 +210,7 @@ nav:
   - Home: index.md
   # - About: bio\posts\about.md
   - Posts:
-      - On Evaluating LLMs: posts\llm-evals.md
+      - Evaluation and Interpretation for LLMs: posts\llm-evals.md
       - Introduction to Large Language Models: posts\intro-llms.md
       - Problems & Challenges in MLOps: posts\mlops-open-problems.md
       - Problems & Challenges in AutoML: posts\automl-problems-2019.md

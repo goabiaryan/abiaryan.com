@@ -5,7 +5,6 @@ categories:
 tags:
   - LLMOps
 ---
-# Introduction to Large Language Models
 **May 15, 2023** 
 
 <sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricWeegie) for being an excellent collaborator on this article.</sup>
@@ -93,11 +92,11 @@ While large language models have shown impressive performance on a variety of la
 4. **Limited generalization:** While large language models can perform well on specific language tasks, they may struggle with generalizing to new or unseen data **[9]**. This can be a challenge in real-world applications where the model needs to operate in a dynamic and evolving environment with changing data distributions.
 5. **Ethical concerns:** Large language models have the potential to be used for malicious purposes, such as generating fake news, impersonating individuals or even being used in sophisticated cyber attacks. There are also concerns around privacy and data security when using language models that generate or process sensitive information.
 
-# Conclusion
+## Conclusion
 
 As this post has described, the development of large language models has been an exciting development in the field of machine learning. LLMs are complex models that can perform a variety of tasks, many of which they were not explicitly trained for. The promise that LLMs will revolutionise many areas of the economy and solve problems across a variety of domains may prove, however, to be a difficult one to realise. There are many challenges to overcome. Of the several challenges discussed here, it is our belief that the consistent evaluation and the effective monitoring of these solutions will be the most acute in the near term and could inhibit the widespread adoption of these models in a safe and reliable way. We would like this to be a call to the community to ensure that they tackle these challenges in as transparent a way as possible, and help ensure that consistent evaluation and monitoring of these models becomes the norm. To support this, the authors are part of a working group attempting to study this question and we would ask for inputs to this collaboration as we seek to share best practice.
 
-# References
+## References
 
 1. Introduction to training Large Language Models https://wandb.ai/ayush-thakur/Intro-RLAIF/reports/An-Introduction-to-Training-LLMs-Using-Reinforcement-Learning-From-Human-Feedback-RLHF---VmlldzozMzYyNjcy
 2. Language Models are Few-Shot Learners https://arxiv.org/abs/2005.14165
