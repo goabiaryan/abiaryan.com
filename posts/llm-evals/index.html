@@ -346,12 +346,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          On Evaluating LLMs
+          Evaluation and Interpretation for LLMs
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        On Evaluating LLMs
+        Evaluation and Interpretation for LLMs
       </a>
       
         
@@ -386,18 +386,12 @@
     The Generative Challenge
   </a>
   
-    <nav class="md-nav" aria-label="The Generative Challenge">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References:
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -543,18 +537,12 @@
     The Generative Challenge
   </a>
   
-    <nav class="md-nav" aria-label="The Generative Challenge">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    References:
-  </a>
-  
 </li>
-        
-      </ul>
-    </nav>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    References
+  </a>
   
 </li>
       
@@ -590,7 +578,7 @@
 
 
 
-  <h1>On Evaluating LLMs</h1>
+  <h1>Evaluation and Interpretation for LLMs</h1>
 
 <p><strong>June 14, 2023</strong> </p>
 <p><sup> * Acknowledgements: I would like to thank my co-author <a href="https://twitter.com/ElectricWeegie">Andy McMahon</a> for being an excellent collaborator on this article.</sup></p>
@@ -600,22 +588,24 @@
 <p><strong>Evaluation of ML models is an activity where there is now a very large body of suggested best practice.</strong></p>
 <p>With the rise of Large Language Models (LLMs) however, the question of what best evaluation practice looks like must be revisited as some assumptions usually employed no longer hold or need augmented.</p>
 <h3 id="why-is-evaluation-hard-for-language-models">Why is evaluation hard for language models?<a class="headerlink" href="#why-is-evaluation-hard-for-language-models" title="Permanent link">&para;</a></h3>
-<p>There are a number of reasons why evaluation is hard for generative language models. Some of the most common reasons include:
-1. Human language is complex: Human language is very complex and can be difficult to quantify. This makes it difficult to develop evaluation metrics that accurately measure the quality of language model outputs.
-2. Language models are trained on large datasets: Language models are typically trained on large datasets of text. This makes it difficult to find a representative sample of text to use for evaluation.
-3. Language models can be biased: Language models can exhibit bias in line with the datasets they are trained on. This can lead to language models generating text that is not deemed acceptable against some social, ethical or legal norms.
-4. Language models can be difficult to interpret: Language models are very complex and it can be difficult to interpret why they generate particular outputs. This can lead to challenges around reproducibility and consistent experimental design.</p>
+<p>There are a number of reasons why evaluation is hard for generative language models. Some of the most common reasons include:</p>
+<ol>
+<li><strong>Human language is complex</strong>: Human language is very complex and can be difficult to quantify. This makes it difficult to develop evaluation metrics that accurately measure the quality of language model outputs.</li>
+<li><strong>Language models are trained on large datasets</strong>: Language models are typically trained on large datasets of text. This makes it difficult to find a representative sample of text to use for evaluation.</li>
+<li><strong>Language models can be biased</strong>: Language models can exhibit bias in line with the datasets they are trained on. This can lead to language models generating text that is not deemed acceptable against some social, ethical or legal norms.</li>
+<li><strong>Language models can be difficult to interpret</strong>: Language models are very complex and it can be difficult to interpret why they generate particular outputs. This can lead to challenges around reproducibility and consistent experimental design.</li>
+</ol>
 <p>Despite these challenges, there are a number of methods that can be used to evaluate language models. Some of the most common methods include:</p>
 <ol>
-<li>Perplexity: Perplexity [1] is a measure of how well a language model can predict the next word in a sequence. A lower perplexity score indicates that the language model is better at predicting the next word.</li>
-</ol>
-<p><a class="glightbox" href="\assets\evals\2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Perplexity - Hugging Face" src="\assets\evals\2.png" /></a></p>
-<ol>
-<li>BLEU score: BLEU [2] score is a measure of how similar a generated text is to a reference text. A higher BLEU score indicates that the generated text is more similar to the reference text.</li>
-</ol>
-<p><a class="glightbox" href="\assets\evals\3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Google - BLEU Score" src="\assets\evals\3.png" /></a></p>
-<ol>
-<li>Human evaluation: Human evaluation is the process of asking humans to rate the quality of generated text. Human evaluation is considered to be the gold standard for evaluating language models, but it is also the most time-consuming and expensive method.</li>
+<li>
+<p><strong>Perplexity</strong>: Perplexity [1] is a measure of how well a language model can predict the next word in a sequence. A lower perplexity score indicates that the language model is better at predicting the next word.<a class="glightbox" href="\assets\evals\2.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Perplexity - Hugging Face" src="\assets\evals\2.png" /></a></p>
+</li>
+<li>
+<p><strong>BLEU score</strong>: BLEU [2] score is a measure of how similar a generated text is to a reference text. A higher BLEU score indicates that the generated text is more similar to the reference text. <a class="glightbox" href="\assets\evals\3.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Google - BLEU Score" src="\assets\evals\3.png" /></a></p>
+</li>
+<li>
+<p><strong>Human evaluation</strong>: Human evaluation is the process of asking humans to rate the quality of generated text. Human evaluation is considered to be the gold standard for evaluating language models, but it is also the most time-consuming and expensive method.</p>
+</li>
 </ol>
 <p><em>In the past, transformer based language models were typically evaluated using perplexity and the BLEU score.</em> However, these metrics have been criticized for being too simplistic and not taking into account much of the nuance of human language. This is counteracted somewhat when using techniques based on human evaluation, however this can also be the most time-consuming and expensive approach, with particular challenges around scaling to large input and outputs, as is the case with LLMs. Thus, it is often not feasible to use human evaluation to evaluate many of the latest language models at scale.</p>
 <p><strong>In the recent years, there has been a growing interest in developing new evaluation metrics that are more sensitive to some of the more nuanced aspects of human language.</strong></p>
@@ -625,23 +615,23 @@
 <p>As these models begin to find their way into deployed solutions across the global economy, it will also be critically important to develop methods for interpreting language models.</p>
 <p>Interpretability of language models in an active area of research and there is no settled best practice approach, similarly to the case for performance evaluation. Some interesting approaches for interpreting these models are:</p>
 <ol>
-<li>Contrastive explanations [3]: Attempting to predict why a language model generated one token and not another.</li>
-<li>Perturbation based importance methods, i.e the extension of SHAP [4]: These are methods where inputs are altered in some way and the change in output measured, for example by extending the SHAP method to work with transformers. Note that this only makes sense for classification tasks, and does not help in generative tasks, but it's worth mentioning here.</li>
-<li>Mechanistic interpretability techniques [5]: These are approaches where the aim is to deconstruct specific neuronal activations inside language models as they perform certain tasks, so as to correlate the one with the other. The aim being to eventually decode neural networks into human understandable code. This covers a large number of techniques and is a very active area of research.</li>
+<li><strong>Contrastive explanations</strong> [3]: Attempting to predict why a language model generated one token and not another.</li>
+<li><strong>Perturbation based importance methods</strong>, i.e the extension of SHAP [4]: These are methods where inputs are altered in some way and the change in output measured, for example by extending the SHAP method to work with transformers. Note that this only makes sense for classification tasks, and does not help in generative tasks, but it's worth mentioning here.</li>
+<li><strong>Mechanistic interpretability techniques</strong> [5]: These are approaches where the aim is to deconstruct specific neuronal activations inside language models as they perform certain tasks, so as to correlate the one with the other. The aim being to eventually decode neural networks into human understandable code. This covers a large number of techniques and is a very active area of research.</li>
 </ol>
 <h3 id="the-generative-challenge">The Generative Challenge<a class="headerlink" href="#the-generative-challenge" title="Permanent link">&para;</a></h3>
 <p>The problems of evaluation and interpretability become very challenging when using LLMs in a generative setting, for example in a chat interface or in an augmented information retrieval setting. This is because LLMs are by default performing token and sequence prediction, and are not necessarily utilizing representational models of the data they have consumed, though there is some debate about whether this is completely the case. This means that LLMs can generate plausible text that can be factually, logically or semantically incorrect. This is the well known problem of <em>hallucinations</em> in LLMs and it makes performance evaluation and interpretability difficult because the challenges mentioned in the previous section are the most salient in this setting.</p>
 <p>These challenges are amplified further by the use of vendor-based large language models like Chat GPT, Bard or Bing Chat. As more and more companies move to closed-versions of the models it becomes increasingly difficult to perform reproducible experiments to ascertain performance. The details that remain internal to these providers include core information like the training datasets, the trained model parameters as well as information on any human evaluation mechanisms used like Reinforcement Learning with Human Feedback (RLHF, see our <a href="https://abiaryan.com/posts/intro-llms/">previous blog post</a> [6] and "red-teaming" (testing the models with adversarial examples).</p>
 <p>However, the challenges around evaluation and interpretability have not stopped companies racing to integrate these models into their solutions. Whether for use as knowledge retrieval on internal documentation (Notion), no-code software development solutions (Zapier), AI augmented pair-programming (repl.it), copywriting (Jasper.ai) or chatbots (several) amongst others.</p>
 <p>Although the race is on to create LLM infused products the risks of models being deployed in production without any concrete guardrails and in the absence of strict performance and interpretability guarantees is a key concern amongst organizations because of the un-predictable behavior of LLMs. These concerns have been voiced by several individuals and organizations over the past few months.</p>
-<p>Any operational machine learning solution must provide some expected performance characteristics before going into production. The solution must also have the ability to be monitored effectively in order to ensure that changes in performance post-deployment are efficiently identified and solutions provided if possible. We can break this down further into the following three points:</p>
+<p>Any operational machine learning solution must provide some expected performance characteristics before going into production. The solution must also have the ability to be monitored effectively in order to ensure that changes in performance post-deployment are efficiently identified and solutions provided if possible. </p>
+<p>We can break this down further into the following three points:</p>
 <ol>
 <li>It helps to ensure that they are performing as expected.</li>
 <li>It can help to identify areas where LLMs can be improved.</li>
 <li>It can help to ensure that LLMs are being used in a safe and responsible manner.</li>
 </ol>
-<p><em>This is part 1 of a two part-series article. In the update of this blogpost, we will explore the how to think about an evaluation framework and what goes into a comparison of the existing evals/leaderboards and what such comparisons mean.</em></p>
-<h4 id="references">References:<a class="headerlink" href="#references" title="Permanent link">&para;</a></h4>
+<h3 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h3>
 <ol>
 <li><a href="https://thegradient.pub/understanding-evaluation-metrics-for-language-models/">Evaluation Metrics for Language Modeling (thegradient.pub)</a></li>
 <li><a href="https://aclanthology.org/P02-1040/">Bleu: a Method for Automatic Evaluation of Machine Translation - ACL Anthology</a></li>
@@ -650,6 +640,7 @@
 <li><a href="https://www.neelnanda.io/mechanistic-interpretability/favourite-papers#language-models=">An Extremely Opinionated Annotated List of My Favourite Mechanistic Interpretability Papers - Neel Nanda.</a></li>
 <li><a href="https://medium.com/the-llmops-brief/introduction-to-large-language-models-9ac028d34732">Introduction to Large Language Models | The LLMOps Brief | May, 2023 | Medium</a></li>
 </ol>
+<p><sup>This is part 1 of a two part-series article. In the update of this blogpost, I will explore the how to think about an evaluation framework and what goes into a comparison of the existing evals/leaderboards and what such comparisons mean.</sup></p>
 
 
   
