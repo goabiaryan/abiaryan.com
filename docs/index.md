@@ -16,6 +16,8 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 
 ## Top Tweets
+- [Brief Review: Unifying Large Language Models and Knowledge Graphs Paper](https://twitter.com/GoAbiAryan/status/1669603176771907584?s=20)
+
 - [My Review of FrugalGPT Paper](https://twitter.com/GoAbiAryan/status/1657033209329209348?s=20)
 
 - [My Review from Palm 2 paper](https://twitter.com/GoAbiAryan/status/1656650856140537858?s=20)
@@ -43,8 +45,6 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ## Upcoming Projects
 - 👩‍💻 **Developing Autonomous Goal-Based Agents for Multi-Modal Data** - BolkayAI
-- 📜 Research Paper, 
-- 📝 Article, **LLM Evaluation: A Moving Target** (currently in review)
 - 📝 Article, **To Prompt or Not** (currently in review)
 
 ## Social Calendar
@@ -52,6 +52,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
     ###  Past
 
     #### 2023
+    - **June 15** - Moderating the panel on **LLM Evaluations** at LLMs in Production Conference II by MLOps.Community
     - **May 4** - Speaker at [LLMs Demsytified](https://www.linkedin.com/events/llmsdemsytifiedwithchris-abi7057602763823730688/comments/) Webinar with Chris Brousseau, Data Scientist at MasterCard
     - **April 26** - Speaker at [Large Language Models in Production](https://twitter.com/i/spaces/1BRKjZelnOpKw?s=20) Twitter Spaces with Christine Yuen, Co-Founder and Head of Engineering at Shakudo.io, hosted by Sabrina Aquino
     - Co-Host MLOps Community Podcast talking about 
@@ -84,8 +85,6 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ### Upcoming 
 
-#### June 2023
-- June 15 - Moderating the panel on **LLM Evaluations** at LLMs in Production Conference II by MLOps.Community
 #### July 2023
 - July 6 - Talking about **Fune-Tuning for LLMs** at What's  the BUZZ? with Andreas Welsch
 - July 7 - Talking about **Data and MLOps** at Women in Data Podcast
