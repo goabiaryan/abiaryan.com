@@ -39,7 +39,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ## Upcoming Projects
 - 👩‍💻 **Developing Autonomous Goal-Based Agents for Multi-Modal Data** - BolkayAI
-- 📜 Research Paper, **Cost Modelling for LLMs in enterprise** (EMNLP 2023 Submission)
+- 📜 Research Paper, **The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning?** [EMNLP 2023 Submission](\assets\EMNLP Submission_Non-Anon.pdf)
 - 📝 Article, **LLM Evaluation: A Moving Target** (currently in review)
 - 📝 Article, **To Prompt or Not** (currently in review)
 
