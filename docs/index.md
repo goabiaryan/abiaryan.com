@@ -7,9 +7,13 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 ✍️ I am also currently authoring **LLMOps: Managing Large Language Models in Production** book for O'Reilley Publications and an **MLOps: Deploying ML models in production** course with Educative for data scientists to learn fundamentals of data engineering and how to deploy machine learning models in production.
 
 ## Publications
+
+[The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](\assets\EMNLP Submission_Non-Anon.pdf), EMNLP 2023 Submission
+
 [Arena: A General Evaluation Platform and Building Toolkit for Multi-Agent Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/6216), *Accepted for poster presentation at AAAI 2020*
 
 [Problems & Challenges in AutoML](posts/automl-problems-2019/), 2019
+
 
 ## Top Tweets
 - [My Review of FrugalGPT Paper](https://twitter.com/GoAbiAryan/status/1657033209329209348?s=20)
@@ -39,7 +43,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ## Upcoming Projects
 - 👩‍💻 **Developing Autonomous Goal-Based Agents for Multi-Modal Data** - BolkayAI
-- 📜 Research Paper, **The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning?** [EMNLP 2023 Submission](\assets\EMNLP Submission_Non-Anon.pdf)
+- 📜 Research Paper, 
 - 📝 Article, **LLM Evaluation: A Moving Target** (currently in review)
 - 📝 Article, **To Prompt or Not** (currently in review)
 
