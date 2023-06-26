@@ -8,7 +8,7 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ## Publications
 
-🆕 [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](\assets\EMNLP Submission_Non-Anon.pdf), EMNLP 2023 Submission
+🎊🔓 [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](\assets\EMNLP Submission_Non-Anon.pdf), EMNLP 2023 Submission
 
 [Arena: A General Evaluation Platform and Building Toolkit for Multi-Agent Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/6216), *Accepted for poster presentation at AAAI 2020*
 
