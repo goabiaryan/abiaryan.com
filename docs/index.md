@@ -1,6 +1,8 @@
-![abi](\full-abi.png){: .center}
+![abi](\abi-preview.png)
 
-Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
+Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. 
+
+Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
 
 In the past, I also attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
 
@@ -15,7 +17,8 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 [Problems & Challenges in AutoML](posts/automl-problems-2019/), 2019
 
 
-## Top Tweets
+## Top Tweets & Threads
+
 - [Brief Review: Unifying Large Language Models and Knowledge Graphs Paper](https://twitter.com/GoAbiAryan/status/1669603176771907584?s=20)
 
 - [My Review of FrugalGPT Paper](https://twitter.com/GoAbiAryan/status/1657033209329209348?s=20)
@@ -25,6 +28,8 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 - [My fav MLOps Papers](https://twitter.com/GoAbiAryan/status/1580852750526468097?s=20)
 
 - [My fav Data Engineering Papers](https://twitter.com/GoAbiAryan/status/1629151405125812225?s=20)
+
+*I use Threads App for sharing ML stuff lately [@goabiaryan](https://www.threads.net/@goabiaryan/)*
 
 ## Volunteering
 - **October 2023** Invited Reviewer for NeurIPS Workshop: I (Still) Can't Believe It's Not Better
@@ -52,9 +57,9 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
     ###  Past
 
     #### 2023
-    - July 7 - Gave a talk on [Cost Modelling for LLMs](https://youtu.be/Hne95kH5hxk) at the LLM Projects Workshop
-    - July 7 - Talked about **Self-Learning and Growth for careers in Data and MLOps** at Women in Data Podcast
-    - July 6 - Talked about [Fune-Tuning and Evaluations for LLMs](https://www.youtube.com/live/8km8_fK-enY?feature=share) at What's  the BUZZ? with Andreas Welsch
+    - **July 7** - Gave a talk on [Cost Modelling for LLMs](https://youtu.be/Hne95kH5hxk) at the LLM Projects Workshop
+    - **July 7** - Talked about **Self-Learning and Growth for careers in Data and MLOps** at Women in Data Podcast
+    - **July 6** - Talked about [Fune-Tuning and Evaluations for LLMs](https://www.youtube.com/live/8km8_fK-enY?feature=share) at What's  the BUZZ? with Andreas Welsch
     - **June 15** - Moderating the panel on **LLM Evaluations** at LLMs in Production Conference II by MLOps.Community
     - **May 4** - Speaker at [LLMs Demsytified](https://www.linkedin.com/events/llmsdemsytifiedwithchris-abi7057602763823730688/comments/) Webinar with Chris Brousseau, Data Scientist at MasterCard
     - **April 26** - Speaker at [Large Language Models in Production](https://twitter.com/i/spaces/1BRKjZelnOpKw?s=20) Twitter Spaces with Christine Yuen, Co-Founder and Head of Engineering at Shakudo.io, hosted by Sabrina Aquino
@@ -90,10 +95,11 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 #### August 2023
 
-- Event Chair for [Building AI Agents with LLMs Event - O'Reilly](https://learning.oreilly.com/live-events/building-ai-agents-with-llms/0636920096162/)
+- Aug 29 - Event Chair for [Building AI Agents with LLMs Event - O'Reilly](https://learning.oreilly.com/live-events/building-ai-agents-with-llms/0636920096162/)
+- Sept 20 - AMA on LLMOps at Deep Learning Daily organized by [Deci.ai](https://deci.ai/)
 
-### Interested in Working Together?
-- If you want to book a consultation with me, you can do so via [Topmate](https://topmate.io/goabiaryan)
+### Collaborate
+- If you want to book a MLOps/LLMOps consultation with me, you can do so via [Topmate](https://topmate.io/goabiaryan)
 - If you want me to participate/speak at your event, you can reach out to me via [email](mailto:hi@abiaryan.com)
 
 <!-- and an independent consultant with over 7 years of experience in the industry where I've worked  in machine learning infrastructure design and model development, integration and deployment at scale for recommender systems, computer vision, natural language processing as well as audio-speech synthesis. You can book my services [here](https://topmate.io/goabiaryan) -->
