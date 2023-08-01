@@ -1,14 +1,14 @@
 ![abi](\full-abi.png){: .center}
 
-Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc. 
+Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
 
 In the past, I also attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
 
-✍️ I am also currently authoring **LLMOps: Managing Large Language Models in Production** book for O'Reilley Publications and an **MLOps: Deploying ML models in production** course with Educative for data scientists to learn fundamentals of data engineering and how to deploy machine learning models in production.
+✍️ I am also currently authoring **LLMOps: Managing Large Language Models in Production** book for O'Reilley Publications and an **MLOps: Deploying ML models in production** course for data scientists to learn fundamentals of data engineering and how to deploy machine learning models in production.
 
 ## Publications
 
-🎊🔓 [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](\assets\EMNLP Submission_Non-Anon.pdf), EMNLP 2023 Submission
+🎊 [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](\assets\EMNLP Submission_Non-Anon.pdf)
 
 [Arena: A General Evaluation Platform and Building Toolkit for Multi-Agent Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/6216), *Accepted for poster presentation at AAAI 2020*
 
@@ -52,6 +52,9 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
     ###  Past
 
     #### 2023
+    - July 7 - Gave a talk on [Cost Modelling for LLMs](https://youtu.be/Hne95kH5hxk) at the LLM Projects Workshop
+    - July 7 - Talked about **Self-Learning and Growth for careers in Data and MLOps** at Women in Data Podcast
+    - July 6 - Talked about [Fune-Tuning and Evaluations for LLMs](https://www.youtube.com/live/8km8_fK-enY?feature=share) at What's  the BUZZ? with Andreas Welsch
     - **June 15** - Moderating the panel on **LLM Evaluations** at LLMs in Production Conference II by MLOps.Community
     - **May 4** - Speaker at [LLMs Demsytified](https://www.linkedin.com/events/llmsdemsytifiedwithchris-abi7057602763823730688/comments/) Webinar with Chris Brousseau, Data Scientist at MasterCard
     - **April 26** - Speaker at [Large Language Models in Production](https://twitter.com/i/spaces/1BRKjZelnOpKw?s=20) Twitter Spaces with Christine Yuen, Co-Founder and Head of Engineering at Shakudo.io, hosted by Sabrina Aquino
@@ -85,12 +88,13 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ### Upcoming 
 
-#### July 2023
-- July 6 - Talking about **Fune-Tuning for LLMs** at What's  the BUZZ? with Andreas Welsch
-- July 7 - Talking about **Data and MLOps** at Women in Data Podcast
-- July 7 - Presenting our research paper on **Cost Modelling for LLMs** at LLM Projects Workshop
+#### August 2023
 
+- Event Chair for [Building AI Agents with LLMs Event - O'Reilly](https://learning.oreilly.com/live-events/building-ai-agents-with-llms/0636920096162/)
 
+### Interested in Working Together?
+- If you want to book a consultation with me, you can do so via [Topmate](https://topmate.io/goabiaryan)
+- If you want me to participate/speak at your event, you can reach out to me via [email](mailto:hi@abiaryan.com)
 
 <!-- and an independent consultant with over 7 years of experience in the industry where I've worked  in machine learning infrastructure design and model development, integration and deployment at scale for recommender systems, computer vision, natural language processing as well as audio-speech synthesis. You can book my services [here](https://topmate.io/goabiaryan) -->
 
