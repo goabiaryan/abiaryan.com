@@ -4,13 +4,20 @@ Hi, my name is Abi. I am a computer scientist working extensively in machine lea
 
 Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
 
-In the past, I also attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
+In the past, I attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
 
-✍️ I am also currently authoring **LLMOps: Managing Large Language Models in Production** book for O'Reilley Publications and an **MLOps: Deploying ML models in production** course for data scientists to learn fundamentals of data engineering and how to deploy machine learning models in production.
+✍️ I am also currently authoring **LLMOps: Managing Large Language Models in Production** book for O'Reilley Publications and worked on an **MLOps: Deploying ML models in production** course for data scientists to learn fundamentals of machine learning software systems and how to deploy machine learning models in production.
+
+## Collaboration
+
+- If you want to book a MLOps/LLMOps consultation with me, you can do so via [Topmate](https://topmate.io/goabiaryan)
+- If you want me to participate/speak at your event, you can reach out to me via [email](mailto:hi@abiaryan.com)
 
 ## Publications
 
-🎊 [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](\assets\EMNLP Submission_Non-Anon.pdf)
+🎊 [Large Language Models - Sector Deep Dive with Laconia Capital](\assets\Laconia_2023_Report.pdf), August 2023
+
+[The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](https://arxiv.org/abs/2308.08061), June 2023
 
 [Arena: A General Evaluation Platform and Building Toolkit for Multi-Agent Intelligence](https://ojs.aaai.org/index.php/AAAI/article/view/6216), *Accepted for poster presentation at AAAI 2020*
 
@@ -49,14 +56,15 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 - **Mar 2016 -Aug 2021** Director, Women Who Code Los Angeles
 
 ## Upcoming Projects
-- 👩‍💻 **Developing Autonomous Goal-Based Agents for Multi-Modal Data** - BolkayAI
-- 📝 Article, **To Prompt or Not** (currently in review)
+- 👩‍💻 **Developing Autonomous Goal-Based Agents for Multi-Modal Data** 
+- 📝 Article, **Fine-Tuning for LLMs** (currently in review)
 
 ## Social Calendar
 ??? Past
     ###  Past
 
     #### 2023
+    - **Aug 29** - Event Chair for [Building AI Agents with LLMs Event - O'Reilly](https://learning.oreilly.com/live-events/building-ai-agents-with-llms/0636920096162/)
     - **July 7** - Gave a talk on [Cost Modelling for LLMs](https://youtu.be/Hne95kH5hxk) at the LLM Projects Workshop
     - **July 7** - Talked about **Self-Learning and Growth for careers in Data and MLOps** at Women in Data Podcast
     - **July 6** - Talked about [Fune-Tuning and Evaluations for LLMs](https://www.youtube.com/live/8km8_fK-enY?feature=share) at What's  the BUZZ? with Andreas Welsch
@@ -93,14 +101,12 @@ In the past, I also attended [Insight](https://insightfellows.com/data-science) 
 
 ### Upcoming 
 
-#### August 2023
+#### September 2023
 
-- Aug 29 - Event Chair for [Building AI Agents with LLMs Event - O'Reilly](https://learning.oreilly.com/live-events/building-ai-agents-with-llms/0636920096162/)
 - Sept 20 - AMA on LLMOps at Deep Learning Daily organized by [Deci.ai](https://deci.ai/)
+- Oct 10 - Domain adaptation and fine-tuning for domain-specific LLMs, [AI Engineer Summit](https://www.ai.engineer/summit)
+- Oct 13 - Productionizing LLMs, [Packt Publication Conference](https://www.packtpub.com/conference/put-gen-ai-to-work?link_from_packtlink=yes)
 
-### Collaborate
-- If you want to book a MLOps/LLMOps consultation with me, you can do so via [Topmate](https://topmate.io/goabiaryan)
-- If you want me to participate/speak at your event, you can reach out to me via [email](mailto:hi@abiaryan.com)
 
 <!-- and an independent consultant with over 7 years of experience in the industry where I've worked  in machine learning infrastructure design and model development, integration and deployment at scale for recommender systems, computer vision, natural language processing as well as audio-speech synthesis. You can book my services [here](https://topmate.io/goabiaryan) -->
 
