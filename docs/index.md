@@ -1,8 +1,8 @@
 ![abi](\abi-preview.png)
 
-Hi, my name is Abi. I am a computer scientist working extensively in machine learning to make the software systems smarter. 
+Hi, my name is Abi. I am a computer scientist and machine learning engineer working extensively in A.I. to make the software systems smarter. 
 
-Over the past seven years, my focus has been building machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
+Over the past seven years, my focus has been building production-level machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
 
 In the past, I attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked in AutoML, MultiAgent Systems and Emotion Recognition.
 
@@ -10,7 +10,10 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 ## Collaboration
 
-- If you want to book a MLOps/LLMOps consultation with me, you can do so via [Topmate](https://topmate.io/goabiaryan)
+- If you want to work with me on a machine learning project, 
+
+<center>[Book MLOps/LLMOps Consultation](https://topmate.io/goabiaryan){ .md-button .md-button--secondary }</center>
+
 - If you want me to participate/speak at your event, you can reach out to me via [email](mailto:hi@abiaryan.com)
 
 ## Publications
@@ -110,12 +113,11 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 <!-- and an independent consultant with over 7 years of experience in the industry where I've worked  in machine learning infrastructure design and model development, integration and deployment at scale for recommender systems, computer vision, natural language processing as well as audio-speech synthesis. You can book my services [here](https://topmate.io/goabiaryan) -->
 
-<!-- ##### Interested in hearing about Data Infrastructure, ML Systems, and new startups/research papers/tools in the MLOps space? -->
+### Newsletter
 
-<!-- I send out Data Driven Babe. Feel free to sub. No spamming. Just one letter a month. -->
+Interested in hearing about Data Infrastructure, ML Systems, and new startups/research papers/tools in the MLOps space? 
 
-<!-- [Subscribe to my newsletter](datadrivenbabe.substack.com){ .md-button .md-button--primary } -->
+I send out a newsletter called **ModelCraft**. Feel free to sub. 
 
-<!-- <iframe src="https://datadrivenbabe.substack.com/embed" width="480" height="320" style="border:1px solid #EEE; background:black;" frameborder="10" scrolling="no"></iframe> -->
+ <center><iframe src="https://modelcraft.substack.com/embed" width="480" height="320" style="border:1px solid #FFFFFF; background:#00FFFFFF;" frameborder="10" scrolling="no"></iframe></center> 
 
-<!-- This month's newsletter will be about Building Reliable Data Pipelines.  -->
