@@ -18,7 +18,7 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 ## Publications
 
-🎊 [Large Language Models - Sector Deep Dive with Laconia Capital](\assets\Laconia_2023_Report.pdf), August 2023
+🎊 Large Language Models - Sector Deep Dive with Laconia Capital, August 2023 (Updating - Coming Soon!)
 
 [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](https://arxiv.org/abs/2308.08061), June 2023
 
