@@ -15,13 +15,10 @@
         <link rel="canonical" href="https://abiaryan.com/posts/automl-problems-2019/">
       
       
-        <link rel="prev" href="../mlops-open-problems/">
       
-      
-        <link rel="next" href="../game-ai/">
       
       <link rel="icon" href="../../logo">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.7">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
     
     
       
@@ -29,14 +26,17 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.ded33207.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.a0c5b2b5.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
+
     
+    
+      
     
     
       
@@ -57,9 +57,7 @@
   
   
 
-
-  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NC4SF5LGSH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NC4SF5LGSH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NC4SF5LGSH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
-
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NC4SF5LGSH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NC4SF5LGSH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NC4SF5LGSH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
   
     <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
   
@@ -68,17 +66,15 @@
     
     
    <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
-        html.glightbox-open { overflow: initial; height: 100%; }
-        .gslide-title { margin-top: 0px; user-select: text; }
-        .gslide-desc { color: #666; user-select: text; }
-        .gslide-image img { background: white; }
-        
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}
-            </style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
   
   
     
@@ -90,9 +86,6 @@
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
   
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -126,6 +119,7 @@
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
+      
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
     </label>
     <div class="md-header__title" data-md-component="header-title">
@@ -145,33 +139,39 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
-            </label>
-          
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
-            </label>
-          
-        
-      </form>
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
       <label class="md-header__button md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
       </label>
       <div class="md-search" data-md-component="search" role="dialog">
@@ -180,12 +180,15 @@
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
       </label>
       <nav class="md-search__options" aria-label="Search">
         
         <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -222,30 +225,35 @@
         
   
   
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
 
-
-  <li class="md-tabs__item">
-    <a href="../.." class="md-tabs__link">
-      Home
-    </a>
-  </li>
+      </a>
+    </li>
+  
 
       
         
   
   
+  
     
+    
+      <li class="md-tabs__item">
+        <a href="../llm-evals.md" class="md-tabs__link">
+          
   
+  Posts
 
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../llm-evals/" class="md-tabs__link md-tabs__link--active">
-        Posts
-      </a>
-    </li>
+        </a>
+      </li>
+    
   
 
       
@@ -264,6 +272,7 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 
   
 
@@ -288,14 +297,19 @@
     
       
       
-      
-
+  
   
   
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
-        Home
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
       </a>
     </li>
   
@@ -303,350 +317,194 @@
     
       
       
-      
-
+  
+  
   
   
     
-  
-  
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-          Posts
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Posts
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../llm-evals/" class="md-nav__link">
-        Evaluation and Interpretation for LLMs
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../intro-llms/" class="md-nav__link">
-        Introduction to Large Language Models
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../mlops-open-problems/" class="md-nav__link">
-        Problems & Challenges in MLOps
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
     
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Problems & Challenges in AutoML
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Problems & Challenges in AutoML
-      </a>
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
         
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#why-deep-learning-for-automl" class="md-nav__link">
-    Why Deep Learning for AutoML?
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#history" class="md-nav__link">
-    History
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-automl" class="md-nav__link">
-    What is AutoML?
-  </a>
-  
-    <nav class="md-nav" aria-label="What is AutoML?">
-      <ul class="md-nav__list">
         
-          <li class="md-nav__item">
-  <a href="#gradient-free-techniques" class="md-nav__link">
-    Gradient Free Techniques
-  </a>
-  
-</li>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
-          <li class="md-nav__item">
-  <a href="#gradient-based-techniques" class="md-nav__link">
-    Gradient Based Techniques
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-selection-architecture-design-and-learning-policy-selection" class="md-nav__link">
-    Model Selection - Architecture Design and Learning Policy Selection
-  </a>
-  
-    <nav class="md-nav" aria-label="Model Selection - Architecture Design and Learning Policy Selection">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#architecture-search-via-bayesian-optimization" class="md-nav__link">
-    Architecture Search via Bayesian Optimization
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#architecture-search-via-evolutionary-methods" class="md-nav__link">
-    Architecture Search via Evolutionary Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#architecture-search-via-reinforcement-learning" class="md-nav__link">
-    Architecture Search via Reinforcement Learning
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#architecture-search-via-tree-based-methods" class="md-nav__link">
-    Architecture Search via Tree Based Methods
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#model-optimization-hpo-and-regularization" class="md-nav__link">
-    Model Optimization- HPO and Regularization
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#pipeline-optimization-for-automl" class="md-nav__link">
-    Pipeline Optimization for AutoML
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#problems-and-challenges-in-automl" class="md-nav__link">
-    PROBLEMS AND CHALLENGES in AutoML
-  </a>
-  
-    <nav class="md-nav" aria-label="PROBLEMS AND CHALLENGES in AutoML">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#cost-sensitivity" class="md-nav__link">
-    Cost Sensitivity
-  </a>
-  
-    <nav class="md-nav" aria-label="Cost Sensitivity">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#model-based-methods" class="md-nav__link">
-    Model Based Methods
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#metric-learning" class="md-nav__link">
-    Metric Learning
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#optimization-based-learning" class="md-nav__link">
-    Optimization Based Learning
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#curse-of-dimensionality" class="md-nav__link">
-    Curse of Dimensionality
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#interpretability" class="md-nav__link">
-    Interpretability
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#limited-data" class="md-nav__link">
-    Limited Data
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#catastrophic-forgetting" class="md-nav__link">
-    Catastrophic Forgetting
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#towards-agi" class="md-nav__link">
-    Towards AGI
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#citation" class="md-nav__link">
-    Citation
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
           
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../game-ai/" class="md-nav__link">
-        Developing A.I. using Games
+      <a href="../llm-evals.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation and Interpretation for LLMs
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../why-tensorlayer/" class="md-nav__link">
-        Why TensorLayer?
+      <a href="../intro-llms.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Large Language Models
+  </span>
+  
+
       </a>
     </li>
   
 
-            
-          
+              
             
               
+                
+  
   
   
   
     <li class="md-nav__item">
-      <a href="../associative-memory/" class="md-nav__link">
-        Dense Associative Memory for Pattern Recognition
+      <a href="../mlops-open-problems.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems & Challenges in MLOps
+  </span>
+  
+
       </a>
     </li>
   
 
+              
             
-          
-        </ul>
-      </nav>
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl-problems-2019.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems & Challenges in AutoML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game-ai.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing A.I. using Games
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-tensorlayer.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why TensorLayer?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../associative-memory.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dense Associative Memory for Pattern Recognition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -677,21 +535,27 @@
       
         <li class="md-nav__item">
   <a href="#why-deep-learning-for-automl" class="md-nav__link">
-    Why Deep Learning for AutoML?
+    <span class="md-ellipsis">
+      Why Deep Learning for AutoML?
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#history" class="md-nav__link">
-    History
+    <span class="md-ellipsis">
+      History
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#what-is-automl" class="md-nav__link">
-    What is AutoML?
+    <span class="md-ellipsis">
+      What is AutoML?
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="What is AutoML?">
@@ -699,14 +563,18 @@
         
           <li class="md-nav__item">
   <a href="#gradient-free-techniques" class="md-nav__link">
-    Gradient Free Techniques
+    <span class="md-ellipsis">
+      Gradient Free Techniques
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#gradient-based-techniques" class="md-nav__link">
-    Gradient Based Techniques
+    <span class="md-ellipsis">
+      Gradient Based Techniques
+    </span>
   </a>
   
 </li>
@@ -718,7 +586,9 @@
       
         <li class="md-nav__item">
   <a href="#model-selection-architecture-design-and-learning-policy-selection" class="md-nav__link">
-    Model Selection - Architecture Design and Learning Policy Selection
+    <span class="md-ellipsis">
+      Model Selection - Architecture Design and Learning Policy Selection
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Model Selection - Architecture Design and Learning Policy Selection">
@@ -726,28 +596,36 @@
         
           <li class="md-nav__item">
   <a href="#architecture-search-via-bayesian-optimization" class="md-nav__link">
-    Architecture Search via Bayesian Optimization
+    <span class="md-ellipsis">
+      Architecture Search via Bayesian Optimization
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#architecture-search-via-evolutionary-methods" class="md-nav__link">
-    Architecture Search via Evolutionary Methods
+    <span class="md-ellipsis">
+      Architecture Search via Evolutionary Methods
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#architecture-search-via-reinforcement-learning" class="md-nav__link">
-    Architecture Search via Reinforcement Learning
+    <span class="md-ellipsis">
+      Architecture Search via Reinforcement Learning
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#architecture-search-via-tree-based-methods" class="md-nav__link">
-    Architecture Search via Tree Based Methods
+    <span class="md-ellipsis">
+      Architecture Search via Tree Based Methods
+    </span>
   </a>
   
 </li>
@@ -759,21 +637,27 @@
       
         <li class="md-nav__item">
   <a href="#model-optimization-hpo-and-regularization" class="md-nav__link">
-    Model Optimization- HPO and Regularization
+    <span class="md-ellipsis">
+      Model Optimization- HPO and Regularization
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#pipeline-optimization-for-automl" class="md-nav__link">
-    Pipeline Optimization for AutoML
+    <span class="md-ellipsis">
+      Pipeline Optimization for AutoML
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#problems-and-challenges-in-automl" class="md-nav__link">
-    PROBLEMS AND CHALLENGES in AutoML
+    <span class="md-ellipsis">
+      PROBLEMS AND CHALLENGES in AutoML
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="PROBLEMS AND CHALLENGES in AutoML">
@@ -781,7 +665,9 @@
         
           <li class="md-nav__item">
   <a href="#cost-sensitivity" class="md-nav__link">
-    Cost Sensitivity
+    <span class="md-ellipsis">
+      Cost Sensitivity
+    </span>
   </a>
   
     <nav class="md-nav" aria-label="Cost Sensitivity">
@@ -789,21 +675,27 @@
         
           <li class="md-nav__item">
   <a href="#model-based-methods" class="md-nav__link">
-    Model Based Methods
+    <span class="md-ellipsis">
+      Model Based Methods
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#metric-learning" class="md-nav__link">
-    Metric Learning
+    <span class="md-ellipsis">
+      Metric Learning
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#optimization-based-learning" class="md-nav__link">
-    Optimization Based Learning
+    <span class="md-ellipsis">
+      Optimization Based Learning
+    </span>
   </a>
   
 </li>
@@ -815,28 +707,36 @@
         
           <li class="md-nav__item">
   <a href="#curse-of-dimensionality" class="md-nav__link">
-    Curse of Dimensionality
+    <span class="md-ellipsis">
+      Curse of Dimensionality
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#interpretability" class="md-nav__link">
-    Interpretability
+    <span class="md-ellipsis">
+      Interpretability
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#limited-data" class="md-nav__link">
-    Limited Data
+    <span class="md-ellipsis">
+      Limited Data
+    </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#catastrophic-forgetting" class="md-nav__link">
-    Catastrophic Forgetting
+    <span class="md-ellipsis">
+      Catastrophic Forgetting
+    </span>
   </a>
   
 </li>
@@ -848,14 +748,18 @@
       
         <li class="md-nav__item">
   <a href="#towards-agi" class="md-nav__link">
-    Towards AGI
+    <span class="md-ellipsis">
+      Towards AGI
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#citation" class="md-nav__link">
-    Citation
+    <span class="md-ellipsis">
+      Citation
+    </span>
   </a>
   
 </li>
@@ -874,25 +778,25 @@
                 
                   
   
-
-  <nav class="md-tags" >
+<nav class="md-tags" >
+  
     
-      
-      
-        <a href="../../tags/#mlsys" class="md-tag">MLSys</a>
-      
     
-      
-      
-        <a href="../../tags/#agents" class="md-tag">Agents</a>
-      
     
-  </nav>
+      <a href="../../tags/#mlsys" class="md-tag">MLSys</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#agents" class="md-tag">Agents</a>
+    
+  
+</nav>
 
 
 
-
-  <h1>Problems & Challenges in AutoML</h1>
+  <h1>Problems and Challenges in AutoML</h1>
 
 <p><strong>March 16, 2019</strong></p>
 <p><sup> 
@@ -923,7 +827,7 @@ Article based on the research paper Problems &amp; Challenges in AutoML, 2019. I
 <p>However, the process of defining the number of layers is still controlled majorly by human beings and the hyperparameters are hand-tuned, therefore requiring a lot of time to be invested. The next step was to model these techniques automatically, thereby leading to the introduction of AutoML.</p>
 <h3 id="what-is-automl">What is AutoML?<a class="headerlink" href="#what-is-automl" title="Permanent link">&para;</a></h3>
 <p>To define the problem of AutoML,</p>
-<p><a class="glightbox" href="/assets/automl/automl-defn.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="What is AutoML" src="/assets/automl/automl-defn.png" /></a></p>
+<p><a class="glightbox" href="/assets/automl/automl-defn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="What is AutoML" src="/assets/automl/automl-defn.png" /></a></p>
 <p>In the past five years, various AutoML methods have been proposed. Introduced in 2013, Auto-WEKA was the first AutoML method and used Bayesian Optimization to automatically instantiate a highly parametric machine learning framework. Parametric models assume some finite set of parameters <span class="arithmatex">\(\theta\)</span>. Given the parameters <span class="arithmatex">\(\theta\)</span>, future predictions, x, are independent of the observed data, D</p>
 <div class="arithmatex">\[
 P(x|\theta, D) = P(x|\theta)
@@ -932,13 +836,13 @@ P(x|\theta, D) = P(x|\theta)
 <p>While these parametric methods are simpler, faster, interpretable and can be trained with less data but they pose flexibility constraints while struggling with complex data generating a poor fit for the real world problems. It was further extended as a package called Hyperopt-sklearn in 2014 to non-parametric methods like probability calibration, density estimation provided by Scikit-Learn. One of the key achievements of Hyperopt-sklearn is an ability to remove redundant features, or reduce data dimensionality using SVM or PCA so the classification task can become simpler. </p>
 <p>While one possible direction post this could be extending the framework to support more machine learning algorithms or extending the number of pre-processing methods however the ability to select a good algorithm and a combination of the right hyperparameters is a problem that lies at the heart of AutoML. </p>
 <p>Introduced in 2015, Auto-sklearn approached the problem by taking into account past performance on similar datasets, or constructing ensembles from the models evaluated during the optimization. While budget and computational power being the obvious constraints for such methods, one not-so-obvious limitation is that testing hundreds of hyperparameter optimization configuration increases the risk of overfitting to the validation set. </p>
-<p><a class="glightbox" href="\assets\automl\bayesian.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Bayesian Machine Learning" src="\assets\automl\bayesian.png" /></a></p>
+<p><a class="glightbox" href="\assets\automl\bayesian.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bayesian Machine Learning" src="\assets\automl\bayesian.png" /></a></p>
 <p>Aside from this, several incremental developments have been made in the field of architecture selection, hyperparameter optimization and meta-learning using both gradient based as well as gradient-free methods. </p>
 <h5 id="gradient-free-techniques">Gradient Free Techniques<a class="headerlink" href="#gradient-free-techniques" title="Permanent link">&para;</a></h5>
 <p>The most intuitive gradient-free technique is random search i.e. randomly searching the state-space domain to find optimal values. However, since the state space is multi-dimensional, therefore, leading to suboptimal results using random search. Population based methods such as Genetic Algorithms and Particle Swarm Optimization have been employed in order to search the state-space more effectively. Other gradient free techniques include Bayesian Optimization by modelling the loss of a configuration, where the improvement of a configuration is proportional to the distance between the best-so-far loss and the predicted mean or using Tree Based Estimator like MCTS or using surrogate models for instance Gaussian processes. Q-learning has also been used in order to learn desirable architectures, where a reinforcement agent chooses components of an architecture sequentially with the reward equal to the validation accuracy. </p>
 <h5 id="gradient-based-techniques">Gradient Based Techniques<a class="headerlink" href="#gradient-based-techniques" title="Permanent link">&para;</a></h5>
 <p>In the past few years, deep learning methods have shown immense potential in the area of AutoML. One such key project is Auto-Net which uses Bayesian Optimization method SMAC and the deep learning library Lasagne, later followed by Auto-Net 2.0 that uses a combination of Bayesian Optimization and HyperBand, called BHOB, and uses PyTorch as the key deep learning library. Auto-Net provides automatically-tuned feed-forward neural networks without any human intervention. BHOB uses repeated runs of successive halving to invest most runtime in promising neural networks and stops training neural networks with poor performance early and using kernel density estimator to describe regions of high performance in the space of neural network. One of its key advantages is that this method is highly parallelizable achieving almost linear speedups with an increasing number of workers. Auto-Net performance on three different datasets -</p>
-<p><a class="glightbox" href="\assets\automl\autonet.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="AutoNet" src="\assets\automl\autonet.png" /></a></p>
+<p><a class="glightbox" href="\assets\automl\autonet.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AutoNet" src="\assets\automl\autonet.png" /></a></p>
 <p>As observed, AutoNet performs best twice and comparatively well for yolanda as well. As the No Free Lunch theorem goes, any one algorithm that searches for an optimal cost or fitness solution is not universally superior to any other algorithm given that we are optimizing for fit on a limited class of problems thus it may or may not generalize in an infinite possibilities dataset. Thus gradient based neural networks started to focus on building a model from existing class of models instead of random search on a particular number of configurations.  In 2016, the focus shifted from searching within specified parameters to instead the use of modular approach to find the best model and combination of hyperparameters.</p>
 <h3 id="model-selection-architecture-design-and-learning-policy-selection">Model Selection - Architecture Design and Learning Policy Selection<a class="headerlink" href="#model-selection-architecture-design-and-learning-policy-selection" title="Permanent link">&para;</a></h3>
 <p>In 2016, MetaQNN was introduced to generate CNN Architectures for a given task using Q-Learning, where the agent chooses the architecture layers sequentially, via the epsilon-greedy strategy, with reward equal to the validation accuracy. Next, the problem of generating a high-performing architecture was dealt by using a meta-controller. A meta controller models state information and directs how the search space is to be navigated in order to find the optimal architecture. Traditionally, RNNs and LSTMs are  used as metacontrollers, encoding the state space information. The state space consists of various blocks performing operations like convolution and pooling, and the meta-controller, say RNN, arranges these blocks in an end-to-end fashion. The controller is then updated based upon the validation accuracies to produce a better performing architecture in the next iterations. </p>
@@ -954,7 +858,7 @@ P(x|\theta, D) = P(x|\theta)
 </div>
 <p>One of the key advantages of Bayesian Optimization framework is that it can be applied to unusual search spaces that involve conditional or categorical inputs, or even combinatorial search spaces with multiple categorical inputs. The Bayesian Optimization framework has two key ingredients - first, a probabilistic surrogate model which consists of a prior distribution that captures our beliefs about the behaviour of the unknown objective function and an observation model that describes the data generation mechanism and secondly, the loss function that describes how optimal a sequence of queries are. In practice, these loss functions are often expresses as a form of regret, either simply or cumulative which is then minimized to select an optimal sequence of queries. </p>
 <p>If f is cheap to evaluate we could sample at many points e.g. via grid search, random search or numeric gradient estimation. However, if function evaluation is expensive e.g. tuning hyperparameters of a deep neural network, probe drilling for oil at given geographic coordinates or evaluating the effectiveness of a drug candidate taken from a chemical search space then it is important to minimize the number of samples drawn from the black box function f. This is the domain where Bayesian optimization techniques are most useful. They attempt to find the global optimum in a minimum number of steps. A popular surrogate model for Bayesian optimization are Gaussian processes (GPs). The success of these methods has led to the discovery and development of several acquisition functions including Thompson Sampling, Probability of Improvement, Expected Improvement, Upper Confidence Bounds, Entropy Search etc. These acquisition functions trade off exploration and exploitation such that their optima is located where the uncertainty in the surrogate model is large (exploration) and/or the prediction is high (exploitation). </p>
-<p><a class="glightbox" href="\assets\automl\bayesian_algo.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Bayesian Method" src="\assets\automl\bayesian_algo.png" /></a></p>
+<p><a class="glightbox" href="\assets\automl\bayesian_algo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bayesian Method" src="\assets\automl\bayesian_algo.png" /></a></p>
 <p>In terms of AutoML, it has been proved through various experiments that often the careful choice of statistical model is often far more important than the choice of acquisition functions. While Bayesian Optimization is already one of the preferred methods for combinatorial search spaces and policy search for both parametric as well as non-parametric models, one of the major applications in AutoML has been the exploration of Bayesian Optimization for Automating Hyperparameter Tuning. In architectural search spaces, Bayesian Optimization methods have received great attention in tuning deep belief networks, Markov Chain Monte Carlo Methods (MCMC), Convolutional Neural Networks and its application in one of the most primitive neural architecture search methods such as SMAC, Auto-SkLearn, AutoWeka, BHOB, REMBO etc.</p>
 <p>Another key application of Bayesian Optimization has been on multi-task learning and transfer learning, esp in a constrained budget. There have been several attempts to exploit this property within the Bayesian Optimization framework including Collaborative Hyperparameter Tuning, Initializing Bayesian Hyperparameter Optimization via Meta-Learning, Sequential Model-Based Optimization for General Algorithm Configuration, Gaussian Process Bandit Optimization, Freeze-Thaw Optimization, Efficient Transfer Learning via Bayesian Optimization. The key idea here is that there are several correlated functions, <span class="arithmatex">\(\tau\)</span> = {1, 2, ….,M}, called tasks and that we are interested in optimizing some subset of these tasks, thus using the data from one task to provide information about another task. </p>
 <p>One such method of sharing information between tasks has been implementing by modifying the Bayesian Optimization Routine to modify the underlying the Gaussian Process (GP) model called Multi-Output GPs. We define a valid covariance over input and task pairs, k((x,m), (x’, m’)). One of the explored methods to do this is using coregionalization that utilizes the product kernel -</p>
@@ -973,9 +877,9 @@ P(x|\theta, D) = P(x|\theta)
 <p>Hyperparameter optimization is an important research topic in machine learning, and is widely used in practice. Despite their success, these methods are still limited in that they only search models from a fixed-length space. In other words, it is difficult to ask them to generate a variable-length configuration that specifies the structure and connectivity of a network. And then as discussed above, there are Bayesian optimization methods that allow one to search non fixed length architectures, but they are less general and less flexible than reinforcement learning methods which provide a general framework for machine learning. Modern neuro-evolution algorithms, on the other hand, are much more flexible for composing novel models, yet they are usually less practical at a large scale. Their limitations lie in the fact that they are search-based methods,thus they are slow or require many heuristics to work well. One of the key advantages of reinforcement learning methods for architectural space design is that they can learn directly from the reward signal without any supervised bootstrapping, which is an immensely attractive characteristic for learning new tasks without much human interference. </p>
 <p>The key idea here is to use a neural network to learn the gradient descent updates for another network and then using reinforcement learning to find update policies for other networks. Under this framework, any particular optimization algorithm simply corresponds to a policy. Then, we reward optimization algorithms that converge quickly and penalize those that do not. Learning an optimization algorithm then reduces to finding an optimal policy, which can be solved using any reinforcement learning method. To differentiate the algorithm that performs learning from the algorithm that is learned, we refer to the former as the “learning algorithm” or “learner” and the latter as the “autonomous algorithm” or “policy” and use an off-the-shelf reinforcement learning algorithm known as guided policy search. </p>
 <p>A reinforcement learning problem is typically formally represented as an Markov decision process(MDP). We consider a finite-horizon MDP with continuous state and action spaces defined by the tuple (S,A,p0,p,c,<span class="arithmatex">\(\gamma\)</span>), where S is the set of states, A is the set of actions, <span class="arithmatex">\(p0:S \rightarrow R+\)</span> is the probability density over initial states, <span class="arithmatex">\(p:S \times A \times S \rightarrow R+\)</span> is the transition probability density, that is, the conditional probability density over successor states given the current state and action, <span class="arithmatex">\(c:S \rightarrow R\)</span> is a function that maps state to cost and <span class="arithmatex">\(\gamma \in (0,1]\)</span> is the discount factor.The objective is to learn a stochastic policy <span class="arithmatex">\(\Pi^*\)</span>: $S \times A \rightarrow R+ $, which is a conditional probability density over actions given the current state, such that the expected cumulative cost is minimized. That is,</p>
-<p><a class="glightbox" href="\assets\automl\rl_cum.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Reinforcement Learning" src="\assets\automl\rl_cum.png" /></a></p>
+<p><a class="glightbox" href="\assets\automl\rl_cum.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reinforcement Learning" src="\assets\automl\rl_cum.png" /></a></p>
 <p>where the expectation is taken with respect to the joint distribution over the sequence of states and actions, often referred to as a trajectory, which has the density </p>
-<p><a class="glightbox" href="\assets\automl\rl_density.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="Density" src="\assets\automl\rl_density.png" /></a></p>
+<p><a class="glightbox" href="\assets\automl\rl_density.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Density" src="\assets\automl\rl_density.png" /></a></p>
 <p>This problem of finding the cost-minimizing policy is known as the policy search problem. To enable generalization to unseen states, the policy is typically parameterized and minimization is performed over representable policies. Solving this problem exactly is intractable in all but selected special cases. Therefore, policy search methods generally tackle this problem by solving it approximately.In many practical settings,p, which characterizes the dynamics, is unknown and must therefore be estimated. Additionally, because it is often equally important to minimize cost at earlier and later time steps, we will henceforth focus on the undiscounted setting, i.e. the setting where <span class="arithmatex">\(\gamma\)</span>= 1.</p>
 <p>Guided policy search is a method for performing policy search in continuous state and action spaces under possibly unknown dynamics. It works by alternating between computing a target distribution over trajectories that is encouraged to minimize cost and agree with the current policy and learning parameters of the policy in a standard supervised fashion so that sample trajectories from executing the policy are close to sample trajectories drawn from the target distribution. The target trajectory distribution is computed by iteratively fitting local time-varying linear and quadratic approximations to the (estimated) dynamics and cost respectively and optimizing over a restricted class of linear-Gaussian policies subject to a trust region constraint, which can be solved efficiently in closed form using a dynamic programming algorithm known as linear-quadratic-Gaussian (LQG).</p>
 <p>At the point of writing, we are not aware of any model-based reinforcement learning methods used to find the optimal search space for automatic neural architecture design. </p>
@@ -1027,7 +931,7 @@ P(x|\theta, D) = P(x|\theta)
 <p>If an algorithm performs better than random search on some class of problems then in must perform worse than random search on the remaining problems.</p>
 </div>
 <p>In other words, the NFLT states that no black box strategy is superior to another one. Another point to consider is the tradeoff between generality and specificity of an approach.</p>
-<p><a class="glightbox" href="\assets\automl\nlft.png" data-type="image" data-width="100%" data-height="auto" data-desc-position="bottom"><img alt="NLFT" src="\assets\automl\nlft.png" /></a></p>
+<p><a class="glightbox" href="\assets\automl\nlft.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="NLFT" src="\assets\automl\nlft.png" /></a></p>
 <p>The need for defining interpretability arises from the gap between objectives in a supervised learning environment and the actual deployment costs. The training procedure only requires the predicted and actual labels for optimization. The problem arises when the real world problem cannot be translated into a mathematical function or because of the difference between the deployment and training settings. Interpretations thus cater to the important but difficult to formalize objectives. The objectives of interpretability are:</p>
 <ol>
 <li>Trust: Does the model mimic humans, i.e. performing accurately where humans perform accurately and committing mistakes in areas where humans also struggle? Are we comfortable giving the model the entire control without human supervision?</li>
@@ -1100,6 +1004,16 @@ P(x|\theta, D) = P(x|\theta)
 </code></pre></div>
 
 
+
+
+
+
+
+  
+  
+
+
+
   
 
 
@@ -1110,6 +1024,7 @@ P(x|\theta, D) = P(x|\theta)
             </div>
           
           
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
         
       </main>
@@ -1137,7 +1052,7 @@ P(x|\theta, D) = P(x|\theta)
       
     
     <a href="https://datadrivenbabe.substack.com/" target="_blank" rel="noopener" title="datadrivenbabe.substack.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
     </a>
   
     
@@ -1148,7 +1063,7 @@ P(x|\theta, D) = P(x|\theta)
       
     
     <a href="https://twitter.com/goabiaryan" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
     </a>
   
     
@@ -1159,7 +1074,7 @@ P(x|\theta, D) = P(x|\theta)
       
     
     <a href="https://www.linkedin.com/in/goabiaryan/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
     </a>
   
     
@@ -1167,7 +1082,7 @@ P(x|\theta, D) = P(x|\theta)
     
     
     <a href="mailto:<abi@abiaryan.com>" target="_blank" rel="noopener" title="" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
     </a>
   
 </div>
@@ -1181,10 +1096,11 @@ P(x|\theta, D) = P(x|\theta)
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.51198bba.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
         <script src="../../javascripts/mathjax.js"></script>
       
