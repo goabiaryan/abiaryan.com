@@ -36,7 +36,7 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 ??? Past
     #### 2023
     #### November 2023
-    - **Nov 8** - Whats New in Data podcast with John Kutay
+    - **Nov 8** - **Whats New in Data** podcast with John Kutay
     - **Oct 26** - Speaker, Laconia Capital LP Event - LLMOps with Abi Aryan (Privately Hosted by [Geri Kirilova and Jeffrey Silverman](https://www.laconiacapitalgroup.com/people) )
     - **Oct 13** - Presented a workshop on **Productionizing LLMs**, [Packt Publication Conference](https://www.packtpub.com/conference/put-gen-ai-to-work?link_from_packtlink=yes)
     - **Oct 10** - Presented a talk on **Domain adaptation and fine-tuning for domain-specific LLMs**, [AI Engineer Summit](https://www.ai.engineer/summit)
@@ -79,13 +79,13 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 ### Upcoming 
 
 #### March 2024
-- **March 8** - Speaker: 5 min interviews for Hopsworks with	Rik Van Bruggen
-- **March 16** - Speaker: Productionizing LLMs: LLMOps - AI X Entertainment Hackathon, CIC Tokyo, Japan
-- **March 20** - Speaker: AI and Other Hot Takes at AI Tinkerers, Ottawa, Canada
+- **March 8** - Speaker: **5 min interviews** for Hopsworks with	Rik Van Bruggen
+- **March 16** - Speaker: **Productionizing LLMs: LLMOps** - AI X Entertainment Hackathon, CIC Tokyo, Japan
+- **March 20** - Speaker: **AI and Other Hot Takes at AI Tinkerers**, Ottawa, Canada
 
 #### April 2024
-- **April 17** - Speaker, SecOps for LLMOps at NatWest Bank
-- **April 24** - Speaker, Deploying and Managing LLMs in Production for O'Reilly Events
+- **April 17** - Speaker, **SecOps for LLMOps** at NatWest Bank, U.K.
+- **April 24** - Speaker, **Deploying and Managing LLMs in Production** for O'Reilly Events
 - **April 26** - More details soon!
 
 ## Volunteering
