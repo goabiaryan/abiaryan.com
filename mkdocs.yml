@@ -6,7 +6,7 @@ site_url: https://abiaryan.com
 site_author: Abi Aryan
 site_description: >-
   Personal Blog
-copyright: Copyright &copy; 2023 Abi Aryan
+copyright: Copyright &copy; 2024 Abi Aryan
 
 #configuration
 theme:
@@ -48,6 +48,7 @@ theme:
 
 # Plugins
 plugins:
+  - blog
   - search
   - glightbox
   - external-markdown
@@ -122,7 +123,7 @@ markdown_extensions:
   - pymdownx.critic
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true

@@ -34,9 +34,9 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 ## Social Calendar
 ??? Past
-    ###  Past
-
     #### 2023
+    #### November 2023
+    - **Nov 8** - Whats New in Data podcast with John Kutay
     - **Oct 26** - Speaker, Laconia Capital LP Event - LLMOps with Abi Aryan (Privately Hosted by [Geri Kirilova and Jeffrey Silverman](https://www.laconiacapitalgroup.com/people) )
     - **Oct 13** - Presented a workshop on **Productionizing LLMs**, [Packt Publication Conference](https://www.packtpub.com/conference/put-gen-ai-to-work?link_from_packtlink=yes)
     - **Oct 10** - Presented a talk on **Domain adaptation and fine-tuning for domain-specific LLMs**, [AI Engineer Summit](https://www.ai.engineer/summit)
@@ -78,12 +78,23 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 ### Upcoming 
 
-#### November 2023
-- **Nov 8** - Whats New in Data podcast with John Kutay
+#### March 2024
+- **March 8** - Speaker: 5 min interviews for Hopsworks with	Rik Van Bruggen
+- **March 16** - Speaker: Productionizing LLMs: LLMOps - AI X Entertainment Hackathon, CIC Tokyo, Japan
+- **March 20** - Speaker: AI and Other Hot Takes at AI Tinkerers, Ottawa, Canada
 
+#### April 2024
+- **April 17** - Speaker, SecOps for LLMOps at NatWest Bank
+- **April 24** - Speaker, Deploying and Managing LLMs in Production for O'Reilly Events
+- **April 26** - More details soon!
 
 ## Volunteering
+
+- **March 2024** - Invited Reviewer for AABI 2024 (Advances in Approximate Bayesian Inference)
+
 - **October 2023** Invited Reviewer for NeurIPS Workshop: I (Still) Can't Believe It's Not Better
+
+- **September 2023** Invited Reviewer for Reviewer for DGM4H NeurIPS 2023
 
 - **March 2023** Invited Reviewer | Fifth Symposium on Advances in Approximate Bayesian Inference (AABI 2023)
 
