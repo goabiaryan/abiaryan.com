@@ -24,6 +24,8 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 ## Publications
 
+- [Data Governance for Analytics and Generative AI](assets/Data_Governance_Report.pdf), 2025
+
 - 🎊 Large Language Models - Sector Deep Dive with Laconia Capital, August 2023 (Updating - Coming Soon!)
 
 - [The Costly Dilemma: Are Large Language Models the Pay-Day Loans of Machine Learning](https://arxiv.org/abs/2308.08061), June 2023
