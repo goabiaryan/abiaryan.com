@@ -51,7 +51,7 @@ However, the process of defining the number of layers is still controlled majorl
 
 To define the problem of AutoML,
 
-![What is AutoML](\assets\automl\automl-defn.png)
+![What is AutoML](/assets/automl/automl-defn.png)
 
 In the past five years, various AutoML methods have been proposed. Introduced in 2013, Auto-WEKA was the first AutoML method and used Bayesian Optimization to automatically instantiate a highly parametric machine learning framework. Parametric models assume some finite set of parameters $\theta$. Given the parameters $\theta$, future predictions, x, are independent of the observed data, D
 
@@ -67,7 +67,7 @@ While one possible direction post this could be extending the framework to suppo
 
 Introduced in 2015, Auto-sklearn approached the problem by taking into account past performance on similar datasets, or constructing ensembles from the models evaluated during the optimization. While budget and computational power being the obvious constraints for such methods, one not-so-obvious limitation is that testing hundreds of hyperparameter optimization configuration increases the risk of overfitting to the validation set. 
 
-![Bayesian Machine Learning](\assets\automl\bayesian.png)
+![Bayesian Machine Learning](/assets/automl/bayesian.png)
 
 Aside from this, several incremental developments have been made in the field of architecture selection, hyperparameter optimization and meta-learning using both gradient based as well as gradient-free methods. 
 
@@ -78,7 +78,7 @@ The most intuitive gradient-free technique is random search i.e. randomly search
 ##### Gradient Based Techniques
 In the past few years, deep learning methods have shown immense potential in the area of AutoML. One such key project is Auto-Net which uses Bayesian Optimization method SMAC and the deep learning library Lasagne, later followed by Auto-Net 2.0 that uses a combination of Bayesian Optimization and HyperBand, called BHOB, and uses PyTorch as the key deep learning library. Auto-Net provides automatically-tuned feed-forward neural networks without any human intervention. BHOB uses repeated runs of successive halving to invest most runtime in promising neural networks and stops training neural networks with poor performance early and using kernel density estimator to describe regions of high performance in the space of neural network. One of its key advantages is that this method is highly parallelizable achieving almost linear speedups with an increasing number of workers. Auto-Net performance on three different datasets -
 
-![AutoNet](\assets\automl\autonet.png)
+![AutoNet](/assets/automl/autonet.png)
 
 As observed, AutoNet performs best twice and comparatively well for yolanda as well. As the No Free Lunch theorem goes, any one algorithm that searches for an optimal cost or fitness solution is not universally superior to any other algorithm given that we are optimizing for fit on a limited class of problems thus it may or may not generalize in an infinite possibilities dataset. Thus gradient based neural networks started to focus on building a model from existing class of models instead of random search on a particular number of configurations.  In 2016, the focus shifted from searching within specified parameters to instead the use of modular approach to find the best model and combination of hyperparameters.
 
@@ -105,7 +105,7 @@ One of the key advantages of Bayesian Optimization framework is that it can be a
 
 If f is cheap to evaluate we could sample at many points e.g. via grid search, random search or numeric gradient estimation. However, if function evaluation is expensive e.g. tuning hyperparameters of a deep neural network, probe drilling for oil at given geographic coordinates or evaluating the effectiveness of a drug candidate taken from a chemical search space then it is important to minimize the number of samples drawn from the black box function f. This is the domain where Bayesian optimization techniques are most useful. They attempt to find the global optimum in a minimum number of steps. A popular surrogate model for Bayesian optimization are Gaussian processes (GPs). The success of these methods has led to the discovery and development of several acquisition functions including Thompson Sampling, Probability of Improvement, Expected Improvement, Upper Confidence Bounds, Entropy Search etc. These acquisition functions trade off exploration and exploitation such that their optima is located where the uncertainty in the surrogate model is large (exploration) and/or the prediction is high (exploitation). 
 
-![Bayesian Method](\assets\automl\bayesian_algo.png)
+![Bayesian Method](/assets/automl/bayesian_algo.png)
 
 In terms of AutoML, it has been proved through various experiments that often the careful choice of statistical model is often far more important than the choice of acquisition functions. While Bayesian Optimization is already one of the preferred methods for combinatorial search spaces and policy search for both parametric as well as non-parametric models, one of the major applications in AutoML has been the exploration of Bayesian Optimization for Automating Hyperparameter Tuning. In architectural search spaces, Bayesian Optimization methods have received great attention in tuning deep belief networks, Markov Chain Monte Carlo Methods (MCMC), Convolutional Neural Networks and its application in one of the most primitive neural architecture search methods such as SMAC, Auto-SkLearn, AutoWeka, BHOB, REMBO etc.
 
@@ -141,11 +141,11 @@ The key idea here is to use a neural network to learn the gradient descent updat
 
 A reinforcement learning problem is typically formally represented as an Markov decision process(MDP). We consider a finite-horizon MDP with continuous state and action spaces defined by the tuple (S,A,p0,p,c,$\gamma$), where S is the set of states, A is the set of actions, $p0:S \rightarrow R+$ is the probability density over initial states, $p:S \times A \times S \rightarrow R+$ is the transition probability density, that is, the conditional probability density over successor states given the current state and action, $c:S \rightarrow R$ is a function that maps state to cost and $\gamma \in (0,1]$ is the discount factor.The objective is to learn a stochastic policy $\Pi^*$: $S \times A \rightarrow R+ $, which is a conditional probability density over actions given the current state, such that the expected cumulative cost is minimized. That is,
 
-![Reinforcement Learning](\assets\automl\rl_cum.png)
+![Reinforcement Learning](/assets/automl/rl_cum.png)
 
 where the expectation is taken with respect to the joint distribution over the sequence of states and actions, often referred to as a trajectory, which has the density 
 
-![Density](\assets\automl\rl_density.png)
+![Density](/assets/automl/rl_density.png)
 
 This problem of finding the cost-minimizing policy is known as the policy search problem. To enable generalization to unseen states, the policy is typically parameterized and minimization is performed over representable policies. Solving this problem exactly is intractable in all but selected special cases. Therefore, policy search methods generally tackle this problem by solving it approximately.In many practical settings,p, which characterizes the dynamics, is unknown and must therefore be estimated. Additionally, because it is often equally important to minimize cost at earlier and later time steps, we will henceforth focus on the undiscounted setting, i.e. the setting where $\gamma$= 1.
 
@@ -238,7 +238,7 @@ Deep neural networks tend to perform better than the shallow networks, but is it
     
 In other words, the NFLT states that no black box strategy is superior to another one. Another point to consider is the tradeoff between generality and specificity of an approach.
 
-![NLFT](\assets\automl\nlft.png)
+![NLFT](/assets/automl/nlft.png)
 
 The need for defining interpretability arises from the gap between objectives in a supervised learning environment and the actual deployment costs. The training procedure only requires the predicted and actual labels for optimization. The problem arises when the real world problem cannot be translated into a mathematical function or because of the difference between the deployment and training settings. Interpretations thus cater to the important but difficult to formalize objectives. The objectives of interpretability are:
 
