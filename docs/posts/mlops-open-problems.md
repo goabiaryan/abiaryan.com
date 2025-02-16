@@ -25,7 +25,7 @@ It truly needs an army, some in-house (DE/MLE) and some outsourced to the A.I. t
 
 5. There is a lack of commonly well-defined best practices around **creating model version control or project structures at different stages from exploration to deployment**. [Cookie cutter](https://drivendata.github.io/cookiecutter-data-science/) is one of the efforts toward developing a unified project structure for cross-team collaborations.
     
-    ![Github Template for ML/DS Projects](/assets/mlops/1.png)
+    ![Github Template for ML/DS Projects](\assets\mlops\1.png)
     
     Undefined/poorly defined prerequisites about when to push a model in production can create unnecessary bugs and introduce delays during monitoring and debugging.
     

@@ -51,7 +51,7 @@ However, the process of defining the number of layers is still controlled majorl
 
 To define the problem of AutoML,
 
-![What is AutoML](/assets/automl/automl-defn.png)
+![What is AutoML](\assets\automl\automl-defn.png)
 
 In the past five years, various AutoML methods have been proposed. Introduced in 2013, Auto-WEKA was the first AutoML method and used Bayesian Optimization to automatically instantiate a highly parametric machine learning framework. Parametric models assume some finite set of parameters $\theta$. Given the parameters $\theta$, future predictions, x, are independent of the observed data, D
 
