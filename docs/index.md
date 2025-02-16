@@ -12,7 +12,7 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 - The best way to stay updated with my research work is either through my public talks or the [newsletter](https://modelcraft.substack.com/).
 
-- ✍️ More info on my next book and course **Coming Soon!**
+- ✍️ More info on upcoming projects **Coming Soon!**
 
 ## Collaboration
 
