@@ -41,7 +41,7 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 ### Upcoming
 
 ##### May 2025
-- Speaker, **Observability in LLM Pipelines**, [Open Data Science Conference (OSFC) East](https://odsc.com/boston/) 2025, Boston
+- Speaker, **Observability in LLM Pipelines**, [Open Data Science Conference (ODSC) East](https://odsc.com/boston/) 2025, Boston
 
 ##### March 2025
 - Invited Talk, **Evaluating LLMs: From RAG Pipelines to Advanced Reasoning**, organized by Embrace.ai, Lisbon (Portugal)
