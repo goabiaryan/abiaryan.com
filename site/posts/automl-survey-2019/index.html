@@ -12,9 +12,13 @@
         <meta name="author" content="Abi Aryan">
       
       
-        <link rel="canonical" href="https://abiaryan.com/posts/automl-problems-2019/">
+        <link rel="canonical" href="https://abiaryan.com/posts/automl-survey-2019/">
       
       
+        <link rel="prev" href="../mlops-open-problems/">
+      
+      
+        <link rel="next" href="../game-ai/">
       
       
       <link rel="icon" href="../../logo">
@@ -242,10 +246,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../llm-evals/" class="md-tabs__link">
           
   
@@ -319,25 +325,30 @@
       
   
   
+    
   
   
+  
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -348,7 +359,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Posts
@@ -422,10 +433,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../automl-survey-2019/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Problems & Challenges in AutoML
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -434,6 +463,255 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-deep-learning-for-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Deep Learning for AutoML?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is AutoML?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is AutoML?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradient-free-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Free Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient-based-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Based Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection-architecture-design-and-learning-policy-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection - Architecture Design and Learning Policy Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Selection - Architecture Design and Learning Policy Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-bayesian-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Bayesian Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-evolutionary-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Evolutionary Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Reinforcement Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-tree-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Tree Based Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-optimization-hpo-and-regularization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Optimization- HPO and Regularization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-optimization-for-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Optimization for AutoML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems-and-challenges-in-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROBLEMS AND CHALLENGES in AutoML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROBLEMS AND CHALLENGES in AutoML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Sensitivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Sensitivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Based Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-based-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Based Learning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curse-of-dimensionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curse of Dimensionality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpretability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limited Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catastrophic-forgetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catastrophic Forgetting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#towards-agi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Towards AGI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -796,7 +1074,7 @@
 
 
 
-  <h1>Problems and Challenges in AutoML</h1>
+  <h1>Problems & Challenges in AutoML</h1>
 
 <p><strong>March 16, 2019</strong></p>
 <p><sup> 
