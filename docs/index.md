@@ -45,10 +45,10 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 - **June 7**, Speaker, [AI Horizons](https://ai-horizons.co/), UPTEC, Porto 
 
 ##### May 2025
-- **May 13** - Speaker, **Observability in LLM Pipelines**, [Open Data Science Conference (ODSC) East](https://odsc.com/boston/) 2025, Boston - [Slides](assets/ODSC Talk 2025.pdf)
+- 🆕🚀 **May 13** - Speaker, **Observability in LLM Pipelines**, [Open Data Science Conference (ODSC) East](https://odsc.com/boston/) 2025, Boston - [Slides](assets/ODSC Talk 2025.pdf)
 
 ##### March 2025
-- **Mar 20** - Invited Talk, **Evaluating LLMs: From RAG Pipelines to Advanced Reasoning**, organized by Embrace.ai, Lisbon (Portugal) - [Slides](assets/Evals presentation.pdf)
+- 🆕🚀 **Mar 20** - Invited Talk, **Evaluating LLMs: From RAG Pipelines to Advanced Reasoning**, organized by Embrace.ai, Lisbon (Portugal) - [Slides](assets/Evals presentation.pdf)
 
 ##### January 2025
 - Guest Lecture: **Serverless LLM Deployment** for [Cloud Engineering for Python Developers Course by Eric Riddoch, MLOps Club](https://mlops-club.org/)
