@@ -22,11 +22,11 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 
 ## Publications
 
+- 📙 [LLMOps: Managing Large Language Models in Production](https://learning.oreilly.com/library/view/llmops/9781098154196/), 🚀 In Bookshops Near You and Amazon - July 2025
+
+- 📙 [What is LLMOps, O'Reilly Publications](https://learning.oreilly.com/library/view/what-is-llmops/9781098154301/), 2024 - *Paperback available at Data + AI Summit, 2024 by Databricks*
+
 - [Report - Data Governance for Analytics and Generative AI](assets/Data_Governance_Report.pdf), [Slides](assets/Data_Governance_Slides.pdf), 2025 
-
-- *Early Release* [LLMOps: Managing Large Language Models in Production](https://learning.oreilly.com/library/view/llmops/9781098154196/), 2025
-
-- [What is LLMOps, O'Reilly Publications](https://learning.oreilly.com/library/view/what-is-llmops/9781098154301/), 2024 - *Paperback available at Data + AI Summit, 2024 by Databricks*
 
 - Report - Large Language Models - Sector Deep Dive with Laconia Capital, August 2023
 
