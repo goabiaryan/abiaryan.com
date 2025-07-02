@@ -1,0 +1,1119 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Personal Blog">
+      
+      
+        <meta name="author" content="Abi Aryan">
+      
+      
+        <link rel="canonical" href="https://abiaryan.com/posts/automl-problems-2019/">
+      
+      
+      
+      
+      <link rel="icon" href="../../logo">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>Problems and Challenges in AutoML - Abi Aryan</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-NC4SF5LGSH"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-NC4SF5LGSH",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-NC4SF5LGSH",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+   <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#why-deep-learning-for-automl" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Abi Aryan" class="md-header__button md-logo" aria-label="Abi Aryan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Abi Aryan
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Problems and Challenges in AutoML
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="red" data-md-color-accent="red"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../llm-evals/" class="md-tabs__link">
+          
+  
+  Posts
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Abi Aryan" class="md-nav__button md-logo" aria-label="Abi Aryan" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Abi Aryan
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Posts
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Posts
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../llm-evals/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Evaluation and Interpretation for LLMs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../intro-llms/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to Large Language Models
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mlops-open-problems/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems & Challenges in MLOps
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../automl-survey-2019/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Problems & Challenges in AutoML
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../game-ai/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Developing A.I. using Games
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../why-tensorlayer/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Why TensorLayer?
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../associative-memory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dense Associative Memory for Pattern Recognition
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#why-deep-learning-for-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Why Deep Learning for AutoML?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#history" class="md-nav__link">
+    <span class="md-ellipsis">
+      History
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is AutoML?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What is AutoML?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gradient-free-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Free Techniques
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gradient-based-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gradient Based Techniques
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-selection-architecture-design-and-learning-policy-selection" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Selection - Architecture Design and Learning Policy Selection
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Selection - Architecture Design and Learning Policy Selection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-bayesian-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Bayesian Optimization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-evolutionary-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Evolutionary Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-reinforcement-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Reinforcement Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#architecture-search-via-tree-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture Search via Tree Based Methods
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-optimization-hpo-and-regularization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Optimization- HPO and Regularization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline-optimization-for-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pipeline Optimization for AutoML
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problems-and-challenges-in-automl" class="md-nav__link">
+    <span class="md-ellipsis">
+      PROBLEMS AND CHALLENGES in AutoML
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PROBLEMS AND CHALLENGES in AutoML">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cost-sensitivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cost Sensitivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cost Sensitivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#model-based-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Based Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#metric-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Metric Learning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#optimization-based-learning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Optimization Based Learning
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#curse-of-dimensionality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Curse of Dimensionality
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interpretability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interpretability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#limited-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Limited Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#catastrophic-forgetting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Catastrophic Forgetting
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#towards-agi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Towards AGI
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Citation
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+<nav class="md-tags" >
+  
+    
+    
+    
+      <a href="../../tags/#mlsys" class="md-tag">MLSys</a>
+    
+  
+    
+    
+    
+      <a href="../../tags/#agents" class="md-tag">Agents</a>
+    
+  
+</nav>
+
+
+
+  <h1>Problems and Challenges in AutoML</h1>
+
+<p><strong>March 16, 2019</strong></p>
+<p><sup> 
+Article based on the research paper Problems &amp; Challenges in AutoML, 2019. I would like to thank my co-author <a href="https://in.linkedin.com/in/shubhi-sareen">Shubhi Sareen</a> for being an excellent research collaborator through this research.
+</sup></p>
+<p>The constantly growing amount and complexity of data involved in brain studies makes manual parameterization of data processing and modelling algorithms a tedious and time-consuming task. One of the key focuses for the machine learning community has been to develop autonomous agents, by automating the entire production pipeline for selecting and training the learning algorithms, so as to take humans out of the loop. This automation has several benefits including reducing human effort and the associated time cost involved, improving the performance of these algorithms by tailoring them to the problem at hand, reducing human induced bias as well as improving the improving the reproducibility and fairness of the scientific studie s. In this paper, we will be discussing some of the key problems and challenges in AutoML. Our survey will cover central algorithms in AutoML including NAS, etc. In parallel, we also highlight the unique advantages of deep neural network, focusing on developing algorithms that can generalize of different tasks via AutoML. To conclude, we describe several current areas of research within the field.</p>
+<p>While neural networks were not the first choice for designing machine intelligence, it was in 2012 that neural networks began outperforming competing techniques for tasks that required complex feature engineering [Hinton, Sutskever 2012]. This advent of deep learning has had a significant impact on many areas in machine learning, dramatically improving the state-of-the-art in tasks such as object detection, speech recognition, and language translation.</p>
+<h5 id="why-deep-learning-for-automl">Why Deep Learning for AutoML?<a class="headerlink" href="#why-deep-learning-for-automl" title="Permanent link">&para;</a></h5>
+<p>While AutoML is not simply limited to deep learning methods, classical machine learning becomes limited by the need for simpler rules and features. The key foundation for deep learning is compositionality, which means it is possible to construct a task from a series of sub-tasks. </p>
+<p>For most of the tasks we can divide them into two categories - classification problems and regression problems. Deep Learning has shown excellent promise on classification problems. And one could argue that one of the key contributors for this success on classification problem is the convolutional neural networks. </p>
+<p>Convolutional Neural Networks consist of multiple layers and are designed to require relatively little pre-processing compared to other classification algorithms. They learn by using filters and applying them to the images. The algorithm takes a small square (or ‘window’) and starts applying it over the image. This mathematical process is called convolution. Each filter allows the CNN to identify certain patterns in the image. The CNN looks for parts of the image where a filter matches the contents of the image. The first few layers of the network may detect simple features like lines, circles, edges. In each layer, the network is able to combine these findings and continually learn more complex concepts as we go deeper and deeper into the layers of the Neural Network. Thus, deep learning essentially allows us to map complex features from inputs to a classification. </p>
+<p>For this complex feature engineering, the number of available choices of algorithms, learning methods and packages for machine learning have quadrupled in the past decade. The algorithm choice space ranges from CNNs, LSTMs to GANs. Learning methods ranging from K-means clustering, PCA (Principal Component Analysis), Bayesian Optimization to Q-Learning. The number of packages ranging from Tensorflow, Scikit-Learn, PyTorch, etc. </p>
+<p>When doing AutoML these days, the performance is hugely dependent on the design decision of the model. These design decisions include - algorithm selection and hyperparameter optimization. Usually, this optimization process for any selected algorithm is repeated via hit and trial until we find a good set of choices for each dataset. This problem has been dubbed as CASH (Combined Algorithm Selection and Hyperparameter Optimization) and can present a combinatorial number of choices for any user. For any non-expert, this often results in choosing an algorithm based on either reputation or intuitive appeal and more often than not, leaving the hyperparameter settings to default thus resulting in less than optimal performance for that particular selection of models. Lately, Tensorflow has helped make this process slightly easier by allowing the users a visual representation of the process and an almost plug and play like interface for optimization settings, however the choice of algorithm selection and learning method selection is still heavily user-dependent.</p>
+<h3 id="history">History<a class="headerlink" href="#history" title="Permanent link">&para;</a></h3>
+<p>The goal of AutoML is largely to build autonomous agents that can take human out of the loop for choosing and designing learning algorithms. This can potentially mean huge gains in the performance of machine learning algorithms by tailoring them to the problem at hand, reducing human induced bias as well as improving the improving the reproducibility and fairness of the scientific studies. </p>
+<p>We roughly divide this section in two parts-</p>
+<ul>
+<li>the Model Selection where we discuss the problem of architecture design (also known as Search Space) and Learning Policy Selection, and </li>
+<li>Model Optimization where we discuss the problem of optimization choices made while training the model including hyperparameters, ensembles and regularizers. In this section, we will go through the reasoning behind some of these decisions. </li>
+</ul>
+<p>For image classification, various architectures have been proposed over the years. The convolution neural network architecture was first proposed in LeNet-5, which consisted of 6 layers consisting of convolution, average pooling and hidden layers. However, because of low computational resources, convolutional architectures next came into attention in 2012 with the first fast implementation of CNNs on GPU, AlexNet. AlexNet employed 8 layers, including 5 convolutional  and 3 fully connected layers using the ReLU activation function. The authors highlighted the gains in performance using ReLU over tanh and sigmoid activation functions. Dropout was used in the fully connected layers to prevent overfitting.</p>
+<p>In 2014, VGGNet was proposed which consists of 16 convolution and three fully connected layers employing only 3x3 convolutions. Next, GoogleNet was proposed which consisted of 22 layers. The main intuition behind the model was to make it compatible to be used on a smartphone with 12 times lesser parameters than AlexNet. It employed inception modules, which convolve parallely using different sizes of filters. Next, in 2015, ResNet was proposed which introduced skip-connections between the layers. These skip connections allowed a 152 layer architecture to be trained, while still having complexity lesser than that of VGGNet. </p>
+<p>Thus the advances in image classifications can be attributed to two main features-</p>
+<ul>
+<li>Increasing the number of layers </li>
+<li>Introduction of operations/connections which reduces the amount of parameters to be trained.</li>
+</ul>
+<p>However, the process of defining the number of layers is still controlled majorly by human beings and the hyperparameters are hand-tuned, therefore requiring a lot of time to be invested. The next step was to model these techniques automatically, thereby leading to the introduction of AutoML.</p>
+<h3 id="what-is-automl">What is AutoML?<a class="headerlink" href="#what-is-automl" title="Permanent link">&para;</a></h3>
+<p>To define the problem of AutoML,</p>
+<p><a class="glightbox" href="/assets/automl/automl-defn.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="What is AutoML" src="/assets/automl/automl-defn.png" /></a></p>
+<p>In the past five years, various AutoML methods have been proposed. Introduced in 2013, Auto-WEKA was the first AutoML method and used Bayesian Optimization to automatically instantiate a highly parametric machine learning framework. Parametric models assume some finite set of parameters <span class="arithmatex">\(\theta\)</span>. Given the parameters <span class="arithmatex">\(\theta\)</span>, future predictions, x, are independent of the observed data, D</p>
+<div class="arithmatex">\[
+P(x|\theta, D) = P(x|\theta)
+\]</div>
+<p>It is based upon the assumption that <span class="arithmatex">\(\theta\)</span> captures everything there is to know about the data and thus the complexity of the model is bounded even if the amount of data is unbounded. </p>
+<p>While these parametric methods are simpler, faster, interpretable and can be trained with less data but they pose flexibility constraints while struggling with complex data generating a poor fit for the real world problems. It was further extended as a package called Hyperopt-sklearn in 2014 to non-parametric methods like probability calibration, density estimation provided by Scikit-Learn. One of the key achievements of Hyperopt-sklearn is an ability to remove redundant features, or reduce data dimensionality using SVM or PCA so the classification task can become simpler. </p>
+<p>While one possible direction post this could be extending the framework to support more machine learning algorithms or extending the number of pre-processing methods however the ability to select a good algorithm and a combination of the right hyperparameters is a problem that lies at the heart of AutoML. </p>
+<p>Introduced in 2015, Auto-sklearn approached the problem by taking into account past performance on similar datasets, or constructing ensembles from the models evaluated during the optimization. While budget and computational power being the obvious constraints for such methods, one not-so-obvious limitation is that testing hundreds of hyperparameter optimization configuration increases the risk of overfitting to the validation set. </p>
+<p><a class="glightbox" href="/assets/automl/bayesian.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bayesian Machine Learning" src="/assets/automl/bayesian.png" /></a></p>
+<p>Aside from this, several incremental developments have been made in the field of architecture selection, hyperparameter optimization and meta-learning using both gradient based as well as gradient-free methods. </p>
+<h5 id="gradient-free-techniques">Gradient Free Techniques<a class="headerlink" href="#gradient-free-techniques" title="Permanent link">&para;</a></h5>
+<p>The most intuitive gradient-free technique is random search i.e. randomly searching the state-space domain to find optimal values. However, since the state space is multi-dimensional, therefore, leading to suboptimal results using random search. Population based methods such as Genetic Algorithms and Particle Swarm Optimization have been employed in order to search the state-space more effectively. Other gradient free techniques include Bayesian Optimization by modelling the loss of a configuration, where the improvement of a configuration is proportional to the distance between the best-so-far loss and the predicted mean or using Tree Based Estimator like MCTS or using surrogate models for instance Gaussian processes. Q-learning has also been used in order to learn desirable architectures, where a reinforcement agent chooses components of an architecture sequentially with the reward equal to the validation accuracy. </p>
+<h5 id="gradient-based-techniques">Gradient Based Techniques<a class="headerlink" href="#gradient-based-techniques" title="Permanent link">&para;</a></h5>
+<p>In the past few years, deep learning methods have shown immense potential in the area of AutoML. One such key project is Auto-Net which uses Bayesian Optimization method SMAC and the deep learning library Lasagne, later followed by Auto-Net 2.0 that uses a combination of Bayesian Optimization and HyperBand, called BHOB, and uses PyTorch as the key deep learning library. Auto-Net provides automatically-tuned feed-forward neural networks without any human intervention. BHOB uses repeated runs of successive halving to invest most runtime in promising neural networks and stops training neural networks with poor performance early and using kernel density estimator to describe regions of high performance in the space of neural network. One of its key advantages is that this method is highly parallelizable achieving almost linear speedups with an increasing number of workers. Auto-Net performance on three different datasets -</p>
+<p><a class="glightbox" href="/assets/automl/autonet.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="AutoNet" src="/assets/automl/autonet.png" /></a></p>
+<p>As observed, AutoNet performs best twice and comparatively well for yolanda as well. As the No Free Lunch theorem goes, any one algorithm that searches for an optimal cost or fitness solution is not universally superior to any other algorithm given that we are optimizing for fit on a limited class of problems thus it may or may not generalize in an infinite possibilities dataset. Thus gradient based neural networks started to focus on building a model from existing class of models instead of random search on a particular number of configurations.  In 2016, the focus shifted from searching within specified parameters to instead the use of modular approach to find the best model and combination of hyperparameters.</p>
+<h3 id="model-selection-architecture-design-and-learning-policy-selection">Model Selection - Architecture Design and Learning Policy Selection<a class="headerlink" href="#model-selection-architecture-design-and-learning-policy-selection" title="Permanent link">&para;</a></h3>
+<p>In 2016, MetaQNN was introduced to generate CNN Architectures for a given task using Q-Learning, where the agent chooses the architecture layers sequentially, via the epsilon-greedy strategy, with reward equal to the validation accuracy. Next, the problem of generating a high-performing architecture was dealt by using a meta-controller. A meta controller models state information and directs how the search space is to be navigated in order to find the optimal architecture. Traditionally, RNNs and LSTMs are  used as metacontrollers, encoding the state space information. The state space consists of various blocks performing operations like convolution and pooling, and the meta-controller, say RNN, arranges these blocks in an end-to-end fashion. The controller is then updated based upon the validation accuracies to produce a better performing architecture in the next iterations. </p>
+<p>Another new approach in 2016, was the creation of NAS. The intuition behind this was since a single model does not generalize well for different datasets. Let’s try to automate the process of building a system that can adapt to different datasets. This was done by using smaller pieces from the architecture to build a new architecture using a technique called convolutional cells. However, limitations of this approach are it does limit itself to using the same type of controller and same kind of model for every image, which might or might not be optimal. Also, it happens to be computationally expensive. Progressive Nets however were the next iteration. Progressive Nets employ sequential-based model optimization to further optimize the search process. It learns the architecture in increasing complexity, with first learning the cell structure and then stacking those together to form a CNN. </p>
+<p>The next in line was ENAS i..e efficient neural architecture search. In 2017, Efficient Architecture Search was proposed to reuse the weights of pre-existing architectures using a Reinforcement Agent as a meta-controller. The architecture is encoded into a low dimensional representation using a bidirectional RNN with Embedding Layer. The network transformations are produced by an independent actor network which takes in as input the encoded representation. Efficient Neural Architecture Search is the next step to reduce the dependence on computational resources for generating high performance architectures. A policy gradient approach is used to train a controller which can select optimal subgraphs from within a larger graph. It allows the children graphs to share weights, therefore allowing faster convergence. ENAS employs LSTM as a controller. The training procedure consists of alternating between learning the parameters shared by the children and that of the LSTM controller. </p>
+<p>In addition to the requirement of high computational costs, the performance of network architectures learnt on a specific dataset don’t transfer to other tasks. In order to overcome that, in BlockQNN the authors proposed to generate the architecture block-wise, rather than layer-wise. The optimal block structure is searched using Q-Learning with <span class="arithmatex">\(\epsilon\)</span>-greedy strategy and experience relay. Lately, there has been a influx of various AutoML methods  like Elastic Architecture Transfer for Accelerating Large-scale Neural Architecture Search (EAT-NAS), Graph HyperNetworks for Neural Architecture Search, Stochastic Neural Architecture Search (SNAS), Instance-aware Neural Architecture Search (Insta-NAS) etc that use several approaches that we will discuss in further sections. </p>
+<p>One of the major drawbacks of these approaches is the fact that each architecture is trained from scratch, thereby basing their success on external factors like availability of computational resources. However, In the limited computational resource scenario, Bayesian Optimization techniques have emerged to be very successful for their ability to work with combinatorial space problems with limited training time as well as their flexibility with high-dimensional problems and transfer learning problems. </p>
+<h5 id="architecture-search-via-bayesian-optimization">Architecture Search via Bayesian Optimization<a class="headerlink" href="#architecture-search-via-bayesian-optimization" title="Permanent link">&para;</a></h5>
+<p>Bayesian optimization has emerged as an exciting subfield of machine learning that is concerned with the global optimization of noisy, black-box functions using probabilistic methods. Essentially, Bayesian Optimization is a sequential model-based approach to machine learning.  </p>
+<div class="admonition note annotate">
+<p class="admonition-title">Mathematically, the problem of finding a global maximizer (or minimizer) of an unknown objective function f can be represented as</p>
+<p>x* = arg max f(x) for x in X’ where X’ is some design space of interest.</p>
+</div>
+<p>One of the key advantages of Bayesian Optimization framework is that it can be applied to unusual search spaces that involve conditional or categorical inputs, or even combinatorial search spaces with multiple categorical inputs. The Bayesian Optimization framework has two key ingredients - first, a probabilistic surrogate model which consists of a prior distribution that captures our beliefs about the behaviour of the unknown objective function and an observation model that describes the data generation mechanism and secondly, the loss function that describes how optimal a sequence of queries are. In practice, these loss functions are often expresses as a form of regret, either simply or cumulative which is then minimized to select an optimal sequence of queries. </p>
+<p>If f is cheap to evaluate we could sample at many points e.g. via grid search, random search or numeric gradient estimation. However, if function evaluation is expensive e.g. tuning hyperparameters of a deep neural network, probe drilling for oil at given geographic coordinates or evaluating the effectiveness of a drug candidate taken from a chemical search space then it is important to minimize the number of samples drawn from the black box function f. This is the domain where Bayesian optimization techniques are most useful. They attempt to find the global optimum in a minimum number of steps. A popular surrogate model for Bayesian optimization are Gaussian processes (GPs). The success of these methods has led to the discovery and development of several acquisition functions including Thompson Sampling, Probability of Improvement, Expected Improvement, Upper Confidence Bounds, Entropy Search etc. These acquisition functions trade off exploration and exploitation such that their optima is located where the uncertainty in the surrogate model is large (exploration) and/or the prediction is high (exploitation). </p>
+<p><a class="glightbox" href="/assets/automl/bayesian_algo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Bayesian Method" src="/assets/automl/bayesian_algo.png" /></a></p>
+<p>In terms of AutoML, it has been proved through various experiments that often the careful choice of statistical model is often far more important than the choice of acquisition functions. While Bayesian Optimization is already one of the preferred methods for combinatorial search spaces and policy search for both parametric as well as non-parametric models, one of the major applications in AutoML has been the exploration of Bayesian Optimization for Automating Hyperparameter Tuning. In architectural search spaces, Bayesian Optimization methods have received great attention in tuning deep belief networks, Markov Chain Monte Carlo Methods (MCMC), Convolutional Neural Networks and its application in one of the most primitive neural architecture search methods such as SMAC, Auto-SkLearn, AutoWeka, BHOB, REMBO etc.</p>
+<p>Another key application of Bayesian Optimization has been on multi-task learning and transfer learning, esp in a constrained budget. There have been several attempts to exploit this property within the Bayesian Optimization framework including Collaborative Hyperparameter Tuning, Initializing Bayesian Hyperparameter Optimization via Meta-Learning, Sequential Model-Based Optimization for General Algorithm Configuration, Gaussian Process Bandit Optimization, Freeze-Thaw Optimization, Efficient Transfer Learning via Bayesian Optimization. The key idea here is that there are several correlated functions, <span class="arithmatex">\(\tau\)</span> = {1, 2, ….,M}, called tasks and that we are interested in optimizing some subset of these tasks, thus using the data from one task to provide information about another task. </p>
+<p>One such method of sharing information between tasks has been implementing by modifying the Bayesian Optimization Routine to modify the underlying the Gaussian Process (GP) model called Multi-Output GPs. We define a valid covariance over input and task pairs, k((x,m), (x’, m’)). One of the explored methods to do this is using coregionalization that utilizes the product kernel -</p>
+<div class="arithmatex">\[
+    k((x,m), (x’, m’)) = k_{\chi}(x,x')k_{\tau}(m,m')
+\]</div>
+<p>Where m, m’ <span class="arithmatex">\(\in\)</span>  <span class="arithmatex">\(\tau\)</span> . The problem of defining a Multi-Output GP can then be viewed as learning a latent function, or a set of latent functions, that can be transformed to produce the output tasks. This can be done by introducing a latent ranking function across different pairs of observations on various tasks such that the tasks are jointly embedded in a single latent space that in variant to potentially different output scales across tasks. The key idea here is to build a joint model with a joint probability distribution function which can then be trained via various methods like Random Forest to learn the similarities between different tasks based on the task features. The best inputs from the most familiar tasks (or models) are then used as the initial design for the new task (or new model) thus creating an automatic architecture space pipeline for working on cross domain machine learning models. </p>
+<h5 id="architecture-search-via-evolutionary-methods">Architecture Search via Evolutionary Methods<a class="headerlink" href="#architecture-search-via-evolutionary-methods" title="Permanent link">&para;</a></h5>
+<p>An evolutionary algorithm based approach is used to evolve AmoebaNet-A, an architecture for image classification at par with human crafted designs. The proposed approach biases tournament selection with age, thereby preferring younger genomes. The search space consists of directed graphs where hidden states correspond to vertices and ordinary operations like convolution, pooling etc. are associated with edges. Mutation is performed either by random reconnection of edges to other vertices or relabeling randomly selected edges. After initializing the parent population with randomly generated architectures which are trained and evaluated, children architectures are generated using mutation. These architectures are then trained and evaluated, whereas the oldest ones are discarded. The ageing evolution used is analogous to regularization, as the only way good architectures can be retained are when they are inherited by the children. Since at each step, children models are retrained, architectures which constantly perform good, are the ones which are eventually retained, thereby preventing overfitting.</p>
+<p>In GeneticCNN, Genetic Algorithms are used to come up with Convolutional Neural Network Architectures.  A binary string is used to represent each possible network. 0.5 <span class="arithmatex">\(\Sigma\)</span> sKs(Ks-1) bits are needed to represent the network with S stages, and each stage having Ks nodes. The bit corresponding to (vs,i, vs,j) is set if there is a connection between the associated nodes. A default input and output node are present at every stage. Isolated nodes do not have a connection to the default nodes. In case of absence of connections at a stage, i.e. all bits are unset, convolution is applied only once. Only convolution and pooling operations are taken into consideration. The initial population consists of randomized strings, where each bit is sampled from Bernoulli Distribution. Individuals are selected using Russian roulette process, where fittest individual has maximum probability of being selected. In mutation, a randomly selected bit is flipped with mutation probability. In crossover between two individuals, corresponding stage pairs are exchanged with crossover probability. Fitness is obtained by training the architectures represented by individuals on a preselected reference dataset. </p>
+<p>Cartesian Genetic Programming is used to design architecture for Convolutional Neural Network which provides the benefit of flexibility to incorporate skip connections and variable depth networks in the representation. The network is defined as a directed acyclic graph represented using s two dimensional grid consisting of computational vertices. For a grid of Nr rows and Nc columns with fixed number of inputs and outputs, nodes in the nth column have connections from nodes in the range of (n-l)  to (n-1) columns. The architecture representation in the genotype have fixed length integers, each chromosome consisting of type and connectivity information regarding that node. The phenotype consists of variable number of nodes because all nodes don’t have a connection to the output. Computational nodes comprises of convolution operation, average pooling, max pooling, summation, concatenation and ResBlock (convolution processing, batch normalization, ReLU, and tensor summation). A (1+ <span class="arithmatex">\(\lambda\)</span>) evolution strategy is used to find the appropropriate architecture where the most fit of the <span class="arithmatex">\(\lambda\)</span> children generated at each generation become the parents for the next generation. Children architectures are trained in parallel and fitness is defined as the validation accuracy. The mutation strategy used is to change the type (size and number of filters) or the edge connections at random depending upon the mutation probability. In case of stagnation in fitness of children, mutation is applied to the non functioning nodes in the parent architectures. The proposed approach has an inherent drawback of high computational cost.</p>
+<p>Another work analyzed the performance of gradient-free Genetic Algorithms on Reinforcement Learning Problems. The population of N individuals comprise of vector parameters for neural networks denoted by <span class="arithmatex">\(\theta\)</span>i. On evaluating <span class="arithmatex">\(\theta\)</span>i in every generation, a fitness score F(<span class="arithmatex">\(\theta\)</span>i) is associated with each individual which is analogous to reward. The most fit individuals become the parents in the next generation. Mutation is performed on randomly selected parent by addition of Gaussian noise in the parameter vector: <span class="arithmatex">\(\theta'\)</span> = <span class="arithmatex">\(\theta\)</span> + <span class="arithmatex">\(\sigma_\epsilon\)</span>, where <span class="arithmatex">\(\epsilon\)</span> ~ N(0,1) and value of <span class="arithmatex">\(\epsilon\)</span> is empirically determined in every experiment. The best individual from each generation is retained which is determined by evaluation of the most fit 10 individuals for additional 30 episodes and selecting the one with the highest mean score as the elite individual to be retained. Crossover is not included for simplicity. The process is then repeated for the new generation of individuals. The hyperparameters for all Atari games were selected from a collection of 36 hyperparameters evaluated on 6 games. In order to efficiently implement distributed deep GA, parameter vectors are stored as combination of the initial seed value and the random seeds producing the sequence of mutations from which it is possibly to reconstruct <span class="arithmatex">\(\theta\)</span>. This compressed representation is independent of the network size and linearly dependent on the number of generations. It was observed that all the final Atari networks were 8000-50000 times compressible. Another advantage provided by the use of GAs over traditional RL methods is that of increased speed. </p>
+<p>Another variant of GA which uses Novelty Search in place of Fitness Function was implemented to evaluate the performance of its combination with DNNs on deceptive image based Reinforcement Learning problems. Novelty Search rewards agents for novel behaviour, thereby avoiding local optima. A policy’s novelty is determined by calculating the average behavioral distance to its <span class="arithmatex">\(k(25)\)</span> nearest neighbours. This fitness function is inspired by Darwin’s Fitness function which suggests that the genetic contribution of an individual to the next generation's gene pool relative to the average for the population, usually measured by the number of offspring or close kin that survive to reproductive age. the ability of a population to maintain or increase its numbers in succeeding generations.</p>
+<p>Also, <a href="https://arxiv.org/abs/1804.09081v4">another related work</a> derived a new approach where the children are pre-trained from parent networks. This technique is called Lakhmarian Evolution.  </p>
+<h5 id="architecture-search-via-reinforcement-learning">Architecture Search via Reinforcement Learning<a class="headerlink" href="#architecture-search-via-reinforcement-learning" title="Permanent link">&para;</a></h5>
+<p>Hyperparameter optimization is an important research topic in machine learning, and is widely used in practice. Despite their success, these methods are still limited in that they only search models from a fixed-length space. In other words, it is difficult to ask them to generate a variable-length configuration that specifies the structure and connectivity of a network. And then as discussed above, there are Bayesian optimization methods that allow one to search non fixed length architectures, but they are less general and less flexible than reinforcement learning methods which provide a general framework for machine learning. Modern neuro-evolution algorithms, on the other hand, are much more flexible for composing novel models, yet they are usually less practical at a large scale. Their limitations lie in the fact that they are search-based methods,thus they are slow or require many heuristics to work well. One of the key advantages of reinforcement learning methods for architectural space design is that they can learn directly from the reward signal without any supervised bootstrapping, which is an immensely attractive characteristic for learning new tasks without much human interference. </p>
+<p>The key idea here is to use a neural network to learn the gradient descent updates for another network and then using reinforcement learning to find update policies for other networks. Under this framework, any particular optimization algorithm simply corresponds to a policy. Then, we reward optimization algorithms that converge quickly and penalize those that do not. Learning an optimization algorithm then reduces to finding an optimal policy, which can be solved using any reinforcement learning method. To differentiate the algorithm that performs learning from the algorithm that is learned, we refer to the former as the “learning algorithm” or “learner” and the latter as the “autonomous algorithm” or “policy” and use an off-the-shelf reinforcement learning algorithm known as guided policy search. </p>
+<p>A reinforcement learning problem is typically formally represented as an Markov decision process(MDP). We consider a finite-horizon MDP with continuous state and action spaces defined by the tuple (S,A,p0,p,c,<span class="arithmatex">\(\gamma\)</span>), where S is the set of states, A is the set of actions, <span class="arithmatex">\(p0:S \rightarrow R+\)</span> is the probability density over initial states, <span class="arithmatex">\(p:S \times A \times S \rightarrow R+\)</span> is the transition probability density, that is, the conditional probability density over successor states given the current state and action, <span class="arithmatex">\(c:S \rightarrow R\)</span> is a function that maps state to cost and <span class="arithmatex">\(\gamma \in (0,1]\)</span> is the discount factor.The objective is to learn a stochastic policy <span class="arithmatex">\(\Pi^*\)</span>: $S \times A \rightarrow R+ $, which is a conditional probability density over actions given the current state, such that the expected cumulative cost is minimized. That is,</p>
+<p><a class="glightbox" href="/assets/automl/rl_cum.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Reinforcement Learning" src="/assets/automl/rl_cum.png" /></a></p>
+<p>where the expectation is taken with respect to the joint distribution over the sequence of states and actions, often referred to as a trajectory, which has the density </p>
+<p><a class="glightbox" href="/assets/automl/rl_density.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Density" src="/assets/automl/rl_density.png" /></a></p>
+<p>This problem of finding the cost-minimizing policy is known as the policy search problem. To enable generalization to unseen states, the policy is typically parameterized and minimization is performed over representable policies. Solving this problem exactly is intractable in all but selected special cases. Therefore, policy search methods generally tackle this problem by solving it approximately.In many practical settings,p, which characterizes the dynamics, is unknown and must therefore be estimated. Additionally, because it is often equally important to minimize cost at earlier and later time steps, we will henceforth focus on the undiscounted setting, i.e. the setting where <span class="arithmatex">\(\gamma\)</span>= 1.</p>
+<p>Guided policy search is a method for performing policy search in continuous state and action spaces under possibly unknown dynamics. It works by alternating between computing a target distribution over trajectories that is encouraged to minimize cost and agree with the current policy and learning parameters of the policy in a standard supervised fashion so that sample trajectories from executing the policy are close to sample trajectories drawn from the target distribution. The target trajectory distribution is computed by iteratively fitting local time-varying linear and quadratic approximations to the (estimated) dynamics and cost respectively and optimizing over a restricted class of linear-Gaussian policies subject to a trust region constraint, which can be solved efficiently in closed form using a dynamic programming algorithm known as linear-quadratic-Gaussian (LQG).</p>
+<p>At the point of writing, we are not aware of any model-based reinforcement learning methods used to find the optimal search space for automatic neural architecture design. </p>
+<h5 id="architecture-search-via-tree-based-methods">Architecture Search via Tree Based Methods<a class="headerlink" href="#architecture-search-via-tree-based-methods" title="Permanent link">&para;</a></h5>
+<p>Another alternative approach for finding optimal architectures is also what is sometimes referred as Programming by Demonstration. In these methods, the strategy/policy is based upon inputs and outputs which are recorded at very instance which we do guided search using MCTS or Monte-Carlo Tree Search. Also another popular approach used in Markov Decision Monte Carlo Tree Search. </p>
+<p>While highly interpretable, but this approach has multiple limitations. MCTS works by exploring several single method and optimizing for global optimum which can be computationally expensive. This was explored by studying the performance of MCTS methods in the 2013 paper Investigating the Limits of Monte-Carlo Tree Search Methods in Computer Go.</p>
+<h3 id="model-optimization-hpo-and-regularization">Model Optimization- HPO and Regularization<a class="headerlink" href="#model-optimization-hpo-and-regularization" title="Permanent link">&para;</a></h3>
+<p>While the progress in the field of AutoML has followed the step-wise progressive direction of from doing effective feature designing to manual tuning of various hyper-parameters and implementing regularization techniques to architecture designing one of the key contributions of this paper is to instead look at the problem of automatic model creation and hyperparameter tuning in a top-down fashion instead of a bottom-up approach that explores various hacks to produce substantial predictive and computational gains over our datasets. We believe that the problem of automatic model generation lies at the heart of AutoML and other various optimization techniques can instead be used to further the performance of such automatically generated models. One of the key advantages of this approach is the focus on general-use architectures that can adapt well to non-stationary and cross-domain data i.e. transfer learning. In the past two years, transfer learning has managed to effectively adapt to new domains including in Video Classification to Sentiment Analysis in NLP. The biggest advantage of adopting this line of thinking is the idea of reducing human time and effort required in creating ML model pipelines that lies at the heart of AutoML. We believe the bottom-up approach is rather contrarian in increasing  the amount of manual human effort and computational efforts required in testing various approaches since designing architectures still requires a lot of expert knowledge and takes ample time. </p>
+<p>Various ways in which the performance of state-of-the-art architectures can be improved includes inclusion of more diverse data for training, or trying various possibly architectures, both being expensive tasks. In order to reduce model overfitting, regularization is used to penalize the model loss for complex models. The basic intuition is that smaller magnitude of model weights will produce a simpler model, thereby reducing overfitting. Normalization techniques can fasten the training process of deep neural networks. The input distribution for each layer in a network changes with updation in parameters of the previous layer, referred to as Internal Covariance Shift. Batch Normalization reduces this shift by taking mean and variance of each layer as a constant, and integrating normalization in the neural network architecture, thereby accelerating the end-to-end training process. The dependency if gradients on input values and scale is considerably reduced, allowing larger learning rates. It also acts as a regularizer, reducing the need of Dropout. However, simply normalizing inputs of each layer can change the meaning represented by each layer. This is tackled by introducing parameters which scale and shift each activation, and learnt during the training process. Secondly, this model uses mini-batches of the training dataset to estimate mean and variances. Weight Normalization, on the other hand aims to reparametrize weight vectors into a parameterized vector and a scalar parameter, in such a way that the Euclidean norm of the weight vector is equal to the scalar parameter. Thus acceleration in the training process can be attributed to decoupling the weight vector’s norm from its direction. Weight normalization reduces the required overheads and is not dependent on batch size. </p>
+<p>Another way could be to find the optimal values of hyperparameters in the hyperparameter space which minimizes the loss. The naive approach is to incorporate grid search, which evaluates all possible combinations of hyperparameters. However, this isn’t feasible in real-time, because hyperparameter space is multi-dimensional with infinitely many possible values for the numerical hyperparameters. The next step to perform random search which tests random combinations of hyperparameters within the limits of resources or until a desirable performance is achieved. The success of random search lies in the fact that there are only a few hyperparameters which affect the model accuracy, thereby reducing the apparent dimensionality of the search space. However, the importance of hyperparameters isn’t known beforehand. The next step, intuitively, is to learn the impact of the hyperparameters and accordingly pay attention to those. Bayesian Optimization, thus builds a  probabilistic loss-model, updating it sequentially with the newer combinations being tried out, which are selected by the acquisition function. Other sequential model based algorithms employs Tree Parzen Estimators and Random Forests. </p>
+<p>However these approaches lack a method of early termination for poorly performing hyperparameter combinations. Bertrand H. et. al. proposed an approach to fine tune hyperparameters for a machine learning model using an ensemble of two complementary approaches - Bayesian Optimization and Hyperband. Hyperband selects and trains a range of models in the hyperparameter domain, while removing the models with the worst performing models after a certain time spent in training. This step is repeated until only a few combinations are left. Bayesian Optimization invests time on training bad models, while Hyperband doesn’t result in improvement in the quality of selected model with time. Combining these two approaches can overcome both of these problems. Initial configurations are selected uniformly and evaluated using Hyperband, after which subsequent selections are a result of training Gaussian Process. After this, the next set of configurations is sampled from the probability distribution resulting from the normalized expected improvement of un-evaluated configurations.</p>
+<p>An alternative approach to hyperparameter optimization is to use gradient based approaches. It uses  two contrasting approaches to calculate hypergradient in Reverse and Forward Mode. In the reverse mode formulation, the computation is similar to that of backpropagation through time. The forward mode of hypergradient computation relies on chain rule for computing derivative in order to compute the gradient w.r.t hyperparameters. Forward mode calculation is particularly efficient when the hyperparameter space is much smaller than that of the parameters. In another approach, we aim to overcome the constraint of limited memory when computing gradient w.r.t hyperparameters while optimizing the same on validation set. This is achieved by a procedure which is exactly the reverse of stochastic gradient descent with momentum, which allows to compute gradient of the function of the final trained weights w.r.t. learning rate, initial weight configuration, momentum schedule and any other hyperparameter which may be involved with the time complexity equal to that of forward SGD. However, because of finite precision, this computation results in loss of important information as momentum schedule <span class="arithmatex">\(\gamma &lt; 1\)</span>, therefore discarding  bits at every multiplication step. This can be overcome by saving the discarded information at each step, and with <span class="arithmatex">\(\gamma = 0.9\)</span>, less than one bit per average needs to be stored.</p>
+<h3 id="pipeline-optimization-for-automl">Pipeline Optimization for AutoML<a class="headerlink" href="#pipeline-optimization-for-automl" title="Permanent link">&para;</a></h3>
+<p>While machine learning is devised to become a tool that could generate classifications or predictions directly from the data itself however as of now deploying these machine learning models end-to-end is still a challenge that’s currently tackled in part with a lot of intervention from humans at various stages. The key steps in training a machine learning algorithm range from pre-processing to feature selection to prediction. </p>
+<p>While still an unsolved problem but in 2016, TPOT was created as an automated pipeline design optimization method for AutoML. TPOT works as an architecture with three kinds of operators where each operator corresponds to a machine learning algorithm. Multiple copies of the entire dataset enter the pipeline for analysis. These various copies are then passed over to various types of feature processing operators are available in TPOT including StandardScalar, RobustScalar, RandomizedPCA, Polynomial Features etc that modify the dataset in some way thus returning the modified dataset. Later, these all features from multiple copies are then combined and best features are selected via Feature Selection Operators including SelectKBest, SelectFwe, Recursive Feature Elimination etc. The goal of this step is to reduce the number of features so as pick only the best features. However, this can also cause leaks and overfitting in automated pipelines. Finally, the selected features are sent to Supervised Classification Operators that include Decision Tree, Random Forest, Extreme Gradient Boosting (XGBoost), Logistic Regression and K-Nearest Neighbour Classifier(KNN) which stores the classifier's predictions as a new feature as well as produce classifications for the pipeline. </p>
+<h3 id="problems-and-challenges-in-automl">PROBLEMS AND CHALLENGES in AutoML<a class="headerlink" href="#problems-and-challenges-in-automl" title="Permanent link">&para;</a></h3>
+<h5 id="cost-sensitivity">Cost Sensitivity<a class="headerlink" href="#cost-sensitivity" title="Permanent link">&para;</a></h5>
+<p>Building an AutoML system that looks for all the variations of hyperparameter settings, all learning policies can be a very costly endeavour. Also, this does not favour how natural intelligence works.</p>
+<p>Argument 1: During meta-learning, the model is trained to learn tasks in the meta-training set. There are two optimizations at play – the learner, which learns new tasks, and the meta-learner, which trains the learner. Methods for meta-learning have typically fallen into one of three categories: recurrent models, metric learning and learning optimizers. </p>
+<h6 id="model-based-methods">Model Based Methods<a class="headerlink" href="#model-based-methods" title="Permanent link">&para;</a></h6>
+<p>The basic idea behind model based methods is fast learning through rapid parameter updation. One way is to feed the input sequentially to a recurrent model which learns the sequence representation to adapt to newer tasks. These RNN models ingest their own weights as additional inputs to identify their errors and update their own weights for better generalization on newer tasks.</p>
+<p>Memory Augmented Neural Networks are a family of architectures which learn how to quickly encode previously unseen information and thus learn new tasks after seeing limited samples. A Neural Turing Machine combines a controller with external storage buffer and learns to perform read and write operations in memory using soft attention. The label for an input was presented with an offset of 1 timestamp, which allowed the network to learn to keep the data in memory until the label is presented later and retrieval of earlier information for making predictions. The reading mechanism incorporates content similarity where the cosine similarity between the input feature and the memory rows is computed to produce a read vector which is the weighted sum of memory rows.  For the write operation, Least Recently Used Access (LRUA) writer is designed in which the write weight vector is an interpolation between previous least used weight vector and previous read weight vector. The intuition lies in the idea of preserving frequently used information and the fact that recently retrieved information won’t be used again for a while. </p>
+<p>MetaNets are used for rapid generalization across various tasks. One neural network is used to predict weights of another neural network and these weights are known as fast weights. Weights learnt using stochastic gradient descent, on the other hand are termed as slow weights. MetaNets combine slow and fast weights. MetaNets consist of an embedding function for learning the input representation and a base learner model which performs the actual learning task. A LSTM network is then used to learn the fast weights for embedding function and a neural network is incorporated to learn the fast weights for base learner from their loss gradients.  Thus, here we can see that MetaNets effectively have to learn 4 sets of model parameters. </p>
+<p>Thus model based methods effectively design a fast learning mechanism, where the models rapidly update their parameters using their own architecture or by incorporating additional meta learning model. </p>
+<h6 id="metric-learning">Metric Learning<a class="headerlink" href="#metric-learning" title="Permanent link">&para;</a></h6>
+<p>The metric learning based approaches are analogous to kernel density estimation and nearest neighbours estimation, where the predicted probability for an output label for a data point is equal to the weighted sum of labels for other data points in training sample, where the weight signifies the similarity between the 2 samples. </p>
+<p>Koch, Zemel &amp; Salakhutdinov used Siamese Networks to learn embeddings for a pair of images to check if they belong to the same output class. The advantage of this approach lies in its ability to measure similarity between images of unknown classes, but its utility decreases with divergence in tasks from the original training perspective. </p>
+<p>Relation Networks are similar to Siamese networks but they captured the correlation between an image and support set by incorporating a CNN classifier rather than using a distance metric. It also used MSE Loss in place of cross entropy, because intuitively, it outputs a relationship score, rather than a classification label. </p>
+<p>In another approach - Matching Networks, incorporated attention networks which measured cosine similarity between the embedding for a test sample and corresponding support set images. Since the performance of Matching Networks depends upon the quality of the embeddings learnt, a Bidirectional LSTM was trained over the entire support set for a class label to learn the embeddings. For the test sample, an LSTM incorporating attention with the support set as hidden state was used to learn effective embeddings. </p>
+<p>Prototypical Networks learns a prototype feature vector for each class, which is defined as mean over feature vectors learnt for each sample in the support set. For a test sample, the output class can be found by taking softmax over inverse-distances with the prototype vectors.</p>
+<p>The major task, therefore, in Metric based methods, is therefore to learn the kernel function, which in turn depends upon learning the embedding function for the test sample and the samples in support set. </p>
+<h6 id="optimization-based-learning">Optimization Based Learning<a class="headerlink" href="#optimization-based-learning" title="Permanent link">&para;</a></h6>
+<p>Gradient based methods aren’t suitable for learning from a small training dataset or converging in a few steps. One idea is to use an additional meta learner to update the weights of the model at hand in a small number of steps. An LSTM Meta Learning provides the following advantages:</p>
+<ol>
+<li>Similarity between cell state update and gradient based update</li>
+<li>Analogy between storing history of gradients in momentum based update and memory in LSTM</li>
+<li>Parameter sharing across coordinates is incorporated to compress the parameter space for the meta learner</li>
+</ol>
+<p>In Model Agnostic Meta-Learning, the parameters for the new task are calculated by performing a single or multiple gradient descent operations on the original parameters. The original model parameters are then updated using stochastic gradient descent using the loss over new parameters for the new problems sampled from a distribution of tasks. The basic idea behind this approach is to learn features which are applicable to a distribution of tasks, rather than to that of a single task.</p>
+<p>Meta Learning Approaches, therefore aim at increasing the generalization of a model across tasks, without re-training the entire network, and therefore reducing the cost of learning. Model Based Methods utilize inherent or additional memory for fast updation of model parameters. Metric Learning, on the other hand rely majorly on effective representation learning. Optimization Methods replace gradient based methods to generalize the model across tasks with a smaller dataset in hand or in a fewer number of steps. </p>
+<h5 id="curse-of-dimensionality">Curse of Dimensionality<a class="headerlink" href="#curse-of-dimensionality" title="Permanent link">&para;</a></h5>
+<p>Curse of Dimensionality refers to the problem of exponentially increasing data configurations with a linear increase in dimensions. The statistical challenge lies in the small number of available training tuples available compared to the large number of possible configurations. With increasing dimensions, there is a possibility for the lack of training examples for a given configuration of dimensional values. Machine Learning Algorithms using the nearest neighbour information to perform a task will fail in such a case. Natural intelligence is multidimensional (Gardner, 2011) and given the complexity of the world, generalized artificial intelligence will necessarily be multi-dimensional as well. </p>
+<p>The most important property of deep learning is that deep neural networks can automatically find compact low-dimensional representations(features) of high-dimensional data (e.g., images, text and audio). Through crafting inductive biases into neural network architectures, particularly that of hierarchical representations,machine learning practitioners have made effective progress in addressing the curse of dimensionality [Yoshua Bengio, Aaron Courville, and Pascal Vincent. Representation Learning: A Review and New Perspective]</p>
+<p>Principal Component Analysis, the most commonly used dimensionality reduction technique maps the data to a lower dimension, such that the resulting variance of the data is maximized. The basic objective is to capture most of the variance in the original data, while reducing the number of dimensions used to represent it. Autoencoders can also be used to perform dimensionality reduction, where they learn a reduced representation in the reduction phase, and then goes on to reconstruct the original data tuple in the reconstruction phase. </p>
+<h5 id="interpretability">Interpretability<a class="headerlink" href="#interpretability" title="Permanent link">&para;</a></h5>
+<p>Deep neural networks tend to perform better than the shallow networks, but is it certain that the improved performance can be attributed to the increased depth of a network? In a related paper, the authors mimicked deep networks with shallow ones by training shallow networks not on the original labels, but on the ones predicted by the deep network. The authors observed that shallow networks at par with the deep networks on CIFAR-10 image recognition and TIMIT phoneme recognition, allowing us to ponder upon the correlation between the training procedures used and the success of deep neural networks. It also opens up room to come up with novel approaches to train a shallow network more accurately. </p>
+<div class="admonition note">
+<p class="admonition-title">According to the No Free Lunch Theorem for Optimisation:</p>
+<p>If an algorithm performs better than random search on some class of problems then in must perform worse than random search on the remaining problems.</p>
+</div>
+<p>In other words, the NFLT states that no black box strategy is superior to another one. Another point to consider is the tradeoff between generality and specificity of an approach.</p>
+<p><a class="glightbox" href="/assets/automl/nlft.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="NLFT" src="/assets/automl/nlft.png" /></a></p>
+<p>The need for defining interpretability arises from the gap between objectives in a supervised learning environment and the actual deployment costs. The training procedure only requires the predicted and actual labels for optimization. The problem arises when the real world problem cannot be translated into a mathematical function or because of the difference between the deployment and training settings. Interpretations thus cater to the important but difficult to formalize objectives. The objectives of interpretability are:</p>
+<ol>
+<li>Trust: Does the model mimic humans, i.e. performing accurately where humans perform accurately and committing mistakes in areas where humans also struggle? Are we comfortable giving the model the entire control without human supervision?</li>
+<li>Causality: Can the associations generated by models be tested experimentally?</li>
+<li>Transferability: While supervised learning algorithms are evaluated based upon their performance on the test set, independent of the training data, humans have far more capabilities of generalizing their learnings. This is evident from the failure of machine learning models in adversarial settings.</li>
+<li>Informativeness: To provide more information to human decision makers, rather than simply outputting a single value.</li>
+<li>Fair and Ethical Decision-Making: Conventional evaluation metrics do not ensure acceptability. Algorithmic decisions must be supported with reasoning and should offer a way to be contested and modified if proven to be wrong.</li>
+</ol>
+<p>The paper also expanded on the properties of an interpretable model grouping it under 2 categories:</p>
+<ul>
+<li>transparency and </li>
+<li>post-hoc explanations.</li>
+</ul>
+<p><strong>Transparency</strong>: It can be defined at 3 levels:-</p>
+<ul>
+<li>At the level of the entire model - Simulatability: Allowing a human to combine input data, along with model parameters and be able to carry out all the computations to produce the output in reasonable time. But how much is “reasonable” amount of time? Are high dimensional linear models, cumbersome rule based systems or huge decision trees interpretable - No. What about a compact neural network?</li>
+<li>At the level of individual components - Decomposability: Offering an intuitive explanation to each input, parameter and calculation. Associating descriptions with each node in decision trees or using parameters of a linear model to represent the association strength between features and labels. </li>
+<li>At the level of algorithm used - Algorithmic Transparency: A linear model will converge to a unique point even for a new dataset. This however cannot be guaranteed for deep learning mechanisms.</li>
+</ul>
+<p><strong>Interpretability</strong>: Offer useful information to humans in the form of:</p>
+<ul>
+<li>Text Explanations: Train a model to produce an output and a separate model to produce an explanation, mimicking the verbal descriptions of humans. </li>
+<li>Visualizations: Qualitatively represent the model’s learnings in form of visualizations.</li>
+<li>Local Explanations: Offering local explanations to the decisions of a neural network. A popular example is that of a saliency map which highlights important pixels in an image, which when changed will maximize the effect on the output. In other work, the authors trained a sparse model in locality of a particular point to offer explanation to the decisions of the original model.</li>
+<li>Explanation by Examples: Reporting examples which the model consider similar to one under observation. This can be achieved by finding the nearest neighbours in the learned space of the model.</li>
+</ul>
+<p>Linear models might seem to be more interpretable than deep learning ones, however they lose simulatability and decomposability with increasing number of dimensions or complexity of features. Deep architectures work on raw features, and thus offer better and more intuitive post-hoc explanations. </p>
+<h5 id="limited-data">Limited Data<a class="headerlink" href="#limited-data" title="Permanent link">&para;</a></h5>
+<p>One of the key arguments here is that humans can learn from very small amount of data. However, deep learning method based AutoML methods and libraries require huge amounts of training data to compute the results. Thus, one of the more apparent limitations of the key AutoML libraries is scenario modelling for the performance of existing models on these particular tasks depend upon the availability of relevant data. This limitation can also be explained by No-Free Lunch Theorem that suggests that no single algorithm can model and provide good predictions on all kinds of data.</p>
+<p>One of the methods used in the cases of limited data is probablistic inferencing models that have used to explore compositionality. While compostitional models are yet to match the performance of deep learning based models however one of the AutoML projects developed using this core idea of compositionality is called Automatic Statistician. The main problem for such methods would be computational complexity and the high amount of computational resources required to make predictions. Thus, although theoretically robust, however are also non-scalable.</p>
+<p>Linear Regression particularly suffers from lack of data. Relationships learnt from limited data may not portray the accurate trends. For example, the model may learn faster or slower growth in trends than what it actually should be because of lack of sufficient data points.</p>
+<p>In the paper Linear Regression with Limited Observation, compared the performance of various regression variants when only a subset of attributes were available. They discovered that while Lasso and Ridge regression required the same number of total attributes to achieve a certain accuracy, SVM Regressors could achieve that with exponentially less attributes. </p>
+<p>Many real world scenarios (social media, citation graphs, the Internet etc.) can be visualized in the form of graphs.  Two challenges in performing tasks like classification on a graph includes -
+1. Absence of labels for many nodes 
+2. Large computation time for the graph convolutions involved in spectral graph theory. A graph G = (V, E) can be represented using an adjacency matrix A. The input features for the graph can be represented as a N x D matrix, where N are the number of Nodes, and each node had D input features. Each node is associated with an output Z. </p>
+<p>Thus, a neural network of the graph G can be summarized as: H(l+1) = f(H(l), A) where input to the first row is the feature matrix and output corresponds to the labels. Kipf &amp; Welling proposed a fast layer wise propagation rule which ensured the inclusion of the feature vector for the node in consideration, as well as normalized the adjacency matrix. The proposed rule is also analogous to differentiable, parameterized form of Weisfeiler-Lehman algorithm, therefore assigning features which captures the role of nodes in the graph. Training this model on a graph, where only a single node is labelled corresponding to each class, the proposed model is able to linearly separate nodes into various classes. The drawback of this approach is the possibility of the proposed approach to underperform on regular graphs.</p>
+<p>Missing data poses another problem to learning models which do not overfit the training data. Missing data can be categorized into 3 classes - Missing Completely at Random (MCAR), Missing Not at Random (MNAR) and Missing at Random (MAR). In MAR, the missing data distribution depends on the observed values. MCAR, is a special case where the missing value distribution depends on both observed and missing data. In MNAR, the distribution is independent of observed as well as missing values.  Some basic approaches for missing data imputation include Mean Imputation, Gaussian Random Imputation and Expected Maximization Imputation. As their name suggests, Mean Imputation replaces the missing value of the attribute with the mean of available values and Expected Maximization Imputation estimates the missing variable sum and maximizes their mean and covariance using the estimated sum. Gaussian Random Imputation replaces missing values with <span class="arithmatex">\(\sigma * z + \nu\)</span> where z is a uniformly distributed random standard normal variate and <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(\nu\)</span> are standard deviation and mean of the attribute with missing values. In another work, ensemble methods were used to improve missing value imputation. In Bagging Simple Method, the dataset was resampled and missing values in each dataset was imputed using average of values generated by multiple imputation. After that, a decision tree was constructed for each sample, and their majority vote was used as the classification prediction. In Bagging Multiple Method, an individual decision tree was built for result of each of the dataset generated by multiple imputation. In MI Ensemble, Multiple Imputation is applied on the dataset multiple times, and majority vote of the classifier built on the top of each complete dataset is used. These methods proved to be robust even in scenarios with high percentage of missing data. </p>
+<p>For handling image datasets with missing values, variations of GANs and VAEs have been proposed. CollaGAN was proposed which uses a single generator and discriminator network to estimate missing data by looking at the problem of image imputation as multi domain image translation task, and therefore being more memory efficient than other image translation GAN architectures such as CycleGAN. </p>
+<p>Comparing the performance of modified Generative Adversarial Networks (GAIN) and Variational Autoencoders for missing data imputation, it is observed that GAIN performs better than VAE for smaller datasets with missing values of numerical attributes but worse on larger ones. VAE tend to be more stable than GAIN, even in cases where they perform worse. </p>
+<p>In another approach, the missing values weren’t directly imputed. Instead the missing data was fed to a neural network, and the missing data uncertainty is modeled using probabilistic functions with parametric density, like GMMs, which is learnt with the remaining neural network parameters. Such an approach can work with incomplete datasets, without the need of accurate output for training.  </p>
+<h4 id="catastrophic-forgetting">Catastrophic Forgetting<a class="headerlink" href="#catastrophic-forgetting" title="Permanent link">&para;</a></h4>
+<p>Human beings are capable of learning sequentially, where knowledge regarding a new domain doesn't wipe out previously acquired information. Neural Networks, on the other hand, traditionally suffer from a phenomenon called catastrophic forgetting where adaptation over a new task completely wipes out the "memory" of the problem they were previously solving. Lately, there has been some work which promises to overcome catastrophic forgetting and allow networks to learn sequentially.</p>
+<p>Intuitively, the most basic way is to keep predictions over old task unchanged when training for newer ones. This, however limits the task distributions. Other way is to ensure that the model parameters always remain in the neighbourhood of optimal parameters achieved for previous iterations. This requires a large number of parameters to be stored. Later, we overcame these disadvantages by training undercomplete autoencoders to preserve feature information important to various tasks.</p>
+<p>Deepmind came up with Elastic Weight Consolidation where knowledge is preserved by reducing weight plasticity, where parameter values are drawn back to their older values proportional to their degree of importance for the previous task. EWC, however is sensitive to diagonal approximation of Fischer Information Matrix. Another related work proposed reparametrization of the layers by rotating FIM in the directions which are less prone to forgetting. This resulted in more compact and diagonal FIM. </p>
+<p>SupportNet uses SVMs to recognize "support data" which, along with the data for the newer tasks is fed to the neural networks for adapting to newer tasks while retaining information about the older ones. In a related work, the authors used incremental moment matching along with transfer learning techniques like weight transfer and a variant of dropout which boosted the performance of IMM.</p>
+<p>Some researchers later used an application oriented view for incremental learning to evaluate the performance of various approaches to cater to catastrophic forgetting. They concluded that dropout doesn't particularly help and EWC, though partly effective still doesn't perform up to the mark. </p>
+<h3 id="towards-agi">Towards AGI<a class="headerlink" href="#towards-agi" title="Permanent link">&para;</a></h3>
+<p>Current Machine Learning paradigms have achieved human-liker performaces in various domains such as games like Go. However, a very important domain where these models lack the human-like performance is to perform sufficiently well in multiple tasks. Meta Learning, or learning to learn focuses on bridging this gap in Artificial Intelligence. Such models are introduced to numerous tasks, and then they are evaluated on how efficiently they can learn a new one. </p>
+<p>Meta Learning tasks can be classified into 3 approaches -:</p>
+<ol>
+<li>Using RNNs as base learners, where dataset is processed sequentially and using gradient descent to train the meta learner.</li>
+<li>Using a meta-learned metric space, where the base learner follows a comparison scheme and meta learner uses gradient descent.</li>
+<li>To learn an optimizer which updates the base learner to efficiently learn a new task. Such a meta-learner is usually an RNN, trained using supervised learning or reinforcement learning which remembers how the base learner was previously updated.</li>
+</ol>
+<p>In a different approach Model Agnostic Meta Learning, the authors proposed a model and task independent mechanism which tunes a model’s parameters in order to quickly adapt to a new problem statement with the help of few gradient updates. The parameters for the new task are calculated by performing a single or multiple gradient descent operations on the original parameters. The original model parameters are then updated using stochastic gradient descent using the loss over new parameters for the new problems sampled from a distribution of tasks. The basic idea behind this approach is to learn features which are applicable to a distribution of tasks, rather than to that of a single task. In spite of the simplicity of MAML,it outperformed various few-shot image classification benchmarks, and therefore brought us one step closer to building more versatile agents.</p>
+<p>While given the advances in GPUs as well as parallel distribution, several systems are now able to not only compute but also infer the results from past training results. However, one of the key limitations of the widely-accepted methods are their lack of causal inference given these models are trained in a model-blind manner. While there have been several model-based approaches been used in reinforcement learning, however their application to AutoML methods yet remains to be seen and compared against that of model-free methods.</p>
+<p>One of the key limitations for these methods in AutoML is the ability to capture abstraction in the data. Several approaches in the past have been thus explored to deal with abstraction and hierarchy in the data namely Fuzzy Set Theory, Rough Set Theory and Quotient Space Based Models.</p>
+<p>Christoph Molnar emphasized on understanding how a machine learning model comes up with a prediction, in addition to what the prediction was. The basis of this hypothesis lies closely with human curiosity and our quest to find meaning in life. The study is divided into 2 parts - Interpretable Models and Model Agnostic Methods for interpretability. </p>
+<p>Linear models like Linear Regression and Logistic Regression are inherently interpretable models. However, these models suffer from dependence on handcrafted non-linearities and lower predictive performance. Other models including Decision Trees, Decision Rules etc. also fall under the category of interpretable models where importance of each feature can be computed. However these models struggle to accurately model linear correlations.</p>
+<p>Model agnostic methods focus on developing stand-alone techniques to interpret the results of a machine learning model. The model is treated as a black box, whose parameters, weights or even architecture is unknown. Certain types of agnostic methods try to model the relationship between the features and the output of the ML model. These methods are easily understandable and intuitive to human beings. However, these methods rely on the assumption of independence among the input features, which is not true for many real world scenarios. Another class of methods focuses on the input features. These methods include the study the meaningful but computationally expensive interaction among the features or studying how the model error changes with permutation in the input feature values. The latter method provides a global overview of the model, but is prone to outliers. The third class of model agnostic methods comprise of surrogate models. The global surrogate method uses the predictions of a black box model for the input data to train an inherently interpretable model, which is then used to carry out the interpretability study. The Local Surrogate Method (LIME) generates permuted data samples for the sample of interest, along with the black-box model’s outcomes for these new data points. It then trains an interpretable model over this newly generate dataset where each input sample’s weight is based upon its distance from the original sample. These methods are flexible and can be used over any type of dataset. However the performance of these methods depend upon the choice and performance of the surrogate interpretable models.    </p>
+<h3 id="citation">Citation<a class="headerlink" href="#citation" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  @article{abi2019,
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  title = &quot;Problems &amp; Challenges in AutoML&quot;,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  author= &quot;Aryan, Abi; Sareen, Shubhi&quot;,
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  journal = &quot;abiaryan.com&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  year = &quot;2019&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  month = &quot;Mar&quot;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  url = &quot;https://abiaryan.com/posts/automl-problems-2019/&quot;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  }
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2025 Abi Aryan
+    </div>
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://datadrivenbabe.substack.com/" target="_blank" rel="noopener" title="datadrivenbabe.substack.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M180.5 74.262C80.813 74.262 0 155.633 0 256s80.819 181.738 180.5 181.738S361 356.373 361 256 280.191 74.262 180.5 74.262Zm288.25 10.646c-49.845 0-90.245 76.619-90.245 171.095s40.406 171.1 90.251 171.1 90.251-76.619 90.251-171.1H559c0-94.503-40.4-171.095-90.248-171.095Zm139.506 17.821c-17.526 0-31.735 68.628-31.735 153.274s14.2 153.274 31.735 153.274S640 340.631 640 256c0-84.649-14.215-153.271-31.742-153.271Z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/goabiaryan" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/goabiaryan/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:<abi@abiaryan.com>" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+      
+        <script src="../../javascripts/tablesort.js"></script>
+      
+        <script src="../../js/image-carousel.js"></script>
+      
+    
+  <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
+</html>
