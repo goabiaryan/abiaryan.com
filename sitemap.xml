@@ -11,67 +11,92 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/blog/</loc>
+         <loc>https://abiaryan.com/book/chapters/chapter-1/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/extra-stuff/podcast/posts/legal-tech/</loc>
+         <loc>https://abiaryan.com/book/chapters/chapter-2/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/extra-stuff/posts/about/</loc>
+         <loc>https://abiaryan.com/book/chapters/preface/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/extra-stuff/posts/fun-zone/posts/news/</loc>
+         <loc>https://abiaryan.com/content-creation/posts/2022-10-12-how-to-podcast/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/extra-stuff/posts/fun-zone/posts/reading/</loc>
+         <loc>https://abiaryan.com/content-creation/posts/content-creation-stalking/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/associative-memory/</loc>
+         <loc>https://abiaryan.com/fun-zone/posts/bucket-list/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/automl-problems-2019/</loc>
+         <loc>https://abiaryan.com/fun-zone/posts/news/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/automl-survey-2019/</loc>
+         <loc>https://abiaryan.com/fun-zone/posts/re-learn/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/game-ai/</loc>
+         <loc>https://abiaryan.com/fun-zone/posts/reading/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/intro-llms/</loc>
+         <loc>https://abiaryan.com/machine-learning/posts/2017-09-10-associative-memory/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/llm-evals/</loc>
+         <loc>https://abiaryan.com/machine-learning/posts/2019-09-09-game-ai/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/mlops-open-problems/</loc>
+         <loc>https://abiaryan.com/machine-learning/posts/automl-problems-2018/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://abiaryan.com/posts/why-tensorlayer/</loc>
+         <loc>https://abiaryan.com/ml-engineering/posts/2019-05-10-why-tensorlayer/</loc>
+         <lastmod>2025-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://abiaryan.com/ml-engineering/posts/ds-best-practices/</loc>
+         <lastmod>2025-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://abiaryan.com/ml-engineering/posts/mlops-open-problems/</loc>
+         <lastmod>2025-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://abiaryan.com/podcast/posts/legal-tech/</loc>
+         <lastmod>2025-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://abiaryan.com/venture-capital/posts/creating-a-pitchdeck/</loc>
+         <lastmod>2025-07-02</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://abiaryan.com/venture-capital/posts/due-dilligence/</loc>
          <lastmod>2025-07-02</lastmod>
          <changefreq>daily</changefreq>
     </url>
