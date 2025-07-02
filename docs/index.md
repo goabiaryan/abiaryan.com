@@ -1,10 +1,18 @@
 ![abi](\abi-preview.png)
 
-Hi, my name is Abi. I am the founder of [Abide A.I.](https://abideai.com/), author and machine learning engineer working extensively in A.I. to help integrate personalized machine learning systems in our day-to-day lives. 
+Hi, I’m Abi. I am the founder of  [Abide A.I.](https://abideai.com/), machine learning research engineer and an author. My books include LLMOps: Managing Large Language Models in Production, O'Reilly Publication (released: July 2025) and GPU Engineering for AI Systems, Packt Publication (releasing Autumn 2026).
 
-Over the past seven years, my focus has been building production-level machine learning systems for various applications including recommender systems, automated data labelling pipelines for both audio and video, audio-speech synthesis, forecasting and time-series analysis etc.
+My work focuses on building intelligent systems that scale. Over the past decade, I’ve designed and deployed production-grade machine learning pipelines across domains like recommender systems, speech synthesis, time-series forecasting, and automated data labeling for both audio and video.
 
-In the past, I attended [Insight](https://insightfellows.com/data-science) as a Data Science Fellow and was a Visiting Research Scholar at UCLA under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html) where I worked on Intelligent Agents focusing specifically on AutoML, MultiAgent Systems and Emotion Recognition.
+I’m especially interested in the challenges that emerge at scale: memory optimization, distributed training, GPU engineering, and the future of multi-agent systems. I’m  currently advancing research in:
+
+- Reflective intelligence in AI agents
+- Self-healing protocols in distributed multi-agent environments
+- GPU systems for large-scale training of language models
+
+Previously, I was a Visiting Research Scholar at UCLA’s Cognitive Systems Lab under [Dr. Judea Pearl](http://bayes.cs.ucla.edu/jp_home.html), where I focused on intelligent agents with a focus on AutoML, Emotion Recognition, Causal Inference and Multi-Agent learning.
+
+I’ve also served as a reviewer for leading ML and NLP venues like NeurIPS, ACL, EMNLP, and AABI, and I care deeply about helping engineers understand the low-level systems knowledge needed to train and deploy advanced AI models reliably.
 
 ## Books & Courses 
 
@@ -39,8 +47,11 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 ## Social Calendar
 
 ### Upcoming
+- **August 21**, Speaker, **Debugging and Monitoring LLMs in Production**, [Infrastructure & Ops O'Reilly Superstream: AI-Driven Operations and Observability](https://learning.oreilly.com/live-events/infrastructure-ops-superstream-ai-driven-operations-and-observability/0642572188160/0642572188153/)
+- **July 19**, Speaker, Lightening Session, [LLMOps: Roles and Career Transitions, Maven](https://maven.com/p/4ee6de/llm-ops-roles-career-transitions?)utm_medium=ll_share_link&utm_source=instructor
 
 ### June 2025
+- **June 24**, Speaker, **Monitoring RAG Pipelines**, [DataCamp Public Webinars](https://www.datacamp.com/)
 - **June 4**, Speaker, Lisbon Tech Connect | AI edition
 - **June 7**, Speaker, [AI Horizons](https://ai-horizons.co/), UPTEC, Porto 
 
@@ -56,7 +67,7 @@ In the past, I attended [Insight](https://insightfellows.com/data-science) as a 
 ??? Past
     #### 2024
     - **Nov 19** - Panelist, Xtreme Python Conference 2024
-    - **Nov 12** - Panelist, Ask the Experts: LLM Engineering
+    - **Nov 12** - Panelist, **Ask the Experts: LLM Engineering**
     - **Nov 11** -  Speaker, **Accelerate Your AI Workflows - Mastering GPU Strategies**, Generative AI in Action Conference
     - **Oct 5** - Speaker, **Data Management for LLMs**, Data Engineering And Machine Learning Summit 2024 
     - **Oct 3** - Guest Lecture, **Evaluations for MultiAgent Systems**, Multi-agents Course by Aggregate Intellect
