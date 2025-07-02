@@ -50,7 +50,7 @@ I’ve also served as a reviewer for leading ML and NLP venues like NeurIPS, ACL
 - **August 21**, Speaker, **Debugging and Monitoring LLMs in Production**, [Infrastructure & Ops O'Reilly Superstream: AI-Driven Operations and Observability](https://learning.oreilly.com/live-events/infrastructure-ops-superstream-ai-driven-operations-and-observability/0642572188160/0642572188153/)
 - **July 19**, Speaker, Lightening Session, [LLMOps: Roles and Career Transitions, Maven](https://maven.com/p/4ee6de/llm-ops-roles-career-transitions?utm_medium=ll_share_link&utm_source=instructor)
 
-### June 2025
+#### June 2025
 - **June 24**, Speaker, **Monitoring RAG Pipelines**, [DataCamp Public Webinars](https://www.datacamp.com/)
 - **June 4**, Speaker, Lisbon Tech Connect | AI edition
 - **June 7**, Speaker, [AI Horizons](https://ai-horizons.co/), UPTEC, Porto 
