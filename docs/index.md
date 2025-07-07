@@ -1,6 +1,6 @@
 ![abi](\abi-preview.png)
 
-Hi, I’m Abi. I am the founder of  [Abide A.I.](https://abideai.com/), machine learning research engineer and an author. My books include LLMOps: Managing Large Language Models in Production, O'Reilly Publication (released: July 2025) and GPU Engineering for AI Systems, Packt Publication (releasing Autumn 2026).
+Hi, I’m Abi. I am the founder of  [Abide A.I.](https://abideai.com/), machine learning research engineer and an author.
 
 My work focuses on building intelligent systems that scale. Over the past decade, I’ve designed and deployed production-grade machine learning pipelines across domains like recommender systems, speech synthesis, time-series forecasting, and automated data labeling for both audio and video.
 
@@ -16,17 +16,18 @@ I’ve also served as a reviewer for leading ML and NLP venues like NeurIPS, ACL
 
 ## Books & Courses 
 
-- ✍️ My first boook **LLMOps: Managing Large Language Models in Production** book for O'Reilly Publications is currently in [early release](https://learning.oreilly.com/library/view/llmops/9781098154196/). The full book will be available in print in July, 2025.
+I am the author of two upcoming books:
 
-- The best way to stay updated with my research work is either through my public talks or the [newsletter](https://modelcraft.substack.com/).
+- **LLMOps: Managing Large Language Models in Production** (O'Reilly, shipping August 2025- pre-order now on Amazon)
+- **GPU Engineering for AI Systems** (Packt Publishing, releasing Autumn 2026)
 
-- ✍️ More info on upcoming projects **Coming Soon!**
+The best way to stay updated with my research work is either through my public talks or the [newsletter](https://modelcraft.substack.com/).
 
 ## Collaboration
 
 - If you want me to participate/speak at your event/podcast, feel free to reach out to me via [email](mailto: hi@abiaryan.com)
 
-- You can now book a [1:1 Mentorship Session](https://topmate.io/goabiaryan) via Topmate
+- You can now book a [1:1 Career Mentorship Session](https://topmate.io/goabiaryan) via Topmate
 
 ## Publications
 
