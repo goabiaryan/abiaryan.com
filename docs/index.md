@@ -147,6 +147,8 @@ The best way to stay updated with my research work is either through my public t
 
 ## Volunteering
 
+- **Ongoing 2025** Reviewer for [Journal of Transactions in Machine Learning](https://jmlr.org/tmlr/), EMNLP, NeurIPS, ICML, ICLR
+
 - **February 2025** Reviewer for [Proceedings, Advances in Approximate Bayesian Inference (AABI)](https://approximateinference.org/)  co-hosted at ICLR 2025
 
 - **June 2024** Reviewer for [Empirical Methods in Natural Language Processing(EMNLP)](https://2024.emnlp.org/), 2024
