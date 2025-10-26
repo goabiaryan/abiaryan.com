@@ -16,10 +16,12 @@ I’ve also served as a reviewer for leading ML and NLP venues like NeurIPS, ACL
 
 ## Books & Courses 
 
-I am the author of two upcoming books:
+I am the author of two books:
 
-- **LLMOps: Managing Large Language Models in Production** (O'Reilly, shipping August 2025- pre-order now on Amazon)
-- **GPU Engineering for AI Systems** (Packt Publishing, releasing Autumn 2026)
+- **LLMOps: Managing Large Language Models in Production** (O'Reilly, order your copy from Amazon)
+- Upcoming: **GPU Engineering for AI Systems** (Packt Publishing, releasing Autumn 2026, some chapters available in early release soon!). 
+
+In the meantime, many people keep asking me for resources on GPU Engineering, I also collated some resources here on [gpuengineering.com](https://gpuengineering.com/) for beginners to get started. 
 
 The best way to stay updated with my research work is either through my public talks or the [newsletter](https://modelcraft.substack.com/).
 
@@ -27,11 +29,13 @@ The best way to stay updated with my research work is either through my public t
 
 - If you want me to participate/speak at your event/podcast, feel free to reach out to me via [email](mailto: hi@abiaryan.com)
 
-- You can now book a [1:1 Career Mentorship Session](https://topmate.io/goabiaryan) via Topmate
+- You can now book a [1:1 Career Mentorship Session](https://topmate.io/goabiaryan) via Topmate or via [Substack](https://modelcraft.substack.com/)
 
 ## Publications
 
-- 📙 [LLMOps: Managing Large Language Models in Production](https://learning.oreilly.com/library/view/llmops/9781098154196/), 🚀 In Bookshops Near You and Amazon - July 2025
+- [Causal Reflection with Language Models](https://arxiv.org/abs/2508.04495), Presenting at NeurIPS 2025 in Efficient Reasoning - Dec 20205
+
+- [AbideGym: Turning Static RL Worlds into Adaptive Challenges](https://arxiv.org/abs/2509.21234), September 2025
 
 - 📙 [What is LLMOps, O'Reilly Publications](https://learning.oreilly.com/library/view/what-is-llmops/9781098154301/), 2024 - *Paperback available at Data + AI Summit, 2024 by Databricks*
 
@@ -48,8 +52,30 @@ The best way to stay updated with my research work is either through my public t
 ## Social Calendar
 
 ### Upcoming
+
+#### January 2026
+- **January 24**, Speaker, [Data Day Texas](https://datadaytexas.com/)
+
+#### December 2025
+- **December 6-7**, Paper Presentation, [Causal Reflection with Language Models](https://arxiv.org/abs/2508.04495), [NeurIPS 2025](https://neurips.cc/Conferences/2025/Dates)
+
+#### November 2025
+- **November 21**, Speaker, **Building Agents Workshop**, [LLMs and Agentic AI In Production - Nexus 2025 Conference](https://www.eventbrite.com/e/llms-and-agentic-ai-in-production-nexus-2025-tickets-1745713037689)
+- **November 14**, Podcast Guest on LLMOps, Agentic Systems and Infra, [O'Reilly Radar Podcast](https://www.oreilly.com/radar/tag/podcast/)
+
+#### October 2025
+- **October 30**, Workshop Speaker, **GPU Engineering for LLMOps**, [ODSC West 2025](https://odsc.ai/)
+
+#### September 2025
+- **September 17**, Speaker, [The Unintelligence Conference](https://www.unintelligence.ai/)
+- **September 13**, Speaker, **Fundamentals of GPU Orchestration**, [GPU Engineering Meetups](https://luma.com/c50stbjv)
+
+#### August 2025
 - **August 21**, Speaker, **Debugging and Monitoring LLMs in Production**, [Infrastructure & Ops O'Reilly Superstream: AI-Driven Operations and Observability](https://learning.oreilly.com/live-events/infrastructure-ops-superstream-ai-driven-operations-and-observability/0642572188160/0642572188153/)
-- **July 19**, Speaker, Lightening Session, [LLMOps: Roles and Career Transitions, Maven](https://maven.com/p/4ee6de/llm-ops-roles-career-transitions?utm_medium=ll_share_link&utm_source=instructor)
+- **August 16**, Workshop Speaker, **Deploying DeepSeek Models**, DeepSeek in Production Summit, Packt Events
+
+#### July 2025
+- **July 19**, Speaker, Lightning Session, [LLMOps: Roles and Career Transitions, Maven](https://maven.com/p/4ee6de/llm-ops-roles-career-transitions?utm_medium=ll_share_link&utm_source=instructor)
 
 #### June 2025
 - **June 24**, Speaker, **Monitoring RAG Pipelines**, [DataCamp Public Webinars](https://www.datacamp.com/)
@@ -175,7 +201,7 @@ While I am on [Twitter](https://twitter.com/GoAbiAryan), [LinkedIn](https://www.
 
 ## Newsletter
 
-Interested in hearing about Data Infrastructure, ML Systems, and new startups/research papers/tools in the ML and LLMOps space? 
+Interested in hearing about Data Infrastructure, LLMOps and GPU Engineering? 
 
 I send out a newsletter called **ModelCraft**. Feel free to sub. 
 
