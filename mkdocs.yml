@@ -211,6 +211,7 @@ nav:
   - Home: index.md
   # - About: bio\posts\about.md
   - Posts:
+      - The Full Story of LLM Inference: posts/gpu-engineering.md
       - Evaluation and Interpretation for LLMs: posts/llm-evals.md
       - Introduction to Large Language Models: posts/intro-llms.md
       - Problems & Challenges in MLOps: posts/mlops-open-problems.md
