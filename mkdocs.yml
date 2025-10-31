@@ -48,7 +48,6 @@ theme:
 
 # Plugins
 plugins:
-  - blog
   - search
   - glightbox
   - external-markdown
