@@ -3,7 +3,7 @@ export const site = {
   url: "https://abiaryan.com",
   title: "Abi Aryan · AI Infrastructure Engineer, Inference Systems",
   description:
-    "Hi, I am Abi. I build inference systems for data centers, neoclouds, and hyperscalers. Joule, Maven, and the stack I teach.",
+    "Hi, I am Abi. I build inference systems for data centers, neoclouds, and hyperscalers. Founder of Joule. I teach on Maven.",
   doctorate: {
     title: "SLO-aware inference and hardware-aware compilers",
     statement:
@@ -24,6 +24,7 @@ export const site = {
     gpuengineering: "https://gpuengineering.com/",
     gpuengineeringRepo: "https://github.com/goabiaryan/awesome-gpu-engineering",
     maven: "https://maven.com/goabiaryan/inferencing",
+    mavenIntro: "https://maven.com/goabiaryan/inferencing-intro",
     mavenProfile: "https://maven.com/goabiaryan",
     academy: "https://theacademysf.com/",
     academyNote: "https://a16z.com/announcement/incubating-horowitz-andreessen-academy/",

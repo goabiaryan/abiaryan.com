@@ -100,7 +100,7 @@ export const projects: Record<string, { href: string; note: string; kind: string
 export const course = {
   title: "AI Inference Engineering & Systems Design",
   href: site.links.maven,
-  note: "Eight-week cohort. Build the stack by hand.",
+  note: "Highly rated Maven masterclass for mid-to-senior engineers. Eight weeks. Build the stack by hand.",
 };
 
 export const books = {

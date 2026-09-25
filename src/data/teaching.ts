@@ -1,5 +1,7 @@
+import { site } from "./site";
+
 export const mavenSchool = {
-  href: "https://maven.com/goabiaryan",
+  href: site.links.mavenProfile,
   subscribers: "1.7K",
   standing: "amongst the top-most rated instructors on Maven",
 };
@@ -7,15 +9,15 @@ export const mavenSchool = {
 export const mavenCourses = [
   {
     title: "AI Inference Engineering & Systems Design",
-    href: "https://maven.com/goabiaryan/inferencing",
+    href: site.links.maven,
     meta: "8 weeks",
-    note: "Build the stack by hand. Next live cohort 24 Oct - 19 Dec 2026.",
+    note: "A highly rated masterclass for mid-to-senior engineers. Build the stack by hand. Next live cohort 24 Oct - 19 Dec 2026.",
   },
   {
     title: "AI Inference for FDE and PM Roles",
-    href: "https://maven.com/goabiaryan/inferencing-intro",
+    href: site.links.mavenIntro,
     meta: "Inferencing 101",
-    note: "What's happening inside the model, for FDE, PM, and adjacent technical roles.",
+    note: "A masterclass on what is happening inside the model, for FDE, PM, and adjacent technical roles.",
   },
 ];
 

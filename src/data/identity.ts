@@ -17,7 +17,7 @@ export const personJsonLd = {
   name: author.name,
   url: author.url,
   jobTitle: author.role,
-  description: site.description,
+  description: `${site.description} Founder of Joule.`,
   sameAs: author.sameAs,
   knowsAbout: [
     ...author.focus,
@@ -31,8 +31,18 @@ export const personJsonLd = {
     ...stackTopics,
     ...indexKeywords,
   ],
-  worksFor: { "@id": jouleId },
-  founder: { "@id": jouleId },
+  worksFor: {
+    "@id": jouleId,
+    "@type": "Organization",
+    name: "Joule",
+    url: site.links.joule,
+  },
+  founder: {
+    "@id": jouleId,
+    "@type": "Organization",
+    name: "Joule",
+    url: site.links.joule,
+  },
   alumniOf: [
     {
       "@type": "CollegeOrUniversity",
@@ -93,10 +103,21 @@ export const jouleJsonLd = {
   "@type": "Organization",
   "@id": jouleId,
   name: "Joule",
+  legalName: "Joule",
   url: site.links.joule,
   founder: { "@id": personId },
   description:
     "Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",
+};
+
+export const abideJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Abide",
+  url: site.links.abide,
+  founder: { "@id": personId },
+  description:
+    "Prior lab. Reflective intelligence and neuro-symbolic models for agents. Not the current company.",
 };
 
 export const courseJsonLd = [
@@ -154,7 +175,13 @@ export const investigationJsonLd = investigations.map((item) => ({
   author: { "@id": personId },
 }));
 
-export const identityJsonLd = [websiteJsonLd, personJsonLd, jouleJsonLd, ...projectJsonLd];
+export const identityJsonLd = [
+  websiteJsonLd,
+  personJsonLd,
+  jouleJsonLd,
+  abideJsonLd,
+  ...projectJsonLd,
+];
 
 export const aboutJsonLd = [
   ...education.map((item) => ({

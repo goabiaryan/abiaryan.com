@@ -4,7 +4,8 @@ import { site } from "../data/site";
 import { builds, courseLabs } from "../data/builds";
 import { essays } from "../data/essays";
 import { nav } from "../data/site";
-import { projectJsonLd } from "../data/identity";
+import { projectJsonLd, teachingJsonLd } from "../data/identity";
+import { mavenCourses, mavenSchool, lightningLessons } from "../data/teaching";
 
 const investigations = essays.filter((item) => item.kind !== "Archive");
 const archive = essays.filter((item) => item.kind === "Archive");
@@ -13,7 +14,7 @@ const archive = essays.filter((item) => item.kind === "Archive");
 <Base
   title="Sitemap"
   description="Index of Abi Aryan investigations, builds (Joule, RelayServe, smol-vllm, fullstack-inferencing, gpuengineering.com), Maven teaching, and on-site pages."
-  jsonLd={projectJsonLd}
+  jsonLd={[...projectJsonLd, ...teachingJsonLd]}
 >
   <section class="page">
     <p class="label">Sitemap</p>
@@ -36,6 +37,43 @@ const archive = essays.filter((item) => item.kind === "Archive");
             <span class="meta">Page</span>
             <div>
               <a class="title" href={item.href}>{item.label}</a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Maven courses</h2>
+    </div>
+    <ul class="list">
+      <li>
+        <span class="meta">School</span>
+        <div>
+          <a class="title" href={mavenSchool.href}>maven.com/goabiaryan</a>
+          <p class="note">{mavenSchool.standing}</p>
+        </div>
+      </li>
+      {
+        mavenCourses.map((item) => (
+          <li>
+            <span class="meta">{item.meta}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+      {
+        lightningLessons.map((item) => (
+          <li>
+            <span class="meta">Slides</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">Lightning lesson · {item.meta}</p>
             </div>
           </li>
         ))
