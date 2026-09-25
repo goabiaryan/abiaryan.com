@@ -21,6 +21,7 @@ export const author = {
     site.links.github,
     site.links.x,
     site.links.youtube,
+    site.links.podcast,
     site.links.modelcraft,
     site.links.mavenProfile,
     site.links.joule,

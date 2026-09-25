@@ -83,6 +83,7 @@ export function llmsIndex() {
     `- [LinkedIn](${site.links.linkedin})`,
     `- [X](${site.links.x})`,
     `- [YouTube](${site.links.youtube})`,
+    `- [Podcast](${site.links.podcast})`,
     `- [gpuengineering.com](${site.links.gpuengineering})`,
     "",
   ].join("\n");

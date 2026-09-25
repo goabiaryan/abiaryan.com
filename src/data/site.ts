@@ -19,6 +19,7 @@ export const site = {
     linkedin: "https://www.linkedin.com/in/goabiaryan/",
     x: "https://twitter.com/GoAbiAryan",
     modelcraft: "https://modelcraft.substack.com/",
+    podcast: "https://modelcraft.substack.com/podcast",
     github: "https://github.com/goabiaryan",
     youtube: "https://www.youtube.com/@goabiaryan",
     gpuengineering: "https://gpuengineering.com/",
