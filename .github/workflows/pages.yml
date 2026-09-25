@@ -39,3 +39,13 @@ jobs:
     steps:
       - id: deployment
         uses: actions/deploy-pages@v4
+
+  notify:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Wait for Pages to publish
+        run: sleep 90
+      - name: Notify IndexNow
+        run: node scripts/indexnow.mjs

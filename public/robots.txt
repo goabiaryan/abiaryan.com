@@ -1,6 +1,7 @@
 # https://abiaryan.com/llms.txt
 # https://abiaryan.com/llms-full.txt
 # https://abiaryan.com/sitemap-index.xml
+# IndexNow: https://abiaryan.com/faf32153d859d903358f0ebc6874975c.txt
 
 User-agent: *
 Allow: /
