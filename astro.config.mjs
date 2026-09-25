@@ -26,7 +26,8 @@ export default defineConfig({
         const investigation = path.startsWith("/writing/") && path !== "/writing/";
         return {
           ...item,
-          changefreq: investigation ? "monthly" : "weekly",
+          lastmod: new Date().toISOString(),
+          changefreq: investigation ? "weekly" : "daily",
           priority: top ? 1 : investigation ? 0.9 : path.includes("/advisory") || path.includes("/speaking") ? 0.8 : 0.6,
         };
       },
