@@ -53,6 +53,19 @@ const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
         <script type="application/ld+json" set:html={JSON.stringify(payload)} />
       ))
     }
+    <script
+      is:inline
+      async
+      src={`https://www.googletagmanager.com/gtag/js?id=${site.analytics}`}
+    ></script>
+    <script is:inline define:vars={{ analytics: site.analytics }}>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", analytics);
+    </script>
   </head>
   <body class:list={[isHome && "page-home"]}>
     <div class="wrap">
