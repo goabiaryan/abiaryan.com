@@ -94,7 +94,7 @@ export const books = {
   LLMOps: {
     title: "LLMOps",
     href: site.links.llmops,
-    note: "O'Reilly book. Also in Korean, Japanese, Russian, and Simplified Chinese.",
+    note: "O'Reilly book. Written in English, now translated into Korean, Japanese, Russian, and Simplified Chinese.",
   },
   "What is LLMOps": {
     title: "What is LLMOps",

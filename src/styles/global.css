@@ -1,6 +1,7 @@
 :root {
   --paper: #f3efe6;
   --paper-2: #ebe4d6;
+  --paper-3: #e4e8e3;
   --ink: #1c1916;
   --muted: #6a6258;
   --rule: #d4cbbd;
@@ -1102,6 +1103,10 @@ p {
 .home .places li {
   padding: 1.35rem 1.45rem 1.6rem;
   border-top: 0;
+}
+
+.home-company {
+  background: var(--paper-3);
 }
 
 .home .places a.title {

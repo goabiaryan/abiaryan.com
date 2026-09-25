@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify";
+import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://abiaryan.com",
@@ -8,6 +9,11 @@ export default defineConfig({
     assets: "site",
   },
   adapter: netlify(),
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes("/404") && !page.includes("/advisory/thanks"),
+    }),
+  ],
   redirects: {
     "/posts/gpu-engineering": "/writing/llm-inference/",
     "/posts/llm-evals": "/writing/llm-evals/",

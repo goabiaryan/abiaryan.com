@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@astrojs/netlify": "^6.6.5",
+    "@astrojs/sitemap": "^3.7.4",
     "astro": "^5.13.7",
     "stripe": "^22.6.2"
   }

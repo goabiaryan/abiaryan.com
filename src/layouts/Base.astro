@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import { site } from "../data/site";
+import { author } from "../data/entities";
 
 interface Props {
   title?: string;
@@ -22,7 +23,28 @@ const {
 const pageTitle = title ? `${title} · ${site.name}` : site.name;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const imageAbs = image ? new URL(image, site.url).href : undefined;
-const payloads = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const identity = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: site.name,
+    url: site.url,
+    description: site.description,
+    author: { "@id": `${author.url}#person` },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${author.url}#person`,
+    name: author.name,
+    url: author.url,
+    jobTitle: author.role,
+    sameAs: author.sameAs,
+    knowsAbout: author.focus,
+  },
+];
+const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const payloads = [...identity, ...extra];
 const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
 ---
 
@@ -35,6 +57,7 @@ const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
     <meta name="description" content={description} />
     <meta name="author" content={site.name} />
     <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={description} />
