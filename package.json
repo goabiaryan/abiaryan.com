@@ -1,0 +1,16 @@
+{
+  "name": "abiaryan.com",
+  "type": "module",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^6.6.5",
+    "astro": "^5.13.7",
+    "stripe": "^22.6.2"
+  }
+}

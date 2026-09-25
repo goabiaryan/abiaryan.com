@@ -1,0 +1,50 @@
+---
+import Base from "../../layouts/Base.astro";
+import InquiryForm from "../../components/InquiryForm.astro";
+import { site } from "../../data/site";
+import { offers, capacity } from "../../data/advisory";
+
+export function getStaticPaths() {
+  return offers.map((offer) => ({
+    params: { slug: offer.id },
+    props: { offer },
+  }));
+}
+
+const { offer } = Astro.props;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  name: offer.title,
+  description: offer.summary,
+  provider: { "@type": "Person", name: site.name, url: site.url },
+  offers: {
+    "@type": "Offer",
+    price: offer.amount,
+    priceCurrency: "USD",
+    url: new URL(offer.href, site.url).href,
+  },
+};
+---
+
+<Base title={offer.short} description={offer.summary} jsonLd={jsonLd}>
+  <section class="page product">
+    <div class="product-copy">
+      <p class="label">Advisory · {offer.label}</p>
+      <h1>{offer.headline}</h1>
+      <p class="price">{offer.price}</p>
+      <p class="lede">{offer.summary}</p>
+      <p class="form-note">{offer.priceNote}</p>
+      {offer.finePrint && <p class="form-note">{offer.finePrint}</p>}
+      <p class="form-note">{capacity}</p>
+      <ul class="include">
+        {offer.items.map((item) => <li>{item}</li>)}
+      </ul>
+      <p><a href="/advisory/">All offers</a></p>
+    </div>
+    <aside class="product-buy" id="pay">
+      <InquiryForm offer={offer.id} />
+    </aside>
+  </section>
+</Base>

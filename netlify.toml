@@ -1,0 +1,31 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+[[redirects]]
+  from = "/posts/gpu-engineering"
+  to = "/writing/llm-inference/"
+  status = 301
+
+[[redirects]]
+  from = "/advisory/gpu"
+  to = "/advisory/retainer/"
+  status = 301
+
+[[redirects]]
+  from = "/advisory/gpu/"
+  to = "/advisory/retainer/"
+  status = 301
+
+[[redirects]]
+  from = "/advisory/agents"
+  to = "/advisory/retainer/"
+  status = 301
+
+[[redirects]]
+  from = "/advisory/agents/"
+  to = "/advisory/retainer/"
+  status = 301

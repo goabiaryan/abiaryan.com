@@ -1,0 +1,158 @@
+---
+import Base from "../layouts/Base.astro";
+import Stack from "../components/Stack.astro";
+import { site, research } from "../data/site";
+import { papers, thesis } from "../data/papers";
+import { volunteering } from "../data/speaking";
+---
+
+<Base
+  title="About"
+  description="AI Infrastructure Engineer. A decade of production ML. Inference systems for data centers, neoclouds, and hyperscalers. Doctoral research in HPC distributed systems."
+>
+  <section class="about-split">
+    <div class="about-copy">
+    <p class="label">About</p>
+    <h1>Abi Aryan</h1>
+    <p class="lede">
+      I am an AI Infrastructure Engineer building inference systems for data centers,
+      neoclouds, and hyperscalers.
+    </p>
+    <div class="prose">
+    <p>
+      I have spent over a decade building production ML systems. Today, I work at the
+      intersection of inference, GPUs, distributed systems, and AI infrastructure: from
+      the runtime down to the hardware.
+    </p>
+    <p>
+      I build the systems, measure them, research them, write about them, and teach them.
+      I am a doctoral researcher in HPC distributed systems, studying SLO-aware inference
+      optimization and hardware-aware compiler design.       I am the author of
+      <a href={site.links.llmops}>LLMOps</a>
+      (now in Korean, Japanese, Russian, and Simplified Chinese) and the report
+      <a href={site.links.llmopsWhat}>What is LLMOps</a> (O'Reilly).
+      <a href="/books/">GPU Engineering: AI Inference and System Design</a>
+      (Packt) is almost done, slated for late 2026 to early 2027. Invited Faculty for AI Inference Engineering at
+        <a href={site.links.academy}>Andreessen Horowitz Academy (The Academy SF)</a>.
+    </p>
+    <p>
+      Previously, I founded <a href={site.links.abide}>Abide</a>, where I worked on
+      neuro-symbolic AI and platform and infra layer for agentic systems. That research
+      was presented at NeurIPS 2025.
+    </p>
+    <p>
+      I am a mathematician by training. I was a visiting research scholar at UCLA,
+      supervised by the 2012 Turing Award winner, Dr.
+      <a href={site.links.pearl}>Judea Pearl</a>, where I focused on developing
+      intelligent agents.
+    </p>
+    <p>
+      I am developing a digital twin for LLM inference so operators can manage energy
+      while latency SLOs stay intact. <a href={site.links.joule}>Joule</a> is the company
+      form of that work: tokens, watts, serving cost.
+    </p>
+    <p>
+      I work on performance-critical inference runtimes (TensorRT-LLM, TorchDynamo, SGLang,
+      vLLM) and GPU cluster efficiency. I am not trying to be the person who maintains those
+      engines. I am trying to make the serving path intelligible, and to do original work in
+      the same territory.
+    </p>
+    <p>
+      I also teach
+      <a href={site.links.maven}>AI Inference Engineering &amp; Systems Design</a>
+      on Maven. I write <a href={site.links.modelcraft}>ModelCraft</a>. I review for
+      NeurIPS, ACL, EMNLP, ICML, ICLR, and TMLR.
+    </p>
+    <p>
+      For talks, see <a href="/speaking/">speaking</a>.
+      For the audit and the seat, see <a href="/advisory/">advisory</a>.
+    </p>
+    </div>
+    </div>
+    <div class="about-aside">
+      <Stack />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Doctoral work</h2>
+    </div>
+    <p class="lede" style="margin-bottom: 1.6rem">{site.doctorate.statement}</p>
+    <div class="grid-3">
+      {
+        research.map((item) => (
+          <article class="card">
+            <h3>{item.title}</h3>
+            <p>{item.note}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Thesis</h2>
+    </div>
+    <ul class="list">
+      <li>
+        <span class="meta">{thesis.year}</span>
+        <div>
+          <a class="title" href={thesis.href}>{thesis.title}</a>
+          <p class="note">{thesis.note}</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Papers</h2>
+    </div>
+    <ul class="list">
+      {
+        papers.map((item) => (
+          <li>
+            <span class="meta">{item.year}</span>
+            <div>
+              {item.href ? (
+                <a class="title" href={item.href}>{item.title}</a>
+              ) : (
+                <span class="title">{item.title}</span>
+              )}
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <details class="year" open>
+      <summary>Reviewing and service</summary>
+      {
+        volunteering.map((item) => (
+          <div class="talk">
+            <div class="when">{item.when}</div>
+            <div>
+              {item.href ? <a href={item.href}>{item.what}</a> : item.what}
+            </div>
+          </div>
+        ))
+      }
+    </details>
+  </section>
+
+  <section class="section media-block">
+    <div class="section-head">
+      <h2>Media</h2>
+      <span class="label">October 2024</span>
+    </div>
+    <video class="media-clip" controls playsinline preload="metadata">
+      <source src="/assets/billboard.mp4" type="video/mp4" />
+    </video>
+    <p>I was featured on the Times Square Billboard by <a href={site.links.topmate}>Topmate</a>.</p>
+  </section>
+</Base>

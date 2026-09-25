@@ -1,0 +1,71 @@
+---
+import Base from "../../layouts/Base.astro";
+import InquiryForm from "../../components/InquiryForm.astro";
+import { site } from "../../data/site";
+import { offers, capacity } from "../../data/advisory";
+---
+
+<Base
+  title="Advisory"
+  description="A second set of eyes on production inference. Architecture and SLO audit, then one strategic retainer."
+>
+  <section class="sell">
+    <p class="label">Advisory</p>
+    <h1>A second set of eyes on the serving stack.</h1>
+    <p class="lede">
+      For teams already running production inference and paying a real GPU bill. I take the
+      system apart, break down what is actually happening, and sit on the calls that move
+      cost and latency. You keep the implementation.
+    </p>
+    <p class="form-note">{capacity} Not a hire. Not a <a href={site.links.joule}>Joule</a> service.</p>
+  </section>
+
+  <section class="sell-offers">
+    <div class="grid-2">
+      {
+        offers.map((item) => (
+          <article class="offer-card">
+            <p class="label">{item.label}</p>
+            <h2>{item.title}</h2>
+            <p class="price">{item.price}</p>
+            <p>{item.summary}</p>
+            <p class="form-note">{item.priceNote}</p>
+            {item.finePrint && <p class="form-note">{item.finePrint}</p>}
+            <ul class="include">
+              {item.items.map((line) => (
+                <li>{line}</li>
+              ))}
+            </ul>
+            <div class="cta-row">
+              <a class="btn" href={`/advisory/?offer=${item.id}#pay`}>
+                {item.cta}
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="sell sell-proof">
+    <p class="proof">
+      A decade building production ML. Author of <a href={site.links.llmops}>LLMOps</a>
+      (O'Reilly).
+      <a href="/books/">GPU Engineering: AI Inference and System Design</a> (Packt) lands late 2026 to early
+      2027.
+      Invited Faculty for AI Inference Engineering at
+      <a href={site.links.academy}>Andreessen Horowitz Academy (The Academy SF)</a>.
+    </p>
+  </section>
+
+  <section class="sell-pay" id="pay">
+    <div class="sell-pay-copy">
+      <p class="label">Checkout</p>
+      <h2>Pay. Then we schedule.</h2>
+      <p class="form-note">
+        Payment unlocks the calendar and the intake. I take only 2 clients a month.
+      </p>
+    </div>
+    <InquiryForm />
+  </section>
+</Base>

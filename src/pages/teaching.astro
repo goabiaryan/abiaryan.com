@@ -1,0 +1,176 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+import { reviews, mentoring } from "../data/reviews";
+import { mavenSchool, mavenCourses, lightningLessons } from "../data/teaching";
+---
+
+<Base
+  title="Teaching"
+  description="Abi Aryan on Maven, AI Inference Engineering & Systems Design, Inferencing 101, and free lightning lessons."
+>
+  <section class="page">
+    <p class="label">Teaching · Maven</p>
+    <h1>From AI engineer to inference engineer.</h1>
+    <p class="lede">
+      The teaching home is
+      <a href={mavenSchool.href}>maven.com/goabiaryan</a>
+      · {mavenSchool.subscribers} subscribers, {mavenSchool.standing}.
+      Two courses, six free lightning lessons, and the live cohort. Invited Faculty for AI Inference Engineering at
+      <a href={site.links.academy}>Andreessen Horowitz Academy (The Academy SF)</a>.
+    </p>
+    <div class="cta-row">
+      <a class="btn" href={mavenSchool.href}>Maven home</a>
+      <a class="btn ghost" href={site.links.maven}>Next cohort · 24 Oct – 19 Dec</a>
+      <a class="btn ghost" href={site.links.mentorship}>1:1 on Topmate</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>On Maven</h2>
+      <a class="label" href={mavenSchool.href}>Maven school →</a>
+    </div>
+    <ul class="list">
+      {
+        mavenCourses.map((item) => (
+          <li>
+            <span class="meta">{item.meta}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Lightning lessons</h2>
+      <a class="label" href={mavenSchool.href}>Watch on Maven →</a>
+    </div>
+    <ul class="list">
+      {
+        lightningLessons.map((item) => (
+          <li>
+            <span class="meta">{item.meta}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>The ladder</h2>
+    </div>
+    <ol class="list">
+      <li>
+        <span class="meta">01</span>
+        <div>
+          <a class="title" href={site.links.linkedin}>LinkedIn</a>
+          <p class="note">The question. A folk model, then a contradiction.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">02</span>
+        <div>
+          <a class="title" href="/writing/">Maps</a>
+          <p class="note">The stack. Save this, come back in six months.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">03</span>
+        <div>
+          <a class="title" href={site.links.modelcraft}>ModelCraft</a>
+          <p class="note">The deep dive. Underutilized GPUs as an economic systems problem.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">04</span>
+        <div>
+          <a class="title" href={site.links.gpuengineering}>gpuengineering.com</a>
+          <p class="note">A separate project. What to read, in order.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">05</span>
+        <div>
+          <a class="title" href="/code/">GitHub</a>
+          <p class="note">RelayServe, smol-vllm, the Lambda lab. Run the argument.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">06</span>
+        <div>
+          <a class="title" href="/books/">Book</a>
+          <p class="note">The reference that outlives a feed.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">07</span>
+        <div>
+          <a class="title" href={mavenSchool.href}>Maven</a>
+          <p class="note">The school. Both courses, lightning lessons. Amongst the top-most rated instructors on Maven.</p>
+        </div>
+      </li>
+      <li>
+        <span class="meta">08</span>
+        <div>
+          <a class="title" href={site.links.mentorship}>1:1 mentorship</a>
+          <p class="note">Topmate. Career path into inference. 5.0 from 3 ratings.</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>From the cohorts</h2>
+      <a class="label" href={mavenSchool.href}>Reviews on Maven →</a>
+    </div>
+    <div class="quotes">
+      {
+        reviews.map((item) => (
+          <blockquote class="card quote">
+            <p>“{item.quote}”</p>
+            <footer>
+              {item.name}
+              {item.role ? ` · ${item.role}` : ""}
+              {item.cohort ? ` · ${item.cohort}` : ""}
+            </footer>
+          </blockquote>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>1:1 mentorship</h2>
+      <a class="label" href={site.links.topmate}>5.0 · 3 ratings on Topmate →</a>
+    </div>
+    <p class="lede" style="margin-bottom: 1.6rem">
+      Sixty minutes. How to find the role in inference, resume gaps, the path, what to learn next.
+      Book <a href={site.links.mentorship}>1:1 career mentorship</a> on Topmate.
+    </p>
+    <div class="quotes">
+      {
+        mentoring.map((item) => (
+          <blockquote class="card quote">
+            <p>“{item.quote}”</p>
+            <footer>
+              {item.name}
+              {" · Topmate"}
+            </footer>
+          </blockquote>
+        ))
+      }
+    </div>
+  </section>
+</Base>

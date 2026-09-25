@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.astro/
+.DS_Store
+site/
+.env
+.env.*
+!.env.example
+
+# Local Netlify folder
+.netlify
+
+# Local MkDocs archive and leftover downloads
+old/
+Abi's PMPP Notes (1).pdf

@@ -1,0 +1,153 @@
+---
+import Base from "../layouts/Base.astro";
+import Stack from "../components/Stack.astro";
+import { site } from "../data/site";
+import { essays } from "../data/maps";
+import { builds } from "../data/builds";
+import { reviews, mentoring } from "../data/reviews";
+---
+
+<Base>
+  <div class="home">
+    <section class="hero">
+      <p class="topics">
+        AI Systems · Inference engineering · Distributed systems · LLMOps · Infra engineering
+      </p>
+      <div class="hero-top">
+        <img class="portrait" src="/abi-preview.png" alt="Abi Aryan" width="512" height="512" />
+        <div class="hero-copy">
+          <div class="philosophy">
+            <p class="label">My philosophy</p>
+            <h1>Don't accept the abstraction.</h1>
+            <p>
+              Understand what the system actually does. Take it apart. Measure it. Build your own
+              mental model from the evidence.
+            </p>
+          </div>
+          <p class="lede">
+            I am an AI Infrastructure Engineer building inference systems for data centers,
+            neoclouds, and hyperscalers.
+          </p>
+          <p>
+            I build the systems, measure them, research them, write about them, and teach them.
+            The path, the books, and the research sit on <a href="/about/">About</a>.
+          </p>
+          <p class="home-links">
+            <a href="/code/">Here is the code</a>
+            <a href="/writing/">Here is what I found</a>
+            <a href="/about/">About</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <Stack compact />
+    </section>
+
+    <div class="home-split">
+      <section class="section home-pane home-built">
+        <div class="section-head">
+          <h2>I built this</h2>
+          <a class="label" href="/code/">Here is the code →</a>
+        </div>
+        <ul class="list">
+          {
+            builds.slice(0, 5).map((item) => (
+              <li>
+                <span class="meta">{item.kind}</span>
+                <a class="title" href={item.href}>{item.title}</a>
+                <p class="note">{item.note}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="section home-pane home-measured">
+        <div class="section-head">
+          <h2>I measured this</h2>
+          <a class="label" href="/writing/">Here is what I found →</a>
+        </div>
+        <p class="note">
+          On <a href="/writing/">Writing</a>:
+          <a href="/writing/#investigations">Investigations</a>,
+          <a href="/writing/#archive">Archive</a>,
+          <a href="/writing/#modelcraft">ModelCraft</a>,
+          <a href="/writing/#field-notes">Field notes</a>.
+        </p>
+        <ul class="list">
+          {
+            essays.filter((item) => item.kind !== "Archive").slice(0, 6).map((item) => (
+              <li>
+                <span class="meta">{item.kind ?? "Here"}</span>
+                <a class="title" href={item.href}>{item.title}</a>
+                <p class="note">{item.note}</p>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+    </div>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>From the cohorts</h2>
+        <a class="label" href="/teaching/">Maven course →</a>
+      </div>
+      <div class="quotes">
+        {
+          reviews.map((item) => (
+            <blockquote class="quote">
+              <p>“{item.blurb ?? item.quote}”</p>
+              <footer>
+                {item.name}
+                {item.role ? ` · ${item.role}` : ""}
+                {item.cohort ? ` · ${item.cohort}` : ""}
+              </footer>
+            </blockquote>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>1:1 mentorship</h2>
+        <a class="label" href={site.links.topmate}>Topmate · 5.0 →</a>
+      </div>
+      <div class="quotes quotes-3">
+        {
+          mentoring.map((item) => (
+            <blockquote class="quote">
+              <p>“{item.blurb ?? item.quote}”</p>
+              <footer>
+                {item.name}
+                {" · Topmate"}
+              </footer>
+            </blockquote>
+          ))
+        }
+      </div>
+    </section>
+
+    <section class="section">
+      <ul class="list places">
+        <li class="home-pane home-built">
+          <span class="meta">Company</span>
+          <a class="title" href={site.links.joule}>Joule</a>
+          <p class="note">Phase-aware inference power. Tokens, watts, serving cost.</p>
+          <p class="note"><a href={site.links.joule}>Go to joule.lat</a></p>
+        </li>
+        <li class="home-pane home-measured">
+          <span class="meta">Books</span>
+          <a class="title" href="/books/">LLMOps, and GPU Engineering</a>
+          <p class="note">
+            LLMOps, 2025, now in four languages. The GPU Engineering book lands late 2026 to early 2027.
+          </p>
+          <p class="note"><a href="/books/">See the books</a></p>
+        </li>
+      </ul>
+    </section>
+  </div>
+</Base>

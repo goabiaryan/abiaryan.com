@@ -1,0 +1,29 @@
+---
+import { nav } from "../data/site";
+
+const here = Astro.url.pathname;
+---
+
+<header class="site-header">
+  <a class="wordmark" href="/">Abi Aryan</a>
+  <nav class="nav" aria-label="Primary">
+    {
+      nav.map((item) => (
+        <a
+          href={item.href}
+          aria-current={
+            item.href === "/"
+              ? here === "/"
+                ? "page"
+                : undefined
+              : here.startsWith(item.href)
+                ? "page"
+                : undefined
+          }
+        >
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

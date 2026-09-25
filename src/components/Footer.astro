@@ -1,0 +1,40 @@
+---
+import { site } from "../data/site";
+import Subscribe from "./Subscribe.astro";
+
+const socials = [
+  { href: site.links.github, label: "GitHub" },
+  { href: site.links.linkedin, label: "LinkedIn" },
+  { href: site.links.x, label: "X" },
+  { href: site.links.youtube, label: "YouTube" },
+];
+---
+
+<footer class="site-footer">
+  <div class="footer-bar">
+    <div class="footer-left">
+      <div class="footer-meta">
+        <span>© {new Date().getFullYear()} Abi Aryan</span>
+        <span>
+          <a href={site.links.joule}>Joule</a>
+          ·
+          <a href={site.links.modelcraft}>ModelCraft</a>
+        </span>
+      </div>
+      <div class="footer-socials">
+        {socials.map((item) => (
+          <a class="footer-link" href={item.href}>{item.label}</a>
+        ))}
+      </div>
+    </div>
+    <div class="footer-subscribe">
+      <p class="label">Newsletter</p>
+      <Subscribe />
+    </div>
+    <div class="footer-cta">
+      <a class="footer-link" href={site.links.maven}>Maven · Join the next cohort</a>
+      <a class="footer-link" href={site.links.mentorship}>Topmate · Book a 1:1</a>
+      <a class="footer-link" href="/advisory/">Advisory · Book an audit</a>
+    </div>
+  </div>
+</footer>

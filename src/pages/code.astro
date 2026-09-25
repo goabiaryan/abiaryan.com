@@ -1,0 +1,62 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+import { builds, courseLabs } from "../data/builds";
+---
+
+<Base
+  title="Code"
+  description="Public inference, serving, GPU, and observability work by Abi Aryan."
+>
+  <section class="page">
+    <p class="label">GitHub</p>
+    <h1>Things you can run.</h1>
+    <p class="lede">
+      Joule is the company. The public repos are the rest of the argument: serving code, an
+      educational engine, a Lambda lab, observability for agents, the Packt Nexus workshop,
+      thesis code for national AI-infrastructure fragility, and the GPU list at
+      gpuengineering.com.
+    </p>
+    <p class="prose" style="color: var(--muted)">
+      Account: <a href={site.links.github}>github.com/goabiaryan</a>.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Builds</h2>
+    </div>
+    <ul class="list">
+      {
+        builds.map((item) => (
+          <li>
+            <span class="meta">{item.kind}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Course labs</h2>
+    </div>
+    <ul class="list">
+      {
+        courseLabs.map((item) => (
+          <li>
+            <span class="meta">{item.kind}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>

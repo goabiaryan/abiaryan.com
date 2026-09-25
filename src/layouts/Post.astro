@@ -1,0 +1,344 @@
+---
+import Base from "./Base.astro";
+import { site } from "../data/site";
+import {
+  author,
+  topics as topicCatalog,
+  projects as projectCatalog,
+  course,
+  books,
+  researchLinks,
+} from "../data/entities";
+import { essays } from "../data/essays";
+
+type Definition = { term: string; meaning: string };
+
+const { frontmatter } = Astro.props;
+const kind = frontmatter.kind ?? "Investigation";
+const typeLabel =
+  kind === "Map"
+    ? "Map"
+    : kind === "Notes"
+      ? "Notes"
+      : kind === "Archive"
+        ? "Archive"
+        : "Technical investigation";
+
+const publishedIso =
+  frontmatter.published ??
+  (() => {
+    const parsed = Date.parse(frontmatter.date);
+    return Number.isNaN(parsed) ? undefined : new Date(parsed).toISOString().slice(0, 10);
+  })();
+
+const publishedLabel = publishedIso
+  ? new Date(`${publishedIso}T12:00:00`).toLocaleDateString("en-US", {
+      month: "long",
+      year: "numeric",
+    })
+  : frontmatter.date;
+
+const takeaways: string[] = frontmatter.takeaways ?? [];
+const definitions: Definition[] = frontmatter.definitions ?? [];
+const topicKeys: string[] = frontmatter.topics ?? [];
+const projectKeys: string[] = frontmatter.projects ?? [];
+const relatedSlugs: string[] = frontmatter.relatedWriting ?? [];
+const researchKeys: string[] = frontmatter.research ?? [];
+const bookKeys: string[] = frontmatter.books ?? [];
+const showCourse = frontmatter.course !== false;
+const source: string | undefined = frontmatter.source;
+const sourceLabel: string = frontmatter.sourceLabel ?? "Original field note";
+const coverCaption: string | undefined = frontmatter.coverCaption;
+
+const canonical = new URL(Astro.url.pathname, site.url).href;
+const imageAbs = frontmatter.cover
+  ? new URL(frontmatter.cover, site.url).href
+  : undefined;
+
+const relatedEssays = relatedSlugs
+  .map((slug) => essays.find((item) => item.href === `/writing/${slug}/`))
+  .filter(Boolean);
+
+const mentionedProjects = projectKeys
+  .map((key) => ({ key, ...projectCatalog[key] }))
+  .filter((item) => item.href);
+
+const mentionedTopics = topicKeys
+  .map((key) => ({ key, ...topicCatalog[key] }))
+  .filter((item) => item.href);
+
+const mentionedResearch = researchKeys
+  .map((key) => ({ key, ...researchLinks[key] }))
+  .filter((item) => item.href);
+
+const mentionedBooks = bookKeys
+  .map((key) => ({ key, ...books[key] }))
+  .filter((item) => item.href);
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": `${author.url}#person`,
+    name: author.name,
+    url: author.url,
+    jobTitle: author.role,
+    sameAs: author.sameAs,
+    knowsAbout: author.focus,
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: frontmatter.title,
+    alternativeHeadline: frontmatter.question,
+    description: frontmatter.summary,
+    abstract: frontmatter.summary,
+    datePublished: publishedIso,
+    dateModified: publishedIso,
+    author: { "@id": `${author.url}#person` },
+    publisher: { "@id": `${author.url}#person` },
+    image: imageAbs,
+    mainEntityOfPage: canonical,
+    url: canonical,
+    articleSection: typeLabel,
+    keywords: topicKeys.join(", "),
+    about: mentionedTopics.map((item) => ({
+      "@type": "Thing",
+      name: item.key,
+      url: new URL(item.href, site.url).href,
+    })),
+    mentions: [
+      ...mentionedProjects.map((item) => ({
+        "@type": "SoftwareApplication",
+        name: item.key,
+        url: item.href,
+      })),
+      ...relatedEssays.map((item) => ({
+        "@type": "TechArticle",
+        name: item!.title,
+        url: new URL(item!.href, site.url).href,
+      })),
+      ...mentionedResearch.map((item) => ({
+        "@type": "ScholarlyArticle",
+        name: item.key,
+        url: item.href,
+      })),
+    ],
+  },
+];
+---
+
+<Base
+  title={frontmatter.title}
+  description={frontmatter.summary}
+  image={frontmatter.cover}
+  type="article"
+  jsonLd={jsonLd}
+>
+  <article class="page prose investigation" itemscope itemtype="https://schema.org/TechArticle">
+    <p class="label">{typeLabel} · {frontmatter.date}</p>
+    <h1 itemprop="headline">{frontmatter.title}</h1>
+
+    <dl class="identity">
+      <div>
+        <dt>Author</dt>
+        <dd><a href="/about/" itemprop="author">{author.name}</a></dd>
+      </div>
+      <div>
+        <dt>Role</dt>
+        <dd>{author.role}</dd>
+      </div>
+      <div>
+        <dt>Focus</dt>
+        <dd>{author.focus.join(", ")}</dd>
+      </div>
+      <div>
+        <dt>Published</dt>
+        <dd itemprop="datePublished" content={publishedIso}>{publishedLabel}</dd>
+      </div>
+      <div>
+        <dt>Type</dt>
+        <dd>{typeLabel}</dd>
+      </div>
+      {
+        topicKeys.length > 0 && (
+          <div>
+            <dt>Topics</dt>
+            <dd>
+              {topicKeys.map((topic, i) => (
+                <>
+                  {i > 0 ? ", " : ""}
+                  {topicCatalog[topic] ? (
+                    <a href={topicCatalog[topic].href}>{topic}</a>
+                  ) : (
+                    topic
+                  )}
+                </>
+              ))}
+            </dd>
+          </div>
+        )
+      }
+    </dl>
+
+    {
+      frontmatter.summary && (
+        <section class="abstract">
+          <h2>Abstract</h2>
+          <p itemprop="abstract">{frontmatter.summary}</p>
+        </section>
+      )
+    }
+
+    {
+      takeaways.length > 0 && (
+        <section class="takeaways">
+          <h2>Key takeaways</h2>
+          <ul>
+            {takeaways.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    {
+      frontmatter.question && (
+        <section class="question-block">
+          <h2>The question</h2>
+          <p>
+            <strong>{frontmatter.question}</strong>
+          </p>
+        </section>
+      )
+    }
+
+    {
+      definitions.length > 0 && (
+        <section>
+          <h2>Definitions</h2>
+          <dl class="defs">
+            {definitions.map((item) => (
+              <div>
+                <dt>{item.term}</dt>
+                <dd>{item.meaning}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )
+    }
+
+    {
+      frontmatter.cover && (
+        <figure>
+          <img
+            class="cover"
+            src={frontmatter.cover}
+            alt={coverCaption ?? frontmatter.title}
+            itemprop="image"
+          />
+          {coverCaption && <figcaption>{coverCaption}</figcaption>}
+        </figure>
+      )
+    }
+
+    <div class="body" itemprop="articleBody">
+      <slot />
+    </div>
+
+    <section class="related">
+      <h2>Related entities</h2>
+      {
+        mentionedProjects.length > 0 && (
+          <>
+            <h3>Projects</h3>
+            <ul>
+              {mentionedProjects.map((item) => (
+                <li>
+                  <a href={item.href}>{item.key}</a>, {item.note}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+      {
+        mentionedTopics.length > 0 && (
+          <>
+            <h3>Topics</h3>
+            <ul>
+              {mentionedTopics.map((item) => (
+                <li>
+                  <a href={item.href}>{item.key}</a>, {item.note}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+      {
+        mentionedResearch.length > 0 && (
+          <>
+            <h3>Research</h3>
+            <ul>
+              {mentionedResearch.map((item) => (
+                <li>
+                  <a href={item.href}>{item.key}</a>, {item.note}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+      {
+        relatedEssays.length > 0 && (
+          <>
+            <h3>Writing</h3>
+            <ul>
+              {relatedEssays.map((item) => (
+                <li>
+                  <a href={item!.href}>{item!.title}</a>, {item!.note}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+      {
+        mentionedBooks.length > 0 && (
+          <>
+            <h3>Books</h3>
+            <ul>
+              {mentionedBooks.map((item) => (
+                <li>
+                  <a href={item.href}>{item.title}</a>, {item.note}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+      {
+        showCourse && (
+          <>
+            <h3>Course</h3>
+            <ul>
+              <li>
+                <a href={course.href}>{course.title}</a>, {course.note}
+              </li>
+            </ul>
+          </>
+        )
+      }
+      {
+        source && (
+          <p class="note">
+            <a href={source}>{sourceLabel} →</a>
+          </p>
+        )
+      }
+    </section>
+  </article>
+</Base>

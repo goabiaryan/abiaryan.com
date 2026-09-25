@@ -1,0 +1,45 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+---
+
+<Base title="Books" description="LLMOps and What is LLMOps (O'Reilly), and GPU Engineering: AI Inference and System Design (Packt).">
+  <section class="page">
+    <p class="label">Books</p>
+    <h1>The durable layer.</h1>
+    <p class="lede">
+      LinkedIn is the question. The book is the reference. The course is the transformation.
+    </p>
+  </section>
+
+  <section class="section">
+    <article class="card">
+      <p class="label">O'Reilly · book</p>
+      <h2>LLMOps: Managing Large Language Models in Production</h2>
+      <p>
+        How language models actually get into production: evaluation, serving, cost, and the
+        operational path from a demo to a system. Now in Korean, Japanese, Russian, and
+        Simplified Chinese.
+      </p>
+      <p><a class="btn" href={site.links.llmops}>LLMOps on O'Reilly</a></p>
+    </article>
+
+    <article class="card" style="margin-top: 2rem">
+      <p class="label">O'Reilly · report</p>
+      <h2>What is LLMOps</h2>
+      <p>
+        A separate O'Reilly report. The short brief on what LLMOps is, not the production book.
+      </p>
+      <p><a class="btn" href={site.links.llmopsWhat}>What is LLMOps on O'Reilly</a></p>
+    </article>
+
+    <article class="card" style="margin-top: 2rem">
+      <p class="label">Packt · late 2026 to early 2027</p>
+      <h2>GPU Engineering: AI Inference and System Design</h2>
+      <p>
+        The GPU and serving book. Almost done. The Maven course is a compressed version of
+        it. <a href={site.links.gpuengineering}>gpuengineering.com</a> is a separate project.
+      </p>
+    </article>
+  </section>
+</Base>

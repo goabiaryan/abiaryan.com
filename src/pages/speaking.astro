@@ -1,0 +1,82 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+import { upcoming, archive } from "../data/speaking";
+
+const years = Object.keys(archive).sort((a, b) => Number(b) - Number(a));
+
+function when(date: string) {
+  if (/^\d{4}$/.test(date)) return date;
+  const d = new Date(date.length === 7 ? `${date}-01` : date);
+  if (Number.isNaN(d.getTime())) return date;
+  return d.toLocaleString("en-GB", { month: "short", year: "numeric" });
+}
+---
+
+<Base
+  title="Speaking"
+  description="Talks, workshops, and keynotes on inference serving, GPU engineering, and LLMOps."
+>
+  <section class="page">
+    <p class="label">Speaking</p>
+    <h1>Talks.</h1>
+    <p class="lede">
+      Book a talk or workshop by
+      <a href={`mailto:${site.email}`}>email</a>.
+      The full historical calendar also lives in the site archive.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Forthcoming</h2>
+    </div>
+    {
+      upcoming.map((talk) => (
+        <div class="talk">
+          <div class="when">{when(talk.date)}</div>
+          <div>
+            {talk.kind && <span class="kind">{talk.kind}</span>}
+            <div>
+              {talk.href ? <a href={talk.href}>{talk.title}</a> : talk.title}
+            </div>
+            <p class="note">{talk.event}</p>
+          </div>
+        </div>
+      ))
+    }
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Archive</h2>
+    </div>
+    {
+      years.map((year) => (
+        <details class="year" open>
+          <summary>{year}</summary>
+          {archive[year].map((talk) => (
+            <div class="talk">
+              <div class="when">{when(talk.date)}</div>
+              <div>
+                {talk.kind && <span class="kind">{talk.kind}</span>}
+                <div>
+                  {talk.href ? <a href={talk.href}>{talk.title}</a> : talk.title}
+                </div>
+                <p class="note">
+                  {talk.event}
+                  {talk.slides && (
+                    <>
+                      {" "}
+                      · <a href={talk.slides}>Slides</a>
+                    </>
+                  )}
+                </p>
+              </div>
+            </div>
+          ))}
+        </details>
+      ))
+    }
+  </section>
+</Base>
