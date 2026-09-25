@@ -4,6 +4,9 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   site: "https://abiaryan.com",
   trailingSlash: "always",
+  build: {
+    assets: "site",
+  },
   adapter: netlify(),
   redirects: {
     "/posts/gpu-engineering": "/writing/llm-inference/",
