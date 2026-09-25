@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "Why the Same GPU Serves One Request in 3.3 Seconds and Another in 39: Request Shape, Prefill, and Decode"
+seoTitle: "Same GPU, 3.3s vs 39s: Prefill and Decode"
 date: 12 April 2026
 published: 2026-04-12
 summary: "This investigation looks at a measurement that surprises people who think inference is 'run the model': identical weights, identical GPU, identical software, 3.3 seconds versus 39 seconds. The variable is request shape. Prefill is compute-bound; decode is memory-bound. Mixing them in one batch punishes both. The post splits TTFT from inter-token latency and argues against a single p50."

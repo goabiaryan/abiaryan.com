@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "Abi's PMPP Notes: Execution Model, Memory Hierarchy, and Why More Work Can Be Faster"
+seoTitle: "Abi's PMPP Notes: Execution and Memory Hierarchy"
 date: 15 October 2025
 published: 2025-10-15
 summary: "Notes from Programming Massively Parallel Processors (Kirk & Hwu): the GPU execution model, the memory model, warps, occupancy, coalescing, and why hiding latency can mean launching more work. These are the hardware chapter under LLM inference, not a kernel tutorial. The claim throughout is that sequential-CPU intuition is the wrong prior for throughput machines."

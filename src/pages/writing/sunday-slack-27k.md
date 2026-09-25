@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "Why Agent Workloads OOM at 62% GPU Utilization: KV Cache, Multi-Turn State, and a $27k Weekend"
+seoTitle: "Why Agents OOM at 62% GPU: KV and a $27k Weekend"
 date: 15 February 2026
 published: 2026-02-15
 summary: "This investigation reconstructs a weekend where an agent demo that looked 10× over-provisioned lost seven of twelve replicas and spent $27k. nvidia-smi still reported 62% GPU utilization. The limiting resource was not FLOPs. It was KV-cache residency across 50–70 turn agents with tool retries. The post separates stateless RAG from stateful agents and gives admission rules that would have stopped the bleed."

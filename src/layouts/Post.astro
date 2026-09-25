@@ -129,7 +129,7 @@ const jsonLd = [
 ---
 
 <Base
-  title={frontmatter.title}
+  title={frontmatter.seoTitle ?? frontmatter.title}
   description={frontmatter.summary}
   image={frontmatter.cover}
   type="article"

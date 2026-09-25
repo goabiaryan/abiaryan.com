@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "The Inference Engineer Owns SLOs, Not vLLM Flags: Why This Job Didn't Exist in 2024"
+seoTitle: "The Inference Engineer Owns SLOs, Not Flags"
 date: 8 January 2026
 published: 2026-01-08
 summary: "Inference engineer is not the person who knows vLLM flags. It is the person who can explain why the same 70B is cheap on one topology and bankrupt on another, and who owns TTFT, inter-token latency, KV pressure, and $/token when the PM only asked for a chatbot. In 2024 the title barely existed. In 2026 it is the difference between a demo and a bill. The role starts from the SLO and works backward."

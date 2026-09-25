@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "Junior Throws GPUs. Principal Deletes Them: Why Over-Engineering Hides the Queue"
+seoTitle: "Junior Throws GPUs. Principal Deletes Them"
 date: 9 December 2025
 published: 2025-12-09
 summary: "The funny ladder is a critique of architecture theater. Junior throws everything on the box. Mid adds Kubernetes so the OOM restarts politely. Senior writes four kinds of parallelism and a design doc. Principal meets the SLO with half the GPUs because they measured the queue, not the model. Over-engineering is how we hide that we never wrote down the bottleneck. I would rather see one good trace than a new service mesh."

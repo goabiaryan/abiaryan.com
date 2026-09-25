@@ -20,7 +20,8 @@ const {
   type = "website",
   jsonLd,
 } = Astro.props;
-const pageTitle = title ? `${title} · ${site.name}` : site.title;
+const withName = title ? `${title} · ${site.name}` : site.title;
+const pageTitle = withName.length <= 70 ? withName : title && title.length <= 70 ? title : site.title;
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const imageAbs = image ? new URL(image, site.url).href : undefined;
 const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];

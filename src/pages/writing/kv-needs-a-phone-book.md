@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "Why KV Cache Needs a Directory: Locality, Leases, and Cache-Aware Routing"
+seoTitle: "Why KV Cache Needs a Directory and Routing"
 date: 8 July 2026
 published: 2026-07-08
 summary: "This investigation argues that KV cache stops being an allocator problem the moment it has a location. On one GPU, KV is pages. Across a cluster, KV is a directory: who has this prefix, how stale is it, what does it cost to move. Systems such as Mooncake, LMCache, and cache-aware routing are naming and locality, not 'ML.' Hashing users to GPUs without a phone book relayouts prefixes all day and calls it a GPU problem."

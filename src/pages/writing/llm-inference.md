@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "The Full Story of LLM Inference: Six Layers from HTTP Request to Multi-GPU Execution"
+seoTitle: "LLM Inference: Six Layers from Request to GPU"
 date: 31 October 2025
 published: 2025-10-31
 summary: "This map walks a single LLM request from the API gateway to multi-GPU execution. Most tutorials stop at 'call the API' or 'run the model.' Production performance is a path across six layers: gateway, engine, orchestration, compiler, CUDA primitives, and hardware. Miss one layer and the rest lie to you. The post names each component and what it owns."

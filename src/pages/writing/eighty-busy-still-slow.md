@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Post.astro
 title: "Why GPU Utilization Is a Misleading Metric for LLM Inference: Queueing, KV Cache, and SLOs"
+seoTitle: "Why GPU Utilization Misleads LLM Inference"
 date: 22 August 2026
 published: 2026-08-22
 summary: "This investigation examines why GPU utilization alone is insufficient for evaluating production LLM inference systems. I show how a server can report high SM occupancy while violating latency SLOs, and why two teams can pay $97 versus $0.38 per million tokens on similar hardware. The post develops a practical mental model: evaluate inference with goodput, queue depth, KV-cache pressure, and request shape, not utilization graphs."
