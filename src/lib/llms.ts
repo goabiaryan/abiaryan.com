@@ -21,7 +21,7 @@ export function llmsIndex() {
     "",
     "## Teaching / Maven",
     `- School: [${mavenSchool.href}](${mavenSchool.href}). ${mavenSchool.subscribers} subscribers. ${mavenSchool.standing}.`,
-    `- Invited Faculty for AI Inference Engineering at [Andreessen Horowitz Academy (The Academy SF)](${site.links.academy}).`,
+    `- Invited Expert and Faculty Member on AI Inferencing for [Andreessen Horowitz Academy (The Academy SF)](${site.links.academy}).`,
     ...mavenCourses.map((item) => `- [${item.title}](${item.href}) (${item.meta}): ${item.note}`),
     ...lightningLessons.map((item) => `- Lightning lesson: [${item.title}](${item.href}) (${item.meta})`),
     `- 1:1 mentorship: [${site.links.mentorship}](${site.links.mentorship})`,

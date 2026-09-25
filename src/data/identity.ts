@@ -67,7 +67,7 @@ export const personJsonLd = {
     },
     {
       "@type": "Occupation",
-      name: "Invited Faculty for AI Inference Engineering",
+      name: "Invited Expert and Faculty Member on AI Inferencing",
       occupationLocation: {
         "@type": "Organization",
         name: "Andreessen Horowitz Academy (The Academy SF)",
