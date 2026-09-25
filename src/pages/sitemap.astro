@@ -1,0 +1,124 @@
+---
+import Base from "../layouts/Base.astro";
+import { site } from "../data/site";
+import { builds, courseLabs } from "../data/builds";
+import { essays } from "../data/essays";
+import { nav } from "../data/site";
+import { projectJsonLd } from "../data/identity";
+
+const investigations = essays.filter((item) => item.kind !== "Archive");
+const archive = essays.filter((item) => item.kind === "Archive");
+---
+
+<Base
+  title="Sitemap"
+  description="Index of Abi Aryan investigations, builds (Joule, RelayServe, smol-vllm, fullstack-inferencing, gpuengineering.com), Maven teaching, and on-site pages."
+  jsonLd={projectJsonLd}
+>
+  <section class="page">
+    <p class="label">Sitemap</p>
+    <h1>What to index.</h1>
+    <p class="lede">
+      Investigations, the projects I built, and the rest of
+      <a href={site.url}>{site.url}</a>.
+      Also at <a href="/llms.txt">llms.txt</a> and <a href="/llms-full.txt">llms-full.txt</a>.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Pages</h2>
+    </div>
+    <ul class="list">
+      {
+        nav.map((item) => (
+          <li>
+            <span class="meta">Page</span>
+            <div>
+              <a class="title" href={item.href}>{item.label}</a>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Investigations</h2>
+    </div>
+    <ul class="list">
+      {
+        investigations.map((item) => (
+          <li>
+            <span class="meta">{item.kind}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+              {item.keywords && <p class="note">{item.keywords.join(", ")}</p>}
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Archive</h2>
+    </div>
+    <ul class="list">
+      {
+        archive.map((item) => (
+          <li>
+            <span class="meta">{item.kind}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Projects I built</h2>
+    </div>
+    <ul class="list">
+      {
+        builds.map((item) => (
+          <li>
+            <span class="meta">{item.kind}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+              <p class="note">{item.keywords.join(", ")}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Course labs</h2>
+    </div>
+    <ul class="list">
+      {
+        courseLabs.map((item) => (
+          <li>
+            <span class="meta">{item.kind}</span>
+            <div>
+              <a class="title" href={item.href}>{item.title}</a>
+              <p class="note">{item.note}</p>
+              <p class="note">{item.keywords.join(", ")}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Base>

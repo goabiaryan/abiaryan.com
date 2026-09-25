@@ -2,13 +2,16 @@
 import Base from "../layouts/Base.astro";
 import Stack from "../components/Stack.astro";
 import { site, research } from "../data/site";
-import { papers, thesis } from "../data/papers";
+import { papers } from "../data/papers";
+import { education, theses } from "../data/education";
+import { aboutJsonLd } from "../data/identity";
 import { volunteering } from "../data/speaking";
 ---
 
 <Base
   title="About"
-  description="AI Infrastructure Engineer. A decade of production ML. Inference systems for data centers, neoclouds, and hyperscalers. Doctoral research in HPC distributed systems."
+  description="Abi Aryan: AI Infrastructure Engineer, Joule founder, Maven instructor, Invited Faculty at Andreessen Horowitz Academy. Doctoral research in HPC distributed systems. Master's theses at NOVA IMS and LSE. The stack I teach: vLLM, SGLang, KV cache, CUDA, Kubernetes."
+  jsonLd={aboutJsonLd}
 >
   <section class="about-split">
     <div class="about-copy">
@@ -48,8 +51,9 @@ import { volunteering } from "../data/speaking";
     </p>
     <p>
       I am developing a digital twin for LLM inference so operators can manage energy
-      while latency SLOs stay intact. <a href={site.links.joule}>Joule</a> is the company
-      form of that work: tokens, watts, serving cost.
+      while latency SLOs stay intact. <a href={site.links.joule}>Joule</a> is an inference
+      power economics engine that ties physical GPU energy to token throughput and SLO
+      goodput.
     </p>
     <p>
       I work on performance-critical inference runtimes (TensorRT-LLM, TorchDynamo, SGLang,
@@ -93,16 +97,47 @@ import { volunteering } from "../data/speaking";
 
   <section class="section">
     <div class="section-head">
-      <h2>Thesis</h2>
+      <h2>Education</h2>
     </div>
     <ul class="list">
-      <li>
-        <span class="meta">{thesis.year}</span>
-        <div>
-          <a class="title" href={thesis.href}>{thesis.title}</a>
-          <p class="note">{thesis.note}</p>
-        </div>
-      </li>
+      {
+        education.map((item) => (
+          <li>
+            <span class="meta">{item.year}</span>
+            <div>
+              {item.href ? (
+                <a class="title" href={item.href}>{item.title}</a>
+              ) : (
+                <span class="title">{item.title}</span>
+              )}
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section class="section">
+    <div class="section-head">
+      <h2>Theses</h2>
+    </div>
+    <ul class="list">
+      {
+        theses.map((item) => (
+          <li>
+            <span class="meta">{item.year}</span>
+            <div>
+              {item.href ? (
+                <a class="title" href={item.href}>{item.title}</a>
+              ) : (
+                <span class="title">{item.title}</span>
+              )}
+              <p class="note">{item.note}</p>
+            </div>
+          </li>
+        ))
+      }
     </ul>
   </section>
 

@@ -3,11 +3,13 @@ import Base from "../layouts/Base.astro";
 import { site } from "../data/site";
 import { reviews, mentoring } from "../data/reviews";
 import { mavenSchool, mavenCourses, lightningLessons } from "../data/teaching";
+import { teachingJsonLd } from "../data/identity";
 ---
 
 <Base
   title="Teaching"
-  description="Abi Aryan on Maven, AI Inference Engineering & Systems Design, Inferencing 101, and free lightning lessons."
+  description="Abi Aryan on Maven: AI Inference Engineering & Systems Design, AI Inference for FDE and PM Roles, lightning lessons, and the stack I teach (vLLM, SGLang, KV cache, CUDA, Kubernetes). Invited Faculty at Andreessen Horowitz Academy."
+  jsonLd={teachingJsonLd}
 >
   <section class="page">
     <p class="label">Teaching · Maven</p>
@@ -21,7 +23,7 @@ import { mavenSchool, mavenCourses, lightningLessons } from "../data/teaching";
     </p>
     <div class="cta-row">
       <a class="btn" href={mavenSchool.href}>Maven home</a>
-      <a class="btn ghost" href={site.links.maven}>Next cohort · 24 Oct – 19 Dec</a>
+      <a class="btn ghost" href={site.links.maven}>Next cohort · 24 Oct - 19 Dec</a>
       <a class="btn ghost" href={site.links.mentorship}>1:1 on Topmate</a>
     </div>
   </section>
@@ -48,7 +50,7 @@ import { mavenSchool, mavenCourses, lightningLessons } from "../data/teaching";
 
   <section class="section">
     <div class="section-head">
-      <h2>Lightning lessons</h2>
+      <h2>Lightning lessons (Slides)</h2>
       <a class="label" href={mavenSchool.href}>Watch on Maven →</a>
     </div>
     <ul class="list">

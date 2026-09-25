@@ -9,7 +9,7 @@ export const mavenCourses = [
     title: "AI Inference Engineering & Systems Design",
     href: "https://maven.com/goabiaryan/inferencing",
     meta: "8 weeks",
-    note: "Build the stack by hand. Next live cohort 24 Oct – 19 Dec 2026.",
+    note: "Build the stack by hand. Next live cohort 24 Oct - 19 Dec 2026.",
   },
   {
     title: "AI Inference for FDE and PM Roles",

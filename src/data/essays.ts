@@ -6,6 +6,7 @@ export const essays = [
     note: "GPU utilization is not goodput. Queueing, KV pressure, and why $97 vs $0.38 / MTok.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["GPU utilization", "goodput", "queueing", "KV cache", "SLOs", "TTFT", "TPOT", "$/MTok"],
   },
   {
     title: "Why KV Cache Needs a Directory: Locality, Leases, and Cache-Aware Routing",
@@ -14,6 +15,7 @@ export const essays = [
     note: "On one GPU, KV is an allocator. Across a cluster it is a phone book.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["KV cache", "directory", "locality", "leases", "cache-aware routing", "allocator"],
   },
   {
     title: "Why the Same GPU Serves One Request in 3.3 Seconds and Another in 39: Request Shape, Prefill, and Decode",
@@ -22,6 +24,7 @@ export const essays = [
     note: "Same model, same card, same code. The request shape did it.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["request shape", "prefill", "decode", "latency", "same GPU"],
   },
   {
     title: "One Inference Roadmap, Not Fifty Tools: Request Path Before CUDA",
@@ -30,6 +33,7 @@ export const essays = [
     note: "Path, phases, memory, queue, then kernels. Not a bookmark pile.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["inference roadmap", "request path", "CUDA", "phases", "memory", "queue", "kernels"],
   },
   {
     title: "Why Agent Workloads OOM at 62% GPU Utilization: KV Cache, Multi-Turn State, and a $27k Weekend",
@@ -38,6 +42,7 @@ export const essays = [
     note: "The demo had headroom. Saturday agents leased HBM. Seven of twelve replicas died.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["agent workloads", "OOM", "GPU utilization", "KV cache", "multi-turn", "HBM", "$27k"],
   },
   {
     title: "The Inference Engineer Owns SLOs, Not vLLM Flags: Why This Job Didn't Exist in 2024",
@@ -46,6 +51,7 @@ export const essays = [
     note: "The role owns TTFT, TPOT, KV pressure, and $/token when the demo becomes traffic.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["inference engineer", "SLOs", "vLLM", "TTFT", "TPOT", "KV pressure", "$/token"],
   },
   {
     title: "Junior Throws GPUs. Principal Deletes Them: Why Over-Engineering Hides the Queue",
@@ -54,6 +60,7 @@ export const essays = [
     note: "The funny ladder is a critique of architecture theater.",
     onSite: true,
     kind: "Investigation",
+    keywords: ["over-engineering", "queue", "GPU", "architecture theater"],
   },
   {
     title: "The Full Story of LLM Inference: Six Layers from HTTP Request to Multi-GPU Execution",
@@ -62,6 +69,7 @@ export const essays = [
     note: "The map: gateway, engine, orchestration, compiler, CUDA, silicon.",
     onSite: true,
     kind: "Map",
+    keywords: ["LLM inference", "gateway", "engine", "orchestration", "compiler", "CUDA", "silicon", "multi-GPU"],
   },
   {
     title: "Abi's PMPP Notes: Execution Model, Memory Hierarchy, and Why More Work Can Be Faster",
@@ -70,6 +78,7 @@ export const essays = [
     note: "Kirk & Hwu: warps, coalescing, occupancy, latency hiding.",
     onSite: true,
     kind: "Notes",
+    keywords: ["PMPP", "warps", "coalescing", "occupancy", "latency hiding", "memory hierarchy"],
   },
   {
     title: "Evaluation and Interpretation for LLMs",

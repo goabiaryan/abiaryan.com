@@ -41,9 +41,4 @@ export const papers = [
   },
 ];
 
-export const thesis = {
-  year: "2026",
-  title: "Cascading Fragility in National AI Infrastructure",
-  href: "https://github.com/goabiaryan/ai-infra-fragility",
-  note: "Master’s thesis. Submitting to AI & Society (Springer). Code on GitHub.",
-};
+export { theses } from "./education";

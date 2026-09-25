@@ -7,7 +7,9 @@ import { builds } from "../data/builds";
 import { reviews, mentoring } from "../data/reviews";
 ---
 
-<Base>
+<Base
+  description="Hi, I am Abi. AI Infrastructure Engineer, Joule founder, Maven instructor. I teach the inference stack: vLLM, SGLang, TensorRT-LLM, KV cache, CUDA, Kubernetes. Doctoral research in SLO-aware inference and hardware-aware compilers."
+>
   <div class="home">
     <section class="hero">
       <p class="topics">
@@ -136,7 +138,7 @@ import { reviews, mentoring } from "../data/reviews";
         <li class="home-pane home-company">
           <span class="meta">Company</span>
           <a class="title" href={site.links.joule}>Joule</a>
-          <p class="note">Phase-aware inference power. Tokens, watts, serving cost.</p>
+          <p class="note">An inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.</p>
           <p class="note"><a href={site.links.joule}>Go to joule.lat</a></p>
         </li>
         <li class="home-pane home-measured">

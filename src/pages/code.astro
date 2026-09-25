@@ -2,17 +2,19 @@
 import Base from "../layouts/Base.astro";
 import { site } from "../data/site";
 import { builds, courseLabs } from "../data/builds";
+import { projectJsonLd } from "../data/identity";
 ---
 
 <Base
   title="Code"
-  description="Public inference, serving, GPU, and observability work by Abi Aryan."
+  description="Abi Aryan builds: Joule (an inference power economics engine), RelayServe, smol-vllm, fullstack-inferencing, gpuengineering.com, and the rest of the public inference stack."
+  jsonLd={projectJsonLd}
 >
   <section class="page">
     <p class="label">GitHub</p>
     <h1>Things you can run.</h1>
     <p class="lede">
-      Joule is the company. The public repos are the rest of the argument: serving code, an
+      Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput. The public repos are the rest of the argument: serving code, an
       educational engine, a Lambda lab, observability for agents, the Packt Nexus workshop,
       thesis code for national AI-infrastructure fragility, and the GPU list at
       gpuengineering.com.

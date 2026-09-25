@@ -8,6 +8,8 @@ export const site = {
     statement:
       "I am doing doctoral research in HPC distributed systems: SLO-aware inference optimization and hardware-aware compiler design. I am developing a digital twin that lets operators manage energy while protecting latency SLOs, via phase-aware observability, predictive forecasting, and human-centred decision support.",
   },
+  joule:
+    "Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",
   analytics: "G-NC4SF5LGSH",
   email: "hi@abiaryan.com",
   learnEmail: "learn@abiaryan.com",

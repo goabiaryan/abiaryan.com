@@ -12,6 +12,24 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) => !page.includes("/404") && !page.includes("/advisory/thanks"),
+      customPages: ["https://abiaryan.com/llms.txt", "https://abiaryan.com/llms-full.txt"],
+      serialize(item) {
+        const path = new URL(item.url).pathname;
+        const top =
+          path === "/" ||
+          path === "/about/" ||
+          path === "/teaching/" ||
+          path === "/books/" ||
+          path === "/writing/" ||
+          path === "/code/" ||
+          path === "/sitemap/";
+        const investigation = path.startsWith("/writing/") && path !== "/writing/";
+        return {
+          ...item,
+          changefreq: investigation ? "monthly" : "weekly",
+          priority: top ? 1 : investigation ? 0.9 : path.includes("/advisory") || path.includes("/speaking") ? 0.8 : 0.6,
+        };
+      },
     }),
   ],
   redirects: {

@@ -3,7 +3,18 @@ import { site } from "./site";
 export const author = {
   name: site.name,
   role: "AI Infrastructure Engineer",
-  focus: ["LLM inference", "GPU engineering", "distributed systems"],
+  focus: [
+    "LLM inference",
+    "GPU engineering",
+    "distributed systems",
+    "LLMOps",
+    "Joule",
+    "inference power economics engine",
+    "Maven",
+    "vLLM",
+    "SGLang",
+    "KV cache",
+  ],
   url: `${site.url}/about/`,
   sameAs: [
     site.links.linkedin,
@@ -13,6 +24,8 @@ export const author = {
     site.links.modelcraft,
     site.links.mavenProfile,
     site.links.joule,
+    site.links.gpuengineering,
+    site.links.academy,
   ],
 };
 
@@ -54,7 +67,7 @@ export const topics: Record<string, { href: string; note: string }> = {
 export const projects: Record<string, { href: string; note: string; kind: string }> = {
   Joule: {
     href: site.links.joule,
-    note: "Phase-aware inference power economics. Tokens, watts, serving cost.",
+    note: "Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",
     kind: "Company",
   },
   RelayServe: {
