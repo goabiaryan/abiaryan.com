@@ -1,8 +1,9 @@
 export const site = {
   name: "Abi Aryan",
   url: "https://abiaryan.com",
+  title: "Abi Aryan · AI Infrastructure Engineer, Inference Systems",
   description:
-    "AI Infrastructure Engineer building inference systems for data centers, neoclouds, and hyperscalers. Production ML to runtime, distributed systems, and hardware-aware compilers.",
+    "Hi, I am Abi. I build inference systems for data centers, neoclouds, and hyperscalers. Joule, Maven, and the stack I teach.",
   doctorate: {
     title: "SLO-aware inference and hardware-aware compilers",
     statement:
