@@ -104,20 +104,20 @@ export const course = {
 };
 
 export const books = {
+  "GPU Engineering: AI Inference and System Design": {
+    title: "GPU Engineering: AI Inference and System Design",
+    href: "/books/",
+    note: "Packt. High-throughput inference serving from the gateway to bare metal: concurrency, multi-tenant isolation, control versus data plane, then fabric, silicon, compilers, and kernels. Almost finished. Launch is end of 2026 or early 2027.",
+  },
   LLMOps: {
     title: "LLMOps",
     href: site.links.llmops,
-    note: "O'Reilly book. Written in English, now translated into Korean, Japanese, Russian, and Simplified Chinese.",
+    note: "O'Reilly book. Written 2023-2024, finished December 2024, published 2025. In English, now translated into Korean, Japanese, Russian, and Simplified Chinese.",
   },
   "What is LLMOps": {
     title: "What is LLMOps",
     href: site.links.llmopsWhat,
-    note: "O'Reilly report. A separate brief from the LLMOps book.",
-  },
-  "GPU Engineering: AI Inference and System Design": {
-    title: "GPU Engineering: AI Inference and System Design",
-    href: "/books/",
-    note: "Packt. Almost done. Slated for late 2026 to early 2027.",
+    note: "O'Reilly report. Written 2023, published 2024. A separate brief from the LLMOps book.",
   },
 };
 

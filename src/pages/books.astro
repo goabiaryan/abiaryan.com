@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import { site } from "../data/site";
 ---
 
-<Base title="Books" description="LLMOps and What is LLMOps (O'Reilly), and GPU Engineering: AI Inference and System Design (Packt).">
+<Base title="Books" description="GPU Engineering: AI Inference and System Design (Packt), LLMOps and What is LLMOps (O'Reilly).">
   <section class="page">
     <p class="label">Books</p>
     <h1>The durable layer.</h1>
@@ -13,33 +13,73 @@ import { site } from "../data/site";
   </section>
 
   <section class="section">
-    <article class="card">
-      <p class="label">O'Reilly · book</p>
+    <article class="card book">
+      <img
+        class="book-cover"
+        src="/assets/books/gpu-engineering.png"
+        alt="Placeholder cover for GPU Engineering: a dragon on a GPU. Guess the cover."
+        width="864"
+        height="1152"
+      />
+      <div>
+      <p class="label">Packt · almost finished</p>
+      <h2>GPU Engineering: AI Inference and System Design</h2>
+      <p>
+        Modern AI workloads don't fail at the prompt, they fail at the systems boundary.
+        This book covers the anatomy of high-throughput inference serving. It starts where
+        traffic hits: concurrency at the gateway versus the engine, multi-tenant isolation,
+        and the divide between the control plane and the data plane. From there it works
+        down to bare metal: interconnect fabric, silicon, compilers, and kernels.
+      </p>
+      <p>
+        Written for systems architects, infrastructure leads, and platform engineers who
+        have to design the fleet rather than consume an endpoint.
+      </p>
+      <p>
+        Almost finished. Launch is end of 2026 or early 2027. The
+        <a href={site.links.maven}>Maven course</a> is a compressed version.
+      </p>
+      </div>
+    </article>
+
+    <article class="card book" style="margin-top: 2rem">
+      <img
+        class="book-cover"
+        src="/assets/books/llmops.jpg"
+        alt="Cover of LLMOps: Managing Large Language Models in Production, O'Reilly"
+        width="800"
+        height="1050"
+      />
+      <div>
+      <p class="label">O'Reilly · written 2023-2024 · published 2025</p>
       <h2>LLMOps: Managing Large Language Models in Production</h2>
       <p>
         How language models actually get into production: evaluation, serving, cost, and the
-        operational path from a demo to a system. Written in English, now translated into
-        Korean, Japanese, Russian, and Simplified Chinese.
+        operational path from a demo to a system. Two years of writing, 2023-2024. Finished
+        in December 2024, published in 2025. In English, now translated into Korean,
+        Japanese, Russian, and Simplified Chinese.
       </p>
       <p><a class="btn" href={site.links.llmops}>LLMOps on O'Reilly</a></p>
+      </div>
     </article>
 
-    <article class="card" style="margin-top: 2rem">
-      <p class="label">O'Reilly · report</p>
+    <article class="card book" style="margin-top: 2rem">
+      <img
+        class="book-cover"
+        src="/assets/books/what-is-llmops.jpg"
+        alt="Cover of What is LLMOps, O'Reilly"
+        width="800"
+        height="1200"
+      />
+      <div>
+      <p class="label">O'Reilly · report · written 2023 · published 2024</p>
       <h2>What is LLMOps</h2>
       <p>
         A separate O'Reilly report. The short brief on what LLMOps is, not the production book.
+        Written in 2023, published in 2024.
       </p>
       <p><a class="btn" href={site.links.llmopsWhat}>What is LLMOps on O'Reilly</a></p>
-    </article>
-
-    <article class="card" style="margin-top: 2rem">
-      <p class="label">Packt · late 2026 to early 2027</p>
-      <h2>GPU Engineering: AI Inference and System Design</h2>
-      <p>
-        The GPU and serving book. Almost done. The Maven course is a compressed version of
-        it. The public reading list is on <a href={site.links.gpuengineering}>gpuengineering.com</a>.
-      </p>
+      </div>
     </article>
   </section>
 </Base>

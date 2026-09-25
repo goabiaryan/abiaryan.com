@@ -479,6 +479,19 @@ p {
   padding-top: 0.2rem;
 }
 
+.book {
+  display: grid;
+  grid-template-columns: 18rem minmax(0, 1fr);
+  gap: 1.5rem 2rem;
+  align-items: start;
+}
+
+.book-cover {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .card h3 {
   margin-top: 0.35rem;
 }
@@ -1171,8 +1184,13 @@ p {
   .grid-2,
   .quotes,
   .list li,
-  .talk {
+  .talk,
+  .book {
     grid-template-columns: 1fr;
+  }
+
+  .book-cover {
+    max-width: 16rem;
   }
 
   .hero,
