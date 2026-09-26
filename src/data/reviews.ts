@@ -1,8 +1,26 @@
 export const reviews = [
   {
+    name: "Tap",
+    role: "Data Scientist, Cleverse",
+    cohort: "July '26 Cohort",
+    blurb:
+      "Real case studies on multi-tenancy clustering and scaling a cluster with good practice, from cluster level to kernel engineering.",
+    quote:
+      "The great part of this course is the real case studies from multi-tenancy clustering, and how to scaling up the cluster with the good practice. It make me complete the view of how inference company work, which cover from cluster level to kernel engineering. If you are going build the multi-tenacy inference clustering, should take this course.",
+  },
+  {
+    name: "Srini",
+    role: "AI Architect, BNPP",
+    cohort: "July '26 Cohort",
+    blurb:
+      "This course doesn't stop at explaining how LLM inference works, it puts you inside the actual machinery. Every project runs against a GPU you actually rent and break.",
+    quote:
+      "This course doesn't stop at explaining how LLM inference works, it puts you inside the actual machinery: vLLM engines, GPU slicing with HAMi, KV-cache disaggregation over Mooncake, gateways that admit, place, and queue real traffic under real GPU scarcity. Every project runs against a GPU you actually rent and break, not a simulated one, and the final build with a control plane that has to defend its own design decisions on live metrics , it mirrors what serving infrastructure looks like in production, not in a textbook. Quite Intensive course. Highly recommended, Thanks to Abi.",
+  },
+  {
     name: "Vijay",
     role: "Lead Member of Technical Staff, Salesforce",
-    cohort: "July 2026",
+    cohort: "July '26 Cohort",
     blurb:
       "This course was very helpful in giving me a broad, end-to-end understanding of the LLM inference space and connecting the key concepts.",
     quote:
@@ -11,7 +29,7 @@ export const reviews = [
   {
     name: "Anuj",
     role: "Sr. Machine Learning Engineer",
-    cohort: "July 2026",
+    cohort: "July '26 Cohort",
     blurb:
       "It goes beyond theory and dives into the practical challenges of building and scaling LLM inference systems, from KV cache to admission control.",
     quote:
@@ -20,7 +38,7 @@ export const reviews = [
   {
     name: "Sachin",
     role: "Founder, Chortle Labs",
-    cohort: "July 2026",
+    cohort: "July '26 Cohort",
     blurb:
       "I would give this course 10 stars if I could. We built every part of the inference stack by hand, so we came out understanding the mechanics, not just the APIs.",
     quote:
@@ -29,7 +47,7 @@ export const reviews = [
   {
     name: "Vivian",
     role: "Software Engineer, Google",
-    cohort: "February 2026",
+    cohort: "February '26 Cohort",
     blurb:
       "Fantastic course for deep-diving into LLM systems. The final project covers the full inference lifecycle: load balancing, agentic systems, and observability.",
     quote:

@@ -95,7 +95,7 @@ import { reviews, mentoring } from "../data/reviews";
     <section class="section">
       <div class="section-head">
         <h2>From the cohorts</h2>
-        <a class="label" href="/teaching/">Maven courses →</a>
+        <a class="label" href="/teaching/#reviews">See the full reviews →</a>
       </div>
       <div class="quotes">
         {
@@ -106,6 +106,7 @@ import { reviews, mentoring } from "../data/reviews";
                 {item.name}
                 {item.role ? ` · ${item.role}` : ""}
                 {item.cohort ? ` · ${item.cohort}` : ""}
+                <a class="review-more" href={`/teaching/#review-${item.name.toLowerCase()}`}>See the full review →</a>
               </footer>
             </blockquote>
           ))

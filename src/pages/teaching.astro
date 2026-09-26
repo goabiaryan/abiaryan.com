@@ -139,15 +139,15 @@ import { teachingJsonLd } from "../data/identity";
     </ol>
   </section>
 
-  <section class="section">
+  <section class="section" id="reviews">
     <div class="section-head">
       <h2>From the cohorts</h2>
-      <a class="label" href={mavenSchool.href}>Reviews on Maven →</a>
+      <a class="label" href={site.links.maven}>Reviews on Maven →</a>
     </div>
     <div class="quotes">
       {
         reviews.map((item) => (
-          <blockquote class="card quote">
+          <blockquote class="card quote" id={`review-${item.name.toLowerCase()}`}>
             <p>“{item.quote}”</p>
             <footer>
               {item.name}

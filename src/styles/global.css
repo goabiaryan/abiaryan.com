@@ -949,6 +949,20 @@ p {
   color: var(--muted);
 }
 
+.quote[id] {
+  scroll-margin-top: 1.2rem;
+}
+
+.review-more {
+  display: block;
+  margin-top: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  text-transform: none;
+  color: var(--accent);
+}
+
 .home .hero {
   display: block;
   max-width: none;
