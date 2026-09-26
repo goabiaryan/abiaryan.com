@@ -57,21 +57,17 @@ export const nav = [
 ];
 
 export const stack = [
-  { layer: "Model", tools: ["Transformers", "GGUF", "Hugging Face"] },
-  { layer: "Framework", tools: ["PyTorch", "Accelerate"] },
-  { layer: "Compiler", tools: ["LLVM", "Triton", "TorchDynamo", "TorchInductor", "CUDA graphs"] },
-  { layer: "Kernel", tools: ["PTX", "SASS", "FlashAttention", "CUTLASS"] },
-  { layer: "Memory", tools: ["HBM", "DDR", "PagedAttention", "Mooncake", "LMCache", "KV cache"] },
-  { layer: "Storage", tools: ["Lustre", "NVMe"] },
-  { layer: "GPU", tools: ["CUDA", "MIG", "DRA", "HAMi", "DCGM", "DGCM"] },
-  { layer: "Communication", tools: ["NCCL", "MPI", "NIXL", "NVLink/NVSwitch", "UCX", "GPUDirect RDMA"] },
+  { layer: "Model & Framework", tools: ["Transformers", "GGUF", "Hugging Face", "PyTorch", "Accelerate"] },
+  { layer: "Compiler & Kernel", tools: ["LLVM", "Triton", "TorchDynamo", "TorchInductor", "CUDA Graphs", "PTX", "SASS", "FlashAttention", "CUTLASS"] },
+  { layer: "Memory & Storage", tools: ["HBM", "DDR", "PagedAttention", "Mooncake", "LMCache", "KV cache", "Lustre", "NVMe"] },
+  { layer: "GPU & Communication", tools: ["CUDA", "MIG", "DRA", "HAMi", "DCGM", "DGCM", "NCCL", "MPI", "NIXL", "NVLink/NVSwitch", "UCX", "GPUDirect RDMA"] },
   { layer: "Networking", tools: ["InfiniBand", "UFM", "RDMA/RoCE", "Ethernet", "CXL", "PCIe"] },
   { layer: "Serving", tools: ["vLLM", "SGLang", "TensorRT-LLM", "KServe", "llm-d", "llama.cpp", "RelayServe", "LiteLLM", "Portkey", "OpenRouter"] },
-  { layer: "Scheduling", tools: ["Kubernetes", "EKS", "GKE", "Ray", "KubeRay", "Volcano", "Slurm", "Flux", "Kueue", "dstack", "Karpenter", "KEDA", "HPA", "Gateway API", "Enroot", "xCAT"] },
+  { layer: "Scheduling & Orchestration", tools: ["Kubernetes", "EKS", "GKE", "Ray", "KubeRay", "Volcano", "Slurm", "Flux", "Kueue", "dstack", "Karpenter", "KEDA", "HPA", "Gateway API", "Enroot", "xCAT"] },
   { layer: "Automation", tools: ["Terraform", "Ansible"] },
-  { layer: "Latency / throughput", tools: ["Prometheus", "Grafana", "Jaeger", "Locust", "Nsight Systems", "Nsight Compute", "Perf", "HPCG"] },
-  { layer: "Facility", tools: ["DCIM platforms", "BMS/BAS", "Modbus", "BACnet", "SNMP", "OPC UA", "Redfish", "IPMI", "BMC"] },
-  { layer: "$ / token", tools: ["Lambda Cloud", "Modal"] },
+  { layer: "Observability & Performance", tools: ["Prometheus", "Grafana", "Jaeger", "Locust", "Nsight Systems", "Nsight Compute", "Perf", "HPCG"] },
+  { layer: "Facility & Hardware Management", tools: ["DCIM platforms", "BMS/BAS", "Modbus", "BACnet", "SNMP", "OPC UA", "Redfish", "IPMI", "BMC"] },
+  { layer: "$ / Token", tools: ["Lambda Cloud", "Modal"] },
 ];
 
 export const research = [

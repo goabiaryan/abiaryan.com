@@ -3,13 +3,14 @@ import { stack } from "../data/site";
 
 interface Props {
   compact?: boolean;
+  heading?: string;
 }
 
-const { compact = false } = Astro.props;
+const { compact = false, heading = "The stack I teach" } = Astro.props;
 ---
 
-<aside class:list={["stack", compact && "stack-compact"]} aria-label="The inference stack">
-  <p class="label">The stack I teach</p>
+<aside class:list={["stack", compact && "stack-compact"]} aria-label={heading}>
+  <p class="label">{heading}</p>
   <ol>
     {
       stack.map((item, i) => (

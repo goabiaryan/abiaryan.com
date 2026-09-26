@@ -366,11 +366,6 @@ p {
   max-width: none;
 }
 
-.about-copy .skim {
-  color: var(--accent);
-  font-weight: 600;
-}
-
 .about-aside {
   position: sticky;
   top: 1.2rem;
