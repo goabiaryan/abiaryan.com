@@ -16,14 +16,14 @@ interface Props {
 const {
   title,
   description = site.description,
-  image,
+  image = "/abi-preview.png",
   type = "website",
   jsonLd,
 } = Astro.props;
 const withName = title ? `${title} · ${site.name}` : site.title;
 const pageTitle = withName.length <= 70 ? withName : title && title.length <= 70 ? title : site.title;
 const canonical = new URL(Astro.url.pathname, site.url).href;
-const imageAbs = image ? new URL(image, site.url).href : undefined;
+const imageAbs = new URL(image, site.url).href;
 const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const payloads = [...identityJsonLd, ...extra];
 const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
@@ -46,8 +46,10 @@ const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content={type} />
-    {imageAbs && <meta property="og:image" content={imageAbs} />}
-    {imageAbs && <meta name="twitter:card" content="summary_large_image" />}
+    <meta property="og:image" content={imageAbs} />
+    <meta property="og:image:alt" content={site.name} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content={imageAbs} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
