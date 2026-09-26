@@ -18,62 +18,82 @@ import { volunteering } from "../data/speaking";
     <p class="label">About</p>
     <h1>Abi Aryan</h1>
     <p class="lede">
-      I am an AI Infrastructure Engineer building inference systems for data centers,
+      I am an <span class="skim">AI Infrastructure Engineer</span> building inference systems for data centers,
       neoclouds, and hyperscalers. I founded
-      <a href={site.links.joule}>Joule</a>, an inference power economics engine that ties
-      physical GPU energy to token throughput and SLO goodput.
+      <a href={site.links.joule}>Joule</a>, an inference power economics engine that
+      connects physical GPU energy to token throughput and SLO goodput.
     </p>
     <div class="prose">
     <p>
-      I have spent over a decade building production ML systems. Today, I work at the
-      intersection of inference, GPUs, distributed systems, and AI infrastructure - from
-      the runtime down to the hardware. I am also currently an Invited Expert and Faculty
-      Member on AI Inferencing for
-      <a href={site.links.academy}>Andreessen Horowitz Academy (The Academy SF)</a>.
+      I have spent over a decade building production ML systems and now work across the
+      inference stack, from
+      <span class="skim">performance-critical runtimes and distributed systems to GPUs,
+      compilers, and cluster efficiency</span>. I architect infrastructure for serving systems
+      built on inference engines such as TensorRT-LLM, TorchDynamo, SGLang, and vLLM.
+    </p>
+    <p>
+      My focus is not maintaining these engines, but making
+      <span class="skim">high-concurrency serving</span>
+      intelligible and reliable at scale, across the entire infrastructure path: from the
+      client and request layer, through
+      <span class="skim">tokens, bytes, GPUs, and network fabric</span>, all the
+      way to
+      <span class="skim">data-center capacity planning, power, and cooling</span>.
+    </p>
+    <p>
+      In other words, I care about the complete path from a request to the orchestrators
+      down to the physical resources that produce it:
+      <span class="skim">the tokens generated, the bytes moved, the energy consumed, the heat that ultimately has to be removed, and data-center capacity planning</span>.
+    </p>
+    <p>
+      At <a href={site.links.joule}>Joule</a>, I work on the infra engineering that
+      manages the <span class="skim">economics of inference power</span>: connecting GPU energy consumption to token
+      throughput and SLO goodput, so cluster operators and fleet managers can understand
+      the cost and physical reality of inference alongside its performance.
+    </p>
+    <p>
+      I am a <span class="skim">doctoral researcher in HPC distributed systems</span>, studying SLO-aware
+      inference optimization and hardware-aware compiler design for supercomputers. As part
+      of this research, I am developing a <span class="skim">digital twin for LLM inference</span>
+      that lets operators manage energy while protecting latency SLOs.
     </p>
     <p>
       I build the systems, measure them, research them, write about them, and teach them.
-      I am a doctoral researcher in HPC distributed systems, studying SLO-aware inference
-      optimization and hardware-aware compiler design.       I am the author of
-      <a href={site.links.llmops}>LLMOps</a>
-      (written 2023-2024, finished December 2024, published 2025, in English, now translated into Korean, Japanese, Russian, and Simplified Chinese) and the report
-      <a href={site.links.llmopsWhat}>What is LLMOps</a> (written 2023, published 2024, O'Reilly).
-      <a href="/books/">GPU Engineering: AI Inference and System Design</a>
-      (Packt) is almost finished, launch is end of 2026 or early 2027.
-    </p>
-    <p>
-      I am developing a digital twin for LLM inference so operators can manage energy
-      while latency SLOs stay intact. That work sits in
-      <a href={site.links.joule}>Joule</a>.
-    </p>
-    <p>
-      Previously, I founded <a href={site.links.abide}>Abide</a>, a lab for reflective
-      intelligence and neuro-symbolic models for agents. That research was presented at
-      NeurIPS 2025. Abide is prior work. Joule is the company I run now.
-    </p>
-    <p>
-      I am a mathematician by training. I was a visiting research scholar at UCLA's
-      Cognitive Systems Lab under the 2012 Turing Award winner, Dr.
-      <a href={site.links.pearl}>Judea Pearl</a>, working on causal inference, AutoML,
-      and multi-agent learning.
-    </p>
-    <p>
-      I work on performance-critical inference runtimes (TensorRT-LLM, TorchDynamo, SGLang,
-      vLLM) and GPU cluster efficiency. I am not trying to be the person who maintains those
-      engines. I am trying to make the serving path intelligible, and to do original work in
-      the same territory.
-    </p>
-    <p>
-      I teach popular, highly rated masterclasses on Maven:
+      I am an <span class="skim">Invited Expert and Faculty Member on AI Inferencing</span> for
+      <a href={site.links.academy}>Andreessen Horowitz Academy (The Academy SF)</a>, and I
+      teach masterclasses on Maven, including
       <a href={site.links.maven}>AI Inference Engineering &amp; Systems Design</a>
-      for mid-to-senior engineers, and
+      for mid-to-senior engineers and
       <a href={site.links.mavenIntro}>AI Inference for FDE and PM Roles</a>.
-      I write <a href={site.links.modelcraft}>ModelCraft</a>. I review for
-      NeurIPS, ACL, EMNLP, ICML, ICLR, TMLR, and AABI.
     </p>
     <p>
-      For talks, see <a href="/speaking/">speaking</a>.
-      For the audit and the seat, see <a href="/advisory/">advisory</a>.
+      I am the author of
+      <a href={site.links.llmops}>LLMOps</a>
+      (written 2023-2024, completed December 2024, published in 2025), now translated into
+      Korean, Japanese, Russian, and Simplified Chinese. I also wrote
+      <a href={site.links.llmopsWhat}>What is LLMOps</a> (O'Reilly, 2024). My next book,
+      <a href="/books/">GPU Engineering: AI Inference and System Design</a> (Packt), is
+      nearing completion, with publication planned for late 2026 or early 2027. I write
+      <a href={site.links.modelcraft}>ModelCraft</a> and review for NeurIPS, ACL, EMNLP,
+      ICML, ICLR, TMLR, and AABI.
+    </p>
+    <p>
+      Previously, I co-founded <a href={site.links.abide}>Abide</a>, a research lab focused
+      on reflective intelligence and neuro-symbolic models for agents, where I mainly
+      contributed to building platform and observability solutions for agentic reasoning
+      in LLMs. That work was presented at NeurIPS 2025. Abide is prior work, whereas
+      <a href={site.links.joule}>Joule</a> is the company I run today.
+    </p>
+    <p>
+      A mathematician by training, I was a visiting research scholar at
+      <span class="skim">UCLA's Cognitive Systems Lab</span> from 2018-19 under Dr.
+      <a href={site.links.pearl}>Judea Pearl</a>, the 2012 recipient of the ACM A.M. Turing
+      Award. There I worked on intelligence in agents, with research spanning causal
+      inference, AutoML, and multi-agent learning.
+    </p>
+    <p>
+      For talks, see <a href="/speaking/">Speaking</a>. For the audit and advisory work,
+      see <a href="/advisory/">Advisory</a>.
     </p>
     </div>
     </div>

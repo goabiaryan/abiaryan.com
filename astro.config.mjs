@@ -8,7 +8,7 @@ export default defineConfig({
   build: {
     assets: "site",
   },
-  adapter: netlify(),
+  adapter: process.env.ASTRO_LOCAL ? undefined : netlify(),
   integrations: [
     sitemap({
       filter: (page) => !page.includes("/404") && !page.includes("/advisory/thanks"),

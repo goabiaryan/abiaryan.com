@@ -366,6 +366,11 @@ p {
   max-width: none;
 }
 
+.about-copy .skim {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .about-aside {
   position: sticky;
   top: 1.2rem;
@@ -556,6 +561,7 @@ p {
   margin: 0.25rem 0 0;
   color: var(--muted);
   font-size: 0.95rem;
+  white-space: pre-line;
 }
 
 .page {
@@ -1185,7 +1191,8 @@ p {
   .quotes,
   .list li,
   .talk,
-  .book {
+  .book,
+  .about-split {
     grid-template-columns: 1fr;
   }
 

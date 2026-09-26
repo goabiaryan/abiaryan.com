@@ -5,9 +5,9 @@ export const site = {
   description:
     "Hi, I am Abi. I build inference systems for data centers, neoclouds, and hyperscalers. Founder of Joule. I teach on Maven.",
   doctorate: {
-    title: "SLO-aware inference and hardware-aware compilers",
+    title: "AI HPC distributed systems",
     statement:
-      "I am doing doctoral research in HPC distributed systems: SLO-aware inference optimization and hardware-aware compiler design. I am developing a digital twin that lets operators manage energy while protecting latency SLOs, via phase-aware observability, predictive forecasting, and human-centred decision support.",
+      "Doctoral research in AI HPC distributed systems: SLO-aware inference optimization, hardware-aware compiler design, and a digital twin for energy optimization for bursty workloads.",
   },
   joule:
     "Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",
@@ -59,15 +59,18 @@ export const nav = [
 export const stack = [
   { layer: "Model", tools: ["Transformers", "GGUF", "Hugging Face"] },
   { layer: "Framework", tools: ["PyTorch", "Accelerate"] },
-  { layer: "Compiler", tools: ["Triton", "TorchDynamo", "CUDA graphs"] },
-  { layer: "Kernel", tools: ["FlashAttention", "CUTLASS"] },
-  { layer: "Memory", tools: ["PagedAttention", "Mooncake", "LMCache", "KV cache"] },
-  { layer: "GPU", tools: ["CUDA", "MIG", "DRA", "HAMi", "DCGM"] },
-  { layer: "Communication", tools: ["NCCL", "NIXL", "NVLink"] },
-  { layer: "Networking", tools: ["InfiniBand", "RDMA", "Ethernet"] },
-  { layer: "Serving", tools: ["vLLM", "SGLang", "TensorRT-LLM", "llm-d", "llama.cpp", "RelayServe", "LiteLLM", "Portkey", "OpenRouter"] },
-  { layer: "Scheduling", tools: ["Kubernetes", "EKS", "GKE", "Ray", "Karpenter", "KEDA", "HPA", "Gateway API"] },
-  { layer: "Latency / throughput", tools: ["Prometheus", "Grafana", "Locust"] },
+  { layer: "Compiler", tools: ["LLVM", "Triton", "TorchDynamo", "TorchInductor", "CUDA graphs"] },
+  { layer: "Kernel", tools: ["PTX", "SASS", "FlashAttention", "CUTLASS"] },
+  { layer: "Memory", tools: ["HBM", "DDR", "PagedAttention", "Mooncake", "LMCache", "KV cache"] },
+  { layer: "Storage", tools: ["Lustre", "NVMe"] },
+  { layer: "GPU", tools: ["CUDA", "MIG", "DRA", "HAMi", "DCGM", "DGCM"] },
+  { layer: "Communication", tools: ["NCCL", "MPI", "NIXL", "NVLink/NVSwitch", "UCX", "GPUDirect RDMA"] },
+  { layer: "Networking", tools: ["InfiniBand", "UFM", "RDMA/RoCE", "Ethernet", "CXL", "PCIe"] },
+  { layer: "Serving", tools: ["vLLM", "SGLang", "TensorRT-LLM", "KServe", "llm-d", "llama.cpp", "RelayServe", "LiteLLM", "Portkey", "OpenRouter"] },
+  { layer: "Scheduling", tools: ["Kubernetes", "EKS", "GKE", "Ray", "KubeRay", "Volcano", "Slurm", "Flux", "Kueue", "dstack", "Karpenter", "KEDA", "HPA", "Gateway API", "Enroot", "xCAT"] },
+  { layer: "Automation", tools: ["Terraform", "Ansible"] },
+  { layer: "Latency / throughput", tools: ["Prometheus", "Grafana", "Jaeger", "Locust", "Nsight Systems", "Nsight Compute", "Perf", "HPCG"] },
+  { layer: "Facility", tools: ["DCIM platforms", "BMS/BAS", "Modbus", "BACnet", "SNMP", "OPC UA", "Redfish", "IPMI", "BMC"] },
   { layer: "$ / token", tools: ["Lambda Cloud", "Modal"] },
 ];
 
