@@ -29,7 +29,7 @@ const payloads = [...identityJsonLd, ...extra];
 const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
 const socialDescription =
   isHome || description === site.description
-    ? "I am an AI Infrastructure Engineer building inference systems for data centers, neoclouds, and hyperscalers."
+    ? "AI Infrastructure Engineer building inference systems for data centers, neoclouds, and hyperscalers."
     : description;
 ---
 
