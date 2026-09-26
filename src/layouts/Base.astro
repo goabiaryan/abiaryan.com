@@ -16,7 +16,7 @@ interface Props {
 const {
   title,
   description = site.description,
-  image = "/abi-preview.png",
+  image = "/og.jpg",
   type = "website",
   jsonLd,
 } = Astro.props;
@@ -27,6 +27,10 @@ const imageAbs = new URL(image, site.url).href;
 const extra = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 const payloads = [...identityJsonLd, ...extra];
 const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
+const socialDescription =
+  isHome || description === site.description
+    ? "I am an AI Infrastructure Engineer building inference systems for data centers, neoclouds, and hyperscalers."
+    : description;
 ---
 
 <!doctype html>
@@ -43,10 +47,14 @@ const isHome = Astro.url.pathname.replace(/\/+$/, "") === "";
     <link rel="alternate" type="text/plain" href="/llms-full.txt" title="LLM full index" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <meta property="og:title" content={pageTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={socialDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content={type} />
     <meta property="og:image" content={imageAbs} />
+    <meta property="og:image:secure_url" content={imageAbs} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content={site.name} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={imageAbs} />
