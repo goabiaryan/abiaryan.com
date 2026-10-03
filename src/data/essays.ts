@@ -1,3 +1,12 @@
+const MONTHS_SHORT = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+export function formatEssayDate(iso: string) {
+  const [year, month, day] = iso.split("-").map(Number);
+  const name = MONTHS_SHORT[month - 1];
+  if (!year || !name || !day) return iso;
+  return `${day} ${name} ${year}`;
+}
+
 export const essays = [
   {
     title: "Why Your AI Factory Is Secretly a Dynamical System (And 5 Other Counter-Intuitive Truths About Modern AI Inference)",
@@ -80,6 +89,24 @@ export const essays = [
     onSite: true,
     kind: "Investigation",
     keywords: ["over-engineering", "queue", "GPU", "architecture theater"],
+  },
+  {
+    title: "CASCADE: Why Fault Tolerance Without Adaptive Consistency Still Breaks GPU Clusters",
+    href: "/writing/cascade/",
+    date: "2026-01-14",
+    note: "Horovod, Ray, and DeepSpeed recover the job. They do not change how the cluster is allowed to disagree.",
+    onSite: true,
+    kind: "Investigation",
+    keywords: [
+      "CASCADE",
+      "adaptive consistency",
+      "causal consistency",
+      "fault tolerance",
+      "GPU clusters",
+      "Horovod",
+      "Ray",
+      "DeepSpeed",
+    ],
   },
   {
     title: "The Full Story of LLM Inference: Six Layers from HTTP Request to Multi-GPU Execution",

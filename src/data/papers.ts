@@ -1,8 +1,17 @@
-export const papers = [
+type Paper = {
+  year: string;
+  title: string;
+  note: string;
+  href?: string;
+  blog?: string;
+};
+
+export const papers: Paper[] = [
   {
     year: "2026",
     title: "Adaptive Causal Consistency for Fault-Resilient GPU Clusters in Large-Scale AI Workloads",
     note: "Working paper for DAIS 2026.",
+    blog: "/writing/cascade/",
   },
   {
     year: "2026",

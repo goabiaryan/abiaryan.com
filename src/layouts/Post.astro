@@ -1,4 +1,5 @@
 ---
+import "katex/dist/katex.min.css";
 import Base from "./Base.astro";
 import { site } from "../data/site";
 import {
@@ -31,12 +32,7 @@ const publishedIso =
     return Number.isNaN(parsed) ? undefined : new Date(parsed).toISOString().slice(0, 10);
   })();
 
-const publishedLabel = publishedIso
-  ? new Date(`${publishedIso}T12:00:00`).toLocaleDateString("en-US", {
-      month: "long",
-      year: "numeric",
-    })
-  : frontmatter.date;
+const publishedLabel = frontmatter.date;
 
 const takeaways: string[] = frontmatter.takeaways ?? [];
 const definitions: Definition[] = frontmatter.definitions ?? [];
@@ -49,6 +45,7 @@ const showCourse = frontmatter.course !== false;
 const source: string | undefined = frontmatter.source;
 const sourceLabel: string = frontmatter.sourceLabel ?? "Original field note";
 const coverCaption: string | undefined = frontmatter.coverCaption;
+const coverVideo: string | undefined = frontmatter.coverVideo;
 
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const imageAbs = frontmatter.cover
@@ -182,6 +179,35 @@ const jsonLd = [
     </dl>
 
     {
+      coverVideo && (
+        <figure class="video-cover">
+          <div class="video-frame">
+            <video
+              class="cover cover-video"
+              controls
+              playsinline
+              preload="metadata"
+              poster={frontmatter.cover}
+            >
+              <source src={coverVideo} type="video/mp4" />
+            </video>
+            <p class="video-credit video-credit-joule">
+              Concept video by <a href={site.links.joule}>Joule</a> (<a class="video-credit-url" href={site.links.joule}>www.joule.lat</a>)
+            </p>
+            <div class="video-card" data-video-card>
+              <p>Based on doctoral research work by</p>
+              <p>
+                <a href="/">Abi Aryan</a>
+              </p>
+              <a class="video-credit-url" href="/">www.abiaryan.com</a>
+            </div>
+          </div>
+          {coverCaption && <figcaption>{coverCaption}</figcaption>}
+        </figure>
+      )
+    }
+
+    {
       frontmatter.summary && (
         <section class="abstract">
           <h2>Abstract</h2>
@@ -231,7 +257,7 @@ const jsonLd = [
     }
 
     {
-      frontmatter.cover && (
+      !coverVideo && frontmatter.cover && (
         <figure>
           <img
             class="cover"
@@ -342,3 +368,28 @@ const jsonLd = [
     </section>
   </article>
 </Base>
+
+{
+  coverVideo && (
+    <script>
+      const frame = document.querySelector(".video-frame");
+      const video = frame?.querySelector("video");
+      const card = frame?.querySelector("[data-video-card]");
+      if (video && card) {
+        const showCard = () => {
+          const duration = video.duration;
+          const time = video.currentTime;
+          const atStart = !Number.isFinite(duration) || time < 6;
+          const atEnd = Number.isFinite(duration) && duration > 0 && time >= duration - 8;
+          card.classList.toggle("is-hidden", !(atStart || atEnd));
+        };
+        video.addEventListener("timeupdate", showCard);
+        video.addEventListener("loadedmetadata", showCard);
+        video.addEventListener("play", showCard);
+        video.addEventListener("pause", showCard);
+        video.addEventListener("seeked", showCard);
+        showCard();
+      }
+    </script>
+  )
+}

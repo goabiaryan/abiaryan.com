@@ -68,7 +68,7 @@ The 80% GPU utilization trap: you finally kept the SMs busy and the users starte
 
 High utilization is a queue. Variance in request shape makes it worse. Prefill and decode in one batch is how you get 3.3 seconds and 39 seconds on the same card.
 
-This is also why one team pays **$97 per million tokens** and another pays **$0.38 per million tokens**: prefix caching, batching, hardware generation, and whether they count failures.
+This is also why one team pays **\$97 per million tokens** and another pays **\$0.38 per million tokens**: prefix caching, batching, hardware generation, and whether they count failures.
 
 ## Why I think this happened
 
@@ -88,11 +88,11 @@ The GPU looking busy is the ρ = 0.8 line. The user seeing 39 seconds is the tai
 
 **Implication.** A production autoscaler that adds replicas when utilization is "low" and refuses them when utilization is "high" will stabilize the wrong variable.
 
-## Finding 2: The $97 vs $0.38 gap is a systems gap
+## Finding 2: The \$97 vs \$0.38 gap is a systems gap
 
 **Claim.** Cost per million tokens is dominated by caching, admission, and failure accounting, not by the list price of the GPU.
 
-**Evidence.** The same model family shows roughly two orders of magnitude in reported $/MTok depending on prefix-cache hit rate, batch composition, hardware generation, and whether failed generations are included in the denominator.
+**Evidence.** The same model family shows roughly two orders of magnitude in reported \$/MTok depending on prefix-cache hit rate, batch composition, hardware generation, and whether failed generations are included in the denominator.
 
 **Explanation.** Uncached prefill is expensive. Decode without a cap is a runaway. Idle replicas still draw watts. Joule exists because tokens and watts are the same ledger.
 
@@ -137,4 +137,4 @@ Wait times assume a 30-millisecond mean service time and no heavy-tailed request
 
 ## Limitations
 
-This is a field note and a queueing argument, not a controlled A/B on a named model and SKU. The $97 vs $0.38 figures are observed production ranges, not a single matched experiment. Kingman assumes known service-time variance; real prefill/decode mixes are heavier-tailed than the formula. Results will differ across serving engines (vLLM, SGLang, TensorRT-LLM), quantization, and disaggregated prefill/decode.
+This is a field note and a queueing argument, not a controlled A/B on a named model and SKU. The \$97 vs \$0.38 figures are observed production ranges, not a single matched experiment. Kingman assumes known service-time variance; real prefill/decode mixes are heavier-tailed than the formula. Results will differ across serving engines (vLLM, SGLang, TensorRT-LLM), quantization, and disaggregated prefill/decode.

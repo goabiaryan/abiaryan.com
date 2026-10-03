@@ -1,6 +1,7 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { essays, fieldNotes, modelcraft } from "../../data/maps";
+import { formatEssayDate } from "../../data/essays";
 import { site } from "../../data/site";
 
 const investigations = essays.filter((item) => item.kind !== "Archive");
@@ -39,7 +40,7 @@ const archive = essays.filter((item) => item.kind === "Archive");
       {
         investigations.map((item) => (
           <li>
-            <span class="meta">{item.kind ?? item.date.slice(0, 4)}</span>
+            <span class="meta">{formatEssayDate(item.date)}</span>
             <div>
               <a class="title" href={item.href}>{item.title}</a>
               <p class="note">{item.note}</p>
@@ -58,7 +59,7 @@ const archive = essays.filter((item) => item.kind === "Archive");
       {
         archive.map((item) => (
           <li>
-            <span class="meta">{item.date.slice(0, 4)}</span>
+            <span class="meta">{formatEssayDate(item.date)}</span>
             <div>
               <a class="title" href={item.href}>{item.title}</a>
               <p class="note">{item.note}</p>

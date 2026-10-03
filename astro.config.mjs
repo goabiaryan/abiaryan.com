@@ -1,6 +1,8 @@
 import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 function walk(node, visit) {
   visit(node);
@@ -39,7 +41,8 @@ export default defineConfig({
   site: "https://abiaryan.com",
   trailingSlash: "always",
   markdown: {
-    rehypePlugins: [rehypeExternalLinks],
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [[rehypeKatex, { throwOnError: false, strict: "ignore" }], rehypeExternalLinks],
   },
   build: {
     assets: "site",

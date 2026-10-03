@@ -71,7 +71,7 @@ export const stack = [
   { layer: "$ / Token", tools: ["Lambda Cloud", "Modal"] },
 ];
 
-export const research = [
+export const research: { title: string; note: string }[] = [
   {
     title: "SLO-aware inference optimization",
     note: "Latency contracts first. Energy and cost moves are not allowed to blow TTFT, TPOT, or the tail.",

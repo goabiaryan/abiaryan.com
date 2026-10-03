@@ -63,7 +63,7 @@ People ask what an inference engineer is. They want a tool answer. vLLM flags. A
 
 That is not the job.
 
-The job is explaining why the same 70B is cheap on one topology and bankrupt on another. Who owns TTFT, inter-token latency, KV pressure, and $/token when the PM only asked for a chatbot.
+The job is explaining why the same 70B is cheap on one topology and bankrupt on another. Who owns TTFT, inter-token latency, KV pressure, and \$/token when the PM only asked for a chatbot.
 
 In 2024 the title barely existed. In 2026 it is the difference between a demo and a bill.
 

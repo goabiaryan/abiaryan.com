@@ -36,8 +36,9 @@ import { volunteering } from "../data/speaking";
     <p>
       I am a doctoral researcher in HPC distributed systems, studying SLO-aware
       inference optimization and hardware-aware compiler design for supercomputers, and
-      developing a digital twin for LLM inference that lets operators
-      manage energy while protecting latency SLOs.
+      developing a
+      <a href="/writing/ai-factory-dynamical-system/">digital twin for LLM inference</a>
+      that lets operators manage energy while protecting latency SLOs.
     </p>
     <p>
       I build, measure, research, write about, and teach these systems. I am an
@@ -92,7 +93,13 @@ import { volunteering } from "../data/speaking";
     <div class="section-head">
       <h2>Doctoral work</h2>
     </div>
-    <p class="lede" style="margin-bottom: 1.6rem">{site.doctorate.statement}</p>
+    <p class="lede" style="margin-bottom: 0.6rem">
+      Doctoral research in AI HPC distributed systems: SLO-aware inference optimization,
+      hardware-aware compiler design, and a digital twin for energy optimization for bursty workloads.
+    </p>
+    <p class="note" style="margin-bottom: 1.6rem">
+      <a href="/writing/ai-factory-dynamical-system/">Read blogpost</a>
+    </p>
     <div class="grid-3">
       {
         research.map((item) => (
@@ -121,6 +128,9 @@ import { volunteering } from "../data/speaking";
                 <span class="title">{item.title}</span>
               )}
               <p class="note">{item.note}</p>
+              {item.blog && (
+                <p class="note"><a href={item.blog}>Read blogpost</a></p>
+              )}
             </div>
           </li>
         ))
@@ -167,6 +177,9 @@ import { volunteering } from "../data/speaking";
                 <span class="title">{item.title}</span>
               )}
               <p class="note">{item.note}</p>
+              {item.blog && (
+                <p class="note"><a href={item.blog}>Read blogpost</a></p>
+              )}
             </div>
           </li>
         ))

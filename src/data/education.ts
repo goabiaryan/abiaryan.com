@@ -1,10 +1,19 @@
 import { site } from "./site";
 
-export const education = [
+type EducationItem = {
+  year: string;
+  title: string;
+  note: string;
+  href?: string;
+  blog?: string;
+};
+
+export const education: EducationItem[] = [
   {
     year: "Now",
     title: "Doctoral research, AI HPC distributed systems",
     note: "SLO-aware inference optimization, hardware-aware compiler design, and a digital twin for energy optimization for bursty workloads.",
+    blog: "/writing/ai-factory-dynamical-system/",
   },
   {
     year: "2024–2026",

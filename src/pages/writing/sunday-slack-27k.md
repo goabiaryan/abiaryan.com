@@ -56,7 +56,7 @@ source: https://www.linkedin.com/posts/goabiaryan_%F0%9D%90%92%F0%9D%90%AE%F0%9D
 
 I expected 10× headroom. The Friday math said so.
 
-Saturday, real users ran 50–70 turn agents with tool retries. Seven of twelve replicas died. nvidia-smi still said **62% utilized**. The weekend bill crossed **$27,000**.
+Saturday, real users ran 50–70 turn agents with tool retries. Seven of twelve replicas died. nvidia-smi still said **62% utilized**. The weekend bill crossed **\$27,000**.
 
 One long thread could spike a node from about **150 GB** to **220+ GB** of resident state. Fragmentation did the rest.
 

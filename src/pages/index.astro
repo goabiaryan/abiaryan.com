@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import Stack from "../components/Stack.astro";
 import { site } from "../data/site";
 import { essays } from "../data/maps";
+import { formatEssayDate } from "../data/essays";
 import { builds } from "../data/builds";
 import { reviews, mentoring } from "../data/reviews";
 ---
@@ -80,9 +81,9 @@ import { reviews, mentoring } from "../data/reviews";
         </p>
         <ul class="list">
           {
-            essays.filter((item) => item.kind !== "Archive").slice(0, 6).map((item) => (
+            essays.filter((item) => item.kind === "Investigation").slice(0, 6).map((item) => (
               <li>
-                <span class="meta">{item.kind ?? "Here"}</span>
+                <span class="meta">{formatEssayDate(item.date)}</span>
                 <a class="title" href={item.href}>{item.title}</a>
                 <p class="note">{item.note}</p>
               </li>
