@@ -72,13 +72,6 @@ import { reviews, mentoring } from "../data/reviews";
           <h2>I measured this</h2>
           <a class="label" href="/writing/">Here is what I found →</a>
         </div>
-        <p class="note">
-          On <a href="/writing/">Writing</a>:
-          <a href="/writing/#investigations">Investigations</a>,
-          <a href="/writing/#archive">Archive</a>,
-          <a href="/writing/#modelcraft">ModelCraft</a>,
-          <a href="/writing/#field-notes">Field notes</a>.
-        </p>
         <ul class="list">
           {
             essays.filter((item) => item.kind === "Investigation").slice(0, 6).map((item) => (

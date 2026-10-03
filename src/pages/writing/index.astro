@@ -24,15 +24,20 @@ const archive = essays.filter((item) => item.kind === "Archive");
       Field notes are the LinkedIn posts. Those two live on their own sites. I listed them
       here so you can find the source.
     </p>
-    <p class="home-links">
-      <a href="#investigations">Investigations</a>
-      <a href="#archive">Archive</a>
-      <a href="#modelcraft">ModelCraft</a>
-      <a href="#field-notes">Field notes</a>
-    </p>
   </section>
 
-  <section class="section" id="investigations">
+  <section class="section ddl-toolbar">
+    <p class="label">View</p>
+    <div class="ddl-filters" role="group" aria-label="Filter writing" data-filters="kind">
+      <button type="button" class="ddl-filter" data-kind="all" aria-pressed="true">All</button>
+      <button type="button" class="ddl-filter" data-kind="investigations" aria-pressed="false">Investigations</button>
+      <button type="button" class="ddl-filter" data-kind="archive" aria-pressed="false">Archive</button>
+      <button type="button" class="ddl-filter" data-kind="modelcraft" aria-pressed="false">ModelCraft: Substack & Podcast</button>
+      <button type="button" class="ddl-filter" data-kind="field-notes" aria-pressed="false">LinkedIn: Field Notes</button>
+    </div>
+  </section>
+
+  <section class="section ddl-section" id="investigations" data-kind="investigations">
     <div class="section-head">
       <h2>Investigations</h2>
     </div>
@@ -51,7 +56,7 @@ const archive = essays.filter((item) => item.kind === "Archive");
     </ul>
   </section>
 
-  <section class="section" id="archive">
+  <section class="section ddl-section" id="archive" data-kind="archive">
     <div class="section-head">
       <h2>Archive</h2>
     </div>
@@ -70,9 +75,9 @@ const archive = essays.filter((item) => item.kind === "Archive");
     </ul>
   </section>
 
-  <section class="section" id="modelcraft">
+  <section class="section ddl-section" id="modelcraft" data-kind="modelcraft">
     <div class="section-head">
-      <h2>ModelCraft</h2>
+      <h2>ModelCraft: Substack & Podcast</h2>
       <a class="label" href={site.links.modelcraft}>All issues →</a>
     </div>
     <ul class="list">
@@ -90,9 +95,9 @@ const archive = essays.filter((item) => item.kind === "Archive");
     </ul>
   </section>
 
-  <section class="section" id="field-notes">
+  <section class="section ddl-section" id="field-notes" data-kind="field-notes">
     <div class="section-head">
-      <h2>Field notes</h2>
+      <h2>LinkedIn: Field Notes</h2>
       <a class="label" href={site.links.linkedin}>LinkedIn · 50 →</a>
     </div>
     <ul class="list">
@@ -111,3 +116,34 @@ const archive = essays.filter((item) => item.kind === "Archive");
   </section>
 
 </Base>
+
+<script>
+  const allowed = new Set(["all", "investigations", "archive", "modelcraft", "field-notes"]);
+  const hashKind = window.location.hash.replace("#", "");
+  let kind = allowed.has(hashKind) ? hashKind : "all";
+
+  function apply() {
+    for (const button of document.querySelectorAll<HTMLButtonElement>("[data-filters='kind'] .ddl-filter")) {
+      button.setAttribute("aria-pressed", String(button.dataset.kind === kind));
+    }
+    for (const section of document.querySelectorAll<HTMLElement>(".ddl-section")) {
+      section.hidden = kind !== "all" && section.dataset.kind !== kind;
+    }
+  }
+
+  apply();
+
+  document.querySelector("[data-filters='kind']")?.addEventListener("click", (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>(".ddl-filter");
+    if (!button?.dataset.kind) return;
+    kind = button.dataset.kind;
+    history.replaceState(null, "", kind === "all" ? "/writing/" : `/writing/#${kind}`);
+    apply();
+  });
+
+  window.addEventListener("hashchange", () => {
+    const next = window.location.hash.replace("#", "");
+    kind = allowed.has(next) ? next : "all";
+    apply();
+  });
+</script>
