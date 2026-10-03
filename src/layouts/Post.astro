@@ -47,11 +47,15 @@ const source: string | undefined = frontmatter.source;
 const sourceLabel: string = frontmatter.sourceLabel ?? "Original field note";
 const coverCaption: string | undefined = frontmatter.coverCaption;
 const coverVideo: string | undefined = frontmatter.coverVideo;
+const preprint: string | undefined = frontmatter.preprint;
+const preprintLabel: string = frontmatter.preprintLabel ?? "Read arXiv pre-print";
+const citations: { text: string; href?: string }[] = frontmatter.citations ?? [];
 
 const canonical = new URL(Astro.url.pathname, site.url).href;
 const imageAbs = frontmatter.cover
   ? new URL(frontmatter.cover, site.url).href
   : undefined;
+const preprintAbs = preprint ? new URL(preprint, site.url).href : undefined;
 
 const MONTHS_LONG = [
   "January",
@@ -67,21 +71,30 @@ const MONTHS_LONG = [
   "November",
   "December",
 ];
-const [citeYearNum, citeMonthNum] = (publishedIso ?? "").split("-").map(Number);
+const citePublishedIso = frontmatter.citePublished ?? publishedIso;
+const [citeYearNum, citeMonthNum] = (citePublishedIso ?? "").split("-").map(Number);
 const citeYear = citeYearNum ? String(citeYearNum) : "";
 const citeMonth = citeMonthNum ? MONTHS_LONG[citeMonthNum - 1] : "";
 const citeSlug = Astro.url.pathname.replace(/^\/writing\/|\/$/g, "").replace(/-/g, "");
-const citeKey = `abi${citeYear}${citeSlug}`;
+const citeKey = frontmatter.citeKey ?? `abi${citeYear}${citeSlug}`;
 const citeAuthor = frontmatter.citeAuthor ?? "Aryan, Abi";
-const citeTitle = String(frontmatter.title ?? "").replace(/"/g, "'");
-const bibtex = `@article{${citeKey},
-  title = "${citeTitle}",
-  author = "${citeAuthor}",
-  journal = "abiaryan.com",
-  year = "${citeYear}",
-  month = "${citeMonth}",
-  url = "${canonical}"
-}`;
+const citeTitle = String(frontmatter.citeTitle ?? frontmatter.title ?? "").replace(/"/g, "'");
+const citeJournal = frontmatter.citeJournal ?? "abiaryan.com";
+const citeUrl = frontmatter.citeUrl
+  ? new URL(frontmatter.citeUrl, site.url).href
+  : (preprintAbs ?? canonical);
+const citeDoi: string | undefined = frontmatter.citeDoi;
+const bibtex = [
+  `@article{${citeKey},`,
+  `  title = "${citeTitle}",`,
+  `  author = "${citeAuthor}",`,
+  `  journal = "${citeJournal}",`,
+  `  year = "${citeYear}",`,
+  `  month = "${citeMonth}",`,
+  ...(citeDoi ? [`  doi = "${citeDoi}",`] : []),
+  `  url = "${citeUrl}"`,
+  `}`,
+].join("\n");
 
 const relatedEssays = relatedSlugs
   .map((slug) => essays.find((item) => item.href === `/writing/${slug}/`))
@@ -151,6 +164,16 @@ const jsonLd = [
         name: item.key,
         url: item.href,
       })),
+      ...(preprintAbs
+        ? [
+            {
+              "@type": "ScholarlyArticle",
+              name: citeTitle,
+              url: preprintAbs,
+              ...(citeDoi ? { identifier: `https://doi.org/${citeDoi}` } : {}),
+            },
+          ]
+        : []),
     ],
   },
 ];
@@ -208,6 +231,16 @@ const jsonLd = [
         )
       }
     </dl>
+
+    {
+      preprint && (
+        <p class="preprint-row">
+          <a class="preprint-btn" href={preprint} target="_blank" rel="noopener noreferrer">
+            {preprintLabel}
+          </a>
+        </p>
+      )
+    }
 
     {
       coverVideo && (
@@ -397,6 +430,26 @@ const jsonLd = [
                 <a href={course.href}>{course.title}</a>, {course.note}
               </li>
             </ul>
+          </>
+        )
+      }
+      {
+        citations.length > 0 && (
+          <>
+            <h3>Citations</h3>
+            <ol class="ieee-cites">
+              {citations.map((item, i) => (
+                <li id={`cite-${i + 1}`}>
+                  {item.href ? (
+                    <a href={item.href} target="_blank" rel="noopener noreferrer">
+                      {item.text}
+                    </a>
+                  ) : (
+                    item.text
+                  )}
+                </li>
+              ))}
+            </ol>
           </>
         )
       }

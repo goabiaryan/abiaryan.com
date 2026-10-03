@@ -9,6 +9,13 @@ type Paper = {
 export const papers: Paper[] = [
   {
     year: "2026",
+    title: "AID: A Framework for AI Infrastructure Dynamics",
+    href: "/assets/pre-print-oct-3.pdf",
+    note: "Preprint. October 2026.",
+    blog: "/writing/ai-factory-dynamical-system/",
+  },
+  {
+    year: "2026",
     title: "Adaptive Causal Consistency for Fault-Resilient GPU Clusters in Large-Scale AI Workloads",
     note: "Working paper for DAIS 2026.",
     blog: "/writing/cascade/",

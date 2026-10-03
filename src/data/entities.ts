@@ -123,6 +123,10 @@ export const books = {
 };
 
 export const researchLinks = {
+  AID: {
+    href: "/assets/pre-print-oct-3.pdf",
+    note: "AI Infrastructure Dynamics. Preprint, October 2026.",
+  },
   "Causal Reflection with Language Models": {
     href: site.links.causalReflection,
     note: "NeurIPS 2025 Efficient Reasoning Workshop. arXiv:2508.04495.",

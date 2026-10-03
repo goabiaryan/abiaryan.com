@@ -646,6 +646,31 @@ p {
   background: transparent;
 }
 
+.preprint-row {
+  display: flex;
+  justify-content: center;
+  margin: 1.3rem 0 1.8rem;
+}
+
+.preprint-btn {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: var(--accent);
+  color: var(--paper);
+  border: 1px solid var(--accent);
+  padding: 0.7rem 1.15rem;
+}
+
+.preprint-btn:hover {
+  background: var(--teal);
+  border-color: var(--teal);
+  color: var(--paper);
+}
+
 .cite-box {
   margin: 2.4rem 0 0;
   padding: 1rem 1.15rem 1.2rem;
@@ -692,6 +717,38 @@ p {
 .related {
   margin-top: 2.8rem;
   padding-top: 0.4rem;
+}
+
+.ieee-cites {
+  list-style: none;
+  padding: 0;
+  margin: 0.4rem 0 0;
+  counter-reset: ieee;
+}
+
+.ieee-cites li {
+  counter-increment: ieee;
+  padding-left: 2.1rem;
+  text-indent: -2.1rem;
+  margin: 0 0 0.75rem;
+  font-size: 0.92rem;
+  line-height: 1.45;
+}
+
+.ieee-cites li::before {
+  content: "[" counter(ieee) "] ";
+  font-family: var(--mono);
+  font-size: 0.78em;
+  letter-spacing: 0.02em;
+}
+
+.ieee-cites a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.ieee-cites a:hover {
+  color: var(--accent);
 }
 
 @media (max-width: 820px) {
