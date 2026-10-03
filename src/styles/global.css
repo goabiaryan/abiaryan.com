@@ -637,12 +637,56 @@ p {
   letter-spacing: 0.03em;
   color: var(--muted);
   margin-top: -0.8rem;
+  text-align: center;
 }
 
 .prose figure .cover,
 .prose figure img {
   margin-bottom: 0.6rem;
   background: transparent;
+}
+
+.cite-box {
+  margin: 2.4rem 0 0;
+  padding: 1rem 1.15rem 1.2rem;
+  background: var(--paper-2);
+}
+
+.cite-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.65rem;
+}
+
+.cite-box h2 {
+  margin: 0;
+}
+
+.cite-copy {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.cite-copy:hover {
+  color: var(--accent);
+}
+
+.prose .cite-box pre {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  background: transparent;
+  padding: 0;
+  overflow-x: auto;
 }
 
 .related {
@@ -844,8 +888,29 @@ p {
 }
 
 .prose .katex {
-  font-size: 1.05em;
+  font-size: 1.1em;
+  line-height: 1.2;
   color: var(--ink);
+}
+
+.prose .katex .vlist > span,
+.prose .katex .vlist > span > .pstrut {
+  box-sizing: content-box;
+}
+
+/* rehype-katex 7 still emits KaTeX 0.16 class "sizing"; 0.19 CSS only matches "katex-sizing". */
+.prose .katex .sizing.reset-size6.size1,
+.prose .katex .sizing.reset-size7.size1 {
+  font-size: 0.5em;
+}
+
+.prose .katex .sizing.reset-size6.size3,
+.prose .katex .sizing.reset-size7.size3 {
+  font-size: 0.7em;
+}
+
+.prose .katex .sizing.reset-size3.size1 {
+  font-size: calc(0.5 / 0.7 * 1em);
 }
 
 .prose .katex-display {

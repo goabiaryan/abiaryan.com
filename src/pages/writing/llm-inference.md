@@ -102,17 +102,6 @@ Request
   → GPU / interconnect
 ```
 
-```
-@article{abi2025,
-  title = "The Full Story of LLM Inference",
-  author= "Aryan, Abi",
-  journal = "abiaryan.com",
-  year = "2025",
-  month = "October",
-  url = "https://abiaryan.com/writing/llm-inference/"
-}
-```
-
 ## Practical guidance
 
 1. Draw the six layers for your stack. Name the software at each hop.

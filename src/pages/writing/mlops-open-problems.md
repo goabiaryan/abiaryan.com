@@ -93,17 +93,3 @@ Some more MLOps papers 📜 you may find interesting to read a little further in
 8. But what about Production Infrastructure? How to cater to data stalls in the pre-processing pipeline? [Understanding Data Storage and Ingestion for Large-Scale Deep Recommendation Model Training](https://arxiv.org/abs/2108.09373)
 
 9. Last, how can all the progress in machine learning guide the future of chip design? The paper by Jeff Dean provides an interesting outlook on hardware for software folks. [The Deep Learning Revolution and Its Implications for Computer Architecture and Chip Design](https://arxiv.org/abs/1911.05289)
-
----
-
-### Citation
-```
-  @article{abi2022,
-  title = "Problems & Challenges in MLOps",
-  author= "Aryan, Abi",
-  journal = "abiaryan.com"
-  year = "2022"
-  month = "Dec"
-  url = "/writing/mlops-open-problems/"
-  }
-```

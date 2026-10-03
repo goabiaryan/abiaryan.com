@@ -6,6 +6,7 @@ published: 2019-03-16
 summary: "A survey of AutoML: CASH, NAS, pipeline search, and why autonomous model design is still hard."
 kind: Archive
 course: false
+citeAuthor: "Aryan, Abi; Sareen, Shubhi"
 ---
 
 <sup> 
@@ -325,16 +326,4 @@ Christoph Molnar emphasized on understanding how a machine learning model comes 
 
 Linear models like Linear Regression and Logistic Regression are inherently interpretable models. However, these models suffer from dependence on handcrafted non-linearities and lower predictive performance. Other models including Decision Trees, Decision Rules etc. also fall under the category of interpretable models where importance of each feature can be computed. However these models struggle to accurately model linear correlations.
 
-Model agnostic methods focus on developing stand-alone techniques to interpret the results of a machine learning model. The model is treated as a black box, whose parameters, weights or even architecture is unknown. Certain types of agnostic methods try to model the relationship between the features and the output of the ML model. These methods are easily understandable and intuitive to human beings. However, these methods rely on the assumption of independence among the input features, which is not true for many real world scenarios. Another class of methods focuses on the input features. These methods include the study the meaningful but computationally expensive interaction among the features or studying how the model error changes with permutation in the input feature values. The latter method provides a global overview of the model, but is prone to outliers. The third class of model agnostic methods comprise of surrogate models. The global surrogate method uses the predictions of a black box model for the input data to train an inherently interpretable model, which is then used to carry out the interpretability study. The Local Surrogate Method (LIME) generates permuted data samples for the sample of interest, along with the black-box model’s outcomes for these new data points. It then trains an interpretable model over this newly generate dataset where each input sample’s weight is based upon its distance from the original sample. These methods are flexible and can be used over any type of dataset. However the performance of these methods depend upon the choice and performance of the surrogate interpretable models.    
-
-### Citation
-```
-  @article{abi2019,
-  title = "Problems & Challenges in AutoML",
-  author= "Aryan, Abi; Sareen, Shubhi",
-  journal = "abiaryan.com"
-  year = "2019"
-  month = "Mar"
-  url = "/writing/automl-problems/"
-  }
-```
+Model agnostic methods focus on developing stand-alone techniques to interpret the results of a machine learning model. The model is treated as a black box, whose parameters, weights or even architecture is unknown. Certain types of agnostic methods try to model the relationship between the features and the output of the ML model. These methods are easily understandable and intuitive to human beings. However, these methods rely on the assumption of independence among the input features, which is not true for many real world scenarios. Another class of methods focuses on the input features. These methods include the study the meaningful but computationally expensive interaction among the features or studying how the model error changes with permutation in the input feature values. The latter method provides a global overview of the model, but is prone to outliers. The third class of model agnostic methods comprise of surrogate models. The global surrogate method uses the predictions of a black box model for the input data to train an inherently interpretable model, which is then used to carry out the interpretability study. The Local Surrogate Method (LIME) generates permuted data samples for the sample of interest, along with the black-box model’s outcomes for these new data points. It then trains an interpretable model over this newly generate dataset where each input sample’s weight is based upon its distance from the original sample. These methods are flexible and can be used over any type of dataset. However the performance of these methods depend upon the choice and performance of the surrogate interpretable models.

@@ -162,15 +162,3 @@ Some interesting works in this direction are [Mixed Initiative Game Design Platf
 
 
 <sup> * Acknowledgements: I would like to thank [Ian Danforth](https://twitter.com/iandanforth) for proofreading the article and providing useful feedback.</sup>
-
-### Citation
-```
-  @article{abi2019,
-  title = "Developing A.I. using Games",
-  author= "Aryan, Abi",
-  journal = "abiaryan.com"
-  year = "2019"
-  month = "Sept"
-  url = "/writing/game-ai/"
-  }
-```

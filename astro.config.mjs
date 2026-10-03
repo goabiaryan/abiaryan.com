@@ -3,6 +3,8 @@ import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
+import rehypeRaw from "rehype-raw";
+import { rehypePlainMath } from "./src/lib/plain-math.mjs";
 
 function walk(node, visit) {
   visit(node);
@@ -42,7 +44,12 @@ export default defineConfig({
   trailingSlash: "always",
   markdown: {
     remarkPlugins: [remarkMath],
-    rehypePlugins: [[rehypeKatex, { throwOnError: false, strict: "ignore" }], rehypeExternalLinks],
+    rehypePlugins: [
+      rehypeRaw,
+      [rehypeKatex, { throwOnError: false, strict: "ignore" }],
+      rehypePlainMath,
+      rehypeExternalLinks,
+    ],
   },
   build: {
     assets: "site",

@@ -106,7 +106,7 @@ To operate under energy and physical bounds, the plant has to be treated as a dy
 
 <figure>
   <img src="/assets/posts/ai-factory-hbm-budget.png" alt="HBM budget split into model weights, static runtime, dynamic KV cache, fragmentation loss, and remaining allocatable bytes." />
-  <figcaption>M_alloc is what the allocator can still place after weights, runtime, KV, and fragmentation.</figcaption>
+  <figcaption>$M_{\mathrm{alloc}}$ is what the allocator can still place after weights, runtime, KV, and fragmentation.</figcaption>
 </figure>
 
 At evaluation time $t$:
@@ -216,11 +216,11 @@ $$
 That is the next reading if the old policy continues. Control needs the outcome of an intervention, with future disturbances $d_{t:t+k}$ and hardware structure $\theta$ held in view:
 
 $$
-p\!\left(r_{t+k} \mid \operatorname{do}(a_{t:t+k} = a^*_{t:t+k}), o_{0:t}, d_{t:t+k}, \theta\right)
+p\!\left(r_{t+k} \mid \mathit{do}(a_{t:t+k} = a^*_{t:t+k}), o_{0:t}, d_{t:t+k}, \theta\right)
 $$
 
 <figure>
-  <img src="/assets/posts/ai-factory-forecasting-vs-intervention.png" alt="Passive forecasting assumes the last policy continues. Active intervention evaluates a counterfactual under do(hard power cap)." />
+  <img src="/assets/posts/ai-factory-forecasting-vs-intervention.png" alt="Passive forecasting assumes the last policy continues. Active intervention evaluates a counterfactual under do(hard_power_cap)." />
   <figcaption>A forecast of the last policy is not the outcome of forcing a new action.</figcaption>
 </figure>
 
@@ -232,9 +232,9 @@ $$
 x_{t+1} = f_{z_t}(x_t, a_t, d_t; \theta) + \varepsilon_t
 $$
 
-A digital twin that cannot switch regimes cannot evaluate $\operatorname{do}(a_{t:t+k})$ before you touch live hardware. Identifying an intervention effect needs assumptions beyond an associational fit. That is Pearl's structural causal framework, not a nicer RMSE.
+A digital twin that cannot switch regimes cannot evaluate $\mathit{do}(a_{t:t+k})$ before you touch live hardware. Identifying an intervention effect needs assumptions beyond an associational fit. That is Pearl's structural causal framework, not a nicer RMSE.
 
-**Implication.** Do not drive power caps, batch limits, or routing from a forecast trained on the last policy. Evaluate $\operatorname{do}(\cdot)$ first.
+**Implication.** Do not drive power caps, batch limits, or routing from a forecast trained on the last policy. Evaluate $\mathit{do}(\cdot)$ first.
 
 ## Finding 6: System state is trees and graphs
 
@@ -273,7 +273,7 @@ $$
 r_t = g(x_t, a_t, d_t; \theta) + \xi_t \quad \text{(service and energy outcomes)}
 $$
 
-An operational AI-factory digital twin does four jobs: infer latent state $\hat{x}_t$, update on more than one timescale, model closed-loop demand, and evaluate structural interventions $\operatorname{do}(a_t)$ before they hit the floor.
+An operational AI-factory digital twin does four jobs: infer latent state $\hat{x}_t$, update on more than one timescale, model closed-loop demand, and evaluate structural interventions $\mathit{do}(a_t)$ before they hit the floor.
 
 <figure>
   <img src="/assets/posts/ai-factory-digital-twin.png" alt="Digital twin that infers latent state, updates on more than one timescale, models closed-loop demand, and evaluates do(a) before the floor, under physical and power constraints." />
@@ -285,11 +285,11 @@ Joule exists because tokens, watts, and SLOs are the same ledger. A twin that ca
 ## Practical guidance
 
 1. Watch the chain, not one gauge. Power and thermal events should show up as queue, batch mix, and TTFT, not only as rack watts.
-2. Alert on M_alloc and KV leases. 62% GPU utilization is compatible with an OOM.
+2. Alert on $M_{\mathrm{alloc}}$ and KV leases. 62% GPU utilization is compatible with an OOM.
 3. Keep arrival traces. Mean QPS is not a workload.
 4. Put retry counters in the state. Admission-control the storm you are causing.
 5. Sample fast and slow clocks separately, then couple them.
-6. Test do(power cap), do(batch bound), and do(route) on a twin that can switch regimes.
+6. Test $\mathit{do}(\mathit{power\_cap})$, $\mathit{do}(\mathit{batch\_bound})$, and $\mathit{do}(\mathit{route})$ on a twin that can switch regimes.
 7. Summarize prefix trees with sharing and reuse, not only free bytes.
 
 ## Limitations

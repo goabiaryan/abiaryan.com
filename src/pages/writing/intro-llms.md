@@ -6,6 +6,7 @@ published: 2023-05-15
 summary: "What LLMs are, how they are trained, and the compute and ethics cost of building them."
 kind: Archive
 course: false
+citeAuthor: "Aryan, Abi; McMahon, Andy"
 ---
 
 <sup> * Acknowledgements: I would like to thank my co-author [Andy McMahon](https://twitter.com/ElectricWeegie) for being an excellent collaborator on this article.</sup>
@@ -109,15 +110,3 @@ As this post has described, the development of large language models has been an
 8. Model- Compression for Pre-trained models improves costs and boosts latency [[2303.05378] Greener yet Powerful: Taming Large Code Generation Models with Quantization (arxiv.org)](https://arxiv.org/abs/2303.05378)
 9. Transformers are poor generalization models [Mind the Gap: Assessing Temporal Generalization in Neural Language Models (neurips.cc)](https://proceedings.neurips.cc/paper/2021/hash/f5bf0ba0a17ef18f9607774722f5698c-Abstract.html)
 10. GPU Scaling with Alpa And Ray https://opendatascience.com/training-175b-parameter-language-models-at-1000-gpu-scale-with-alpa-and-ray/
-
-## Citation
-```
-  @article{abi2023,
-  title = "Introduction to Large Language Models",
-  author= "Aryan, Abi; McMahon, Andy",
-  journal = "abiaryan.com"
-  year = "2023"
-  month = "May"
-  url = "/writing/intro-llms/"
-  }
-```

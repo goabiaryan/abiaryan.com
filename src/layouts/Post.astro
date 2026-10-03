@@ -11,6 +11,7 @@ import {
   researchLinks,
 } from "../data/entities";
 import { essays } from "../data/essays";
+import { renderIdent } from "../lib/plain-math.mjs";
 
 type Definition = { term: string; meaning: string };
 
@@ -51,6 +52,36 @@ const canonical = new URL(Astro.url.pathname, site.url).href;
 const imageAbs = frontmatter.cover
   ? new URL(frontmatter.cover, site.url).href
   : undefined;
+
+const MONTHS_LONG = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+const [citeYearNum, citeMonthNum] = (publishedIso ?? "").split("-").map(Number);
+const citeYear = citeYearNum ? String(citeYearNum) : "";
+const citeMonth = citeMonthNum ? MONTHS_LONG[citeMonthNum - 1] : "";
+const citeSlug = Astro.url.pathname.replace(/^\/writing\/|\/$/g, "").replace(/-/g, "");
+const citeKey = `abi${citeYear}${citeSlug}`;
+const citeAuthor = frontmatter.citeAuthor ?? "Aryan, Abi";
+const citeTitle = String(frontmatter.title ?? "").replace(/"/g, "'");
+const bibtex = `@article{${citeKey},
+  title = "${citeTitle}",
+  author = "${citeAuthor}",
+  journal = "abiaryan.com",
+  year = "${citeYear}",
+  month = "${citeMonth}",
+  url = "${canonical}"
+}`;
 
 const relatedEssays = relatedSlugs
   .map((slug) => essays.find((item) => item.href === `/writing/${slug}/`))
@@ -245,12 +276,15 @@ const jsonLd = [
         <section>
           <h2>Definitions</h2>
           <dl class="defs">
-            {definitions.map((item) => (
-              <div>
-                <dt>{item.term}</dt>
-                <dd>{item.meaning}</dd>
-              </div>
-            ))}
+            {definitions.map((item) => {
+              const termMath = renderIdent(item.term);
+              return (
+                <div>
+                  <dt>{termMath ? <span set:html={termMath} /> : item.term}</dt>
+                  <dd>{item.meaning}</dd>
+                </div>
+              );
+            })}
           </dl>
         </section>
       )
@@ -273,6 +307,14 @@ const jsonLd = [
     <div class="body" itemprop="articleBody">
       <slot />
     </div>
+
+    <section class="cite-box" aria-label="Citation">
+      <div class="cite-head">
+        <h2>Citation</h2>
+        <button type="button" class="cite-copy" data-cite-copy>Copy</button>
+      </div>
+      <pre><code data-cite-source>{bibtex}</code></pre>
+    </section>
 
     <section class="related">
       <h2>Related entities</h2>
@@ -368,6 +410,29 @@ const jsonLd = [
     </section>
   </article>
 </Base>
+
+<script>
+  const citeBtn = document.querySelector("[data-cite-copy]");
+  const citeSrc = document.querySelector("[data-cite-source]");
+  if (citeBtn && citeSrc) {
+    citeBtn.addEventListener("click", async () => {
+      try {
+        await navigator.clipboard.writeText(citeSrc.textContent ?? "");
+        citeBtn.textContent = "Copied";
+      } catch {
+        const range = document.createRange();
+        range.selectNodeContents(citeSrc);
+        const selection = window.getSelection();
+        selection?.removeAllRanges();
+        selection?.addRange(range);
+        citeBtn.textContent = "Selected";
+      }
+      window.setTimeout(() => {
+        citeBtn.textContent = "Copy";
+      }, 1600);
+    });
+  }
+</script>
 
 {
   coverVideo && (
