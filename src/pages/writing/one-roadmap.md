@@ -2,8 +2,8 @@
 layout: ../../layouts/Post.astro
 title: "One Inference Roadmap, Not Fifty Tools: Request Path Before CUDA"
 seoTitle: "One Inference Roadmap, Not Fifty Tools"
-date: 20 March 2026
-published: 2026-03-20
+date: 11 June 2026
+published: 2026-06-11
 summary: "If I had to build a single path to LLM inference, I would not start with CUDA. I would start with the request path, then the two workloads hiding inside the word inference, then memory, then the queue, then parallelism. Kernels come last, when you know which millisecond you are buying. The pile-of-tools version produces people who can quote FlashAttention and cannot say why their p99 moved."
 kind: Investigation
 cover: /assets/posts/one-roadmap.jpg

@@ -1,8 +1,27 @@
 export const essays = [
   {
+    title: "Why Your AI Factory Is Secretly a Dynamical System (And 5 Other Counter-Intuitive Truths About Modern AI Inference)",
+    href: "/writing/ai-factory-dynamical-system/",
+    date: "2026-10-02",
+    note: "Power, cooling, KV, queues, and retries are one coupled system, not a dashboard of independent numbers.",
+    onSite: true,
+    kind: "Investigation",
+    keywords: [
+      "AI factory",
+      "dynamical system",
+      "KV cache",
+      "OOM",
+      "workload burstiness",
+      "retry storm",
+      "digital twin",
+      "do-calculus",
+      "RadixAttention",
+    ],
+  },
+  {
     title: "Why GPU Utilization Is a Misleading Metric for LLM Inference: Queueing, KV Cache, and SLOs",
     href: "/writing/eighty-busy-still-slow/",
-    date: "2026-08-22",
+    date: "2026-09-17",
     note: "GPU utilization is not goodput. Queueing, KV pressure, and why $97 vs $0.38 / MTok.",
     onSite: true,
     kind: "Investigation",
@@ -11,7 +30,7 @@ export const essays = [
   {
     title: "Why KV Cache Needs a Directory: Locality, Leases, and Cache-Aware Routing",
     href: "/writing/kv-needs-a-phone-book/",
-    date: "2026-07-08",
+    date: "2026-08-06",
     note: "On one GPU, KV is an allocator. Across a cluster it is a phone book.",
     onSite: true,
     kind: "Investigation",
@@ -20,7 +39,7 @@ export const essays = [
   {
     title: "Why the Same GPU Serves One Request in 3.3 Seconds and Another in 39: Request Shape, Prefill, and Decode",
     href: "/writing/same-gpu-different-century/",
-    date: "2026-04-12",
+    date: "2026-07-23",
     note: "Same model, same card, same code. The request shape did it.",
     onSite: true,
     kind: "Investigation",
@@ -29,7 +48,7 @@ export const essays = [
   {
     title: "One Inference Roadmap, Not Fifty Tools: Request Path Before CUDA",
     href: "/writing/one-roadmap/",
-    date: "2026-03-20",
+    date: "2026-06-11",
     note: "Path, phases, memory, queue, then kernels. Not a bookmark pile.",
     onSite: true,
     kind: "Investigation",
@@ -38,7 +57,7 @@ export const essays = [
   {
     title: "Why Agent Workloads OOM at 62% GPU Utilization: KV Cache, Multi-Turn State, and a $27k Weekend",
     href: "/writing/sunday-slack-27k/",
-    date: "2026-02-15",
+    date: "2026-05-03",
     note: "The demo had headroom. Saturday agents leased HBM. Seven of twelve replicas died.",
     onSite: true,
     kind: "Investigation",
@@ -47,7 +66,7 @@ export const essays = [
   {
     title: "The Inference Engineer Owns SLOs, Not vLLM Flags: Why This Job Didn't Exist in 2024",
     href: "/writing/job-that-didnt-exist/",
-    date: "2026-01-08",
+    date: "2026-03-26",
     note: "The role owns TTFT, TPOT, KV pressure, and $/token when the demo becomes traffic.",
     onSite: true,
     kind: "Investigation",
@@ -56,7 +75,7 @@ export const essays = [
   {
     title: "Junior Throws GPUs. Principal Deletes Them: Why Over-Engineering Hides the Queue",
     href: "/writing/junior-throws-gpus/",
-    date: "2025-12-09",
+    date: "2026-02-19",
     note: "The funny ladder is a critique of architecture theater.",
     onSite: true,
     kind: "Investigation",
