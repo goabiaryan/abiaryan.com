@@ -7,6 +7,7 @@
   --rule: #d4cbbd;
   --accent: #9a3412;
   --accent-soft: #c2410c;
+  --teal: #0f766e;
   --max: 68rem;
   --measure: 40rem;
   --serif: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
@@ -142,6 +143,22 @@ p {
 .nav a[aria-current="page"] {
   color: var(--ink);
   text-decoration: underline;
+}
+
+.nav-eye {
+  display: block;
+  width: 1.05rem;
+  height: 1.05rem;
+  margin-top: 0.05rem;
+}
+
+.nav a:has(.nav-eye) {
+  text-decoration: none;
+}
+
+.nav a:has(.nav-eye):hover,
+.nav a:has(.nav-eye)[aria-current="page"] {
+  color: var(--ink);
 }
 
 .site-footer {
@@ -733,6 +750,187 @@ p {
   margin-left: 0.5rem;
 }
 
+.ddl-toolbar {
+  padding-top: 0.4rem;
+}
+
+.ddl-toolbar .label {
+  margin-bottom: 0.7rem;
+}
+
+.ddl-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.ddl-filter {
+  appearance: none;
+  background: transparent;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  color: var(--muted);
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.06em;
+  padding: 0.35rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.ddl-filter:hover,
+.ddl-filter[aria-pressed="true"] {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+
+.ddl-count {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+}
+
+.ddl-list {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.ddl-card {
+  background: var(--paper-2);
+  padding: 1.05rem 1.15rem 1.1rem;
+}
+
+.ddl-card-star {
+  background: color-mix(in srgb, var(--teal) 8%, var(--paper-2));
+  box-shadow: inset 3px 0 0 var(--teal);
+}
+
+.ddl-card-star .ddl-clock-num,
+.ddl-card-star .ddl-tag-core {
+  color: var(--teal);
+}
+
+.ddl-card-star .ddl-tag-core {
+  border-color: color-mix(in srgb, var(--teal) 40%, var(--rule));
+}
+
+.ddl-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ddl-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.ddl-tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--rule);
+  padding: 0.18rem 0.45rem;
+}
+
+.ddl-tag-core {
+  color: var(--accent);
+  border-color: color-mix(in srgb, var(--accent) 35%, var(--rule));
+}
+
+.ddl-clock {
+  text-align: right;
+  flex: 0 0 auto;
+  min-width: 6.5rem;
+}
+
+.ddl-clock-num {
+  display: block;
+  font-family: var(--display);
+  font-size: 2.6rem;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.ddl-clock-unit,
+.ddl-clock-sub,
+.ddl-clock-static {
+  display: block;
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.ddl-clock-static {
+  padding-top: 0.35rem;
+  max-width: 7.5rem;
+}
+
+.ddl-name {
+  font-family: var(--display);
+  font-size: 1.55rem;
+  margin: 0.7rem 0 0.2rem;
+}
+
+.ddl-name a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.16em;
+}
+
+.ddl-name a:hover {
+  color: var(--accent-soft);
+}
+
+.ddl-fullname {
+  margin-bottom: 0.65rem;
+}
+
+.ddl-dates {
+  display: grid;
+  gap: 0.2rem 1.2rem;
+  margin: 0 0 0.55rem;
+}
+
+.ddl-dates div {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 1fr);
+  gap: 0.6rem;
+}
+
+.ddl-dates dt,
+.ddl-dates dd {
+  margin: 0;
+  font-size: 0.92rem;
+}
+
+.ddl-dates dt {
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 0.18rem;
+}
+
+.ddl-place,
+.ddl-note {
+  margin-bottom: 0;
+}
+
+.ddl-note {
+  margin-top: 0.45rem;
+}
+
 .year {
   margin-top: 2.2rem;
 }
@@ -1233,6 +1431,11 @@ p {
   .list .meta,
   .talk .when {
     padding-top: 0;
+  }
+
+  .ddl-dates div {
+    grid-template-columns: 1fr;
+    gap: 0.05rem;
   }
 
   .site-header {

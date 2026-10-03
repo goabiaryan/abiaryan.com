@@ -1,0 +1,205 @@
+---
+import ConferenceCard from "../components/ConferenceCard.astro";
+import Base from "../layouts/Base.astro";
+import {
+  bucketConferences,
+  lastDeadline,
+  nextDeadline,
+  remainingLabel,
+  topicLabels,
+  topics,
+} from "../data/conferences";
+
+const now = Date.now();
+const { open, watching, closed, journals } = bucketConferences(now);
+const conferenceTopics = topics.filter((topic) => topic !== "Journals");
+---
+
+<Base
+  title="Conferences"
+  description="CFP tracker for HPC, systems, and architecture venues. Dates are taken from official conference pages."
+>
+  <section class="page">
+    <p class="label">Conferences</p>
+    <h1>CFP tracker.</h1>
+    <p class="lede">
+      Architecture, systems, HPC, networking, energy, and journal venues I watch. Dates come
+      from the official pages. Conference ranks are ICORE 2026 from
+      <a href="https://portal.core.edu.au/conf-ranks/?search=EMS&by=all&source=ICORE2026&sort=atitle&page=1" target="_blank" rel="noopener noreferrer">portal.core.edu.au</a>.
+      Journal quartiles are SCImago from
+      <a href="https://www.scimagojr.com/" target="_blank" rel="noopener noreferrer">scimagojr.com</a>.
+      Open CFPs count down in the browser. Workshop, tutorial, and industry-track
+      dates are listed when the official page posts them. Where a 2027 call is not up,
+      the latest official page is linked and the next window is listed as approx
+      April or May. Journals are rolling.
+    </p>
+  </section>
+
+  <section class="section ddl-toolbar">
+    <p class="label">View</p>
+    <div class="ddl-filters" role="group" aria-label="Journals or conferences" data-filters="kind">
+      <button type="button" class="ddl-filter" data-kind="journals" aria-pressed="true">Journals</button>
+      <button type="button" class="ddl-filter" data-kind="conferences" aria-pressed="false">Conferences</button>
+    </div>
+  </section>
+
+  <section class="section ddl-toolbar" data-conference-filters hidden>
+    <p class="label">Conferences</p>
+    <div class="ddl-filters" role="group" aria-label="Filter conferences" data-filters="topic">
+      <button type="button" class="ddl-filter" data-topic="all" aria-pressed="true">All</button>
+      <button type="button" class="ddl-filter" data-topic="upcoming" aria-pressed="false">Upcoming</button>
+      {
+        conferenceTopics.map((topic) => (
+          <button type="button" class="ddl-filter" data-topic={topic} aria-pressed="false">
+            {topicLabels[topic]}
+          </button>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section ddl-section" data-kind="journals">
+    <div class="section-head">
+      <h2>Journals <span class="ddl-count">{journals.length}</span></h2>
+    </div>
+    <div class="ddl-list">
+      {journals.map((conf) => <ConferenceCard conf={conf} when="Rolling" />)}
+    </div>
+  </section>
+
+  <section class="section ddl-section" data-kind="conference" data-bucket="upcoming" hidden>
+    <div class="section-head">
+      <h2>Upcoming <span class="ddl-count">{open.length}</span></h2>
+    </div>
+    <div class="ddl-list">
+      {
+        open.map((conf) => {
+          const next = nextDeadline(conf, now);
+          return (
+            <ConferenceCard
+              conf={conf}
+              at={next?.at}
+              when={next ? remainingLabel(next.at, now) : "Open"}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+
+  <section class="section ddl-section" data-kind="conference" data-bucket="waiting" hidden>
+    <div class="section-head">
+      <h2>Waiting on a 2027 CFP <span class="ddl-count">{watching.length}</span></h2>
+    </div>
+    <div class="ddl-list">
+      {watching.map((conf) => <ConferenceCard conf={conf} when="Approx April or May" />)}
+    </div>
+  </section>
+
+  <section class="section ddl-section" data-kind="conference" data-bucket="past" hidden>
+    <div class="section-head">
+      <h2>Past <span class="ddl-count">{closed.length}</span></h2>
+    </div>
+    <div class="ddl-list">
+      {
+        closed.map((conf) => {
+          const last = lastDeadline(conf);
+          return (
+            <ConferenceCard
+              conf={conf}
+              when={last ? "Closed" : "Closed"}
+            />
+          );
+        })
+      }
+    </div>
+  </section>
+
+</Base>
+
+<script>
+  function parts(ms: number) {
+    return {
+      days: Math.floor(ms / 86_400_000),
+      hours: Math.floor((ms % 86_400_000) / 3_600_000),
+      mins: Math.floor((ms % 3_600_000) / 60_000),
+      secs: Math.floor((ms % 60_000) / 1_000),
+    };
+  }
+
+  function tick() {
+    const now = Date.now();
+    for (const card of document.querySelectorAll<HTMLElement>("[data-deadline]")) {
+      const at = Number(card.dataset.deadline);
+      const clock = card.querySelector(".ddl-clock");
+      if (!clock || !Number.isFinite(at) || at <= 0) continue;
+      const left = at - now;
+      if (left <= 0) {
+        clock.innerHTML = `<span class="ddl-clock-static">Closed</span>`;
+        continue;
+      }
+      const { days, hours, mins, secs } = parts(left);
+      clock.innerHTML = `<span class="ddl-clock-num">${days}</span><span class="ddl-clock-unit">days</span><span class="ddl-clock-sub">${hours}h ${mins}m ${secs}s</span>`;
+    }
+  }
+
+  let kind = "journals";
+  let topic = "all";
+
+  function apply() {
+    const conferenceFilters = document.querySelector<HTMLElement>("[data-conference-filters]");
+    if (conferenceFilters) conferenceFilters.hidden = kind !== "conferences";
+
+    for (const button of document.querySelectorAll<HTMLButtonElement>("[data-filters='kind'] .ddl-filter")) {
+      button.setAttribute("aria-pressed", String(button.dataset.kind === kind));
+    }
+    for (const button of document.querySelectorAll<HTMLButtonElement>("[data-filters='topic'] .ddl-filter")) {
+      button.setAttribute("aria-pressed", String(button.dataset.topic === topic));
+    }
+
+    for (const section of document.querySelectorAll<HTMLElement>(".ddl-section")) {
+      const cards = [...section.querySelectorAll<HTMLElement>(".ddl-card")];
+      const isJournal = section.dataset.kind === "journals";
+      const bucket = section.dataset.bucket;
+      let visible = 0;
+
+      for (const card of cards) {
+        const tags = (card.dataset.topics ?? "").split(",");
+        const matchTopic =
+          kind === "journals" ||
+          topic === "all" ||
+          topic === "upcoming" ||
+          tags.includes(topic);
+        card.hidden = !matchTopic;
+        if (matchTopic) visible += 1;
+      }
+
+      const showSection =
+        kind === "journals"
+          ? isJournal
+          : !isJournal && (topic !== "upcoming" || bucket === "upcoming") && visible > 0;
+
+      section.hidden = !showSection;
+      const count = section.querySelector(".ddl-count");
+      if (count) count.textContent = String(visible);
+    }
+  }
+
+  tick();
+  setInterval(tick, 1_000);
+  apply();
+
+  document.querySelector("[data-filters='kind']")?.addEventListener("click", (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>(".ddl-filter");
+    if (!button?.dataset.kind) return;
+    kind = button.dataset.kind;
+    apply();
+  });
+
+  document.querySelector("[data-filters='topic']")?.addEventListener("click", (event) => {
+    const button = (event.target as HTMLElement).closest<HTMLButtonElement>(".ddl-filter");
+    if (!button?.dataset.topic) return;
+    topic = button.dataset.topic;
+    apply();
+  });
+</script>

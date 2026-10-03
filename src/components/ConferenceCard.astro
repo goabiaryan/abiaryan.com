@@ -1,0 +1,65 @@
+---
+import { externalLinkAttrs } from "../lib/links";
+import {
+  formatDeadline,
+  remainingParts,
+  topicLabels,
+  type Conference,
+} from "../data/conferences";
+
+interface Props {
+  conf: Conference;
+  when?: string;
+  at?: number;
+}
+
+const { conf, when, at } = Astro.props;
+const clock = typeof at === "number" ? remainingParts(at) : null;
+const place = [conf.location, conf.event].filter(Boolean).join(" · ");
+const title = conf.year ? `${conf.acronym} ${conf.year}` : conf.acronym;
+---
+
+<article
+  class:list={["ddl-card", (conf.core === "A*" || conf.featured) && "ddl-card-star"]}
+  data-topics={conf.topics.join(",")}
+  data-deadline={typeof at === "number" ? String(at) : undefined}
+>
+  <div class="ddl-card-top">
+    <div class="ddl-tags">
+      {conf.topics.map((topic) => <span class="ddl-tag">{topicLabels[topic]}</span>)}
+      {conf.core && <span class="ddl-tag ddl-tag-core">ICORE {conf.core}</span>}
+      {conf.sjr && <span class="ddl-tag ddl-tag-core">SCImago {conf.sjr}</span>}
+    </div>
+    <div class="ddl-clock">
+      {
+        clock && !clock.closed ? (
+          <>
+            <span class="ddl-clock-num">{clock.days}</span>
+            <span class="ddl-clock-unit">days</span>
+            <span class="ddl-clock-sub">{clock.hours}h {clock.mins}m {clock.secs}s</span>
+          </>
+        ) : (
+          <span class="ddl-clock-static">{when}</span>
+        )
+      }
+    </div>
+  </div>
+  <h3 class="ddl-name">
+    <a href={conf.href} {...externalLinkAttrs(conf.href)}>{title}</a>
+  </h3>
+  <p class="note ddl-fullname">{conf.name}</p>
+  {
+    conf.deadlines && conf.deadlines.length > 0 && (
+      <dl class="ddl-dates">
+        {conf.deadlines.map((item) => (
+          <div>
+            <dt>{item.label}</dt>
+            <dd>{formatDeadline(item).replace(`${item.label} `, "")}</dd>
+          </div>
+        ))}
+      </dl>
+    )
+  }
+  {place && <p class="note ddl-place">{place}</p>}
+  {conf.note && <p class="note ddl-note">{conf.note}</p>}
+</article>

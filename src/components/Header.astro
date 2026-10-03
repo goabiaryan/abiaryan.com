@@ -11,6 +11,8 @@ const here = Astro.url.pathname;
       nav.map((item) => (
         <a
           href={item.href}
+          aria-label={item.icon ? item.label : undefined}
+          title={item.icon ? item.label : undefined}
           aria-current={
             item.href === "/"
               ? here === "/"
@@ -21,7 +23,21 @@ const here = Astro.url.pathname;
                 : undefined
           }
         >
-          {item.label}
+          {item.icon === "eye" ? (
+            <svg class="nav-eye" viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M2.4 12S6.2 5.8 12 5.8 21.6 12 21.6 12 17.8 18.2 12 18.2 2.4 12 2.4 12Z"
+              />
+              <circle cx="12" cy="12" r="2.4" fill="currentColor" />
+            </svg>
+          ) : (
+            item.label
+          )}
         </a>
       ))
     }

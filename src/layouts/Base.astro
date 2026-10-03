@@ -91,5 +91,26 @@ const socialDescription =
       </main>
       <Footer />
     </div>
+    <script is:inline>
+      (function () {
+        var origin = location.origin;
+        document.querySelectorAll("a[href]").forEach(function (link) {
+          var href = link.getAttribute("href");
+          if (!href || href.charAt(0) === "#" || href.charAt(0) === "/" || href.indexOf("mailto:") === 0 || href.indexOf("tel:") === 0) {
+            return;
+          }
+          try {
+            var url = new URL(href, origin);
+            if (url.origin === origin) return;
+            if (url.protocol !== "http:" && url.protocol !== "https:") return;
+            link.target = "_blank";
+            var rel = new Set((link.rel || "").split(/\s+/).filter(Boolean));
+            rel.add("noopener");
+            rel.add("noreferrer");
+            link.rel = Array.from(rel).join(" ");
+          } catch (err) {}
+        });
+      })();
+    </script>
   </body>
 </html>

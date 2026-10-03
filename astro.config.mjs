@@ -2,9 +2,45 @@ import { defineConfig } from "astro/config";
 import netlify from "@astrojs/netlify";
 import sitemap from "@astrojs/sitemap";
 
+function walk(node, visit) {
+  visit(node);
+  if (Array.isArray(node?.children)) {
+    for (const child of node.children) walk(child, visit);
+  }
+}
+
+function rehypeExternalLinks() {
+  return (tree) => {
+    walk(tree, (node) => {
+      if (node.tagName !== "a") return;
+      const href = node.properties?.href;
+      if (typeof href !== "string") return;
+      if (href.startsWith("#") || href.startsWith("/") || href.startsWith("mailto:") || href.startsWith("tel:")) {
+        return;
+      }
+      try {
+        const url = new URL(href, "https://abiaryan.com");
+        if (url.origin === "https://abiaryan.com") return;
+        if (url.protocol !== "http:" && url.protocol !== "https:") return;
+      } catch {
+        return;
+      }
+      node.properties = node.properties ?? {};
+      node.properties.target = "_blank";
+      const rel = new Set(String(node.properties.rel ?? "").split(/\s+/).filter(Boolean));
+      rel.add("noopener");
+      rel.add("noreferrer");
+      node.properties.rel = [...rel].join(" ");
+    });
+  };
+}
+
 export default defineConfig({
   site: "https://abiaryan.com",
   trailingSlash: "always",
+  markdown: {
+    rehypePlugins: [rehypeExternalLinks],
+  },
   build: {
     assets: "site",
   },
@@ -22,6 +58,8 @@ export default defineConfig({
           path === "/books/" ||
           path === "/writing/" ||
           path === "/code/" ||
+          path === "/speaking/" ||
+          path === "/conferences/" ||
           path === "/sitemap/";
         const investigation = path.startsWith("/writing/") && path !== "/writing/";
         return {

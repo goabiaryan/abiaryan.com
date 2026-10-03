@@ -27,7 +27,7 @@ export const site = {
     maven: "https://maven.com/goabiaryan/inferencing",
     mavenIntro: "https://maven.com/goabiaryan/inferencing-intro",
     mavenProfile: "https://maven.com/goabiaryan",
-    academy: "https://theacademysf.com/",
+    academy: "https://theacademysf.com/faculty-hiring-partners",
     academyNote: "https://a16z.com/announcement/incubating-horowitz-andreessen-academy/",
     llmops: "https://www.oreilly.com/library/view/llmops/9781098154196/",
     llmopsWhat: "https://www.oreilly.com/library/view/what-is-llmops/9781098154301/",
@@ -54,6 +54,7 @@ export const nav = [
   { href: "/advisory/", label: "Advisory" },
   { href: "/code/", label: "Code" },
   { href: "/speaking/", label: "Speaking" },
+  { href: "/conferences/", label: "Conferences", icon: "eye" },
 ];
 
 export const stack = [

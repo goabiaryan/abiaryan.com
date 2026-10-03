@@ -1,4 +1,5 @@
 ---
+import { externalLinkAttrs } from "../lib/links";
 import { site } from "../data/site";
 import Subscribe from "./Subscribe.astro";
 
@@ -17,14 +18,14 @@ const socials = [
       <div class="footer-meta">
         <span>© {new Date().getFullYear()} Abi Aryan</span>
         <span>
-          <a href={site.links.joule}>Joule</a>
+          <a href={site.links.joule} {...externalLinkAttrs(site.links.joule)}>Joule</a>
           ·
-          <a href={site.links.modelcraft}>ModelCraft</a>
+          <a href={site.links.modelcraft} {...externalLinkAttrs(site.links.modelcraft)}>ModelCraft</a>
         </span>
       </div>
       <div class="footer-socials">
         {socials.map((item) => (
-          <a class="footer-link" href={item.href}>{item.label}</a>
+          <a class="footer-link" href={item.href} {...externalLinkAttrs(item.href)}>{item.label}</a>
         ))}
       </div>
     </div>
@@ -33,8 +34,8 @@ const socials = [
       <Subscribe />
     </div>
     <div class="footer-cta">
-      <a class="footer-link" href={site.links.maven}>Maven · Join the next cohort</a>
-      <a class="footer-link" href={site.links.mentorship}>Topmate · Book a 1:1</a>
+      <a class="footer-link" href={site.links.maven} {...externalLinkAttrs(site.links.maven)}>Maven · Join the next cohort</a>
+      <a class="footer-link" href={site.links.mentorship} {...externalLinkAttrs(site.links.mentorship)}>Topmate · Book a 1:1</a>
       <a class="footer-link" href="/advisory/">Advisory · Book an audit</a>
     </div>
   </div>
