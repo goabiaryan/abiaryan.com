@@ -4,7 +4,7 @@ title: "Why Your AI Factory Is Secretly a Dynamical System (And 5 Other Counter-
 seoTitle: "Why Your AI Factory Is a Dynamical System"
 date: 2 October 2026
 published: 2026-10-02
-summary: "AID (AI Infrastructure Dynamics) is a dynamical representation and framework for AI infrastructure: a coupled system whose relevant state spans physical, computational, networking, and serving processes. This investigation treats a modern inference facility as that plant, not a rack of servers with independent dashboards. Isolated GPU utilization, mean arrival rate, and observational forecasts fail once power, cooling, HBM, queues, client retries, and prefix-cache structure interact. Forecasting under the last policy, controlled-state sufficiency, and intervention identification are uses of that representation, not substitutes for it. The post lays out six claims: GPU compute utilization is not allocatable HBM, mean workload is not workload state, demand can be closed-loop, infrastructure evolves on multiple clocks, forecasting is not intervention, and serving state includes trees and graphs."
+summary: "AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. This investigation treats a modern inference facility as a coupled plant, not a rack of servers with independent dashboards. Isolated GPU utilization, mean arrival rate, and observational forecasts fail once power, cooling, HBM, queues, client retries, and prefix-cache structure interact. Forecasting under the last policy, controlled-state sufficiency, and intervention identification are uses of that representation, not substitutes for it. The post lays out six claims: GPU compute utilization is not allocatable HBM, mean workload is not workload state, demand can be closed-loop, infrastructure evolves on multiple clocks, forecasting is not intervention, and serving state includes trees and graphs."
 kind: Investigation
 cover: /assets/posts/ai-factory-digital-twin.png
 coverVideo: /assets/ai-factory-video.mp4
@@ -32,7 +32,7 @@ takeaways:
   - Serving state is not only a Euclidean vector. Prefix trees and paged KV have to be summarized without losing reuse structure.
 definitions:
   - term: AID
-    meaning: "AID (AI Infrastructure Dynamics) is a dynamical representation and framework for AI infrastructure. It formalizes the plant as a coupled dynamical system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. It is not tied to one codebase. Other people can implement it or extend it."
+    meaning: "AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes."
   - term: OpenJoule
     meaning: "My open reference implementation of AID. The open-source release is coming soon: a reproducible experimental platform where the AID state, action, and observation structure can be instantiated and evaluated."
   - term: Joule
@@ -126,7 +126,7 @@ $$
 
 that couples thermals, clocks, queues, and variable-size serving structure.
 
-AID (AI Infrastructure Dynamics) is the dynamical representation of that plant. It formalizes AI infrastructure as a coupled dynamical system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. OpenJoule instantiates that representation, Joule is built on the same architecture, and neither is required to use AID.
+AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. OpenJoule instantiates that representation, Joule is built on the same architecture, and neither is required to use AID.
 
 The objects in the representation are:
 
@@ -326,7 +326,7 @@ $$
 r_t = g(x_t, a_t, d_t; \theta) + \xi_t \quad \text{(service and energy outcomes)}
 $$
 
-That is the representation. A useful operational model would need to infer latent state $\hat{x}_t$, update on more than one timescale, model demand that can respond to service, and evaluate changed actions before they hit the floor. Those are uses of the representation: forecasting the dynamics under the existing policy, finding a representation sufficient under changed actions, and identifying intervention responses. The paper writes AID down as a dynamical representation for AI infrastructure, not as a single implementation, and develops two analytical diagnostics and a validation methodology for testing whether a proposed representation actually preserves the dynamics required for future service.
+That is the representation. A useful operational model would need to infer latent state $\hat{x}_t$, update on more than one timescale, model demand that can respond to service, and evaluate changed actions before they hit the floor. Those are uses of the representation: forecasting the dynamics under the existing policy, finding a representation sufficient under changed actions, and identifying intervention responses. The paper writes AID down as a framework for representing the dynamics of AI infrastructure, not as a single implementation, and develops two analytical diagnostics and a validation methodology for testing whether a proposed representation actually preserves the dynamics required for future service.
 
 <figure>
   <img src="/assets/posts/ai-factory-digital-twin.png" alt="An operational model that infers latent state, updates on more than one timescale, models closed-loop demand, and evaluates a changed action before the floor, under physical and power constraints." />
@@ -353,6 +353,6 @@ The 62% OOM is an empirical result I have already published. The 50 requests/sec
 
 ## The open question
 
-Inference is becoming physically constrained. Physical and computational dynamics are coupled. Traditional telemetry abstractions then become inadequate: they observe a projection of the state, not the state. A dashboard of independent gauges is not a state. AID is the dynamical representation of that plant. OpenJoule implements it.
+Inference is becoming physically constrained. Physical and computational dynamics are coupled. Traditional telemetry abstractions then become inadequate: they observe a projection of the state, not the state. A dashboard of independent gauges is not a state. AID is a framework for representing those dynamics. OpenJoule implements it.
 
 As regional grids, thermal envelopes, and electrical plant become the ceiling, how should hardware-software co-design change when a grid power cap, not spare silicon, is the hard constraint on AI capability?
