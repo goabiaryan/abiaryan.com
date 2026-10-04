@@ -16,6 +16,7 @@ export const site = {
   learnEmail: "learn@abiaryan.com",
   links: {
     joule: "https://joule.lat/",
+    openjoule: "https://github.com/joule-lat/OpenJoule",
     linkedin: "https://www.linkedin.com/in/goabiaryan/",
     x: "https://twitter.com/GoAbiAryan",
     modelcraft: "https://modelcraft.substack.com/",
@@ -63,7 +64,7 @@ export const stack = [
   { layer: "Memory & Storage", tools: ["HBM", "DDR", "PagedAttention", "Mooncake", "LMCache", "KV cache", "Lustre", "NVMe"] },
   { layer: "GPU & Communication", tools: ["CUDA", "MIG", "DRA", "HAMi", "DCGM", "DGCM", "NCCL", "MPI", "NIXL", "NVLink/NVSwitch", "UCX", "GPUDirect RDMA"] },
   { layer: "Networking", tools: ["InfiniBand", "UFM", "RDMA/RoCE", "Ethernet", "CXL", "PCIe"] },
-  { layer: "Serving", tools: ["vLLM", "SGLang", "TensorRT-LLM", "KServe", "llm-d", "llama.cpp", "RelayServe", "LiteLLM", "Portkey", "OpenRouter"] },
+  { layer: "Serving", tools: ["vLLM", "SGLang", "TensorRT-LLM", "KServe", "llm-d", "llama.cpp", "OpenJoule", "RelayServe", "LiteLLM", "Portkey", "OpenRouter"] },
   { layer: "Scheduling & Orchestration", tools: ["Kubernetes", "EKS", "GKE", "Ray", "KubeRay", "Volcano", "Slurm", "Flux", "Kueue", "dstack", "Karpenter", "KEDA", "HPA", "Gateway API", "Enroot", "xCAT"] },
   { layer: "Automation", tools: ["Terraform", "Ansible"] },
   { layer: "Observability & Performance", tools: ["Prometheus", "Grafana", "Jaeger", "Locust", "Nsight Systems", "Nsight Compute", "Perf", "HPCG"] },

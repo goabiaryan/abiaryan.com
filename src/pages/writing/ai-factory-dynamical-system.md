@@ -34,7 +34,7 @@ definitions:
   - term: AID
     meaning: "AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes."
   - term: OpenJoule
-    meaning: "My open reference implementation of AID. The open-source release is coming soon: a reproducible experimental platform where the AID state, action, and observation structure can be instantiated and evaluated."
+    meaning: "Open-source plant-level inference and control engine. Instantiates AID in a real system."
   - term: Joule
     meaning: "The company and proprietary product lineage built on the AID architecture. It may diverge from OpenJoule over time. An inference power economics engine that ties physical GPU energy to token throughput and SLO goodput."
   - term: AI factory
@@ -126,7 +126,7 @@ $$
 
 that couples thermals, clocks, queues, and variable-size serving structure.
 
-AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. OpenJoule instantiates that representation, Joule is built on the same architecture, and neither is required to use AID.
+AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. [OpenJoule](https://github.com/joule-lat/OpenJoule) is an open-source engine that instantiates that framework in a real system. Joule is built on the same architecture, and neither is required to use AID.
 
 The objects in the representation are:
 
@@ -353,6 +353,6 @@ The 62% OOM is an empirical result I have already published. The 50 requests/sec
 
 ## The open question
 
-Inference is becoming physically constrained. Physical and computational dynamics are coupled. Traditional telemetry abstractions then become inadequate: they observe a projection of the state, not the state. A dashboard of independent gauges is not a state. AID is a framework for representing those dynamics. OpenJoule implements it.
+Inference is becoming physically constrained. Physical and computational dynamics are coupled. Traditional telemetry abstractions then become inadequate: they observe a projection of the state, not the state. A dashboard of independent gauges is not a state. AID is a framework for representing those dynamics. [OpenJoule](https://github.com/joule-lat/OpenJoule) is an open-source engine that instantiates that framework in a real system.
 
 As regional grids, thermal envelopes, and electrical plant become the ceiling, how should hardware-software co-design change when a grid power cap, not spare silicon, is the hard constraint on AI capability?

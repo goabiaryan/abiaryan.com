@@ -18,6 +18,7 @@ export const essays = [
     keywords: [
       "AID",
       "AI Infrastructure Dynamics",
+      "OpenJoule",
       "AI factory",
       "dynamical system",
       "KV cache",

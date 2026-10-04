@@ -25,6 +25,7 @@ export const author = {
     site.links.modelcraft,
     site.links.mavenProfile,
     site.links.joule,
+    site.links.openjoule,
     site.links.gpuengineering,
     site.links.academy,
   ],
@@ -67,8 +68,9 @@ export const topics: Record<string, { href: string; note: string }> = {
 
 export const projects: Record<string, { href?: string; note: string; kind: string }> = {
   OpenJoule: {
-    note: "Open reference implementation of AID. Open-source release coming soon.",
-    kind: "Research artifact",
+    href: site.links.openjoule,
+    note: "Open-source plant-level inference and control engine. Instantiates AID in a real system.",
+    kind: "Engine",
   },
   Joule: {
     href: site.links.joule,

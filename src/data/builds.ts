@@ -15,6 +15,13 @@ export const builds: Build[] = [
     keywords: ["Joule", "joule.lat", "inference power economics engine", "physical GPU energy", "token throughput", "SLO goodput", "phase-aware inference", "power economics", "digital twin"],
   },
   {
+    title: "OpenJoule",
+    href: "https://github.com/joule-lat/OpenJoule",
+    kind: "Engine",
+    note: "Open-source plant-level inference and control engine. Instantiates AID in a real system.",
+    keywords: ["OpenJoule", "openjoule", "AID", "AI Infrastructure Dynamics", "plant", "inference control", "vLLM"],
+  },
+  {
     title: "gpuengineering.com",
     href: "https://gpuengineering.com/",
     kind: "Curriculum",
