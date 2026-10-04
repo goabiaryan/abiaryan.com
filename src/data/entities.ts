@@ -65,7 +65,11 @@ export const topics: Record<string, { href: string; note: string }> = {
   },
 };
 
-export const projects: Record<string, { href: string; note: string; kind: string }> = {
+export const projects: Record<string, { href?: string; note: string; kind: string }> = {
+  OpenJoule: {
+    note: "Open reference implementation of AID. Open-source release coming soon.",
+    kind: "Research artifact",
+  },
   Joule: {
     href: site.links.joule,
     note: "Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",

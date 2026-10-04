@@ -102,7 +102,7 @@ const relatedEssays = relatedSlugs
 
 const mentionedProjects = projectKeys
   .map((key) => ({ key, ...projectCatalog[key] }))
-  .filter((item) => item.href);
+  .filter((item) => item.note);
 
 const mentionedTopics = topicKeys
   .map((key) => ({ key, ...topicCatalog[key] }))
@@ -358,7 +358,7 @@ const jsonLd = [
             <ul>
               {mentionedProjects.map((item) => (
                 <li>
-                  <a href={item.href}>{item.key}</a>, {item.note}
+                  {item.href ? <a href={item.href}>{item.key}</a> : item.key}, {item.note}
                 </li>
               ))}
             </ul>
