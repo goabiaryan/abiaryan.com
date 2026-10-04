@@ -10,7 +10,7 @@ export const papers: Paper[] = [
   {
     year: "2026",
     title: "AID: A Framework for AI Infrastructure Dynamics",
-    href: "/assets/pre-print-oct-3.pdf?v=2",
+    href: "/assets/pre-print-aid.pdf",
     note: "Preprint. October 2026.",
     blog: "/writing/ai-factory-dynamical-system/",
   },

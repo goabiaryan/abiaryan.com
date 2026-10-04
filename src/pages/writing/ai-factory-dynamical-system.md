@@ -9,7 +9,7 @@ kind: Investigation
 cover: /assets/posts/ai-factory-digital-twin.png
 coverVideo: /assets/ai-factory-video.mp4
 coverCaption: "An inference facility is a coupled physical-computational plant. Power, cooling, HBM, queues, and retries move together."
-preprint: /assets/pre-print-oct-3.pdf?v=2
+preprint: /assets/pre-print-aid.pdf
 preprintLabel: Read arXiv pre-print
 citeTitle: "AID: A Framework for AI Infrastructure Dynamics"
 citeKey: aryan2026aid
