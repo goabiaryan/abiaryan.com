@@ -72,7 +72,7 @@ export const projects: Record<string, { href?: string; note: string; kind: strin
   },
   Joule: {
     href: site.links.joule,
-    note: "Joule is an inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",
+    note: "Company and proprietary product lineage built on the AID architecture. An inference power economics engine that ties physical GPU energy to token throughput and SLO goodput.",
     kind: "Company",
   },
   RelayServe: {
@@ -129,7 +129,7 @@ export const books = {
 export const researchLinks = {
   AID: {
     href: "/assets/pre-print-oct-3.pdf",
-    note: "AI Infrastructure Dynamics. Preprint, October 2026.",
+    note: "Dynamical representation for AI infrastructure. Preprint, October 2026.",
   },
   "Causal Reflection with Language Models": {
     href: site.links.causalReflection,
