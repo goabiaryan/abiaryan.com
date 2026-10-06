@@ -9,7 +9,7 @@ kind: Investigation
 cover: /assets/posts/ai-factory-observability-trap.jpg
 coverVideo: /assets/The_Observability_Trap__Why_AI_Infra_Models_Fail.mp4
 coverCaption: "An inference facility is a coupled physical-computational plant. Power, cooling, HBM, queues, and retries move together."
-preprint: https://arxiv.org/abs/2610.04801
+preprint: /assets/aid_paper_arxiv_share.pdf
 preprintLabel: Read arXiv pre-print
 citeTitle: "AID: A Framework for AI Infrastructure Dynamics"
 citeKey: aryan2026aidframeworkaiinfrastructure
