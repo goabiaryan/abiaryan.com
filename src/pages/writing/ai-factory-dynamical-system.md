@@ -6,15 +6,25 @@ date: 2 October 2026
 published: 2026-10-02
 summary: "AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. This investigation treats a modern inference facility as a coupled plant, not a rack of servers with independent dashboards. Isolated GPU utilization, mean arrival rate, and observational forecasts fail once power, cooling, HBM, queues, client retries, and prefix-cache structure interact. Forecasting under the last policy, controlled-state sufficiency, and intervention identification are uses of that representation, not substitutes for it. The post lays out six claims: GPU compute utilization is not allocatable HBM, mean workload is not workload state, demand can be closed-loop, infrastructure evolves on multiple clocks, forecasting is not intervention, and serving state includes trees and graphs."
 kind: Investigation
-cover: /assets/posts/ai-factory-digital-twin.png
-coverVideo: /assets/ai-factory-video.mp4
+cover: /assets/posts/ai-factory-observability-trap.jpg
+coverVideo: /assets/The_Observability_Trap__Why_AI_Infra_Models_Fail.mp4
 coverCaption: "An inference facility is a coupled physical-computational plant. Power, cooling, HBM, queues, and retries move together."
-preprint: /assets/pre-print-aid.pdf
+preprint: https://arxiv.org/abs/2610.04801
 preprintLabel: Read arXiv pre-print
 citeTitle: "AID: A Framework for AI Infrastructure Dynamics"
-citeKey: aryan2026aid
-citeJournal: "arXiv preprint"
+citeKey: aryan2026aidframeworkaiinfrastructure
+citeUrl: https://arxiv.org/abs/2610.04801
 citePublished: 2026-10-03
+citeBibtex: |
+  @misc{aryan2026aidframeworkaiinfrastructure,
+        title={AID: A Framework for AI Infrastructure Dynamics},
+        author={Abi Aryan},
+        year={2026},
+        eprint={2610.04801},
+        archivePrefix={arXiv},
+        primaryClass={cs.DC},
+        url={https://arxiv.org/abs/2610.04801},
+  }
 topics:
   - LLM inference
   - GPU engineering

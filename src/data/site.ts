@@ -35,6 +35,7 @@ export const site = {
     causalReflection: "https://arxiv.org/abs/2508.04495",
     abideGym: "https://arxiv.org/abs/2509.21234",
     reflectiveAgents: "https://openreview.net/forum?id=lE2UP2pZ1g",
+    aid: "https://arxiv.org/abs/2610.04801",
     costlyDilemma: "https://arxiv.org/abs/2308.08061",
     arena: "https://ojs.aaai.org/index.php/AAAI/article/view/6216",
     fragility: "https://github.com/goabiaryan/ai-infra-fragility",

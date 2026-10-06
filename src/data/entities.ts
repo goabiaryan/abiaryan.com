@@ -130,8 +130,8 @@ export const books = {
 
 export const researchLinks = {
   AID: {
-    href: "/assets/pre-print-aid.pdf",
-    note: "Framework for representing the dynamics of AI infrastructure. Preprint, October 2026.",
+    href: site.links.aid,
+    note: "Framework for representing the dynamics of AI infrastructure. arXiv:2610.04801. October 2026.",
   },
   "Causal Reflection with Language Models": {
     href: site.links.causalReflection,

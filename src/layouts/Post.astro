@@ -84,17 +84,20 @@ const citeUrl = frontmatter.citeUrl
   ? new URL(frontmatter.citeUrl, site.url).href
   : (preprintAbs ?? canonical);
 const citeDoi: string | undefined = frontmatter.citeDoi;
-const bibtex = [
-  `@article{${citeKey},`,
-  `  title = "${citeTitle}",`,
-  `  author = "${citeAuthor}",`,
-  `  journal = "${citeJournal}",`,
-  `  year = "${citeYear}",`,
-  `  month = "${citeMonth}",`,
-  ...(citeDoi ? [`  doi = "${citeDoi}",`] : []),
-  `  url = "${citeUrl}"`,
-  `}`,
-].join("\n");
+const bibtex = String(
+  frontmatter.citeBibtex ??
+    [
+      `@article{${citeKey},`,
+      `  title = "${citeTitle}",`,
+      `  author = "${citeAuthor}",`,
+      `  journal = "${citeJournal}",`,
+      `  year = "${citeYear}",`,
+      `  month = "${citeMonth}",`,
+      ...(citeDoi ? [`  doi = "${citeDoi}",`] : []),
+      `  url = "${citeUrl}"`,
+      `}`,
+    ].join("\n"),
+).trim();
 
 const relatedEssays = relatedSlugs
   .map((slug) => essays.find((item) => item.href === `/writing/${slug}/`))
@@ -123,7 +126,7 @@ const jsonLd = [
     "@id": `${author.url}#person`,
     name: author.name,
     url: author.url,
-    jobTitle: author.role,
+    jobTitle: "AI Inference Infra Engineer",
     sameAs: author.sameAs,
     knowsAbout: author.focus,
   },
@@ -197,7 +200,7 @@ const jsonLd = [
       </div>
       <div>
         <dt>Role</dt>
-        <dd>{author.role}</dd>
+        <dd>AI Inference Infra Engineer</dd>
       </div>
       <div>
         <dt>Focus</dt>
