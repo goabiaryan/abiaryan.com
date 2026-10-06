@@ -105,6 +105,8 @@ citations:
     href: https://doi.org/10.1145/3458336.3465286
   - text: 'R. Qin et al., "Mooncake: A KVCache-centric architecture for serving LLM chatbot," in Proc. 23rd USENIX Conf. File and Storage Technologies (FAST), 2025, pp. 155–170.'
     href: https://arxiv.org/abs/2407.00079
+  - text: "Aryan, A. (2026). AID: A framework for AI infrastructure dynamics. arXiv. https://arxiv.org/abs/2610.04801"
+    href: https://arxiv.org/abs/2610.04801
 ---
 
 ## System overview
@@ -357,7 +359,7 @@ These are operating hypotheses from the argument above, not experimentally valid
 
 ## Limitations
 
-This investigation is a field reading that motivates AID. The companion preprint states the representation and the validation criteria. This post does not report facility-level validation.
+This investigation is a field reading that motivates AID. The companion preprint states the representation and the validation criteria [[12]](#cite-12). This post does not report facility-level validation.
 
 The 62% OOM is an empirical result I have already published. The 50 requests/second traces are a pedagogical pair with a shared mean, not a claim about one customer. Closed-loop demand and metastability are mechanisms with supporting literature, not a measured incident in this article. Multi-rate dynamics and the intervention distinction are modeling arguments. They hold only under the independence and regime assumptions you are willing to state. Results will differ across engines (vLLM, SGLang, TensorRT-LLM), disaggregated prefill/decode, and how aggressively the runtime shares prefixes.
 
