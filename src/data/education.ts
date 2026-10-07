@@ -25,7 +25,7 @@ export const education: EducationItem[] = [
     year: "2018–2019",
     title: "Visiting Research Scholar, UCLA Cognitive Systems Lab (Los Angeles, USA)",
     href: site.links.pearl,
-    note: "Under Dr. Judea Pearl, ACM 2012 Turing Award Winner. Research on intelligence in agents, spanning causal inference, AutoML, emotion recognition, and multi-agent learning.",
+    note: "Supervisor: Dr. Judea Pearl, ACM 2012 Turing Award Winner. Research on intelligence in agents, spanning causal inference, AutoML, emotion recognition, and multi-agent learning.",
   },
   {
     year: "2013–2014",
