@@ -45,8 +45,6 @@ definitions:
     meaning: "AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes."
   - term: OpenJoule
     meaning: "Open-source plant-level inference and control engine. Instantiates AID in a real system."
-  - term: Joule
-    meaning: "The company and proprietary product lineage built on the AID architecture. It may diverge from OpenJoule over time. An inference power economics engine that ties physical GPU energy to token throughput and SLO goodput."
   - term: AI factory
     meaning: A term for a high-density inference facility where power, cooling, HBM, interconnect, serving software, and request dynamics interact as one plant. Not every deployment is a factory.
   - term: The plant
@@ -69,7 +67,6 @@ definitions:
     meaning: Variable-size structured serving state. PagedAttention gives explicit KV block and page management. Prefix-caching systems such as RadixAttention expose shared-prefix and tree structure on top of those pages.
 projects:
   - OpenJoule
-  - Joule
   - RelayServe
 relatedWriting:
   - eighty-busy-still-slow
@@ -138,7 +135,7 @@ $$
 
 that couples thermals, clocks, queues, and variable-size serving structure.
 
-AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. [OpenJoule](https://github.com/joule-lat/OpenJoule) is an open-source engine that instantiates that framework in a real system. Joule is built on the same architecture, and neither is required to use AID.
+AID (AI Infrastructure Dynamics) is a framework for representing the dynamics of AI infrastructure. It formalizes the plant as a coupled system whose relevant state spans physical, computational, networking, and serving processes, with explicit observations, actions, disturbances, configuration and constraints, and service outcomes. [OpenJoule](https://github.com/joule-lat/OpenJoule) is an open-source engine that instantiates that framework in a real system.
 
 The objects in the representation are:
 

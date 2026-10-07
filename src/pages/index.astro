@@ -30,7 +30,6 @@ import { reviews, mentoring } from "../data/reviews";
             data centers, neoclouds, and hyperscalers. I founded
             <a href={site.links.joule}>Joule</a>, an inference power economics engine that
             ties physical GPU energy to token throughput and SLO goodput.
-            <a href={site.links.openjoule}>OpenJoule</a> is the open-source plant engine.
           </p>
           <p>
             I build the systems, measure them, research them, write about them, and teach them.
@@ -57,7 +56,7 @@ import { reviews, mentoring } from "../data/reviews";
         </div>
         <ul class="list">
           {
-            builds.slice(0, 5).map((item) => (
+            builds.slice(0, 6).map((item) => (
               <li>
                 <span class="meta">{item.kind}</span>
                 <a class="title" href={item.href}>{item.title}</a>

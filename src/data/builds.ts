@@ -88,20 +88,6 @@ export const courseLabs: Build[] = [
     keywords: ["nexus-workshop-code", "Packt Nexus", "CrewAI", "multi-agent", "roles", "tasks", "orchestration"],
   },
   {
-    title: "inferencing_maven",
-    href: "https://github.com/goabiaryan/inferencing_maven",
-    kind: "Course",
-    note: "Labs for the Maven inference engineering cohort.",
-    keywords: ["inferencing_maven", "Maven", "inference engineering", "labs"],
-  },
-  {
-    title: "class-code",
-    href: "https://github.com/goabiaryan/class-code",
-    kind: "Course",
-    note: "Class exercises that sit next to RelayServe and the serving labs.",
-    keywords: ["class-code", "RelayServe", "serving labs"],
-  },
-  {
     title: "concurrency",
     href: "https://github.com/goabiaryan/concurrency",
     kind: "Course",

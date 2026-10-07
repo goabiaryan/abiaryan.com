@@ -3,8 +3,22 @@
 # https://abiaryan.com/sitemap-index.xml
 # IndexNow: https://abiaryan.com/faf32153d859d903358f0ebc6874975c.txt
 
-User-agent: *
-Allow: /
+User-agent: Bytespider
+User-agent: ByteDance
+User-agent: ByteDance-Spider
+User-agent: TikTokSpider
+User-agent: PetalBot
+User-agent: DotBot
+User-agent: MJ12bot
+User-agent: BLEXBot
+User-agent: MegaIndex
+User-agent: DataForSeoBot
+User-agent: ImagesiftBot
+User-agent: Magpie-crawler
+User-agent: AhrefsBot
+User-agent: SemrushBot
+User-agent: ZoominfoBot
+Disallow: /
 
 User-agent: Googlebot
 Allow: /
@@ -62,5 +76,9 @@ Allow: /
 
 User-agent: LinkedInBot
 Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /*.mp4
 
 Sitemap: https://abiaryan.com/sitemap-index.xml
