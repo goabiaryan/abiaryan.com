@@ -16,7 +16,7 @@ export const site = {
   learnEmail: "learn@abiaryan.com",
   links: {
     joule: "https://joule.lat/",
-    openjoule: "https://github.com/joule-lat/OpenJoule",
+    openjoule: "https://openjoule.org/",
     linkedin: "https://www.linkedin.com/in/goabiaryan/",
     x: "https://twitter.com/GoAbiAryan",
     modelcraft: "https://modelcraft.substack.com/",

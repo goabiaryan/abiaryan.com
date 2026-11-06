@@ -16,9 +16,9 @@ export const builds: Build[] = [
   },
   {
     title: "OpenJoule",
-    href: "https://github.com/joule-lat/OpenJoule",
+    href: "https://openjoule.org/",
     kind: "Engine",
-    note: "Open-source plant-level inference and control engine. Instantiates AID in a real system.",
+    note: "Open-source plant-level inference and control engine. Instantiates AID in a real system. [Releasing Soon!]",
     keywords: ["OpenJoule", "openjoule", "AID", "AI Infrastructure Dynamics", "plant", "inference control", "vLLM"],
   },
   {
